@@ -20,7 +20,7 @@ set :deploy_via, :remote_cache
 # Disable warnings about the absence of the styleseheets, javscripts & images directories.
 set :normalize_asset_timestamps, false
 
-before "deploy:create_symlink", :make_cache_link
+# before "deploy:create_symlink", :make_cache_link
 
 after "deploy:create_symlink" do
   # Link the image mosaic stuff to 'mosaic'
