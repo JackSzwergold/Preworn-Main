@@ -24,7 +24,7 @@ before "deploy:create_symlink", :make_cache_link
 
 after "deploy:create_symlink" do
   # Link the image mosaic stuff to 'mosaic'
-  run "cd #{current_release} && ln -s #{web_builds}/image_mosaic/current mosaic"
+  run "cd #{current_release} && ln -s #{web_builds}/image_mosaic/production/current mosaic"
   # If there is no directory & no symbolic link to 'site' then create a directory named 'site'.
   # run "cd #{live_root} && if [ ! -d site ]; then if [ ! -h site ]; then mkdir ./site; fi; fi"
   # If there is no symbolic link called site' and 'site' is a directory, delete that directory.
