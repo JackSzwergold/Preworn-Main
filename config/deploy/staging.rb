@@ -24,7 +24,11 @@ before "deploy:create_symlink", :make_cache_link
 
 after "deploy:create_symlink" do
   # If there is no directory & no symbolic link to 'site' then create a directory named 'site'.
-  run "cd #{live_root} && if [ ! -d site ]; then if [ ! -h site ]; then mkdir ./site; fi; fi"
+  # run "cd #{live_root} && if [ ! -d site ]; then if [ ! -h site ]; then mkdir ./site; fi; fi"
+  # If there is no symbolic link called site' and 'site' is a directory, delete that directory.
+  run "cd #{live_root} && if [ ! -h site ]; then if [ -d site ]; then rm -rf ./site; fi; fi"
+  # If there is a symbolic link called 'site', delete that directory.
+  run "cd #{live_root} && if [ -h site ]; then rm ./site; fi"
   # If there is a symbolic link to 'site' then create a symbolic link called 'site'.
   run "cd #{live_root} && if [ ! -h site ]; then if [ ! -d site ]; then ln -sf #{current_path} ./site; fi; fi"
 end
