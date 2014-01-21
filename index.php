@@ -145,6 +145,7 @@ echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www
    . '<meta property="og:locale" content="en_US" />'
    . '<meta property="og:url" content="http://www.preworn.com/" />'
    . '<meta property="og:site_name" content="preworn" />'
+   . '<meta property="og:image" content="favicons/speeddial-160px.png" />'
    . '<meta name="robots" content="noindex,nofollow" />'
    . '<meta name = "viewport" content = "width = device-width, initial-scale=0.65" />'
    . '<link rel="stylesheet" href="css/style.css" type="text/css" />'
