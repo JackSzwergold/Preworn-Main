@@ -1,0 +1,182 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+html { font-size: 9pt; }
+
+body
+{
+	z-index: 0;
+	position: relative;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	line-height: 1.2em;
+	text-align: center;
+	background-color: #fff;
+}
+
+a, a:visited, a:hover, a:active
+{
+	text-decoration: none;
+	color: #000;
+}
+
+ul, li { list-style: none; }
+:focus { -moz-outline-style: none; }
+a { outline: none; }
+
+/**************************************************************************************************/
+.Core, .Content, .Section, 
+.Padding, .Border, .Image, .Icon,
+.Entry, .Text,
+.Nameplate,
+.Top, .Between, .Bottom, 
+.Left, .Right, .Middle,
+ul, li
+{
+	position: relative;
+	float: left;
+	display: inline;
+}
+
+/**************************************************************************************************/
+.Wrapper
+{
+	width: 714px;
+	height: 100%;
+	margin: 0 auto 0 auto;
+	clear: both;
+	text-align: left;
+}
+
+.Wrapper .Padding
+{
+	padding: 0 0 0 0;
+	clear: both;
+}
+
+/**************************************************************************************************/
+.Nameplate, .Nameplate .Full { width: 600px; }
+.Nameplate { margin: 15px 0 0 0; }
+.Nameplate .Padding { padding: 0; }
+
+/**************************************************************************************************/
+.Nav p { font-size: 100%; }
+.Nav select { margin: -1px 0 0 0; }
+.Nav ul li { margin: 0 15px 0 0; }
+.Nav ul li.select_label { margin: 0 3px 0 0; }
+
+/**************************************************************************************************/
+.Content { width: 100%; }
+
+.Content .Padding
+{
+	padding: 0;
+	margin: 0;
+}
+
+/**************************************************************************************************/
+.Section
+{
+	width: 100%;
+	min-height: 500px;
+	clear: both;
+}
+
+.Section .Padding { padding: 0; }
+.Section .Middle { width: 100%; }
+
+/**************************************************************************************************/
+.Core { }
+.Core .Padding { padding: 0; }
+
+/**************************************************************************************************/
+.Core p
+{
+	font-size: 100%;
+	line-height: 1.4em;
+	margin: 0 0 10px 0;
+}
+
+.Core p a, .Core p a:active, .Core p a:hover, .Core p a:visited
+{
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+}
+
+.Core p a:active, .Core p a:hover { border-color: #666; }
+
+/**************************************************************************************************/
+.Core .Grid .Padding { padding: 6px 3px 0 3px; }
+
+.Core .Grid ul
+{
+	margin: 0;
+	padding: 0;
+}
+
+.Core .Grid ul li .Padding { padding: 0 3px 6px 3px; }
+
+.Core .Grid ul li table
+{
+	height: 205px;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.Core .Grid ul li td { vertical-align: bottom; }
+
+/**************************************************************************************************/
+.Core .Text .Padding { padding: 15px 0 15px 0; }
+
+/**************************************************************************************************/
+.PixelBox
+{
+	float: left;
+	display: inline;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	height: 10px;
+	width: 10px;
+	background-image: url('dot.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.PixelBoxOverlay
+{
+	float: left;
+	display: inline;
+	position: relative;
+	margin: 4px 4px 4px 4px;
+	padding: 0;
+	height: 3px;
+	width: 3px;
+	background-color: #000;
+	/* opacity: 0.05; */
+	/* filter: alpha(opacity=5); */
+	/* background-image: url('dot.png'); */
+	/* background-position: center center; */
+	/* background-repeat: no-repeat; */
+	/* border-top-left-radius: 3px; */
+	/* border-top-right-radius: 3px; */
+	/* border-bottom-left-radius: 3px; */
+	/* border-bottom-right-radius: 3px; */
+	/* border-top: 1px #666 solid; */
+	/* border-right: 1px black solid; */
+	/* border-bottom: 1px black solid; */
+	/* border-left: 1px #666 solid; */
+}
+
+.PixelBoxConatiner
+{
+	float: left;
+	position: relative;
+	display: inline;
+	/* background-color: black; */
+}

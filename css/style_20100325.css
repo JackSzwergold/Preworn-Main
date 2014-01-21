@@ -1,0 +1,264 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+html { font-size: 9pt; }
+
+body
+{
+	z-index: 0;
+	position: relative;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	line-height: 1.2em;
+	text-align: center;
+	background-color: #fff;
+}
+
+a, a:visited, a:hover, a:active
+{
+	text-decoration: none;
+	color: #000;
+}
+
+ul, li { list-style: none; }
+:focus { -moz-outline-style: none; }
+a { outline: none; }
+
+/**************************************************************************************************/
+.Core, .Content, .Section, 
+.Padding, .Border, .Image, .Icon,
+.Entry, .Text,
+.Nameplate,
+.Top, .Between, .Bottom, 
+.Left, .Right, .Middle,
+.Grid  ul, .Grid li,
+.Slide, .Slide ul, .Slide li, 
+.Controls, .Controls ul, .Controls li
+{
+	position: relative;
+	float: left;
+	display: inline;
+}
+
+/**************************************************************************************************/
+.Wrapper
+{
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto 0 auto;
+	clear: both;
+	text-align: left;
+}
+
+.Wrapper .Padding
+{
+	padding: 0 50px 0 50px;
+	clear: both;
+}
+
+/**************************************************************************************************/
+.Nameplate
+{
+	width: 900px;
+	margin: 50px 0 0 0;
+	border-bottom: 1px solid #000;
+}
+
+.Nameplate .Padding { padding: 0 0 20px 0; }
+.Nameplate .Left,
+.Nameplate .Right { width: 450px; }
+
+.Nameplate .Right
+{
+	float: right;
+	text-align: right;
+}
+
+.Nameplate .Left p
+{
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.Nameplate .Right .Icon
+{
+	float: right;
+	width: 20px;
+	height: 15px;
+}
+
+/**************************************************************************************************/
+.Content { width: 100%; }
+
+.Content .Padding
+{
+	padding: 0;
+	margin: 0;
+}
+
+/**************************************************************************************************/
+.Section
+{
+	width: 900px;
+	min-height: 500px;
+	clear: both;
+}
+
+.Section .Padding { padding: 0; }
+.Section .Left { width: 150px; }
+.Section .Left .Padding { padding: 20px 0 0 0; }
+.Section .Middle { width: 750px; }
+
+/**************************************************************************************************/
+.Core { }
+.Core .Padding { padding: 0; }
+.Core .Entry { width: 750px; }
+
+.Core .Image
+{
+	width: 600px;
+	height: 435px;
+	background-color: #ddd;
+}
+
+.Core .Text
+{
+	clear: none;
+	width: 150px;
+}
+
+.Core .Text .Padding { padding: 20px 0 0 20px; }
+
+/**************************************************************************************************/
+.Core p
+{
+	font-size: 100%;
+	line-height: 1.4em;
+	margin: 0 0 10px 0;
+}
+
+.Core p a, .Core p a:active, .Core p a:hover, .Core p a:visited
+{
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+}
+
+.Core p a:active, .Core p a:hover { border-color: #666; }
+
+/**************************************************************************************************/
+.Menu ul
+{
+	position: relative;
+	margin: 0;
+}
+
+.Menu li { margin: 0 0 5px 0; }
+
+.Menu li p
+{
+	font-size: 100%;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+}
+
+.Menu li p a, .Menu li p a:visited, 
+.Menu li p a:active, .Menu li p a:hover { text-decoration: none; }
+.Menu li p a:active, .Menu li p a:hover { text-decoration: underline; }
+.Menu li.active p a, .Menu li.active p a:visited { color: #000; }
+
+/**************************************************************************************************/
+.Menu ul ul { margin: 5px 0 20px 10px; }
+
+.Menu ul ul li p
+{
+	font-size: 100%;
+	text-transform: none;
+	margin: 0;
+	padding: 0;
+}
+
+/**************************************************************************************************/
+.gridPage .Middle { width: 900px; }
+.gridPage .Middle .Core .Padding { padding: 20px 0 0 0; }
+.Core .Grid ul li { margin: 0 20px 20px 0; }
+.Core .Grid ul li.last { margin: 0 0 20px 0; }
+
+.gridPage .Nameplate .Right .Icon
+{
+	float: right;
+	width: 20px;
+	height: 15px;
+	background-color: #000;
+}
+
+.Core .Grid .Image
+{
+	width: 210px;
+	height: 152px;
+	background-color: #ddd;
+}
+
+/**********************************************************************************************/
+.Slide, .Slide ul, .Slide li { overflow: hidden; }
+
+.Slide
+{
+	width: 750px;
+	height: 435px;
+	clear: both;
+}
+
+.Slide ul { width: 8000px; }
+.Slide li { position: static; }
+
+/**********************************************************************************************/
+.Slide ul ul, .Slide li li { overflow: auto; }
+.Slide ul ul { width: auto; }
+.Slide li li { position: relative; }
+
+/**********************************************************************************************/
+.Controls, .Controls ul { width: 600px; }
+
+.Controls
+{
+	clear: both;
+	margin: 0;
+	text-align: center;
+}
+
+.Controls ul { margin: 0; }
+
+.Controls li
+{
+	width: 280px;
+	padding: 20px 0 20px 0;
+	font-size: 120%;
+	color: #000;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+
+.Controls li.prev
+{
+	float: left;
+	text-align: right;
+}
+
+.Controls li.next
+{
+	float: right;
+	text-align: left;
+}
+
+.Controls li:hover
+{
+	color: #bbb;
+	cursor: pointer;
+}
+
+.Controls li a:hover { color: #fff; }
