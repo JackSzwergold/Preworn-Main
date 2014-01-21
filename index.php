@@ -62,7 +62,7 @@ $wrapper = '<div class="Wrapper">'
          . '<br />'
 
          . '<h3>skills</h3>'
-         . '<p>i’m a highly skilled unix systems administrator, web developer & systems engineer with 20+ years of experience. which includes a strong professional history in the fine art world.</p>'
+         . '<p>i’m a highly skilled unix systems administrator, web developer & systems engineer with 20+ years of experience which includes a strong professional history in the fine art world.</p>'
 
          . '<p>specialties: unix systems administration, shell scripting & other common web/unix/internet scripting languages as well as software development using php (object oriented & flat), javascript, mysql, css, json, html, dhtml, xhtml & xml. very comfortable working in the unix shell in ubuntu, redhat, centos & solaris environments. can install/configure packages from repositories & compile from source code on most any platform.</p>'
 
