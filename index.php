@@ -29,7 +29,7 @@ $mode = 'large';
 //**************************************************************************************//
 // Set the sundry metadata stuff.
 
-$description = 'this site is jack szwergold’s the calling card, gallery, portfolio, playground, white wall, black box, idea sandbox & daily distraction.';
+$description = 'this site is jack szwergold’s the calling card, gallery, portfolio, playground, white wall, black box, idea sandbox &amp; daily distraction.';
 
 
 //**************************************************************************************//
@@ -58,15 +58,15 @@ $wrapper = '<div class="Wrapper">'
          . '<br />'
 
          . '<h3>current projects</h3>'
-         . '<p><a href="mosaic/" title="image mosaic" name="image mosaic" target="_top">image mosaic</a>: a dynamically generated image mosaic using php, the gd graphics libarary, html & css</p>'
+         . '<p><a href="mosaic/" title="image mosaic" name="image mosaic" target="_top">image mosaic</a>: a dynamically generated image mosaic using php, the gd graphics libarary, html &amp; css</p>'
          . '<br />'
 
          . '<h3>skills</h3>'
-         . '<p>i’m a highly skilled unix systems administrator, web developer & systems engineer with 20+ years of experience which includes a strong professional history in the fine art world.</p>'
+         . '<p>i’m a highly skilled unix systems administrator, web developer &amp; systems engineer with 20+ years of experience which includes a strong professional history in the fine art world.</p>'
 
-         . '<p>specialties: unix systems administration, shell scripting & other common web/unix/internet scripting languages as well as software development using php (object oriented & flat), javascript, mysql, css, json, html, dhtml, xhtml & xml. very comfortable working in the unix shell in ubuntu, redhat, centos & solaris environments. can install/configure packages from repositories & compile from source code on most any platform.</p>'
+         . '<p>specialties: unix systems administration, shell scripting &amp; other common web/unix/internet scripting languages as well as software development using php (object oriented &amp; flat), javascript, mysql, css, json, html, dhtml, xhtml &amp; xml. very comfortable working in the unix shell in ubuntu, redhat, centos &amp; solaris environments. can install/configure packages from repositories &amp; compile from source code on most any platform.</p>'
 
-         . '<p>i work primarily on the ubuntu & mac os x platforms but have deep experience with many different flavors of unix spanning back to the early 1990s. so i can jump onto the console, maneuver around the terminal and get the job done regardless of os.</p>'
+         . '<p>i work primarily on the ubuntu &amp; mac os x platforms but have deep experience with many different flavors of unix spanning back to the early 1990s. so i can jump onto the console, maneuver around the terminal and get the job done regardless of os.</p>'
 
          . '<br />'
 
