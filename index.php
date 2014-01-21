@@ -58,7 +58,7 @@ $wrapper = '<div class="Wrapper">'
          . '<br />'
 
          . '<h3>current projects</h3>'
-         . '<p><a href="mosaic/" title="image mosaic" name="image mosaic" target="_top">image mosaic</a>: a dynamically generated image mosaic using php, the gd graphics libarary, html &amp; css</p>'
+         . '<p><a href="mosaic/" title="image mosaic" target="_top">image mosaic</a>: a dynamically generated image mosaic using php, the gd graphics libarary, html &amp; css</p>'
          . '<br />'
 
          . '<h3>skills</h3>'
