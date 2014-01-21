@@ -116,15 +116,15 @@ $favicons[] = '<!-- Standard Favicon -->'
             ;
 
 $favicons[] = '<!-- For iPhone 4 Retina display: -->'
-            . '<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicons/apple-touch-icon-114x114-precomposed.png">'
+            . '<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicons/apple-touch-icon-114x114-precomposed.png" />'
             ;
 
 $favicons[] = '<!-- For iPad: -->'
-            . '<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicons/apple-touch-icon-72x72-precomposed.png">'
+            . '<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicons/apple-touch-icon-72x72-precomposed.png" />'
             ;
 
 $favicons[] = '<!-- For iPhone: -->'
-            . '<link rel="apple-touch-icon-precomposed" href="favicons/apple-touch-icon-57x57-precomposed.png">'
+            . '<link rel="apple-touch-icon-precomposed" href="favicons/apple-touch-icon-57x57-precomposed.png" />'
             ;
 
 
