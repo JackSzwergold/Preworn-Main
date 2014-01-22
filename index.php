@@ -75,7 +75,7 @@ $wrapper = '<div class="Wrapper">'
          . '<br />'
 
          . '<h3>community</h3>'
-         . '<p><a href="http://stackoverflow.com/users/117259/jakegould" target="_blank">stack overflow</a> &bull; <a href="http://serverfault.com/users/100013/jakegould" target="_blank">server fault</a></p>'
+         . '<p><a href="http://stackoverflow.com/users/117259/jakegould" target="_blank">stack overflow</a> &bull; <a href="http://serverfault.com/users/100013/jakegould" target="_blank">server fault</a> &bull; <a href="http://www.linkedin.com/in/jackszwergold" target="_blank">linked in</a></p>'
          . '<br />'
 
 
