@@ -22,6 +22,11 @@
 # die();
 
 //**************************************************************************************//
+// Require Parsedown
+
+require_once 'lib/Parsedown.php';
+
+//**************************************************************************************//
 // Set the mode.
 
 $mode = 'mega';
@@ -31,6 +36,11 @@ $mode = 'mega';
 
 $description = 'this site is jack szwergold’s the calling card, gallery, portfolio, playground, white wall, black box, idea sandbox &amp; daily distraction.';
 
+//**************************************************************************************//
+// Load the markdown verskon of the body text.
+
+$md_body = file_get_contents('index.md');
+$body = Parsedown::instance()->parse($md_body);
 
 //**************************************************************************************//
 // Set the content in the wrapper area.
@@ -53,31 +63,7 @@ $wrapper = '<div class="Wrapper">'
          
          . '<div class="PixelBoxWrapper">'
          
-         . '<h1>preworn</h1>'
-         . '<p>' . $description . '</p>'
-         . '<br />'
-
-         . '<h3>current projects</h3>'
-         . '<p><a href="mosaic/" title="image mosaic" target="_top">image mosaic</a> &bull; a dynamically generated image mosaic using php, the gd graphics libarary, html &amp; css</p>'
-         . '<br />'
-
-         . '<h3>skills</h3>'
-         . '<p>i’m a highly skilled unix systems administrator, web developer &amp; systems engineer with 20+ years of experience which includes a strong professional history in the fine art world.</p>'
-
-         . '<p>specialties: unix systems administration, shell scripting &amp; other common web/unix/internet scripting languages as well as software development using php (object oriented &amp; flat), javascript, mysql, css, json, html, dhtml, xhtml &amp; xml. very comfortable working in the unix shell in ubuntu, redhat, centos &amp; solaris environments. can install/configure packages from repositories &amp; compile from source code on most any platform.</p>'
-
-         . '<p>i work primarily on the ubuntu &amp; mac os x platforms but have deep experience with many different flavors of unix spanning back to the early 1990s. so i can jump onto the console, maneuver around the terminal and get the job done regardless of os.</p>'
-
-         . '<br />'
-
-         . '<h3>contact</h3>'
-         . '<p>me [at] preworn [dot] com</p>'
-         . '<br />'
-
-         . '<h3>community</h3>'
-         . '<p><a href="http://stackoverflow.com/users/117259/jakegould" target="_blank">stack overflow</a> &bull; <a href="http://serverfault.com/users/100013/jakegould" target="_blank">server fault</a> &bull; <a href="http://www.linkedin.com/in/jackszwergold" target="_blank">linked in</a></p>'
-         . '<br />'
-
+         . $body
 
          . '</div><!-- .PixelBoxWrapper -->'
 
