@@ -74,6 +74,10 @@ $wrapper = '<div class="Wrapper">'
          . '<p>me [at] preworn [dot] com</p>'
          . '<br />'
 
+         . '<h3>community</h3>'
+         . '<p><a href="http://stackoverflow.com/users/117259/jakegould" target="_blank">stack overflow</a> &bull; <a href="http://serverfault.com/users/100013/jakegould" target="_blank">server fault</a></p>'
+         . '<br />'
+
 
          . '</div><!-- .PixelBoxWrapper -->'
 
