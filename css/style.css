@@ -88,59 +88,35 @@ ul, li
 .Core .Padding { padding: 0; }
 
 /**************************************************************************************************/
-.Core h1
+.Core h1, .Core h3, .Core p
 {
 	font-family: Georgia, "New York", "Times New Roman", Times, serif;
 	font-weight: normal;
-	font-size: 350%;
 	line-height: 1.4em;
 	margin: 0 0 10px 0;
 }
 
-.Core h1 a, .Core h1 a:active, .Core h1 a:hover, .Core h1 a:visited
-{
-	text-decoration: none;
-	color: #000;
-	font-weight: normal;
-}
-
-.Core h1 a:active, .Core h1 a:hover { border-color: #666; }
-
-/**************************************************************************************************/
-.Core h3
-{
-	font-family: Georgia, "New York", "Times New Roman", Times, serif;
-	font-weight: normal;
-	font-size: 180%;
-	line-height: 1.4em;
-	margin: 0 0 10px 0;
-}
-
-.Core h3 a, .Core h3 a:active, .Core h3 a:hover, .Core h3 a:visited
-{
-	text-decoration: none;
-	color: #000;
-	font-weight: normal;
-}
-
-.Core h3 a:active, .Core h3 a:hover { border-color: #666; }
-
-/**************************************************************************************************/
-.Core p
-{
-	font-family: Georgia, "New York", "Times New Roman", Times, serif;
-	font-size: 120%;
-	line-height: 1.4em;
-	margin: 0 0 10px 0;
-}
-
+.Core h1 a, .Core h1 a:active, .Core h1 a:hover, .Core h1 a:visited,
+.Core h3 a, .Core h3 a:active, .Core h3 a:hover, .Core h3 a:visited,
 .Core p a, .Core p a:active, .Core p a:hover, .Core p a:visited
 {
 	text-decoration: none;
 	color: #000;
 	font-weight: normal;
-	border-bottom: 1px #000 solid;
 }
+
+.Core h1 a:active, .Core h1 a:hover,
+.Core h3 a:active, .Core h3 a:hover { border-color: #666; }
+
+/**************************************************************************************************/
+.Core h1 { font-size: 350%; }
+
+/**************************************************************************************************/
+.Core h3 { font-size: 180%; }
+
+/**************************************************************************************************/
+.Core p { font-size: 120%; }
+.Core p a, .Core p a:active, .Core p a:hover, .Core p a:visited { border-bottom: 1px #000 solid; }
 
 .Core p a:active, .Core p a:hover
 {
@@ -161,51 +137,3 @@ ul, li
 
 /**************************************************************************************************/
 .Core .Text .Padding { padding: 15px 0 15px 0; }
-
-/**************************************************************************************************/
-.PixelBoxWrapper,
-.PixelBox,
-.PixelBoxOverlay,
-.PixelBoxContainer
-{
-	float: left;
-	display: inline;
-	position: relative;
-}
-
-.PixelBox
-{
-	margin: 0;
-	padding: 0;
-	border: 0;
-	height: 10px;
-	width: 10px;
-	font-size: 0;
-	line-height: 0;
-	/* background-image: url('brick.png'); */
-	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGZJREFUeNp8jwEKwDAIAzVz3f9f3HUSIZN1wtGWJlHdzJw8dZBzMRYXzwH7rinkG5LmPwaLBUTomw4enMlEDPK6B1O7MGSxFAc3m619bV6GFI42D/hZ3dJQiV0IEWbqLhEyY3ILMAC+wAfRv/+3UQAAAABJRU5ErkJggg==');
-	background-position: center center;
-	background-repeat: no-repeat;
-}
-
-.PixelBoxOverlay
-{
-	margin: 4px 4px 4px 4px;
-	padding: 0;
-	height: 3px;
-	width: 3px;
-	background-color: #000;
-	/* opacity: 0.05; */
-	/* filter: alpha(opacity=5); */
-	/* background-image: url('dot.png'); */
-	/* background-position: center center; */
-	/* background-repeat: no-repeat; */
-	/* border-top-left-radius: 3px; */
-	/* border-top-right-radius: 3px; */
-	/* border-bottom-left-radius: 3px; */
-	/* border-bottom-right-radius: 3px; */
-	/* border-top: 1px #666 solid; */
-	/* border-right: 1px black solid; */
-	/* border-bottom: 1px black solid; */
-	/* border-left: 1px #666 solid; */
-}
