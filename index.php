@@ -24,7 +24,7 @@
 //**************************************************************************************//
 // Set the mode.
 
-$mode = 'large';
+$mode = 'mega';
 
 //**************************************************************************************//
 // Set the sundry metadata stuff.
@@ -159,7 +159,7 @@ echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www
    . '<script src="script/json2.js" type="text/javascript"></script>'
    . '<script type="text/javascript" src="script/jquery/jquery-1.10.2.min.js"></script>'
    . '<script type="text/javascript" src="script/jquery/jquery.noconflict.js"></script>'
-   #  . '<script type="text/javascript" src="script/common.js"></script>'
+   # . '<script type="text/javascript" src="script/common.js"></script>'
 
    . '</head>'
    . '<body>'
