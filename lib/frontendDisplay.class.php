@@ -185,8 +185,8 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
-  // Set the body.
-  function setBody($md_file = null) {
+  // Load the markdown file.
+  function loadMarkdown($md_file = null) {
 
     if (empty($md_file)) {
       return;
@@ -197,7 +197,7 @@ class frontendDisplay {
 
     return $ret;
 
-  } // setBody
+  } // loadMarkdown
 
 
   //**************************************************************************************//
