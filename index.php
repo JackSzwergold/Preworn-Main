@@ -117,18 +117,30 @@ $favicons[] = '<!-- For iPhone: -->'
             . '<link rel="apple-touch-icon-precomposed" href="favicons/apple-touch-icon-57x57-precomposed.png" />'
             ;
 
+//**************************************************************************************//
+// Doctype.
+
+if (FALSE) {
+  $doctype = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">';
+  $html = '<html xmlns="http://www.w3.org/1999/xhtml">';
+  $meta_copyright = '<meta name="copyright" content="(c) copyright ' . date('Y') . ' jack szwergold. all rights reserved." />';
+}
+else {
+  $doctype = '<!DOCTYPE html>';
+  $html = '<html lang="en">';
+  $meta_copyright = '<meta name="dcterms.rightsHolder" content="(c) copyright ' . date('Y') . ' jack szwergold. all rights reserved.">';
+}
 
 //**************************************************************************************//
 // Return the output.
 
-echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">'
-   . '<html xmlns="http://www.w3.org/1999/xhtml">'
+echo $doctype
+   . $html
    . '<head>'
-
    . '<title>preworn</title>'
    . '<meta http-equiv="content-type" content="text/html; charset=utf-8" />'
    . '<meta name="description" content="' . $description . '" />'
-   . '<meta name="copyright" content="(c) copyright ' . date('Y') . ' jack szwergold. all rights reserved." />'
+   . $meta_copyright
    . '<meta property="og:title" content="image mosaic" />'
    . '<meta property="og:description" content="' . $description . '" />'
    . '<meta property="og:type" content="website" />'
