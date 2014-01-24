@@ -8,6 +8,7 @@
  * Created: 2014-01-22, js
  * Version: 2014-01-22, js: creation
  *          2014-01-22, js: development & cleanup
+ *          2014-01-23, js: refinements
  *
  */
 
@@ -21,16 +22,18 @@ class frontendDisplay {
   private $content_type = 'text/html';
   private $charset = 'utf-8';
   private $doctype = 'html5';
-  private $view_mode = '';
-  private $page_description = '';
-  private $body = '';
 
   private $json_encode = FALSE;
   private $json_via_header = FALSE;
 
   private $params = array();
 
-  private $content = NULL;
+  private $view_mode = NULL;
+  private $page_title = NULL;
+  private $page_description = NULL;
+  private $page_content = NULL;
+
+  private $page_markdown_file = NULL;
 
   public function __construct($content_type = NULL, $charset = NULL, $json_encode = NULL, $DEBUG_MODE = NULL) {
     global $VALID_CONTENT_TYPES, $VALID_CHARSETS;
@@ -67,9 +70,23 @@ class frontendDisplay {
 
   //**************************************************************************************//
   // Set the page description.
+  function setPageTitle($page_title = null) {
+    $this->page_title = $page_title;
+  } // setPageTitle
+
+
+  //**************************************************************************************//
+  // Set the page description.
   function setPageDescription($page_description = null) {
     $this->page_description = $page_description;
   } // setPageDescription
+
+
+  //**************************************************************************************//
+  // Set the page conntent markdown file.
+  function setPageContentMarkdown($md_file = null) {
+    $this->page_markdown_file = $md_file;
+  } // setPageContentMarkdown
 
 
   //**************************************************************************************//
@@ -137,6 +154,22 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
+  // Load the markdown file.
+  function loadMarkdown($md_file = null) {
+
+    if (empty($md_file)) {
+      return;
+    }
+
+    $md_file = file_get_contents($md_file);
+    $ret = Parsedown::instance()->parse($md_file);
+
+    return $ret;
+
+  } // loadMarkdown
+
+
+  //**************************************************************************************//
   // Set the wrapper.
   function setWrapper($body = null) {
 
@@ -185,22 +218,6 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
-  // Load the markdown file.
-  function loadMarkdown($md_file = null) {
-
-    if (empty($md_file)) {
-      return;
-    }
-
-    $md_file = file_get_contents($md_file);
-    $ret = Parsedown::instance()->parse($md_file);
-
-    return $ret;
-
-  } // loadMarkdown
-
-
-  //**************************************************************************************//
   // Set the doctype.
   function setDoctype() {
 
@@ -239,63 +256,79 @@ class frontendDisplay {
 
   //**************************************************************************************//
   // Init the content.
-  function initContent($content, $response_header = NULL) {
+  function initContent($response_header = NULL) {
     global $VALID_CONTROLLERS;
+
+    //**************************************************************************************//
+    // Filtrer the URL parameters
 
     $this->filterURLParameters();
 
     //**************************************************************************************//
-    // Set the favicons
+    // Load the markdown content.
 
-    $meta_content = $this->setMetacontent($this->page_description);
+    $content = '';
+    if (!empty($this->page_markdown_file)) {
+      $content = $this->loadMarkdown($this->page_markdown_file);
+    }
 
-    //**************************************************************************************//
-    // Set the favicons
-
-    $favicons = $this->setFavicons();
-
-    //**************************************************************************************//
-    // Set the HTML/XHTML doctype.
-
-    $doctype = $this->setDoctype();
-
-
-    //**************************************************************************************//
-    // Set the JavaScript.
-
-    $javascript = $this->setJavaScript();
-
-
-    //**************************************************************************************//
-    // Set the view wrapper.
-
-    $body = sprintf('<div class="%sView">', $this->view_mode)
-          . $this->setWrapper($content)
-          . sprintf('</div><!-- .%sView -->', $this->view_mode)
-          ;
-
-    //**************************************************************************************//
-    // Set the final content.
-
-    $ret = $doctype
-         . '<head>'
-         . '<title>preworn</title>'
-         . join('', $meta_content)
-         . '<link rel="stylesheet" href="css/style.css" type="text/css" />'
-         . join('', $favicons)
-         . join('', $javascript)
-         . '</head>'
-         . '<body>'
-         . $body
-         . '</body>'
-         . '</html>'
-         ;
-
-    //**************************************************************************************//
-    // Return the output.
+    //**********************************************************************************//
+    // If the content is not empty, do something with it.
 
     if (!empty($content)) {
+    
+      //**********************************************************************************//
+      // Set the favicons
+
+      $meta_content = $this->setMetacontent($this->page_description);
+
+      //**********************************************************************************//
+      // Set the favicons
+
+      $favicons = $this->setFavicons();
+
+      //**********************************************************************************//
+      // Set the HTML/XHTML doctype.
+
+      $doctype = $this->setDoctype();
+
+
+      //**********************************************************************************//
+      // Set the JavaScript.
+
+      $javascript = $this->setJavaScript();
+
+
+      //**********************************************************************************//
+      // Set the view wrapper.
+
+      $body = sprintf('<div class="%sView">', $this->view_mode)
+            . $this->setWrapper($content)
+            . sprintf('</div><!-- .%sView -->', $this->view_mode)
+            ;
+
+       //**********************************************************************************//
+      // Set the final content.
+
+      $ret = $doctype
+           . '<head>'
+           . '<title>' . $this->page_title . '</title>'
+           . join('', $meta_content)
+           . '<link rel="stylesheet" href="css/style.css" type="text/css" />'
+           . join('', $favicons)
+           . join('', $javascript)
+           . '</head>'
+           . '<body>'
+           . $body
+           . '</body>'
+           . '</html>'
+           ;
+
+      //**********************************************************************************//
+      // Return the output.
+    
       $this->renderContent($ret, $response_header);
+
     }
 
   } // initContent
