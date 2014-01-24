@@ -97,6 +97,90 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
+  // Init the content.
+  function initContent($response_header = NULL) {
+    global $VALID_CONTROLLERS;
+
+    //**************************************************************************************//
+    // Filtrer the URL parameters
+
+    $this->filterURLParameters();
+
+    //**************************************************************************************//
+    // Load the markdown content.
+
+    $content = '';
+    if (!empty($this->content)) {
+      $content = $this->content;
+    }
+    else if (!empty($this->page_markdown_file)) {
+      $content = $this->loadMarkdown($this->page_markdown_file);
+    }
+    
+
+    //**********************************************************************************//
+    // If the content is not empty, do something with it.
+
+    if (!empty($content)) {
+    
+      //**********************************************************************************//
+      // Set the favicons
+
+      $meta_content = $this->setMetacontent($this->page_description);
+
+      //**********************************************************************************//
+      // Set the favicons
+
+      $favicons = $this->setFavicons();
+
+      //**********************************************************************************//
+      // Set the HTML/XHTML doctype.
+
+      $doctype = $this->setDoctype();
+
+
+      //**********************************************************************************//
+      // Set the JavaScript.
+
+      $javascript = $this->setJavaScript();
+
+
+      //**********************************************************************************//
+      // Set the view wrapper.
+
+      $body = sprintf('<div class="%sView">', $this->view_mode)
+            . $this->setWrapper($content)
+            . sprintf('</div><!-- .%sView -->', $this->view_mode)
+            ;
+
+       //**********************************************************************************//
+      // Set the final content.
+
+      $ret = $doctype
+           . '<head>'
+           . '<title>' . $this->page_title . '</title>'
+           . join('', $meta_content)
+           . '<link rel="stylesheet" href="css/style.css" type="text/css" />'
+           . join('', $favicons)
+           . join('', $javascript)
+           . '</head>'
+           . '<body>'
+           . $body
+           . '</body>'
+           . '</html>'
+           ;
+
+      //**********************************************************************************//
+      // Return the output.
+    
+      $this->renderContent($ret, $response_header);
+
+    }
+
+  } // initContent
+
+
+  //**************************************************************************************//
   // Set the favicons.
   function setFavicons() {
 
@@ -259,90 +343,6 @@ class frontendDisplay {
     return $ret;
 
   } // setJavaScript
-
-
-  //**************************************************************************************//
-  // Init the content.
-  function initContent($response_header = NULL) {
-    global $VALID_CONTROLLERS;
-
-    //**************************************************************************************//
-    // Filtrer the URL parameters
-
-    $this->filterURLParameters();
-
-    //**************************************************************************************//
-    // Load the markdown content.
-
-    $content = '';
-    if (!empty($this->content)) {
-      $content = $this->content;
-    }
-    else if (!empty($this->page_markdown_file)) {
-      $content = $this->loadMarkdown($this->page_markdown_file);
-    }
-    
-
-    //**********************************************************************************//
-    // If the content is not empty, do something with it.
-
-    if (!empty($content)) {
-    
-      //**********************************************************************************//
-      // Set the favicons
-
-      $meta_content = $this->setMetacontent($this->page_description);
-
-      //**********************************************************************************//
-      // Set the favicons
-
-      $favicons = $this->setFavicons();
-
-      //**********************************************************************************//
-      // Set the HTML/XHTML doctype.
-
-      $doctype = $this->setDoctype();
-
-
-      //**********************************************************************************//
-      // Set the JavaScript.
-
-      $javascript = $this->setJavaScript();
-
-
-      //**********************************************************************************//
-      // Set the view wrapper.
-
-      $body = sprintf('<div class="%sView">', $this->view_mode)
-            . $this->setWrapper($content)
-            . sprintf('</div><!-- .%sView -->', $this->view_mode)
-            ;
-
-       //**********************************************************************************//
-      // Set the final content.
-
-      $ret = $doctype
-           . '<head>'
-           . '<title>' . $this->page_title . '</title>'
-           . join('', $meta_content)
-           . '<link rel="stylesheet" href="css/style.css" type="text/css" />'
-           . join('', $favicons)
-           . join('', $javascript)
-           . '</head>'
-           . '<body>'
-           . $body
-           . '</body>'
-           . '</html>'
-           ;
-
-      //**********************************************************************************//
-      // Return the output.
-    
-      $this->renderContent($ret, $response_header);
-
-    }
-
-  } // initContent
 
 
   //**************************************************************************************//
