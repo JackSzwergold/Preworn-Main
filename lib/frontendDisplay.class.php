@@ -83,10 +83,17 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
-  // Set the page conntent markdown file.
+  // Set the page content markdown file.
   function setPageContentMarkdown($md_file = null) {
     $this->page_markdown_file = $md_file;
   } // setPageContentMarkdown
+
+
+  //**************************************************************************************//
+  // Set the page content file.
+  function setPageContent($content = null) {
+    $this->content = $content;
+  } // setPageContent
 
 
   //**************************************************************************************//
@@ -268,9 +275,13 @@ class frontendDisplay {
     // Load the markdown content.
 
     $content = '';
-    if (!empty($this->page_markdown_file)) {
+    if (!empty($this->content)) {
+      $content = $this->content;
+    }
+    else if (!empty($this->page_markdown_file)) {
       $content = $this->loadMarkdown($this->page_markdown_file);
     }
+    
 
     //**********************************************************************************//
     // If the content is not empty, do something with it.

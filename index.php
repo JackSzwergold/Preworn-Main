@@ -41,6 +41,7 @@ $frontendDisplayClass->setViewMode('mega');
 $frontendDisplayClass->setPageTitle('preworn');
 $frontendDisplayClass->setPageDescription('this site is jack szwergold’s the calling card, gallery, portfolio, playground, white wall, black box, idea sandbox &amp; daily distraction.');
 $frontendDisplayClass->setPageContentMarkdown('index.md');
+$frontendDisplayClass->setPageContent('Hello, world!');
 $frontendDisplayClass->initContent();
 
 
