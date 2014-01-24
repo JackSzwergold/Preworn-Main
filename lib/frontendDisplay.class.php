@@ -126,7 +126,7 @@ class frontendDisplay {
       //**********************************************************************************//
       // Set the favicons
 
-      $meta_content = $this->setMetacontent($this->page_description);
+      $meta_content = $this->setMetaTags($this->page_description);
 
       //**********************************************************************************//
       // Set the favicons
@@ -181,30 +181,77 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
-  // Set the favicons.
-  function setFavicons() {
+  // Set the doctype.
+  function setDoctype() {
+
+    $ret = '';
+
+    if ($this->doctype == 'xhtml') {
+      $ret = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">'
+           . '<html xmlns="http://www.w3.org/1999/xhtml">'
+           ;
+    }
+    else if ($this->doctype == 'html5') {
+      $ret = '<!DOCTYPE html>'
+           . '<html lang="en">'
+           ;
+    }
+
+    return $ret;
+
+   } // setDoctype
+
+
+  //**************************************************************************************//
+  // Set the JavaScript.
+  function setJavaScript() {
 
     $ret = array();
 
-    $ret[] = '<!-- Opera Speed Dial Favicon -->'
-           . '<link rel="icon" type="image/png" href="favicons/speeddial-160px.png" />'
-           ;
+    $ret[] = '<script src="script/json2.js" type="text/javascript"></script>';
+    $ret[] = '<script type="text/javascript" src="script/jquery/jquery-1.10.2.min.js"></script>';
+    $ret[] = '<script type="text/javascript" src="script/jquery/jquery.noconflict.js"></script>';
+    # $ret[] = '<script type="text/javascript" src="script/common.js"></script>';
 
-    $ret[] = '<!-- Standard Favicon -->'
-           . '<link rel="icon" type="image/x-icon" href="favicons/favicon.ico" />'
-           ;
+    return $ret;
 
-    $ret[] = '<!-- For iPhone 4 Retina display: -->'
-           . '<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicons/apple-touch-icon-114x114-precomposed.png" />'
-           ;
+  } // setJavaScript
 
-    $ret[] = '<!-- For iPad: -->'
-           . '<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicons/apple-touch-icon-72x72-precomposed.png" />'
-           ;
 
-    $ret[] = '<!-- For iPhone: -->'
-           . '<link rel="apple-touch-icon-precomposed" href="favicons/apple-touch-icon-57x57-precomposed.png" />'
-           ;
+  //**************************************************************************************//
+  // Set the favicons.
+  function setFavicons() {
+
+    $favicon_array = array();
+
+    $favicon_array['standard']['rel'] = 'icon';
+    $favicon_array['standard']['type'] = 'image/png';
+    $favicon_array['standard']['href'] = 'favicons/favicon.ico';
+
+    $favicon_array['opera']['rel'] = 'icon';
+    $favicon_array['opera']['type'] = 'image/png';
+    $favicon_array['opera']['href'] = 'favicons/speeddial-160px.png';
+
+    $favicon_array['iphone']['rel'] = 'apple-touch-icon-precomposed';
+    $favicon_array['iphone']['href'] = 'favicons/apple-touch-icon-57x57-precomposed.png';
+
+    $favicon_array['iphone4_retina']['rel'] = 'apple-touch-icon-precomposed';
+    $favicon_array['iphone4_retina']['sizes'] = '114x114';
+    $favicon_array['iphone4_retina']['href'] = 'favicons/apple-touch-icon-114x114-precomposed.png';
+
+    $favicon_array['ipad']['rel'] = 'apple-touch-icon-precomposed';
+    $favicon_array['ipad']['sizes'] = '72x72';
+    $favicon_array['ipad']['href'] = 'favicons/apple-touch-icon-72x72-precomposed.png';
+
+    $ret = array();
+    foreach ($favicon_array as $favicon_type => $favicon_parts) {
+      $parts = array();
+      foreach ($favicon_parts as $favicon_key => $favicon_value) {
+        $parts[] = $favicon_key . '="' .$favicon_value . '"';
+      }
+      $ret[$favicon_type] = sprintf('<!-- %s favicon -->', $favicon_type);
+      $ret[$favicon_type] .= sprintf('<link %s />', join(' ', $parts));
+    }
 
     return $ret;
 
@@ -214,33 +261,56 @@ class frontendDisplay {
   //**************************************************************************************//
   // Set the meta content.
 
-  function setMetacontent($description = null) {
+  function setMetaTags($description = null) {
 
-    $meta_copyright = '';
+    // Set the meta property values.
+    $meta_http_equiv_array = array();
+    $meta_http_equiv_array['content-type'] = 'text/html; charset=utf-8';
+
+    // Set the meta property values.
+    $meta_name_array = array();
+    $meta_name_array['description'] = $description;
+    $meta_name_array['robots'] = 'noindex, nofollow';
+    $meta_name_array['viewport'] = 'width=device-width, initial-scale=0.4, maximum-scale=2, minimum-scale=0.4, user-scalable=yes';
+
+    // The copyright changes between 'xhtml' & 'html5'
+    $copyright_key = '';
     if ($this->doctype == 'xhtml') {
-      $meta_copyright = '<meta name="copyright" content="(c) copyright ' . date('Y') . ' jack szwergold. all rights reserved." />';
+      $copyright_key = 'copyright';
     }
     else if ($this->doctype == 'html5') {
-      $meta_copyright = '<meta name="dcterms.rightsHolder" content="(c) copyright ' . date('Y') . ' jack szwergold. all rights reserved.">';
+      $copyright_key = 'dcterms.rightsHolder';
     }
+    if (!empty($copyright_key)) {
+      $meta_name_array[$copyright_key] = '(c) copyright ' . date('Y') . ' jack szwergold. all rights reserved.';
+    }
+
+    // Set the meta property values.
+    $meta_property_array = array();
+    $meta_property_array['og:title'] = 'preworn';
+    $meta_property_array['og:description'] = $description;
+    $meta_property_array['og:type'] = 'website';
+    $meta_property_array['og:locale'] = 'en_US';
+    $meta_property_array['og:url'] = 'http://www.preworn.com/';
+    $meta_property_array['og:site_name'] = 'preworn';
 
     $ret = array();
 
-    $ret[] = '<meta http-equiv="content-type" content="text/html; charset=utf-8" />';
-    $ret[] = '<meta name="description" content="' . $description . '" />';
-    $ret[] = $meta_copyright;
-    $ret[] = '<meta property="og:title" content="image mosaic" />';
-    $ret[] = '<meta property="og:description" content="' . $description . '" />';
-    $ret[] = '<meta property="og:type" content="website" />';
-    $ret[] = '<meta property="og:locale" content="en_US" />';
-    $ret[] = '<meta property="og:url" content="http://www.preworn.com/" />';
-    $ret[] = '<meta property="og:site_name" content="preworn" />';
-    $ret[] = '<meta name="robots" content="noindex,nofollow" />';
-    $ret[] = '<meta name="viewport" content="width=device-width, initial-scale=0.4, maximum-scale=2, minimum-scale=0.4, user-scalable=yes" />';
+    foreach($meta_http_equiv_array as $http_equiv => $content) {
+      $ret[] = sprintf('<meta name="%s" content="%s" />', $http_equiv, $content);
+    }
+
+    foreach($meta_name_array as $name => $content) {
+      $ret[] = sprintf('<meta name="%s" content="%s" />', $name, $content);
+    }
+
+    foreach($meta_property_array as $property => $content) {
+      $ret[] = sprintf('<meta property="%s" content="%s" />', $property, $content);
+    }
 
     return $ret;
 
-  } // setMetacontent
+  } // setMetaTags
 
 
   //**************************************************************************************//
@@ -305,43 +375,6 @@ class frontendDisplay {
     return $ret;
 
   } // setWrapper
-
-
-  //**************************************************************************************//
-  // Set the doctype.
-  function setDoctype() {
-
-    $ret = '';
-    if ($this->doctype == 'xhtml') {
-      $ret = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">'
-           . '<html xmlns="http://www.w3.org/1999/xhtml">'
-           ;
-    }
-    else if ($this->doctype == 'html5') {
-      $ret = '<!DOCTYPE html>'
-           . '<html lang="en">'
-           ;
-    }
-
-    return $ret;
-
-   } // setDoctype
-
-
-  //**************************************************************************************//
-  // Set the JavaScript.
-  function setJavaScript() {
-
-    $ret = array();
-
-    $ret[] = '<script src="script/json2.js" type="text/javascript"></script>';
-    $ret[] = '<script type="text/javascript" src="script/jquery/jquery-1.10.2.min.js"></script>';
-    $ret[] = '<script type="text/javascript" src="script/jquery/jquery.noconflict.js"></script>';
-    # $ret[] = '<script type="text/javascript" src="script/common.js"></script>';
-
-    return $ret;
-
-  } // setJavaScript
 
 
   //**************************************************************************************//
