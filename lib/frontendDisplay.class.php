@@ -116,13 +116,12 @@ class frontendDisplay {
     else if (!empty($this->page_markdown_file)) {
       $content = $this->loadMarkdown($this->page_markdown_file);
     }
-    
 
     //**********************************************************************************//
     // If the content is not empty, do something with it.
 
     if (!empty($content)) {
-    
+
       //**********************************************************************************//
       // Set the favicons
 
@@ -172,7 +171,7 @@ class frontendDisplay {
 
       //**********************************************************************************//
       // Return the output.
-    
+
       $this->renderContent($ret, $response_header);
 
     }
@@ -206,12 +205,18 @@ class frontendDisplay {
   // Set the JavaScript.
   function setJavaScript() {
 
-    $ret = array();
+    // Set the javascript values.
+    $javascripts = array();
+    $javascripts[] = 'script/json2.js';
+    $javascripts[] = 'script/jquery/jquery-1.10.2.min.js';
+    $javascripts[] = 'script/jquery/jquery.noconflict.js';
+    // $javascripts[] = 'script/common.js';
 
-    $ret[] = '<script src="script/json2.js" type="text/javascript"></script>';
-    $ret[] = '<script type="text/javascript" src="script/jquery/jquery-1.10.2.min.js"></script>';
-    $ret[] = '<script type="text/javascript" src="script/jquery/jquery.noconflict.js"></script>';
-    # $ret[] = '<script type="text/javascript" src="script/common.js"></script>';
+    // Roll through the '$javascripts'
+    $ret = array();
+    foreach($javascripts as $javascript) {
+      $ret[] = sprintf('<script src="%s" type="%s"></script>', $javascript, 'text/javascript');
+    }
 
     return $ret;
 
@@ -222,29 +227,29 @@ class frontendDisplay {
   // Set the favicons.
   function setFavicons() {
 
-    $favicon_array = array();
+    $favicons = array();
 
-    $favicon_array['standard']['rel'] = 'icon';
-    $favicon_array['standard']['type'] = 'image/png';
-    $favicon_array['standard']['href'] = 'favicons/favicon.ico';
+    $favicons['standard']['rel'] = 'icon';
+    $favicons['standard']['type'] = 'image/png';
+    $favicons['standard']['href'] = 'favicons/favicon.ico';
 
-    $favicon_array['opera']['rel'] = 'icon';
-    $favicon_array['opera']['type'] = 'image/png';
-    $favicon_array['opera']['href'] = 'favicons/speeddial-160px.png';
+    $favicons['opera']['rel'] = 'icon';
+    $favicons['opera']['type'] = 'image/png';
+    $favicons['opera']['href'] = 'favicons/speeddial-160px.png';
 
-    $favicon_array['iphone']['rel'] = 'apple-touch-icon-precomposed';
-    $favicon_array['iphone']['href'] = 'favicons/apple-touch-icon-57x57-precomposed.png';
+    $favicons['iphone']['rel'] = 'apple-touch-icon-precomposed';
+    $favicons['iphone']['href'] = 'favicons/apple-touch-icon-57x57-precomposed.png';
 
-    $favicon_array['iphone4_retina']['rel'] = 'apple-touch-icon-precomposed';
-    $favicon_array['iphone4_retina']['sizes'] = '114x114';
-    $favicon_array['iphone4_retina']['href'] = 'favicons/apple-touch-icon-114x114-precomposed.png';
+    $favicons['iphone4_retina']['rel'] = 'apple-touch-icon-precomposed';
+    $favicons['iphone4_retina']['sizes'] = '114x114';
+    $favicons['iphone4_retina']['href'] = 'favicons/apple-touch-icon-114x114-precomposed.png';
 
-    $favicon_array['ipad']['rel'] = 'apple-touch-icon-precomposed';
-    $favicon_array['ipad']['sizes'] = '72x72';
-    $favicon_array['ipad']['href'] = 'favicons/apple-touch-icon-72x72-precomposed.png';
+    $favicons['ipad']['rel'] = 'apple-touch-icon-precomposed';
+    $favicons['ipad']['sizes'] = '72x72';
+    $favicons['ipad']['href'] = 'favicons/apple-touch-icon-72x72-precomposed.png';
 
     $ret = array();
-    foreach ($favicon_array as $favicon_type => $favicon_parts) {
+    foreach ($favicons as $favicon_type => $favicon_parts) {
       $parts = array();
       foreach ($favicon_parts as $favicon_key => $favicon_value) {
         $parts[] = $favicon_key . '="' .$favicon_value . '"';
@@ -264,14 +269,14 @@ class frontendDisplay {
   function setMetaTags($description = null) {
 
     // Set the meta property values.
-    $meta_http_equiv_array = array();
-    $meta_http_equiv_array['content-type'] = 'text/html; charset=utf-8';
+    $meta_http_equivs = array();
+    $meta_http_equivs['content-type'] = 'text/html; charset=utf-8';
 
     // Set the meta property values.
-    $meta_name_array = array();
-    $meta_name_array['description'] = $description;
-    $meta_name_array['robots'] = 'noindex, nofollow';
-    $meta_name_array['viewport'] = 'width=device-width, initial-scale=0.4, maximum-scale=2, minimum-scale=0.4, user-scalable=yes';
+    $meta_names = array();
+    $meta_names['description'] = $description;
+    $meta_names['robots'] = 'noindex, nofollow';
+    $meta_names['viewport'] = 'width=device-width, initial-scale=0.4, maximum-scale=2, minimum-scale=0.4, user-scalable=yes';
 
     // The copyright changes between 'xhtml' & 'html5'
     $copyright_key = '';
@@ -282,29 +287,32 @@ class frontendDisplay {
       $copyright_key = 'dcterms.rightsHolder';
     }
     if (!empty($copyright_key)) {
-      $meta_name_array[$copyright_key] = '(c) copyright ' . date('Y') . ' jack szwergold. all rights reserved.';
+      $meta_names[$copyright_key] = '(c) copyright ' . date('Y') . ' jack szwergold. all rights reserved.';
     }
 
     // Set the meta property values.
-    $meta_property_array = array();
-    $meta_property_array['og:title'] = 'preworn';
-    $meta_property_array['og:description'] = $description;
-    $meta_property_array['og:type'] = 'website';
-    $meta_property_array['og:locale'] = 'en_US';
-    $meta_property_array['og:url'] = 'http://www.preworn.com/';
-    $meta_property_array['og:site_name'] = 'preworn';
+    $meta_properties = array();
+    $meta_properties['og:title'] = 'preworn';
+    $meta_properties['og:description'] = $description;
+    $meta_properties['og:type'] = 'website';
+    $meta_properties['og:locale'] = 'en_US';
+    $meta_properties['og:url'] = 'http://www.preworn.com/';
+    $meta_properties['og:site_name'] = 'preworn';
 
     $ret = array();
 
-    foreach($meta_http_equiv_array as $http_equiv => $content) {
-      $ret[] = sprintf('<meta name="%s" content="%s" />', $http_equiv, $content);
+    // Roll through the '$meta_http_equivs'
+    foreach($meta_http_equivs as $http_equiv => $content) {
+      $ret[] = sprintf('<meta http-equiv="%s" content="%s" />', $http_equiv, $content);
     }
 
-    foreach($meta_name_array as $name => $content) {
+    // Roll through the '$meta_names'
+    foreach($meta_names as $name => $content) {
       $ret[] = sprintf('<meta name="%s" content="%s" />', $name, $content);
     }
 
-    foreach($meta_property_array as $property => $content) {
+    // Roll through the '$meta_properties'
+    foreach($meta_properties as $property => $content) {
       $ret[] = sprintf('<meta property="%s" content="%s" />', $property, $content);
     }
 
