@@ -235,7 +235,6 @@ class frontendDisplay {
     $ret[] = '<meta property="og:locale" content="en_US" />';
     $ret[] = '<meta property="og:url" content="http://www.preworn.com/" />';
     $ret[] = '<meta property="og:site_name" content="preworn" />';
-    $ret[] = '<meta property="og:image" content="http://www.preworn.com/favicons/speeddial-160px.png" />';
     $ret[] = '<meta name="robots" content="noindex,nofollow" />';
     $ret[] = '<meta name="viewport" content="width=device-width, initial-scale=0.4, maximum-scale=2, minimum-scale=0.4, user-scalable=yes" />';
 
