@@ -42,6 +42,8 @@ $frontendDisplayClass->setPageTitle('preworn');
 $frontendDisplayClass->setPageDescription('this site is jack szwergold’s the calling card, gallery, portfolio, playground, white wall, black box, idea sandbox &amp; daily distraction.');
 $frontendDisplayClass->setPageContentMarkdown('index.md');
 // $frontendDisplayClass->setPageContent('Hello world!');
+$frontendDisplayClass->setPageViewport('width=device-width, initial-scale=0.4, maximum-scale=2, minimum-scale=0.4, user-scalable=yes');
+$frontendDisplayClass->setPageRobots('noindex, nofollow');
 $frontendDisplayClass->initContent();
 
 

@@ -32,6 +32,9 @@ class frontendDisplay {
   private $page_title = NULL;
   private $page_description = NULL;
   private $page_content = NULL;
+  
+  private $page_viewport = '';
+  private $page_robots = '';
 
   private $page_markdown_file = NULL;
 
@@ -90,10 +93,24 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
-  // Set the page content file.
+  // Set the page content.
   function setPageContent($content = null) {
     $this->content = $content;
   } // setPageContent
+
+
+  //**************************************************************************************//
+  // Set the page content.
+  function setPageViewport($page_viewport = null) {
+    $this->page_viewport = $page_viewport;
+  } // setPageViewport
+
+
+  //**************************************************************************************//
+  // Set the page robots.
+  function setPageRobots($page_robots = null) {
+    $this->page_robots = $page_robots;
+  } // setPageRobots
 
 
   //**************************************************************************************//
@@ -125,7 +142,7 @@ class frontendDisplay {
       //**********************************************************************************//
       // Set the favicons
 
-      $meta_content = $this->setMetaTags($this->page_description);
+      $meta_content = $this->setMetaTags($this->page_description, $this->page_viewport, $this->page_robots);
 
       //**********************************************************************************//
       // Set the favicons
@@ -266,7 +283,7 @@ class frontendDisplay {
   //**************************************************************************************//
   // Set the meta content.
 
-  function setMetaTags($description = null) {
+  function setMetaTags($description = null, $viewport = null, $robots = null) {
 
     // Set the meta property values.
     $meta_http_equivs = array();
@@ -274,10 +291,16 @@ class frontendDisplay {
 
     // Set the meta property values.
     $meta_names = array();
-    $meta_names['description'] = $description;
-    $meta_names['robots'] = 'noindex, nofollow';
-    $meta_names['viewport'] = 'width=device-width, initial-scale=0.4, maximum-scale=2, minimum-scale=0.4, user-scalable=yes';
-
+    if (!empty($description)) {
+      $meta_names['description'] = $description;
+    }
+    if (!empty($viewport)) {
+      $meta_names['viewport'] = $viewport;
+    }
+    if (!empty($robots)) {
+      $meta_names['robots'] = $robots;
+    }
+ 
     // The copyright changes between 'xhtml' & 'html5'
     $copyright_key = '';
     if ($this->doctype == 'xhtml') {
@@ -292,12 +315,14 @@ class frontendDisplay {
 
     // Set the meta property values.
     $meta_properties = array();
-    $meta_properties['og:title'] = 'preworn';
-    $meta_properties['og:description'] = $description;
+    $meta_properties['og:title'] = $this->page_title;
+    if (!empty($description)) {
+      $meta_properties['og:description'] = $description;
+    }
     $meta_properties['og:type'] = 'website';
     $meta_properties['og:locale'] = 'en_US';
     $meta_properties['og:url'] = 'http://www.preworn.com/';
-    $meta_properties['og:site_name'] = 'preworn';
+    $meta_properties['og:site_name'] = $this->page_title;
 
     $ret = array();
 
