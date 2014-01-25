@@ -44,6 +44,7 @@ $frontendDisplayClass->setPageContentMarkdown('index.md');
 // $frontendDisplayClass->setPageContent('Hello world!');
 $frontendDisplayClass->setPageViewport('width=device-width, initial-scale=0.4, maximum-scale=2, minimum-scale=0.4, user-scalable=yes');
 $frontendDisplayClass->setPageRobots('noindex, nofollow');
+// $frontendDisplayClass->setJavascripts(array('script/common.js'));
 $frontendDisplayClass->initContent();
 
 

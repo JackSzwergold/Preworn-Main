@@ -28,6 +28,8 @@ class frontendDisplay {
 
   private $params = array();
 
+  private $javascripts = array();
+
   private $view_mode = NULL;
   private $page_title = NULL;
   private $page_description = NULL;
@@ -111,6 +113,13 @@ class frontendDisplay {
   function setPageRobots($page_robots = null) {
     $this->page_robots = $page_robots;
   } // setPageRobots
+
+
+  //**************************************************************************************//
+  // Set the additional javascripts.
+  function setJavascripts($javascripts = null) {
+    $this->javascripts = $javascripts;
+  } // setJavascripts
 
 
   //**************************************************************************************//
@@ -227,7 +236,9 @@ class frontendDisplay {
     $javascripts[] = 'script/json2.js';
     $javascripts[] = 'script/jquery/jquery-1.10.2.min.js';
     $javascripts[] = 'script/jquery/jquery.noconflict.js';
-    // $javascripts[] = 'script/common.js';
+
+    // Merge the base JavaScripts with the passed array of javasccripts.
+    $javascripts = array_merge($javascripts, $this->javascripts);
 
     // Roll through the '$javascripts'
     $ret = array();
