@@ -235,6 +235,7 @@ class frontendDisplay {
     $javascripts = array();
     $javascripts[] = 'script/json2.js';
     $javascripts[] = 'script/jquery/jquery-1.10.2.min.js';
+    $javascripts[] = 'script/jquery/jquery-1.10.2.min.map';
     $javascripts[] = 'script/jquery/jquery.noconflict.js';
 
     // Merge the base JavaScripts with the passed array of javasccripts.
@@ -299,6 +300,7 @@ class frontendDisplay {
     // Set the meta property values.
     $meta_http_equivs = array();
     $meta_http_equivs['content-type'] = 'text/html; charset=utf-8';
+    $meta_http_equivs['imagetoolbar'] = 'no';
 
     // Set the meta property values.
     $meta_names = array();
@@ -323,6 +325,7 @@ class frontendDisplay {
     if (!empty($copyright_key)) {
       $meta_names[$copyright_key] = '(c) copyright ' . date('Y') . ' jack szwergold. all rights reserved.';
     }
+    $meta_names['apple-mobile-web-app-capable'] = 'yes';
 
     // Set the meta property values.
     $meta_properties = array();
