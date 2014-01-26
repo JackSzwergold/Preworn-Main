@@ -300,7 +300,7 @@ class frontendDisplay {
     // Set the meta property values.
     $meta_http_equivs = array();
     $meta_http_equivs['content-type'] = 'text/html; charset=utf-8';
-    $meta_http_equivs['imagetoolbar'] = 'no';
+    // $meta_http_equivs['imagetoolbar'] = 'no';
 
     // Set the meta property values.
     $meta_names = array();
