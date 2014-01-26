@@ -25,6 +25,8 @@ set :normalize_asset_timestamps, false
 after "deploy:create_symlink" do
   # Link the image mosaic stuff to 'mosaic'
   run "cd #{current_release} && ln -s #{web_builds}/image_mosaic/staging/current mosaic"
+  # Link the preworn slider stuff to 'slider'
+  run "cd #{current_release} && ln -s #{web_builds}/preworn_slider/staging/current slider"
   # If there is no directory & no symbolic link to 'site' then create a directory named 'site'.
   # run "cd #{live_root} && if [ ! -d site ]; then if [ ! -h site ]; then mkdir ./site; fi; fi"
   # If there is no symbolic link called site' and 'site' is a directory, delete that directory.
