@@ -1,4 +1,4 @@
-#  preworn
+# preworn
 this site is jack szwergold’s the calling card, gallery, portfolio, playground, white wall, black box, idea sandbox & daily distraction.
 
 ### current projects
