@@ -43,6 +43,10 @@ class frontendDisplay {
   public function __construct($content_type = NULL, $charset = NULL, $json_encode = NULL, $DEBUG_MODE = NULL) {
     global $VALID_CONTENT_TYPES, $VALID_CHARSETS;
 
+    if (!defined('BASE_PATH')) {
+      define('BASE_PATH', '/');
+    }
+
     if (!empty($content_type) && in_array($content_type, $VALID_CONTENT_TYPES)) {
       $this->content_type = $content_type;
     }
@@ -185,7 +189,7 @@ class frontendDisplay {
            . '<head>'
            . '<title>' . $this->page_title . '</title>'
            . join('', $meta_content)
-           . '<link rel="stylesheet" href="css/style.css" type="text/css" />'
+           . '<link rel="stylesheet" href="' . BASE_URL . '/css/style.css" type="text/css" />'
            . join('', $favicons)
            . join('', $javascript)
            . '</head>'
@@ -233,10 +237,10 @@ class frontendDisplay {
 
     // Set the javascript values.
     $javascripts = array();
-    $javascripts[] = 'script/json2.js';
-    $javascripts[] = 'script/jquery/jquery-1.10.2.min.js';
-    $javascripts[] = 'script/jquery/jquery-1.10.2.min.map';
-    $javascripts[] = 'script/jquery/jquery.noconflict.js';
+    $javascripts[] = BASE_URL . 'script/json2.js';
+    $javascripts[] = BASE_URL . 'script/jquery/jquery-1.10.2.min.js';
+    $javascripts[] = BASE_URL . 'script/jquery/jquery-1.10.2.min.map';
+    $javascripts[] = BASE_URL . 'script/jquery/jquery.noconflict.js';
 
     // Merge the base JavaScripts with the passed array of javasccripts.
     $javascripts = array_merge($javascripts, $this->javascripts);

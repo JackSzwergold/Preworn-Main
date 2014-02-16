@@ -15,10 +15,11 @@
 //**************************************************************************************//
 // Require the basic configuration settings & functions.
 
-require_once 'conf/config.inc.php';
-require_once BASE_FILEPATH . '/common/functions.inc.php';
-require_once BASE_FILEPATH . '/lib/frontendDisplay.class.php';
-require_once BASE_FILEPATH . '/lib/Parsedown.php';
+require_once '../conf/config.inc.php';
+
+require_once BASE_FILEPATH . '/../common/functions.inc.php';
+require_once BASE_FILEPATH . '/../lib/frontendDisplay.class.php';
+require_once BASE_FILEPATH . '/../lib/Parsedown.php';
 
 //**************************************************************************************//
 // Define the valid arrays.
