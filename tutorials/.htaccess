@@ -2,8 +2,8 @@ AddDefaultCharset UTF-8
 
 Options +FollowSymlinks
 RewriteEngine on
-RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} !-f
-RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
 
 # This redirects any call to this subdirectory to an index file.
 # The '?controller=$1' passes the pathname as an HTML param called 'id'.
