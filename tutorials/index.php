@@ -14,9 +14,9 @@
 //**************************************************************************************//
 // Require the basic configuration settings & functions.
 
-require_once 'common/functions.inc.php';
-require_once 'lib/frontendDisplay.class.php';
-require_once 'lib/Parsedown.php';
+require_once '../common/functions.inc.php';
+require_once '../lib/frontendDisplay.class.php';
+require_once '../lib/Parsedown.php';
 
 
 //**************************************************************************************//
