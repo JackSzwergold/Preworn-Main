@@ -12,9 +12,9 @@ Or you can just go here:
 
 	http://localhost:8888/MAMP/phpinfo.php
 
-Once you install it, edit the config file:
+Once you figure out which PHP ini config file you are using, edit the config file:
 
-	bedit /Applications/MAMP/bin/php/php5.4.10/conf/php.ini
+	bbedit /Applications/MAMP/bin/php/php5.4.10/conf/php.ini
 
 
 ### Changing the PHP install time zone.
