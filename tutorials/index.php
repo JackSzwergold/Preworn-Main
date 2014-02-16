@@ -8,16 +8,18 @@
  * Created: 2014-01-20, js
  * Version: 2014-01-20, js: creation
  *          2014-01-20, js: development & cleanup
+ *          2014-02-16, js: adding configuration settings
  *
  */
 
 //**************************************************************************************//
 // Require the basic configuration settings & functions.
 
-require_once '../common/functions.inc.php';
-require_once '../lib/frontendDisplay.class.php';
-require_once '../lib/Parsedown.php';
+require_once '../conf/config.inc.php';
 
+require_once BASE_FILEPATH . '/../common/functions.inc.php';
+require_once BASE_FILEPATH . '/../lib/frontendDisplay.class.php';
+require_once BASE_FILEPATH . '/../lib/Parsedown.php';
 
 //**************************************************************************************//
 // Define the valid arrays.
