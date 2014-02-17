@@ -1,4 +1,4 @@
-# Setting up MAMP & MAMP PRO 2.1.4
+# Setting up MAMP 2.1.4
 
 Written by [Jack Szwergold](http://www.preworn.com/) on February 16, 2014
 
@@ -10,7 +10,7 @@ That said, there are some simple tweaks I like to do on any MAMP install that wi
 
 ### Let’s get started.
 
-Before anything else, you need to figure out which version of the PHP ini configuration file—commonly referred to as *php.ini*—your setup is using. For this example, I am using PHP version 5.4.10 which is part of the standard MAMP 2.1.4 install. I am also using the MAMP specific non-default port of `8888`.
+Before anything else, you need to figure out which version of the PHP ini configuration file—commonly referred to as `php.ini`—your setup is using. For this example, I am using PHP version 5.4.10 which is part of the standard MAMP 2.1.4 install. I am also using the MAMP specific non-default port of `8888`.
 
 While port `80` is the traditionally used port for web services, I find it’s better to use port `8888` since you do not have to enter an administrator password each time you launch MAMP. Also, it’s a good habit to program web applications in a way that that allows you to easily migrate a codebase from server to server. Using port `8888` is so non-standard it forces you to code with flexibility in mind which in the end can only help your coding skills.
 
@@ -26,7 +26,7 @@ Once you figure out which PHP ini configuration file you are using, you can then
 
 	bbedit /Applications/MAMP/bin/php/php5.4.10/conf/php.ini
 
-That will open BBEdit via the command line & open the *php.ini* at the same time. Or if you are more comfortable doing it all in the command line, you can open the file with [GNU nano](http://www.nano-editor.org)—the command line editor I like to use which comes with all Mac OS X installs—like so:
+That will open BBEdit via the command line & open the `php.ini` at the same time. Or if you are more comfortable doing it all in the command line, you can open the file with [GNU nano](http://www.nano-editor.org)—the command line editor I like to use which comes with all Mac OS X installs—like so:
 
 	nano /Applications/MAMP/bin/php/php5.4.10/conf/php.ini
 
@@ -53,7 +53,7 @@ Server resources are idiosyncratic from server to server and from application to
 	max_input_time = 60;
 	memory_limit = 32M;
 
-And change the `memory_limit` value to something like **64M**:
+And change the `memory_limit` value to something like `64M`:
 
 	; memory_limit = 32M;
 	memory_limit = 64M;
@@ -71,7 +71,7 @@ Also adjusting error reporting so you can actually see errors as they happen in 
 
 	display_errors = Off
 
-And change that from **Off** to **On**:
+And change that from `Off` to `On`:
 
 	; display_errors = Off
 	display_errors = On

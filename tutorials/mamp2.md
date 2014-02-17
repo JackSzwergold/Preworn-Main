@@ -1,4 +1,4 @@
-# Setting up MAMP & MAMP PRO 2.1.4
+# Setting up MAMP 2.1.4
 
 ## Part 2: Setting up Name-Based Virtual Hosts
 

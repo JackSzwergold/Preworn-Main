@@ -1,4 +1,4 @@
-# Setting up MAMP & MAMP PRO 2.1.4
+# Setting up MAMP 2.1.4
 
 ## Part 3: Installing the PHP Pear Library for MAMP
 
