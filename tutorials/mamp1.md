@@ -8,6 +8,8 @@ I like using MAMP because it’s a quick & easy way to get a very basic—and ve
 
 That said, there are some simple tweaks I like to do on any MAMP install that will make my life as a developer easier. If you are familiar with basic PHP ini configuration changes, you’ll pick up what I am doing right away.
 
+### Let’s get started.
+
 Before anything else, you need to figure out which version of the PHP ini configuration file—commonly referred to as *php.ini*—your setup is using. For this example, I am using PHP version 5.4.10 which is part of the standard MAMP 2.1.4 install. I am also using the MAMP specific non-default port of `8888`.
 
 While port `80` is the traditionally used port for web services, I find it’s better to use port `8888` since you do not have to enter an administrator password each time you launch MAMP. Also, it’s a good habit to program web applications in a way that that allows you to easily migrate a codebase from server to server. Using port `8888` is so non-standard it forces you to code with flexibility in mind which in the end can only help your coding skills.
