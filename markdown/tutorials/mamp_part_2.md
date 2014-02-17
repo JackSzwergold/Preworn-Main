@@ -1,6 +1,6 @@
-# Setting up MAMP 2.1.4
+# Developing With MAMP 2.1.4
 
-## Part 2: Setting up Name-Based Virtual Hosts
+## Part 2: Setting Up Name-Based Virtual Hosts
 
 This part will be short & sweet, but will also be pretty cool.  It shows you how to use the power of Apache name-based virtual hosts to have more than one base root site served  via your local MAMP install.
 

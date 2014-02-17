@@ -1,4 +1,4 @@
-# Setting up MAMP 2.1.4
+# Developing With MAMP 2.1.4
 
 Written by [Jack Szwergold](http://www.preworn.com/) on February 16, 2014
 
