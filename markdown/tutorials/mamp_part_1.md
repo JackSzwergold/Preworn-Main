@@ -77,7 +77,9 @@ And change that from `Off` to `On`:
 	display_errors = On
 
 
-Now with all that done, restart MAMP so the PHP ini configuration file is properly reloaded with the new settings. Remember, PHP is a module in Apache. So when you restart MAMP, you are restarting Apache & thuse forcing the PHP ini configuration file to be reloaded.
+Now with all that done, restart MAMP so the PHP ini configuration file is properly reloaded with the new settings. Remember, PHP is a module in Apache. So when you restart MAMP, you are restarting Apache & thus forcing the PHP ini configuration file to be reloaded.
+
+### Conclusion.
 
 All of those settings basically make your life easier as a developer. But they don’t really show up as anything fancy in the web browser. So with that said, might as well start the life of your newly setup MAMP environment with a simple “Hello world!” program. Just create a basic `index.php` file like so:
 
