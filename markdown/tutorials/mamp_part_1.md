@@ -14,7 +14,7 @@ Before anything else, you need to figure out which version of the PHP ini config
 
 While port `80` is the traditionally used port for web services, I find it’s better to use port `8888` since you do not have to enter an administrator password each time you launch MAMP. Also, it’s a good habit to program web applications in a way that that allows you to easily migrate a codebase from server to server. Using port `8888` is so non-standard it forces you to code with flexibility in mind which in the end can only help your coding skills.
 
-You can determine which version of PHP is being used by looking through the output of [phpinfo()][2] which is easily done in MAMP by choosing *phpInfo* item from the menu of the main MAMP page:
+You can determine which version of PHP is being used by looking through the output of [phpinfo()][2] for the value called `Loaded Configuration File` near the top of the page. You can easily view the contents of `phpinfo()` in MAMP by choosing *phpInfo* item from the top menu of the main MAMP page:
 
 	http://localhost:8888/MAMP/
 
@@ -22,7 +22,7 @@ Or you can just get to it directly via this URL:
 
 	http://localhost:8888/MAMP/phpinfo.php
 
-Once you figure out which PHP ini configuration file you are using, you can then edit the config file like so. I like to use [BBEdit][3], so this is how I call it from the command line:
+Once you find the `Loaded Configuration File` value and you figure out which PHP ini configuration file you are using, you can then edit the config file like so. I like to use [BBEdit][3], so this is how I call it from the command line:
 
 	bbedit /Applications/MAMP/bin/php/php5.4.10/conf/php.ini
 
