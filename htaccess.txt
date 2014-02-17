@@ -1,14 +1,17 @@
 AddDefaultCharset UTF-8
 
 Options +FollowSymlinks
-RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
 
-# This redirects any call to this subdirectory to an index file.
-# The '?controller=$1' passes the pathname as an HTML param called 'id'.
+RewriteEngine on
+
+# This redirects any call to this directory to an index file with $_GET parameters.
+# The 'controller=$1&page=$2&section=$3&subsection=$4' passes the pathname as an HTML param called 'controller', 'page', 'section' & 'subsection'.
 # RewriteRule     ^([a-z0-9-_]+)/?([^/]*)$       index.php?controller=$1&$2 [QSA]
 RewriteRule     ^([a-z0-9-_]+)/([a-z0-9-_]+)/([a-z0-9-_]+)/([a-z0-9-_]+)/?$    index.php?controller=$1&page=$2&section=$3&subsection=$4 [L]
 RewriteRule     ^([a-z0-9-_]+)/([a-z0-9-_]+)/([a-z0-9-_]+)/?$    index.php?controller=$1&page=$2&section=$3 [L]
 RewriteRule     ^([a-z0-9-_]+)/([a-z0-9-_]+)/?$   index.php?controller=$1&page=$2 [L]
+
+# This setup allows us to have files or directoires on the root of the site without conflicting with rewrite rules.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule     ^([a-z0-9-_]+)/?$    index.php?controller=$1 [L]
