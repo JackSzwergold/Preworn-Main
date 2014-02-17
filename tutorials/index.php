@@ -47,7 +47,7 @@ if (!file_exists($content_markdown)) {
 
 $frontendDisplayClass = new frontendDisplay('text/html', 'utf-8', FALSE, FALSE);
 $frontendDisplayClass->setViewMode('mega');
-$frontendDisplayClass->setPageTitle('preworn');
+$frontendDisplayClass->setPageTitle('tutorials');
 $frontendDisplayClass->setPageDescription('this site is jack szwergold’s the calling card, gallery, portfolio, playground, white wall, black box, idea sandbox &amp; daily distraction.');
 $frontendDisplayClass->setPageContentMarkdown($content_markdown);
 // $frontendDisplayClass->setPageContent('Hello world!');
