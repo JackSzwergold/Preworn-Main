@@ -33,19 +33,28 @@ $DEBUG_OUTPUT_JSON = false;
 $markdown_parts = array();
 $title_parts = array('preworn');
 
-// Check if a 'controller' exists.
+// Parse the 'controller' parameters.
+$controller = '';
 if (array_key_exists('controller', $_GET) && !empty($_GET['controller'])) {
   if (in_array('controller', $VALID_CONTROLLERS)) {
-    $markdown_parts[] = $_GET['controller'];
-    $title_parts[] = $_GET['controller'];
-
-    // Check if a 'page' exists.
-    if (array_key_exists('page', $_GET) && !empty($_GET['page'])) {
-      $markdown_parts[] = $_GET['page'];
-      $title_parts[] = $_GET['page'];
-    }
-
+    $controller = $_GET['controller'];
   }
+}
+
+// Parse the 'page' parameters.
+$page = '';
+if (array_key_exists('page', $_GET) && !empty($_GET['page'])) {
+  $page = $_GET['page'];
+}
+
+if (!empty($controller)) {
+  $markdown_parts[] = $controller;
+  $title_parts[] = $controller;
+}
+
+if (!empty($page)) {
+  $markdown_parts[] = $page;
+  $title_parts[] = $page;
 }
 
 // Set the final markdown file path.
@@ -53,8 +62,10 @@ $markdown_file = 'markdown/' . join('/', $markdown_parts) . '.md';
 
 if (!file_exists($markdown_file)) {
   $markdown_file = 'markdown/index.md';
+  $title_parts = array('preworn');
 }
 
+// Set the page title.
 $page_title = join(' / ', $title_parts);
 $page_title = preg_replace('/_/', ' ', $page_title);
 
