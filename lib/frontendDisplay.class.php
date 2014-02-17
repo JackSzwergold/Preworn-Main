@@ -9,6 +9,7 @@
  * Version: 2014-01-22, js: creation
  *          2014-01-22, js: development & cleanup
  *          2014-01-23, js: refinements
+ *          2014-02-17, js: setting a 'base'
  *
  */
 
@@ -29,6 +30,8 @@ class frontendDisplay {
   private $params = array();
 
   private $javascripts = array();
+
+  private $base = NULL;
 
   private $view_mode = NULL;
   private $page_title = NULL;
@@ -127,6 +130,13 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
+  // Set the HTML base.
+  function setPageBase($page_base = null) {
+    $this->base = $page_base;
+  } // setPageBase
+
+
+  //**************************************************************************************//
   // Init the content.
   function initContent($response_header = NULL) {
     global $VALID_CONTROLLERS;
@@ -192,6 +202,7 @@ class frontendDisplay {
            . '<link rel="stylesheet" href="' . BASE_URL . '/css/style.css" type="text/css" />'
            . join('', $favicons)
            . join('', $javascript)
+           . '<base href="' . $this->base . '" />'
            . '</head>'
            . '<body>'
            . $body
