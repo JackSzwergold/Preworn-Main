@@ -4,13 +4,13 @@ Written by [Jack Szwergold](http://www.preworn.com/) on February 16, 2014
 
 ## Part 1: Setting Up a Basic, Useful MAMP Environment
 
-I like using MAMP because it’s a quick & easy way to get a very basic—and very standard—LAMP (Linux, Apache, MySQL & PHP) environmeht working on a Mac. While there are some purists who believe that coding on a pure Linux setup—virtual or physical—is the way the go, for pretty much every PHP task I have ever come across, MAMP has always worked well. And since it operates on on the Mac desktop like any other applictaion, it allows me to use the great development tools that exist for Macs without much hassle. A complete win-win development setup for Mac developers who code in the LAMP world.
+I like using MAMP because it’s a quick & easy way to get a very basic—and very standard—LAMP (Linux, Apache, MySQL & PHP) environment working on a Mac. While there are some purists who believe that coding on a pure Linux setup—virtual or physical—is the way the go, for pretty much every PHP task I have ever come across, MAMP has always worked well. And since it operates on on the Mac desktop like any other application, it allows me to use the great development tools that exist for Macs without much hassle. A complete win-win development setup for Mac developers who code in the LAMP world.
 
 That said, there are some simple tweaks I like to do on any MAMP install that will make my life as a developer easier. If you are familiar with basic PHP ini configuration changes, you’ll pick up what I am doing right away.
 
-Before anything else, you need to figure out which version of the PHP ini configuration file—commonly refered to as *php.ini*—your setup is using. For this example, I am using PHP version 5.4.10 which is part of the standard MAMP 2.1.4 install. I am also using the MAMP specific non-default port of `8888`.
+Before anything else, you need to figure out which version of the PHP ini configuration file—commonly referred to as *php.ini*—your setup is using. For this example, I am using PHP version 5.4.10 which is part of the standard MAMP 2.1.4 install. I am also using the MAMP specific non-default port of `8888`.
 
-While port `80` is the traditionally used port for web services, I find it’s bettter to use port `8888` since you do not have to enter an administrator password each time you launch MAMP. Also, it’s a good habit to program web applications in a way that that allows you to easilly migrate a codebase from server to server. Using port `8888` is so non-standard it forces you to code with flexibility in mind which in the end can only help your coding skills.
+While port `80` is the traditionally used port for web services, I find it’s better to use port `8888` since you do not have to enter an administrator password each time you launch MAMP. Also, it’s a good habit to program web applications in a way that that allows you to easily migrate a codebase from server to server. Using port `8888` is so non-standard it forces you to code with flexibility in mind which in the end can only help your coding skills.
 
 You can determine which version of PHP is being used by looking through the output of [phpinfo()](http://us3.php.net/phpinfo) which is easily done in MAMP by choosing *phpInfo* item from the menu of the main MAMP page:
 
@@ -28,7 +28,7 @@ That will open BBEdit via the command line & open the *php.ini* at the same time
 
 	nano /Applications/MAMP/bin/php/php5.4.10/conf/php.ini
 
-Whatever editor you coose to use is not important. So don’t feel tied to my examples of BBEdit and GNU nano. You’re ultmate goal is to simply edit a text file to change configuration values. But you should be comfortable with whatever text editor you use.
+Whatever editor you choose to use is not important. So don’t feel tied to my examples of BBEdit and GNU nano. You’re ultimate goal is to simply edit a text file to change configuration values. But you should be comfortable with whatever text editor you use.
 
 ### Changing the PHP install time zone.
 
@@ -41,7 +41,7 @@ Unless you are actually in Berlin—or have a need to have your time zone set to
 	; date.timezone = "Europe/Berlin"
 	date.timezone = "America/New_York"
 
-Also, as you can see, I like to comment out changes that I make & leave them in place insetad of deleting them. In general, you should get into the habit of commenting out small tweaks like this & leaving them in place for future reference instead of ouright overwritung or deleting them. In a case like this it might seem superflous, but remember: What might seem like a simple change now, might be the cause of a debugging issue months or years from now.
+Also, as you can see, I like to comment out changes that I make & leave them in place instead of deleting them. In general, you should get into the habit of commenting out small tweaks like this & leaving them in place for future reference instead of outright overwriting or deleting them. In a case like this it might seem superfluous, but remember: What might seem like a simple change now, might be the cause of a debugging issue months or years from now.
 
 ### Adjusting resource limits & error reporting.
 
@@ -56,7 +56,7 @@ And change the `memory_limit` value to something like **64M**:
 	; memory_limit = 32M;
 	memory_limit = 64M;
 
-Once that is done, look for the *Error handling and logging* section of the PHP ini configuration and adust `error_reporting` so you don’t loose your mind due to excessive warnings, errors & notices poppping up when debugging. The `error_reporting` should look something like this:
+Once that is done, look for the *Error handling and logging* section of the PHP ini configuration and adjust `error_reporting` so you don’t loose your mind due to excessive warnings, errors & notices popping up when debugging. The `error_reporting` should look something like this:
 
 	error_reporting = E_ALL
 
