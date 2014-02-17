@@ -33,26 +33,27 @@ $DEBUG_OUTPUT_JSON = false;
 $markdown_parts = array();
 $title_parts = array('preworn');
 
-// Parse the 'controller' parameters.
-$controller = '';
-if (array_key_exists('controller', $_GET) && !empty($_GET['controller'])) {
-  if (in_array('controller', $VALID_CONTROLLERS)) {
-    $controller = $_GET['controller'];
+// Parse the '$_GET' parameters.
+foreach($VALID_GET_PARAMETERS as $get_parameter) {
+  $$get_parameter = '';
+  if (array_key_exists($get_parameter, $_GET) && !empty($_GET[$get_parameter])) {
+    if (in_array($get_parameter, $VALID_GET_PARAMETERS)) {
+      $$get_parameter = $_GET[$get_parameter];
+    }
   }
 }
 
-// Parse the 'page' parameters.
-$page = '';
-if (array_key_exists('page', $_GET) && !empty($_GET['page'])) {
-  $page = $_GET['page'];
-}
-
+// Set the controller.
 if (!empty($controller)) {
   $markdown_parts[] = $controller;
   $title_parts[] = $controller;
+  if (empty($page)) {
+    $markdown_parts[] = 'index';
+  }
 }
 
-if (!empty($page)) {
+// Set the page.
+if (!empty($controller) && !empty($page)) {
   $markdown_parts[] = $page;
   $title_parts[] = $page;
 }
