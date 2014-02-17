@@ -2,9 +2,7 @@
 
 ## Part 2: Setting up Name-Based Virtual Hosts
 
-This part will be short & sweet, but will also be pretty cool.  It shows you how to use 
-the power of Apache name-based virtual hosts to have more than one base root site served 
-via your local MAMP install.
+This part will be short & sweet, but will also be pretty cool.  It shows you how to use the power of Apache name-based virtual hosts to have more than one base root site served  via your local MAMP install.
 
 You can read up on Name-based virtual hosts here:
 
