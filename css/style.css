@@ -145,6 +145,9 @@ ul, li
 	margin: 0 0 10px 0;
 }
 
+.Core p code { font-weight: bold; }
+.Core pre code { font-weight: normal; }
+
 /**************************************************************************************************/
 .Core .Grid .Padding { padding: 6px 3px 0 3px; }
 
