@@ -1,8 +1,12 @@
 # Setting up MAMP & MAMP PRO 2.1.4
 
+Written by [Jack Szwergold](http://www.preworn.com/) on February 16, 2014
+
 ## Part 1: Setting Up a Basic, Useful MAMP Environment
 
-Before anything else, you need to figure out which version of the PHP ini configuration file—commonly refered to as *php.ini*—your setup is using. For this example, I am using PHP version 5.4.10 which is part of the standard MAMP 2.1.4 install.
+Before anything else, you need to figure out which version of the PHP ini configuration file—commonly refered to as *php.ini*—your setup is using. For this example, I am using PHP version 5.4.10 which is part of the standard MAMP 2.1.4 install. I am also using the MAMP specific non-default port of `8888`.
+
+While port `80` is the traditionally used port for web services, I find it’s bettter to use port `8888` since you do not have to enter an administrator password each time you launch MAMP. Also, it’s a good habit to program web applications in a way that that allows you to easilly migrate a codebase from server to server. Using port `8888` is so non-standard it forces you to code with flexibility in mind which in the end can only help your coding skills.
 
 You can determine which version of PHP is being used by looking through the output of [phpinfo()](http://us3.php.net/phpinfo) which is easily done in MAMP by choosing *phpInfo* item from the menu of the main MAMP page:
 
@@ -37,41 +41,43 @@ Also, as you can see, I like to comment out changes that I make & leave them in 
 
 ### Adjusting resource limits & error reporting.
 
-In general, the simplest resource limit adjustment you should make is to 'memory_limit'.
+Server resources are idiosyncratic from server to server and from application to application. In general, the simplest resource limit adjustment you should make is to `memory_limit` so your PHP scripts don’t bomb out due to lack of memory. So look for the *Resource Limits* section of the PHP ini configuration that looks like this:
 
-	max_execution_time = 30     ; Maximum execution time of each script, in seconds
-	max_input_time = 60	; Maximum amount of time each script may spend parsing request data
-	memory_limit = 32M      ; Maximum amount of memory a script may consume (8MB)
+	max_execution_time = 30;
+	max_input_time = 60;
+	memory_limit = 32M;
 
-Change 'memory_limit' to something like 64M
+And change the `memory_limit` value to something like **64M**:
 
-	; memory_limit = 32M      ; Maximum amount of memory a script may consume (8MB)
-	memory_limit = 64M      ; Maximum amount of memory a script may consume (8MB)
+	; memory_limit = 32M;
+	memory_limit = 64M;
 
-
-Adjusting 'error_reporting' so you don’t go nuts when debugging.
+Once that is done, look for the *Error handling and logging* section of the PHP ini configuration and adust `error_reporting` so you don’t loose your mind due to excessive warnings, errors & notices poppping up when debugging. The `error_reporting` should look something like this:
 
 	error_reporting = E_ALL
 
-I generally change that to be anything but 'strict' notices.
+I generally change that to report anything but `strict` notices like so:
 
 	; error_reporting = E_ALL
 	error_reporting = E_ALL & ~E_STRICT
 
-
-Adjusting 'display_errors' to 'On' so you can actually see errors in the browser.
+Also adjusting error reporting so you can actually see errors as they happen in the web browser—rather than having to read the output in the `php_error.log`—is a good idea. Just do a search for the `display_errors` which should look like this:
 
 	display_errors = Off
 
-Not much else to say about that.
+And change that from **Off** to **On**:
 
 	; display_errors = Off
 	display_errors = On
 
 
-Now with all that done, restart MAMP & then edit the main index.php file on the page.
+Now with all that done, restart MAMP so the PHP ini configuration file is properly reloaded with the new settings. Remember, PHP is a module in Apache. So when you restart MAMP, you are restarting Apache & thuse forcing the PHP ini configuration file to be reloaded.
+
+All of those settings basically make your life easier as a developer. But they don’t really show up as anything fancy in the web browser. So with that said, might as well start the life of your newly setup MAMP environment with a simple “Hello world!” program. Just create a basic `index.php` file like so:
 
 	bbedit /Applications/MAMP/htdocs/index.php
+
+And then copy in this short but sweet PHP script into that file:
 
 	<?php
 
@@ -79,4 +85,4 @@ Now with all that done, restart MAMP & then edit the main index.php file on the 
 
 	?>
 
-And now you’re done setting up your basic MAMP setup!
+Save the file & reload your browser. The text, “Hello world!” should be displayed in the brower. Which means now you’re done setting up your basic MAMP development environment!
