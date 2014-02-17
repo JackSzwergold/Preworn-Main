@@ -1,6 +1,6 @@
 # Developing With MAMP 2.1.4
 
-Written by [Jack Szwergold](http://www.preworn.com/) on February 16, 2014
+Written by [Jack Szwergold][1] on February 16, 2014
 
 ## Part 1: Setting Up a Basic, Useful MAMP Environment
 
@@ -14,7 +14,7 @@ Before anything else, you need to figure out which version of the PHP ini config
 
 While port `80` is the traditionally used port for web services, I find it’s better to use port `8888` since you do not have to enter an administrator password each time you launch MAMP. Also, it’s a good habit to program web applications in a way that that allows you to easily migrate a codebase from server to server. Using port `8888` is so non-standard it forces you to code with flexibility in mind which in the end can only help your coding skills.
 
-You can determine which version of PHP is being used by looking through the output of [phpinfo()](http://us3.php.net/phpinfo) which is easily done in MAMP by choosing *phpInfo* item from the menu of the main MAMP page:
+You can determine which version of PHP is being used by looking through the output of [phpinfo()][2] which is easily done in MAMP by choosing *phpInfo* item from the menu of the main MAMP page:
 
 	http://localhost:8888/MAMP/
 
@@ -22,11 +22,11 @@ Or you can just get to it directly via this URL:
 
 	http://localhost:8888/MAMP/phpinfo.php
 
-Once you figure out which PHP ini configuration file you are using, you can then edit the config file like so. I like to use [BBEdit](http://www.barebones.com/products/bbedit/), so this is how I call it from the command line:
+Once you figure out which PHP ini configuration file you are using, you can then edit the config file like so. I like to use [BBEdit][3], so this is how I call it from the command line:
 
 	bbedit /Applications/MAMP/bin/php/php5.4.10/conf/php.ini
 
-That will open BBEdit via the command line & open the `php.ini` at the same time. Or if you are more comfortable doing it all in the command line, you can open the file with [GNU nano](http://www.nano-editor.org)—the command line editor I like to use which comes with all Mac OS X installs—like so:
+That will open BBEdit via the command line & open the `php.ini` at the same time. Or if you are more comfortable doing it all in the command line, you can open the file with [GNU nano][4]—the command line editor I like to use which comes with all Mac OS X installs—like so:
 
 	nano /Applications/MAMP/bin/php/php5.4.10/conf/php.ini
 
@@ -92,3 +92,8 @@ And then copy in this short but sweet PHP script into that file:
 	?>
 
 Save the file & reload your browser. The text, “Hello world!” should be displayed in the brower. Which means now you’re done setting up your basic MAMP development environment!
+
+[1]: http://www.preworn.com/ "preworn • jack szwergold’s online portfolio"
+[2]: http://us3.php.net/phpinfo "info on phpinfo()"
+[3]: http://www.barebones.com/products/bbedit/ "bare bones software’s bbedit page"
+[4]: http://www.nano-editor.org "info on gnu nano"
