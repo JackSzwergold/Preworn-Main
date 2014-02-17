@@ -8,7 +8,7 @@ In this part of my tutorial I will show you how to use the power of Apache name-
 
 Why would you want more than one website document root served via your local MAMP install? Easy. As a developer, chances are you will be juggling lots of different projects. And while some projects can easily be self-contained into a separate directory of your MAMP install that is served off of the default `http://localhost:8888` site, some projects might require your codebase be served on an explicitly set document root. So instead of having to rip apart apart your MAMP setup & codebase each time you want to switch gears, Apache name-based virtual hosts allow you to have a more flexible MAMP development environment to begin with.
 
-You can read up on [how Apache name-based virtual hosts work over here][1]. But it basically boils down to this: Traditional ip-based virtual hosts restrict you to having one website document root per IP address. But name-based virtual hosts allows Apache to recognize the different hostnames connected to a single IP address.
+You can read up on [how Apache name-based virtual hosts work over here][1]. But it basically boils down to this: Traditional ip-based virtual hosts restrict you to having one website document root per IP address. But name-based virtual hosts allows Apache to recognize the different hostnames connected to a single IP address. Which means you can have multiple website document roots if you use name-based virtual hosts.
 
 Which—for Mac users—means that you can utilize the way your Mac has a machine specific Bonjour MDNS hostname like `my_machine.local`—in addition to the traditional `localhost` hostname—to enable Apache name-based virtual hosts in your local MAMP install.
 
