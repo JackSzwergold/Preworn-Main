@@ -24,6 +24,6 @@ else {
 $VALID_CONTROLLERS = array('controller');
 $DISPLAY_CONTROLLERS = array('controller');
 
-$VALID_GET_PARAMETERS = array('_debug', 'controller');
+$VALID_GET_PARAMETERS = array('_debug', 'controller', 'page', 'section', 'subsection');
 
 ?>
