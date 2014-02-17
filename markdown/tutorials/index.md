@@ -6,4 +6,6 @@ i’m mainly compiling these things for my own personal reference, but if you st
 
 ### Developing With MAMP 2.1.4
 A guide to using MAMP—specifically version 2.1.4—as professional development tool.
-* [Part 1: Setting Up a Basic, Useful MAMP Environment](http://www.preworn.com/tutorials/mamp_part_1)
+* [Part 1: Setting Up a Basic, Useful MAMP Environment][1]
+
+[1]: http://www.preworn.com/tutorials/mamp_part_1 "Setting Up a Basic, Useful MAMP Environment"
