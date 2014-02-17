@@ -10,6 +10,7 @@
  *          2014-01-20, js: development & cleanup
  *          2014-02-16, js: adding configuration settings
  *          2014-02-16, js: adding controller logic
+ *          2014-02-17, js: setting a 'base'
  *
  */
 
@@ -70,6 +71,14 @@ if (!file_exists($markdown_file)) {
 $page_title = join(' / ', $title_parts);
 $page_title = preg_replace('/_/', ' ', $page_title);
 
+// Set the page base.
+if (!empty($controller)) {
+  $page_base = BASE_URL . $controller . '/';
+}
+else {
+  $page_base = BASE_URL;
+}
+
 //**************************************************************************************//
 // Init the "frontendDisplay()" class.
 
@@ -82,6 +91,7 @@ $frontendDisplayClass->setPageContentMarkdown($markdown_file);
 $frontendDisplayClass->setPageViewport('width=device-width, initial-scale=0.4, maximum-scale=2, minimum-scale=0.4, user-scalable=yes');
 $frontendDisplayClass->setPageRobots('noindex, nofollow');
 // $frontendDisplayClass->setJavascripts(array('script/common.js'));
+$frontendDisplayClass->setPageBase($page_base);
 $frontendDisplayClass->initContent();
 
 
