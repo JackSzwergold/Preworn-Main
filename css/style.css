@@ -148,6 +148,34 @@ ul, li
 .Core p code { font-weight: bold; }
 .Core pre code { font-weight: normal; }
 
+.Core ul
+{
+	margin: 0;
+	padding: 0;
+}
+
+.Core ul li
+{
+	font-size: 120%;
+	font-family: Georgia, "New York", "Times New Roman", Times, serif;
+	font-weight: bold;
+	line-height: 1.4em;
+	margin: 0 0 5px 2em;
+	padding: 0;
+	clear: both;
+	list-style-type: disc;
+	list-style-position: outside;
+	display: list-item;
+}
+
+.Core ul li a, .Core ul li a:active, .Core ul li a:hover, .Core ul li a:visited { border-bottom: 1px #000 solid; }
+
+.Core ul li a:active, .Core ul li a:hover
+{
+	color: #080;
+	border-color: #080;
+}
+
 /**************************************************************************************************/
 .Core .Grid .Padding { padding: 6px 3px 0 3px; }
 
