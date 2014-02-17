@@ -22,7 +22,11 @@ Take a note of that hostname, which should be something like:
 
 	my_machine.local
 
-Got that? Good. Now, switch your attention to the `htdocs` root of MAMP. Go there and create a new directory inside the main MAMP `htdocs` directory called `test_host`:
+Got that? Good. Now, switch your attention to the `htdocs` root of MAMP.
+
+### Setting up another document root.
+
+So now you are going to go to the `htdocs` root of MAMP and create a new directory called `test_host`:
 
 	mkdir /Applications/MAMP/htdocs/test_host
 
