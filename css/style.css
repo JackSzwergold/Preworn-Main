@@ -156,11 +156,10 @@ ul, li
 
 .Core ul li
 {
-	font-size: 120%;
+	font-size: 125%;
 	font-family: Georgia, "New York", "Times New Roman", Times, serif;
-	font-weight: bold;
 	line-height: 1.4em;
-	margin: 0 0 5px 2em;
+	margin: 0 0 5px 1.75em;
 	padding: 0;
 	clear: both;
 	list-style-type: disc;
