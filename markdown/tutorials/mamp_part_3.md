@@ -42,11 +42,11 @@ The contents of the file should be something like this:
 
 	export PATH=/usr/bin
 
-And change the `PATH=` value so it adds the MAMP PHP binary path like this:
+And change the `PATH=` value so it adds the MAMP PHP binary path like this; note the `:` delimiter between the different paths:
 
 	export PATH=/Applications/MAMP/bin/php/php5.4.10/bin:/usr/bin
 
-Note the `:` delimiter between the different paths. Now either reload the bash `.profile` in the terminal current terminal window like so:
+Now reload the newly edited bash `.profile` in the terminal current terminal window like so:
 
 	source ~/.profile
 
