@@ -2,7 +2,7 @@
 
 Written by [Jack Szwergold][1] on February 17, 2014
 
-## Part 3: Upgradng the PHP Pear Library in MAMP
+## Part 3: Upgrading the PHP Pear Library in MAMP
 
 Now we’ll install the whole PHP Pear library under MAMP. Yes, the whole PEAR library.
 
