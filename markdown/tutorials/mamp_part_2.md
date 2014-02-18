@@ -2,7 +2,7 @@
 
 Written by [Jack Szwergold][1] on February 17, 2014
 
-## Part 2: Setting Up Name-Based Virtual Hosts in MAMP
+## Part 2: Configuring Name-Based Virtual Hosts in MAMP
 
 In this part of my tutorial I will show you how to use the power of Apache name-based virtual hosts to have more than one website document root served via your local MAMP install.
 
