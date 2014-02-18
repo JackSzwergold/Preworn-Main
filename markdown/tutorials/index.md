@@ -11,5 +11,5 @@ A guide to using MAMP—specifically version 2.1.4—as professional development
 * [Part 3: Upgradng the PHP Pear Library in MAMP][3]
 
 [1]: mamp_part_1 "Setting Up a Basic, Useful MAMP Environment"
-[2]: mamp_part_2 "Setting Up Name-Based Virtual Hosts"
+[2]: mamp_part_2 "Configuring Name-Based Virtual Hosts"
 [3]: mamp_part_3 "Upgradng the PHP Pear Library in MAMP"
