@@ -40,13 +40,13 @@ Now that we know what your MAMP PHP binary path is, let’s edit your `.profile`
 
 The contents of the file should be something like this:
 
-	export PATH=/usr/bin:/usr/local/sbin
+	export PATH=/usr/bin
 
 And change the `PATH=` value so it adds the MAMP PHP binary path like this:
 
-	export PATH=/Applications/MAMP/bin/php/php5.4.10/bin:/usr/bin:/usr/local/sbin
+	export PATH=/Applications/MAMP/bin/php/php5.4.10/bin:/usr/bin
 
-Now either reload the bash `.profile` in the terminal current terminal window like so:
+Note the `:` delimiter between the different paths. Now either reload the bash `.profile` in the terminal current terminal window like so:
 
 	source ~/.profile
 
