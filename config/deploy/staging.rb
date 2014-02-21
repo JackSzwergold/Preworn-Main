@@ -27,6 +27,8 @@ after "deploy:create_symlink" do
   run "cd #{current_release} && ln -s #{web_builds}/image_mosaic/staging/current mosaic"
   # Link the preworn slider stuff to 'slider'
   run "cd #{current_release} && ln -s #{web_builds}/preworn_slider/staging/current slider"
+  # Link the preworn ascii art stuff to 'ascii'
+  run "cd #{current_release} && ln -s #{web_builds}/ascii_art/staging/current ascii"
   # If there is no directory & no symbolic link to 'site' then create a directory named 'site'.
   # run "cd #{live_root} && if [ ! -d site ]; then if [ ! -h site ]; then mkdir ./site; fi; fi"
   # If there is no symbolic link called site' and 'site' is a directory, delete that directory.
