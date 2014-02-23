@@ -4,7 +4,7 @@ this site is jack szwergold’s the calling card, gallery, portfolio, playground
 ### current projects
 [image mosaic][1] • a dynamically generated image mosaic using php, the gd graphics libarary, html & css
 
-[ascii][2] • a dynamically generated ascii art image using php, the gd graphics libarary, html & css
+[image ascii][2] • a dynamically generated ascii art image using php, the gd graphics libarary, html & css
 
 [tutorials][3] • this is where i will be compiling things i have learned over my 20+ years of being a tech person
 
