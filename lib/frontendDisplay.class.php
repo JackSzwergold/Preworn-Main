@@ -50,6 +50,10 @@ class frontendDisplay {
       define('BASE_PATH', '/');
     }
 
+    if (!defined('BASE_URL')) {
+      define('BASE_URL', '');
+    }
+
     if (!empty($content_type) && in_array($content_type, $VALID_CONTENT_TYPES)) {
       $this->content_type = $content_type;
     }
@@ -81,7 +85,7 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
-  // Set the page description.
+  // Set the page title.
   function setPageTitle($page_title = null) {
     $this->page_title = $page_title;
   } // setPageTitle
@@ -109,7 +113,7 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
-  // Set the page content.
+  // Set the page viewport.
   function setPageViewport($page_viewport = null) {
     $this->page_viewport = $page_viewport;
   } // setPageViewport
@@ -163,7 +167,7 @@ class frontendDisplay {
     if (!empty($content)) {
 
       //**********************************************************************************//
-      // Set the favicons
+      // Set the meta tags
 
       $meta_content = $this->setMetaTags($this->page_description, $this->page_viewport, $this->page_robots);
 
@@ -199,7 +203,7 @@ class frontendDisplay {
            . '<head>'
            . '<title>' . $this->page_title . '</title>'
            . join('', $meta_content)
-           . '<link rel="stylesheet" href="' . BASE_URL . '/css/style.css" type="text/css" />'
+           . '<link rel="stylesheet" href="' . BASE_URL . 'css/style.css" type="text/css" />'
            . join('', $favicons)
            . join('', $javascript)
            . '<base href="' . $this->base . '" />'
