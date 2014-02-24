@@ -206,7 +206,7 @@ class frontendDisplay {
            . '<link rel="stylesheet" href="' . BASE_URL . 'css/style.css" type="text/css" />'
            . join('', $favicons)
            . join('', $javascript)
-           . '<base href="' . $this->base . '" />'
+           . (!empty($this->base) ? '<base href="' . $this->base . '" />' : '')
            . '</head>'
            . '<body>'
            . $body
