@@ -23,5 +23,5 @@ me [at] preworn [dot] com
 [2]: ascii/ "image ascii"
 [3]: tutorials/ "tutorials"
 [4]: http://stackoverflow.com/users/117259/jakegould "stack overflow"
-[4]: http://serverfault.com/users/100013/jakegould "server fault"
-[5]: http://www.linkedin.com/in/jackszwergold "linked in"
+[5]: http://serverfault.com/users/100013/jakegould "server fault"
+[6]: http://www.linkedin.com/in/jackszwergold "linked in"
