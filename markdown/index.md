@@ -17,7 +17,7 @@ i work primarily on the ubuntu & mac os x platforms but have deep experience wit
 me [at] preworn [dot] com
 
 ### community
-[stack overflow][3] • [server fault][4] • [linked in][5]
+[stack overflow][4] • [server fault][5] • [linked in][6]
 
 [1]: mosaic/ "image mosaic"
 [2]: ascii/ "image ascii"
