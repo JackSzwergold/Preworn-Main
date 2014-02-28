@@ -10,6 +10,7 @@
  *          2014-01-22, js: development & cleanup
  *          2014-01-23, js: refinements
  *          2014-02-17, js: setting a 'base'
+ *          2014-02-27, js: adding a page URL
  *
  */
 
@@ -34,6 +35,8 @@ class frontendDisplay {
   private $base = NULL;
 
   private $view_mode = NULL;
+  private $page_url = NULL;
+  private $page_copyright = NULL;
   private $page_title = NULL;
   private $page_description = NULL;
   private $page_content = NULL;
@@ -82,6 +85,20 @@ class frontendDisplay {
   function setViewMode($view_mode = null) {
     $this->view_mode = $view_mode;
   } // setViewMode
+
+
+  //**************************************************************************************//
+  // Set the page URL.
+  function setPageURL($page_url = null) {
+    $this->page_url = $page_url;
+  } // setPageURL
+
+
+  //**************************************************************************************//
+  // Set the page URL.
+  function setPageCopyright($page_copyright = null) {
+    $this->page_copyright = $page_copyright;
+  } // setPageCopyright
 
 
   //**************************************************************************************//
@@ -341,8 +358,8 @@ class frontendDisplay {
     else if ($this->doctype == 'html5') {
       $copyright_key = 'dcterms.rightsHolder';
     }
-    if (!empty($copyright_key)) {
-      $meta_names[$copyright_key] = '(c) copyright ' . date('Y') . ' jack szwergold. all rights reserved.';
+    if (!empty($copyright_key) && !empty($this->page_url)) {
+      $meta_names[$copyright_key] = $this->page_copyright;
     }
     $meta_names['apple-mobile-web-app-capable'] = 'yes';
 
@@ -354,8 +371,12 @@ class frontendDisplay {
     }
     $meta_properties['og:type'] = 'website';
     $meta_properties['og:locale'] = 'en_US';
-    $meta_properties['og:url'] = 'http://www.preworn.com/';
-    $meta_properties['og:site_name'] = $this->page_title;
+    if (!empty($this->page_url)) {
+      $meta_properties['og:url'] = $this->page_url;
+    }
+    if (!empty($this->page_title)) {
+      $meta_properties['og:site_name'] = $this->page_title;
+    }
 
     $ret = array();
 
