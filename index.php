@@ -85,7 +85,7 @@ else {
 $frontendDisplayClass = new frontendDisplay('text/html', 'utf-8', FALSE, FALSE);
 $frontendDisplayClass->setViewMode('mega');
 $frontendDisplayClass->setPageTitle($page_title);
-$frontendDisplayClass->setPageURL('http://www.prewporn.com/');
+$frontendDisplayClass->setPageURL('http://www.preworn.com/');
 $frontendDisplayClass->setPageCopyright('(c) copyright ' . date('Y') . ' jack szwergold. all rights reserved.');
 $frontendDisplayClass->setPageDescription('this site is jack szwergold’s the calling card, gallery, portfolio, playground, white wall, black box, idea sandbox &amp; daily distraction.');
 $frontendDisplayClass->setPageContentMarkdown($markdown_file);
