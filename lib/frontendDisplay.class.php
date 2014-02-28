@@ -95,7 +95,7 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
-  // Set the page URL.
+  // Set the page Copyright.
   function setPageCopyright($page_copyright = null) {
     $this->page_copyright = $page_copyright;
   } // setPageCopyright
