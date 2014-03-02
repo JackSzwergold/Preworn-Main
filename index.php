@@ -34,7 +34,7 @@ $DEBUG_OUTPUT_JSON = false;
 // Init the arrays.
 $url_parts = array();
 $markdown_parts = array();
-$title_parts = array('preworn');
+$title_parts = array('Preworn');
 
 // Parse the '$_GET' parameters.
 foreach($VALID_GET_PARAMETERS as $get_parameter) {
@@ -68,7 +68,7 @@ $markdown_file = 'markdown/' . join('/', $markdown_parts) . '.md';
 
 if (!file_exists($markdown_file)) {
   $markdown_file = 'markdown/index.md';
-  $title_parts = array('preworn');
+  $title_parts = array('Preworn');
 }
 
 // Set the page title.
