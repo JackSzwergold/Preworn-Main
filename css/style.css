@@ -88,7 +88,7 @@ ul, li
 .Core .Padding { padding: 0; }
 
 /**************************************************************************************************/
-.Core h1, .Core h2, .Core h3, .Core p
+.Core h1, .Core h2, .Core h3, .Core p, .Core ul
 {
 	font-family: Georgia, "New York", "Times New Roman", Times, serif;
 	font-weight: normal;
@@ -158,8 +158,9 @@ ul, li
 
 .Core ul li, ol li
 {
-	font-size: 130%;
 	font-family: Georgia, "New York", "Times New Roman", Times, serif;
+	font-weight: normal;
+	font-size: 120%;
 	line-height: 1.4em;
 	margin: 0 0 5px 1.75em;
 	padding: 0;
@@ -183,7 +184,7 @@ ul, li
 .Core ul li a, .Core ul li a:active, .Core ul li a:hover, .Core ul li a:visited,
 .Core ol li a, .Core ol li a:active, .Core ol li a:hover, .Core ol li a:visited { border-bottom: 1px #000 solid; }
 
-.Core ul li a:active, .Core ul li a:hover.
+.Core ul li a:active, .Core ul li a:hover,
 .Core ol li a:active, .Core ol li a:hover
 {
 	color: #080;

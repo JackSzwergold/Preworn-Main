@@ -18,5 +18,5 @@ These documents outline the two main ways I like to connect to a host machine fr
 [1]: mamp_part_1 "Setting Up a Basic, Useful MAMP Environment"
 [2]: mamp_part_2 "Configuring Name-Based Virtual Hosts"
 [3]: mamp_part_3 "Upgrading the PHP Pear Library in MAMP"
-[4]: mamp_windows_mac_osx_virtualbox_single_interface "Connecting to MAMP from Windows on VirtualBox with a Single Network Interface"
-[5]: mamp_windows_mac_osx_virtualbox_host_only_interface "Connecting to MAMP from Windows on VirtualBox with a Host-Only Interface"
+[4]: mamp_windows_mac_osx_virtualbox_part_1 "Connecting to MAMP from Windows on VirtualBox with a Single Network Interface"
+[5]: mamp_windows_mac_osx_virtualbox_part_2 "Connecting to MAMP from Windows on VirtualBox with a Host-Only Interface"
