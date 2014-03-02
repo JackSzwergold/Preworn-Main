@@ -1,27 +1,27 @@
-# preworn
-this site is jack szwergold’s the calling card, gallery, portfolio, playground, white wall, black box, idea sandbox & daily distraction.
+# Preworn
+This site is Jack Szwergold’s the calling card, gallery, portfolio, playground, white wall, black box, idea sandbox & daily distraction.
 
 ### current projects
-[image mosaic][1] • a dynamically generated image mosaic using php, the gd graphics libarary, html & css
+[Image Mosaic][1] • A dynamically generated image mosaic using php, the gd graphics libarary, html & css.
 
-[image ascii][2] • a dynamically generated ascii art image using php, the gd graphics libarary, html & css
+[Image ASCII][2] • A dynamically generated ascii art image using php, the gd graphics libarary, html & css.
 
-[tutorials][3] • this is where i will be compiling things i have learned over my 20+ years of being a tech person
+[Tutorials][3] • This is where I will be compiling things I have learned over my 20+ years of being a tech person & problem solver.
 
-### skills
-excellent set of skills for devops. unix systems administration, shell scripting & other common web/unix/internet scripting languages as well as software development using php (object oriented & flat), javascript, mysql, css, json, html, dhtml, xhtml & xml. very comfortable working in the unix shell in ubuntu, redhat, centos & solaris environments. can install/configure packages from repositories & compile from source code on most any platform.
+### Skills
+Excellent set of skills for DevOps. Unix systems administration, shell scripting & other common web/Unix/Internet scripting languages as well as software development using PHP (object oriented & flat), JavaScript, MySQL, CSS, JSON, HTML, dHTML, XHTML & XML. Very comfortable working in the Unix shell in Ubuntu, RedHat, CentOS & Solaris environments. Can install/configure packages from repositories & compile from source code on most any platform.
 
-i work primarily on the ubuntu & mac os x platforms but have deep experience with many different flavors of unix spanning back to the early 1990s. so i can jump onto the console, maneuver around the terminal and get the job done regardless of os.
+I work primarily on the Ubuntu & Mac OS X platforms but have deep experience with many different flavors of Unix spanning back to the early 1990s. So I can jump onto the console, maneuver around the terminal and get the job done regardless of OS.
 
-### contact
+### Contact
 me [at] preworn [dot] com
 
-### community
-[stack overflow][4] • [server fault][5] • [linked in][6]
+### Community
+[Stack Overflow][4] • [Server Fault][5] • [Linked In][6]
 
-[1]: mosaic/ "image mosaic"
-[2]: ascii/ "image ascii"
-[3]: tutorials/ "tutorials"
-[4]: http://stackoverflow.com/users/117259/jakegould "stack overflow"
-[5]: http://serverfault.com/users/100013/jakegould "server fault"
-[6]: http://www.linkedin.com/in/jackszwergold "linked in"
+[1]: mosaic/ "Image Mosaic"
+[2]: ascii/ "Image ASCII"
+[3]: tutorials/ "Tutorials"
+[4]: http://stackoverflow.com/users/117259/jakegould "Stack Overflow"
+[5]: http://serverfault.com/users/100013/jakegould "Server Fault"
+[6]: http://www.linkedin.com/in/jackszwergold "Linked In"

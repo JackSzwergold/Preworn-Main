@@ -11,6 +11,7 @@
  *          2014-02-16, js: adding configuration settings
  *          2014-02-16, js: adding controller logic
  *          2014-02-17, js: setting a 'base'
+ *          2014-03-02, js: adding a better page URL
  *
  */
 
@@ -31,6 +32,7 @@ $DEBUG_OUTPUT_JSON = false;
 // Get the URL param & set the markdown file as well as the page title.
 
 // Init the arrays.
+$url_parts = array();
 $markdown_parts = array();
 $title_parts = array('preworn');
 
@@ -46,6 +48,7 @@ foreach($VALID_GET_PARAMETERS as $get_parameter) {
 
 // Set the controller.
 if (!empty($controller)) {
+  $url_parts[] = $controller;
   $markdown_parts[] = $controller;
   $title_parts[] = $controller;
   if (empty($page)) {
@@ -55,6 +58,7 @@ if (!empty($controller)) {
 
 // Set the page.
 if (!empty($controller) && !empty($page)) {
+  $url_parts[] = $page;
   $markdown_parts[] = $page;
   $title_parts[] = $page;
 }
@@ -85,9 +89,9 @@ else {
 $frontendDisplayClass = new frontendDisplay('text/html', 'utf-8', FALSE, FALSE);
 $frontendDisplayClass->setViewMode('mega');
 $frontendDisplayClass->setPageTitle($page_title);
-$frontendDisplayClass->setPageURL('http://www.preworn.com/');
-$frontendDisplayClass->setPageCopyright('(c) copyright ' . date('Y') . ' jack szwergold. all rights reserved.');
-$frontendDisplayClass->setPageDescription('this site is jack szwergold’s the calling card, gallery, portfolio, playground, white wall, black box, idea sandbox &amp; daily distraction.');
+$frontendDisplayClass->setPageURL('http://www.preworn.com/' . join('/', $url_parts));
+$frontendDisplayClass->setPageCopyright('(c) Copyright ' . date('Y') . ' Jack Szwergold. All rights reserved.');
+$frontendDisplayClass->setPageDescription('This site is Jack Szwergold’s the calling card, gallery, portfolio, playground, white wall, black box, idea sandbox & daily distraction.');
 $frontendDisplayClass->setPageContentMarkdown($markdown_file);
 // $frontendDisplayClass->setPageContent('Hello world!');
 $frontendDisplayClass->setPageViewport('width=device-width, initial-scale=0.4, maximum-scale=2, minimum-scale=0.4, user-scalable=yes');
