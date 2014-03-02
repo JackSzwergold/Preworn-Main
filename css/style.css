@@ -94,6 +94,7 @@ ul, li
 	font-weight: normal;
 	line-height: 1.4em;
 	margin: 0 0 10px 0;
+	clear: both;
 }
 
 .Core h2 { margin: 10px 0 10px 0; }
@@ -152,6 +153,7 @@ ul, li
 {
 	margin: 0;
 	padding: 0;
+	clear: both;
 }
 
 .Core ul li
@@ -181,7 +183,7 @@ ul, li
 .Core .Grid ul
 {
 	margin: 0;
-	padding: 0;
+	padding: 0 0 20px 0;
 }
 
 .Core .Grid ul li .Padding { padding: 0 3px 6px 3px; }
