@@ -1,6 +1,6 @@
 # Tutorials
 
-This is where I will be compiling things I have learned over my 20+ years of being a web developer, Unix user, Unix systems administrator & more generally, “That guy who does things by typing into a green terminal window.”
+This is where I will be compiling things I have learned over my 20+ years of being a web developer, Unix user, Unix systems administrator & more generally, “That guy who does things by typing into a terminal window with green text on the screen.”
 
 I’m mainly compiling these things for my own personal reference, but if you stumble across this & find it useful I’m cool with that.
 
