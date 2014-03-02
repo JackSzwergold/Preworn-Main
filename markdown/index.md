@@ -2,9 +2,9 @@
 This site is Jack Szwergold’s the calling card, gallery, portfolio, playground, white wall, black box, idea sandbox & daily distraction.
 
 ### current projects
-[Image Mosaic][1] • A dynamically generated image mosaic using php, the gd graphics libarary, html & css.
+[Image Mosaic][1] • A dynamically generated image mosaic using PHP, the GD graphics library, HTML & CSS.
 
-[Image ASCII][2] • A dynamically generated ascii art image using php, the gd graphics libarary, html & css.
+[Image ASCII][2] • A dynamically generated ASCII art image using php, the GD graphics library, HTML & CSS.
 
 [Tutorials][3] • This is where I will be compiling things I have learned over my 20+ years of being a tech person & problem solver.
 
