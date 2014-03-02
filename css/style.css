@@ -149,14 +149,14 @@ ul, li
 .Core p code { font-weight: bold; }
 .Core pre code { font-weight: normal; }
 
-.Core ul
+.Core ul, ol
 {
 	margin: 0;
 	padding: 0;
 	clear: both;
 }
 
-.Core ul li
+.Core ul li, ol li
 {
 	font-size: 130%;
 	font-family: Georgia, "New York", "Times New Roman", Times, serif;
@@ -164,14 +164,27 @@ ul, li
 	margin: 0 0 5px 1.75em;
 	padding: 0;
 	clear: both;
+}
+
+.Core ul li
+{
 	list-style-type: disc;
 	list-style-position: outside;
 	display: list-item;
 }
 
-.Core ul li a, .Core ul li a:active, .Core ul li a:hover, .Core ul li a:visited { border-bottom: 1px #000 solid; }
+.Core ol li
+{
+	list-style-type: decimal;
+	list-style-position: outside;
+	display: list-item;
+}
 
-.Core ul li a:active, .Core ul li a:hover
+.Core ul li a, .Core ul li a:active, .Core ul li a:hover, .Core ul li a:visited,
+.Core ol li a, .Core ol li a:active, .Core ol li a:hover, .Core ol li a:visited { border-bottom: 1px #000 solid; }
+
+.Core ul li a:active, .Core ul li a:hover.
+.Core ol li a:active, .Core ol li a:hover
 {
 	color: #080;
 	border-color: #080;
@@ -180,13 +193,15 @@ ul, li
 /**************************************************************************************************/
 .Core .Grid .Padding { padding: 6px 3px 0 3px; }
 
-.Core .Grid ul
+.Core .Grid ul,
+.Core .Grid ol
 {
 	margin: 0;
 	padding: 0 0 20px 0;
 }
 
-.Core .Grid ul li .Padding { padding: 0 3px 6px 3px; }
+.Core .Grid ul li .Padding,
+.Core .Grid ol li .Padding { padding: 0 3px 6px 3px; }
 
 /**************************************************************************************************/
 .Core .Text .Padding { padding: 15px 0 15px 0; }

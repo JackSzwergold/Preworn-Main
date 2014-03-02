@@ -11,10 +11,7 @@ A guide to using MAMP—specifically version 2.1.4—as professional development
 * [Part 3: Upgrading the PHP Pear Library in MAMP][3]
 
 ### Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox
-These tutorialis outline the two main ways I like to connect to a host machine from a guest machine within VirtualBox for web browser testing with MAMP-based development tools in Mac OS X.
-If it’s unclear to you what a *host* machine is compared to a *guest* machine: A host machine is the computer running the VirtualBox application itself and a guest machine is a virtual machine that runs within the VirtualBox application itself. The goal of this tutorial is to be able to bridge the host environment with the guest environment so you can use VirtualBox to help debug websites running in MAMP.
-
-The basic concepts of this kind of setup can be used for all sorts of things beyond web page testing. But the focus of these tutorials is the basic needs of a web developer who needs to test browser compatibly against the various flavors of Microsoft Internet Explorer web browser that are out there. Internet Explorer testing can be painful. Nah, let’s face it: Internet Explorer testing *is* painful… And horrible. Hopefully a setup like this can make your life as a web developer easier.
+These documents outline the two main ways I like to connect to a host machine from a guest machine within VirtualBox for web browser testing with MAMP-based development tools in Mac OS X.
 * [Part 1: Connecting to MAMP from Windows on VirtualBox with a Single Network Interface][4]
 * [Part 2: Connecting to MAMP from Windows on VirtualBox with a Host-Only Interface][5]
 
