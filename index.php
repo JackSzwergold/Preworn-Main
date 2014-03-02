@@ -32,6 +32,7 @@ $DEBUG_OUTPUT_JSON = false;
 // Get the URL param & set the markdown file as well as the page title.
 
 // Init the arrays.
+$url_parts = array();
 $markdown_parts = array();
 $title_parts = array('preworn');
 
