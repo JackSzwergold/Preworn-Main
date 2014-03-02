@@ -1,7 +1,7 @@
 # Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox
 
 Written by [Jack Szwergold][1] on March 2, 2014
-## Part 3: Advanced — Using a Host-Only Interface Network Interface SetupSetting up VirtualBox with an additional host-only interface gives you the flexibility of connecting directly from the host machine to the guest machine. It also helps you eliminate the possibility of any inadvertent networking weirdness that might occur when managing the connections of a whole slew of virtual machines talking to the host machine.But if you don’t care about such things—or if networking issues give you a headache—turn away now.
+## Part 3: Advanced — Using a Host-Only Interface Network Interface SetupSetting up VirtualBox with an additional host-only interface gives you the flexibility of connecting directly from the host machine to the guest machine. It also helps you eliminate the possibility of any inadvertent networking weirdness that might occur when managing the connections of a whole slew of virtual machines talking to the host machine.But if you don’t care about such things—or if networking issues give you a headache—turn away now. The basic setup tutorial should be enough for you.
 ### Let’s get started.
 You will basically be setting up a static IP network within the **192.165.65.x** subnet on the host-only adapter. So your virtual machine will have a standard **10.0.2.x** address on the main network interface and another IP address within the **192.165.65.x** subnet on the secondary host-only virtual interface.The first step in setting up a host-only adapter happens in the main VirtualBox interface.
 
