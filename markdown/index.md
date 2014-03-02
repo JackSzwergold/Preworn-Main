@@ -1,7 +1,7 @@
 # Preworn
 This site is Jack Szwergold’s the calling card, gallery, portfolio, playground, white wall, black box, idea sandbox & daily distraction.
 
-### current projects
+### Current Projects
 [Image Mosaic][1] • A dynamically generated image mosaic using PHP, the GD graphics library, HTML & CSS.
 
 [Image ASCII][2] • A dynamically generated ASCII art image using php, the GD graphics library, HTML & CSS.
