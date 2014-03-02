@@ -95,7 +95,7 @@ And then copy in this short but sweet PHP script into that file:
 
 Save the file & reload your browser. The text, “Hello world!” should be displayed in the brower. Which means now you’re done setting up your basic MAMP development environment!
 
-[1]: http://www.preworn.com/ "preworn • jack szwergold’s online portfolio"
-[2]: http://us3.php.net/phpinfo "info on phpinfo()"
-[3]: http://www.barebones.com/products/bbedit/ "bare bones software’s bbedit page"
-[4]: http://www.nano-editor.org "info on gnu nano"
+[1]: http://www.preworn.com/ "Preworn • Jack Szwergold’s Online Portfolio"
+[2]: http://us3.php.net/phpinfo "Info on phpinfo()."
+[3]: http://www.barebones.com/products/bbedit/ "Bare Bones Software’s BBEdit page."
+[4]: http://www.nano-editor.org "Info on GNO nano."

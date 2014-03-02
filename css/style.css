@@ -197,8 +197,13 @@ ul, li
 .Core .Grid ul,
 .Core .Grid ol
 {
-	margin: 0;
-	padding: 0 0 20px 0;
+	position: relative;
+	float: left;
+	display: inline;
+	margin: 0 0 20px 0;
+	padding: 20px 20px 20px 10px;
+	border-radius: 5px;
+	background-color: #eee;
 }
 
 .Core .Grid ul li .Padding,
