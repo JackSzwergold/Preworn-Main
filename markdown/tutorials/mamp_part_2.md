@@ -59,15 +59,15 @@ And add these lines to the bottom of the Apache `httpd.conf` file:
 	NameVirtualHost *
 
 	<VirtualHost *>
-	  DocumentRoot "/Applications/MAMP/htdocs"
-	  ServerName localhost
-	  ServerAlias localhost
+	 DocumentRoot "/Applications/MAMP/htdocs"
+	 ServerName localhost
+	 ServerAlias localhost
 	</VirtualHost>
 
 	<VirtualHost *>
-	  DocumentRoot "/Applications/MAMP/htdocs/test_host"
-	  ServerName *.local
-	  ServerAlias *.local
+	 DocumentRoot "/Applications/MAMP/htdocs/test_host"
+	 ServerName *.local
+	 ServerAlias *.local
 	</VirtualHost>
 
 The first `VirtualHost` config is pretty straight forward; it handles traffic going to `localhost` and sends it to `htdocs`. But note the second `VirtualHost` config. That one basically tells Apache to set the `DocumentRoot` to be `test_host` for connections going to any `ServerName` that has the `.local`—aka: `*.local`—top level domain.
