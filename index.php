@@ -50,7 +50,7 @@ foreach($VALID_GET_PARAMETERS as $get_parameter) {
 if (!empty($controller)) {
   $url_parts[] = $controller;
   $markdown_parts[] = $controller;
-  $title_parts[] = $controller;
+  $title_parts[] = ucwords($controller);
   if (empty($page)) {
     $markdown_parts[] = 'index';
   }
@@ -73,7 +73,7 @@ if (!file_exists($markdown_file)) {
 
 // Set the page title.
 $page_title = join(' / ', $title_parts);
-$page_title = preg_replace('/_/', ' ', $page_title);
+$page_title = ucwords(preg_replace('/_/', ' ', $page_title));
 
 // Set the page base.
 if (!empty($controller)) {
