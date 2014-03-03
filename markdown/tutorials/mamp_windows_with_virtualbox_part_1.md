@@ -11,7 +11,7 @@ But emulation & virtualization is not 100% the same.
 Virtualization—in contrast to emulation—is a software method which allows you to better divide & allocate existing, non-emulated system resources for other purposes.
 
 So in the case of a modern PC—like Apple’s Macintosh computers—which use the same Intel-based x86 CPUs like Windows machines, virtualization allows an Apple Macintosh x86-based hardware running Mac OS X to run Microsoft Windows—which requires x86-based hardware as well—within a virtual environment on the same machine. This is great!
-### Why is virtualization good for web development?
+### Why is virtualization so great for web development?
 
 You know why this is great? Because, I like to work on primarily in Mac OS X & regularly need do web browser cross-platform compatibility of my work with Internet Explorer running on Windows.
 
