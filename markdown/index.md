@@ -17,7 +17,7 @@ I work primarily on the Ubuntu & Mac OS X platforms but have deep experience wit
 me [at] preworn [dot] com
 
 ### Community
-[Stack Overflow][4] • [Server Fault][5] • [Linked In][6]
+[Stack Overflow][4] • [Server Fault][5] • [Linked In][6] • [GitHub][7]
 
 [1]: mosaic/ "Image Mosaic"
 [2]: ascii/ "Image ASCII"
@@ -25,3 +25,4 @@ me [at] preworn [dot] com
 [4]: http://stackoverflow.com/users/117259/jakegould "Stack Overflow"
 [5]: http://serverfault.com/users/100013/jakegould "Server Fault"
 [6]: http://www.linkedin.com/in/jackszwergold "Linked In"
+[7]: https://github.com/JackSzwergold
