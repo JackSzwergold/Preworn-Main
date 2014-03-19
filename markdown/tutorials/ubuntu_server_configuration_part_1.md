@@ -65,15 +65,21 @@ And now, let’s set the user’s default group to `www-readwrite` so every file
     sudo usermod -g www-readwrite sysop
     sudo usermod -g www-readwrite user
 
+With the user & group basics set, let’s move onto the more sundry server setup things.
+
 ***
 
 #### Set the server time & timezone info.
 
+Okay, now it’s time to set your server’s time with data pulled from a remote time server by running `ntpdate` like so:
+
     sudo ntpdate ntp.ubuntu.com
+
+Now ensure your timezone is set correctly by configuring `tzdata` like so:
 
     sudo dpkg-reconfigure tzdata
 
-#### Set the NTP client to check the server daily.
+Now let’s set up a daily cron job to check the NTP server to make sure the time is correct and not affected by accidental drifting caused by system reboots or other factors. First, create the `ntpdate` file like so.
 
     sudo nano /etc/cron.daily/ntpdate
 
