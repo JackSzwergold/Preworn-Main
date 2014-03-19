@@ -14,15 +14,17 @@ There are are tons of hacks & exploilts that explicitly look for—and act on—
 
 #### Create the users.
 
-Okay, so here is where you will create a new administrative user. The name can be anything you like as long as it is not something common & predictable like `admin` or `administrator`. In my case, I like to use the name `sysop` which is short for “system operator” which is a throwback to the old BBS days, but works well for a case like this.
+Okay, so here is where you will create a new administrative user. The name can be anything you like as long as it is not something common & predictable like `admin` or `administrator`. In my case, I like to use the name `sysop` which is short for “system operator” which is a throwback to the old BBS days, but works well for a case like this. Just add the new user using `adducer` like so:
 
     sudo adduser sysop
-    p: password]
+
+I also like to add a standard, non-administrator user to the system as well for configuration testing like so:
 
     sudo adduser user
-    p: [password]
 
-#### Edit the 'sudoers' file.
+For both users, be sure to choose a solid password of some sort. Something easy for you to remember but not easy for someone else to guess.
+
+#### Add your new admin user to the ‘sudoers’ file.
 
     sudo nano /etc/sudoers
 
