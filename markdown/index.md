@@ -9,7 +9,7 @@ This site is Jack Szwergold’s the calling card, gallery, portfolio, playground
 [Tutorials][3] • This is where I will be compiling things I have learned over my 20+ years of being a tech person & problem solver.
 
 ### Skills
-Excellent set of skills for DevOps. Unix systems administration, shell scripting & other common web/Unix/Internet scripting languages as well as software development using PHP (object oriented & flat), JavaScript, MySQL, CSS, JSON, HTML, dHTML, XHTML & XML. Very comfortable working in the Unix shell in Ubuntu, RedHat, CentOS & Solaris environments. Can install/configure packages from repositories & compile from source code on most any platform.
+Excellent set of skills for DevOps as well as Level 2 & 3 support. Unix systems administration, shell scripting & other common web/Unix/Internet scripting languages as well as software development using PHP (object oriented & flat), JavaScript, MySQL, CSS, JSON, HTML, dHTML, XHTML & XML. Very comfortable working in the Unix shell in Ubuntu, RedHat, CentOS & Solaris environments. Can install/configure packages from repositories & compile from source code on most any platform.
 
 I work primarily on the Ubuntu & Mac OS X platforms but have deep experience with many different flavors of Unix spanning back to the early 1990s. So I can jump onto the console, maneuver around the terminal and get the job done regardless of OS.
 
