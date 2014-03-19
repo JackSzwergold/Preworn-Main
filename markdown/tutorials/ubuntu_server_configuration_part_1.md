@@ -30,14 +30,22 @@ So now that you have designated a new user to be an administrator, you have to a
 
     sudo nano /etc/sudoers
 
-#### Add this entry under: User privilege specification. 
+Look for the section that controls user priviledges named “User privilege specification”. It should look like this:
 
+    # User privilege specification
+    root   ALL=(ALL:ALL) ALL
+
+Now comment out the `root` user, and add another line for the `sysop` user like so:
+
+    # User privilege specification
+    #root   ALL=(ALL:ALL) ALL
     sysop ALL=(ALL:ALL) ALL
 
-#### Now lock the root account.
+Okay, have that set? Then go ahead & lock the `root` user’s account like so:
 
     sudo passwd -l root
 
+And you should now be all set to use `sysop` as your new administrative user with rights granted via `sudo`!
 
 ***
 
