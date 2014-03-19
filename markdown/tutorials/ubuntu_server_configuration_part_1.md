@@ -49,16 +49,15 @@ And you should now be all set to use `sysop` as your new administrative user wit
 
 ***
 
+### Create the ‘www-readwrite’ group.
 
-
-#### Some Ubuntu setups don't have the 'www-readwrite' group in place, so we need to add it.
+Since I do a lot of web development & systems administration on collaborative Ubuntu servers, I like to create a unique group which I assign users to. This allows me to retain system administrator’s privleges while allowing other non-administrator users to have access to web-spefic areas & resources without having to system administrator rights.
 
     sudo groupadd www-readwrite
 
-#### Set user's default group to the 'www-readwrite' group.
+Now with that set, let’s assign the two users we created to the `www-readwrite` group like so:
 
     sudo usermod -g www-readwrite sysop
-
     sudo usermod -g www-readwrite user
 
 #### Add user to the www-readwrite group.
