@@ -10,7 +10,7 @@ The purpose of this tutorial is to explain how I like to configure an Ubuntu ser
 
 First & foremost depending on how your initial install of Ubuntu went, you were either prompted to create an initial user with administrator rights or you were assigned a user. I’m not going to run down the list how an initial user is generated, but there is one overarching philosophy here: If your administrative user is named `root` that is not good from a security standpoint.
 
-There are are tons of hacks & exploilts that explicitly look for—and act on—the `root` account, so you sould not use that account for any reason & instead handle administrative functions via another user assigned administratives rights via `sudo`.
+There are are tons of hacks & exploits that explicitly look for—and act on—the `root` account, so you should not use that account for any reason & instead handle administrative functions via another user assigned administrative rights via `sudo`.
 
 ### Create the users.
 
@@ -26,11 +26,11 @@ For both users, be sure to choose a solid password of some sort. Something easy 
 
 #### Add the new admin user to the ‘sudoers’ file.
 
-So now that you have designated a new user to be an administrator, you have to actually add that user to the `sudoers` file so they can be granyted `sudo` user rights. So let’s open the file like so:
+So now that you have designated a new user to be an administrator, you have to actually add that user to the `sudoers` file so they can be granted `sudo` user rights. So let’s open the file like so:
 
     sudo nano /etc/sudoers
 
-Look for the section that controls user priviledges named “User privilege specification”. It should look like this:
+Look for the section that controls user privileges named “User privilege specification”. It should look like this:
 
     # User privilege specification
     root   ALL=(ALL:ALL) ALL
@@ -51,20 +51,21 @@ And you should now be all set to use `sysop` as your new administrative user wit
 
 ### Create the ‘www-readwrite’ group.
 
-Since I do a lot of web development & systems administration on collaborative Ubuntu servers, I like to create a unique group which I assign users to. This allows me to retain system administrator’s privleges while allowing other non-administrator users to have access to web-spefic areas & resources without having to system administrator rights.
+Since I do a lot of web development & systems administration on collaborative Ubuntu servers, I like to create a unique group which I assign users to. This allows me to retain system administrator’s privileges while allowing other non-administrator users to have access to web-specific areas & resources without having to system administrator rights.
 
     sudo groupadd www-readwrite
 
-Now with that set, let’s assign the two users we created to the `www-readwrite` group like so:
+First, add the user’s to the `www-readwrite` group:
+
+    sudo adduser sysop www-readwrite
+    sudo adduser user www-readwrite
+
+And now, let’s set the user’s default group to `www-readwrite` so every file they create is actually assigned the group of `www-readwrite` like so:
 
     sudo usermod -g www-readwrite sysop
     sudo usermod -g www-readwrite user
 
-#### Add user to the www-readwrite group.
-
-    sudo adduser sysop www-readwrite
-
-    sudo adduser user www-readwrite
+***
 
 #### Set the server time & timezone info.
 
