@@ -144,18 +144,16 @@ I’m not going to do a tool-by-tool breakdown of usage in this tutorial, but if
 
     man htop
 
-That would give you the manual page for `htop`; an excellent open source replacement for the commonly used system tool `top`.
-
-### Install the 'build-essential' tools to allow compiling source code.
-
-    sudo aptitude install build-essential
-
-### Install Subversion & GIT related stuff.
-
-    sudo aptitude install git git-core subversion git-svn
+That would give you the manual page (aka: `man` page) for `htop`; an excellent open source replacement for the commonly used system tool `top`.
 
 
-### Setting default UMASK in Ubuntu & other Debian setups.
+
+
+
+
+### Setting default UMASK for group writability.
+
+By default, Unix systems are set to only allow users
 
     sudo nano /etc/login.defs
 
@@ -174,6 +172,24 @@ Find the line that reads.
 Change it to.
 
     session optional                        pam_umask.so	umask=0002
+
+
+
+
+
+
+
+
+
+
+### Install the 'build-essential' tools to allow compiling source code.
+
+
+    sudo aptitude install build-essential
+
+### Install Subversion & GIT related stuff.
+
+    sudo aptitude install git git-core subversion git-svn
 
 
 ### Fix for slow SSH client connections by changing the prefered order of authetications
