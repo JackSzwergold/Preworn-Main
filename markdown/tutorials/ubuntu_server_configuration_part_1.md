@@ -165,7 +165,9 @@ That reflects the system load average history & allows you to note when—and if
 
 ### Install more base level tools.
 
-At this point you should have a somewhat functional Ubuntu server in place with the bare minimum need to do some things, but we’re not done yet. There are lots of other useful tools that should be installed to make your life easier.  And here they are! 
+At this point you should have a somewhat functional Ubuntu server in place with the bare minimum items needed to do some basic things, but we’re not done yet.
+
+There are lots of other useful tools that should be installed to make your life easier.  And here they are! 
 
     sudo aptitude install dnsutils traceroute nmap bc htop finger curl whois rsync lsof iftop figlet lynx mtr-tiny iperf nload zip unzip attr sshpass dkms mc elinks 
 
