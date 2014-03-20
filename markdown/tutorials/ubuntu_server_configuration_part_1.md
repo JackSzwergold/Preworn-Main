@@ -187,16 +187,29 @@ The file permissions for `test_file.txt` should look like this:
 
     -rw-rw-r-- 1 sysop www-readwrite 0 Mar 20 05:36 test_file.txt
 
-Note the `rw` for the group permissions which indicates the file can be read & written to. Which all means that your default user group permissions are properly set to allow group writability.
+Note the `rw` for the group permissions which indicates the file can be read from & written to. Which all means that your default user group permissions are properly set to allow group writability.
 
+### Install ‘locate’.
 
+Now we’ll install a tool that will make your life lots easier: `locate`. Simply put, if you know what `Spotlight` is in OS X, then you know what `locate` is. It’s a tool that indexes content on your file system and allows you to quickly find files—including full file paths—with ease.
 
+Your first step in using it is to actually install it like so:
 
+    sudo aptitude install locate
 
-### Install compiler, GIT & SVN related stuff.
+Next, run the `updatedb` command so the `locate` command actually has database to use:
 
-    sudo aptitude install build-essential git git-core subversion git-svn
+    sudo updatedb
 
+Now do a search for a a file—such as the `test_file.txt` we created above—like so:
+
+    locate test_file.txt
+
+The result returned should be:
+
+    /home/sysop/test_file.txt
+
+Being able to get to content quickly & easily via the command line is invaluable. And `locate` will help make your life working in the command line a bit easier.
 
 ### Fix for slow SSH client connections by changing the prefered order of authetications
 
@@ -206,12 +219,9 @@ This changes it for all users on a system level.
 
     PreferredAuthentications publickey,password,gssapi-with-mic,hostbased,keyboard-interactive
 
+### Install compiler, GIT & SVN related stuff.
 
-Install locate & update the database.
-
-    sudo aptitude install locate
-
-    sudo updatedb
+    sudo aptitude install build-essential git git-core subversion git-svn
 
 ### Set the MOTD header.
 
@@ -273,19 +283,19 @@ That reflects the system load average history & allows you to note when—and if
 
 
 
-#### Install POSTFIX.
+### Install POSTFIX & related mail utilities.
 
     sudo aptitude install postfix
 
-##### In SOME cases, this is a better option if POSTFIX chokes.
+In SOME cases, this is a better option if POSTFIX chokes.
 
     sudo aptitude install mailutils
 
-##### Check the postfix config.
+Check the postfix config.
 
     sudo nano /etc/postfix/main.cf
 
-##### Change these to match your server settings.
+Change these to match your server settings.
 
     myhostname = sandbox.local
     mydestination = sandbox.local, localhost.localdomain, localhost
