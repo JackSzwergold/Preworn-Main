@@ -2,7 +2,7 @@
 
 Written by [Jack Szwergold][1] on March 19, 2014
 
-## Part 1: Configuration a Basic, Useful Ubuntu Server
+## Part 1: Configuration a Base Level Ubuntu Server
 
 The purpose of this tutorial is to explain how I like to configure an Ubuntu server. This doesn’t go into details as to how you got Ubuntu installed on a server to begin with, but begins with the assumption that you have an Ubuntu machine setup to the point you have a basic terminal prompt & you can login as a user with administrator rights.
 
@@ -130,6 +130,87 @@ Now with that done, let’s update `aptitude`
 
     sudo aptitude upgrade
 
+### Install base level tools & utilities.
+
+At this point you should have a somewhat functional Ubuntu server in place with the bare minimum items needed to do some basic things, but we’re not done yet.
+
+There are lots of other useful tools that should be installed to make your life easier. And here they are! 
+
+    sudo aptitude install dnsutils traceroute nmap bc htop finger curl whois rsync lsof iftop figlet lynx mtr-tiny iperf nload zip unzip attr sshpass dkms mc elinks 
+
+While there are literally tons of tools available for installation in the Ubuntu community, the items listed above are the rock-solid core of the command line system administration tools I rely on on a daily basis. 
+
+I’m not going to do a tool-by-tool breakdown of usage in this tutorial, but if you already know anything about how Unix systems work, you can pretty much understand how these tools are used. But if you don’t know what these tools are, I encourage you to read up on these tools by using the `man` command from the command line like so:
+
+    man htop
+
+That would give you the manual page for `htop`; an excellent open source replacement for the commonly used system tool `top`.
+
+### Install the 'build-essential' tools to allow compiling source code.
+
+    sudo aptitude install build-essential
+
+### Install Subversion & GIT related stuff.
+
+    sudo aptitude install git git-core subversion git-svn
+
+
+### Setting default UMASK in Ubuntu & other Debian setups.
+
+    sudo nano /etc/login.defs
+
+    # UMASK         022
+    UMASK           002
+
+
+### Setting pam.d UMASK in Ubuntu & other Debian setups.
+
+    sudo nano /etc/pam.d/common-session
+
+Find the line that reads.
+
+    session optional                        pam_umask.so
+
+Change it to.
+
+    session optional                        pam_umask.so	umask=0002
+
+
+### Fix for slow SSH client connections by changing the prefered order of authetications
+
+This changes it for all users on a system level.
+
+    sudo nano /etc/ssh/ssh_config
+
+    PreferredAuthentications publickey,password,gssapi-with-mic,hostbased,keyboard-interactive
+
+
+Install locate & update the database.
+
+    sudo aptitude install locate
+
+    sudo updatedb
+
+### Set the MOTD header.
+
+    figlet SANDBOX
+
+    sudo nano /etc/motd.tail
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Install & enable sysstat.
 
 Systat—commonly accessed via the command line command `sar`—is a great tool to use to collect, report, or save system activity information.
@@ -163,37 +244,12 @@ The output should be something like this:
 
 That reflects the system load average history & allows you to note when—and if—there was a spike in system activity. Very useful in diagnosing system issues after they happen.
 
-### Install more base level tools.
-
-At this point you should have a somewhat functional Ubuntu server in place with the bare minimum items needed to do some basic things, but we’re not done yet.
-
-There are lots of other useful tools that should be installed to make your life easier.  And here they are! 
-
-    sudo aptitude install dnsutils traceroute nmap bc htop finger curl whois rsync lsof iftop figlet lynx mtr-tiny iperf nload zip unzip attr sshpass dkms mc elinks 
-
-While there are literally tons of tools available for installation in the Ubuntu community, the items listed above are the rock-solid core of the command line system administration tools I rely on on a daily basis.
-
-I’m not going to do a tool-by-tool breakdown of usage in this tutorial, but encourage anyone who is curious to read up on these tools by using the `man` command from the command line like so:
-
-    man htop
-
-That would give you the manual page for `htop`; an excellent open source replacement for the commonly used system tool `top`.
 
 
 
 
 
 
-
-
-
-#### Install the 'build-essential' tools to allow compiling source code.
-
-    sudo aptitude install build-essential
-
-#### Install Subversion & GIT related stuff.
-
-    sudo aptitude install git git-core subversion git-svn
 
 #### Install POSTFIX.
 
@@ -212,50 +268,10 @@ That would give you the manual page for `htop`; an excellent open source replace
     myhostname = sandbox.local
     mydestination = sandbox.local, localhost.localdomain, localhost
 
-#### Set the MOTD header.
-
-    figlet SANDBOX
-
-    sudo nano /etc/motd.tail
-
-#### Setting default UMASK in Ubuntu & other Debian setups.
-
-    sudo nano /etc/login.defs
-
-    # UMASK         022
-    UMASK           002
 
 
-#### Setting pam.d UMASK in Ubuntu & other Debian setups.
 
-    sudo nano /etc/pam.d/common-session
-
-#### Find the line that reads.
-
-    session optional                        pam_umask.so
-
-#### Change it to.
-
-    session optional                        pam_umask.so	umask=0002
-
-
-#### Fix for slow SSH client connections by changing the prefered order of authetications
-
-#### This changes it for all users on a system level.
-
-    sudo nano /etc/ssh/ssh_config
-
-    PreferredAuthentications publickey,password,gssapi-with-mic,hostbased,keyboard-interactive
-
-
-#### Install locate & update the database.
-
-    sudo aptitude install locate
-
-    sudo updatedb
-
-
-##### Install iptables & iptables-persistent & import iptables.conf.
+### Install iptables & iptables-persistent & import iptables.conf.
 
     sudo aptitude install iptables iptables-persistent
 
@@ -263,11 +279,11 @@ That would give you the manual page for `htop`; an excellent open source replace
 
     sudo cp ~/iptables.conf /etc/iptables/rules.v4
 
-#### Run 'update-locale'.
+Run 'update-locale'.
 
     sudo update-locale
 
-#### Might need to set the locale file to this.
+Might need to set the locale file to this.
 
     sudo nano /etc/default/locale
 
