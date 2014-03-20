@@ -179,7 +179,7 @@ Then finding the line that looks like this
 
     session optional                        pam_umask.so
 
-Change it like so.  Note the addition of `umask=0002` at the end of the line:
+Change it like so. Note the addition of `umask=0002` at the end of the line:
 
     session optional                        pam_umask.so    umask=0002
 
