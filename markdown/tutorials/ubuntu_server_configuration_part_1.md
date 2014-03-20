@@ -130,27 +130,38 @@ Now with that done, let’s update `aptitude`
 
     sudo aptitude upgrade
 
+### Install & enable sysstat.
 
-
-
-
-
-
-#### Install & enable sysstat.
+Systat—commonly accessed via the command line command `sar`—is a great tool to use to collect, report, or save system activity information.
 
     sudo aptitude install sysstat
 
-#### Edit sysstat.
+Now open the `sysstat` config file like so:
 
     sudo nano /etc/default/sysstat
 
-#### Enable sysstat.
+And set the `ENABLED` value to `true`:
 
     ENABLED="true"
 
-#### Restart sysstat.
+Once that is done, restart `sys stat`:
 
     sudo service sysstat restart
+
+Now wait about 10-15 minutes to a half hour and run the following command:
+
+    sar -q
+
+The output should be something like this:
+
+    09:55:01 PM   runq-sz  plist-sz   ldavg-1   ldavg-5  ldavg-15   blocked
+    10:05:01 PM         2       130      1.18      1.48      1.05         0
+    10:15:02 PM         1       126      0.01      0.80      1.11         0
+    10:25:01 PM         1       126      0.01      0.18      0.64         0
+    10:35:02 PM         2       135      1.58      1.59      1.10         0
+    Average:            2       127      0.45      0.83      0.95         0
+
+That reflects the system load average history & allows you to note when—and if—there was a spike in system activity.
 
 #### Install more base level tools.
 
