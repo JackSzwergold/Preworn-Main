@@ -72,7 +72,7 @@ And now, let’s set the user’s default group to `www-readwrite` so every file
 
 With the user & group basics set, let’s move onto the more sundry server setup things.
 
-### Set the server time & timezone info.
+### Set the server time & related timezone info.
 
 Okay, now it’s time to set your server’s time with data pulled from a remote time server by running `ntpdate` like so:
 
@@ -154,7 +154,6 @@ If you are going to use your Ubuntu server for code development of any level, yo
 
 That command will install the whole suite of Debian compilers such as `gcc`/`g++` as well as SCM (source code management) tools such as `git`, `svn` (Subversion) & related utilities like `git-svn` which you can use to bridge & convert `svn` repositories to `git` repositories.
 
-
 ### Setting default UMASK for group writability.
 
 By default, Unix systems are set to only allow users to write to files they themselves have created by using a system-wide UMASK of `022`. But since I like to setup servers which allow users to collaborate when connected to a common group—such as `www-readwrite`—I like to set the system-wide UMASK to `002`.
@@ -222,7 +221,7 @@ Being able to get to content quickly & easily via the command line is invaluable
 
 ### Fix for slow SSH client connections.
 
-In some cases, a fresh install of Ubuntu can have slow a SSH connection when using password authentication. This happens because SSH has `password` authentication set as the last authentication option by default. So you want to edit the SSH config to push `password` authentication closer to the top of the list like so:
+Sometimes a fresh install of Ubuntu can have slow a SSH connection when using password authentication. This happens because SSH has `password` authentication set as the last authentication option by default. So you want to edit the SSH config to push `password` authentication closer to the top of the list like so:
 
     sudo nano /etc/ssh/ssh_config
 
@@ -236,7 +235,7 @@ Now restart the SSH daemon like so:
 
 And that problem should be cleared up.
 
-### Set the MOTD header.
+### Adjust the MOTD (Message of the Day) header & related info.
 
     figlet SANDBOX
 
