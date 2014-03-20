@@ -72,9 +72,7 @@ And now, let’s set the user’s default group to `www-readwrite` so every file
 
 With the user & group basics set, let’s move onto the more sundry server setup things.
 
-***
-
-#### Set the server time & timezone info.
+### Set the server time & timezone info.
 
 Okay, now it’s time to set your server’s time with data pulled from a remote time server by running `ntpdate` like so:
 
