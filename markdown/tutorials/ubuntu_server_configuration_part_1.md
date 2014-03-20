@@ -12,6 +12,13 @@ First & foremost depending on how your initial install of Ubuntu went, you were 
 
 There are are tons of hacks & exploits that explicitly look for—and act on—the `root` account, so you should not use that account for any reason & instead handle administrative functions via another user assigned administrative rights via `sudo`.
 
+### First, make sure ‘aptitude’ is installed.
+
+Before anything else, let’s make sure that `aptitude` is installed. I know some users prefer `apt-get`, but I find `aptitude` to be nicer & easier to use. It appears to be installed by default with Ubuntu 12.04, but in case it isn’t do the following to install `aptitude`:
+
+    sudo apt-get update
+    sudo apt-get install aptitude
+
 ### Create the users.
 
 Okay, so here is where you will create a new administrative user. The name can be anything you like as long as it is not something common & predictable like `admin` or `administrator`. In my case, I like to use the name `sysop` which is short for “system operator” which is a throwback to the old BBS days, but works well for a case like this. Just add the new user using `adduser` like so:
@@ -46,8 +53,6 @@ Okay, have that set? Then go ahead & lock the `root` user’s account like so:
     sudo passwd -l root
 
 And you should now be all set to use `sysop` as your new administrative user with rights granted via `sudo`!
-
-***
 
 ### Create the ‘www-readwrite’ group.
 
@@ -91,7 +96,6 @@ Then make sure the file has executable permissions:
 
     sudo chmod 755 /etc/cron.daily/ntpdate
 
-
 That said, as of 2012 `ntupdate` is slowly being depreciated. So while the above—which is the traditional way of syncing to a time server—works as expected, the new preferred way is to sync with an ntp server is to use `ntpd` which can be installed as follows:
 
     sudo aptitude install ntp
@@ -101,11 +105,10 @@ The `ntpd` options can be edited here:
     sudo nano /etc/ntp.conf
 
 
-#### Update apt-get & install aptitude.
 
-    sudo apt-get update
 
-    sudo apt-get install aptitude
+
+
 
 #### Edit the 'sources.list' to enable partner package updates.
 
@@ -119,6 +122,11 @@ The `ntpd` options can be edited here:
     sudo aptitude update
 
     sudo aptitude upgrade
+
+
+
+
+
 
 
 #### Install & enable sysstat.
