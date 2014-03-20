@@ -161,22 +161,20 @@ The output should be something like this:
     10:35:02 PM         2       135      1.58      1.59      1.10         0
     Average:            2       127      0.45      0.83      0.95         0
 
-That reflects the system load average history & allows you to note when—and if—there was a spike in system activity.
+That reflects the system load average history & allows you to note when—and if—there was a spike in system activity. Very useful in diagnosing system issues after they happen.
 
-#### Install more base level tools.
+### Install more base level tools.
 
-    sudo aptitude install dnsutils traceroute nmap bc htop finger curl whois rsync lsof iftop figlet lynx mtr-tiny iperf nload zip unzip attr sshpass dkms mc elinks
-                      
-#### Run 'update-locale'.
+At this point you should have a somewhat functional Ubuntu server in place with the bare minimum need to do some things, but we’re not done yet. There are lots of other useful tools that should be installed to make your life easier.  And here they are! 
 
-    sudo update-locale
+    sudo aptitude install dnsutils traceroute nmap bc htop finger curl whois rsync lsof iftop figlet lynx mtr-tiny iperf nload zip unzip attr sshpass dkms mc elinks 
 
-#### Might need to set the locale file to this.
+While there are literally tons of tools available for installation in the Ubuntu community, the items listed above are the rock-solid core of he command line system administration tools I rely on on a daily basis. I’m not going to do a tool-by-tool breakdown of usage, but encourage anyone who is curious to read up on these tools by using the `man` command from the command line like so:
 
-    sudo nano /etc/default/locale
+    man htop
 
-    LANG="en_US.UTF-8"
-
+That would give you the manual page for `htop`; an excellent open source replacement for the commonly used system tool `top`.
+                  
 #### Install the 'build-essential' tools to allow compiling source code.
 
     sudo aptitude install build-essential
@@ -189,15 +187,15 @@ That reflects the system load average history & allows you to note when—and if
 
     sudo aptitude install postfix
 
-#### In SOME cases, this is a better option if POSTFIX chokes.
+##### In SOME cases, this is a better option if POSTFIX chokes.
 
     sudo aptitude install mailutils
 
-#### Check the postfix config.
+##### Check the postfix config.
 
     sudo nano /etc/postfix/main.cf
 
-#### Change these to match your server settings.
+##### Change these to match your server settings.
 
     myhostname = sandbox.local
     mydestination = sandbox.local, localhost.localdomain, localhost
@@ -252,5 +250,15 @@ That reflects the system load average history & allows you to note when—and if
     sudo iptables-restore < iptables.conf
 
     sudo cp ~/iptables.conf /etc/iptables/rules.v4
+
+#### Run 'update-locale'.
+
+    sudo update-locale
+
+#### Might need to set the locale file to this.
+
+    sudo nano /etc/default/locale
+
+    LANG="en_US.UTF-8"
 
 [1]: http://www.preworn.com/ "Preworn • Jack Szwergold’s Online Portfolio"
