@@ -171,7 +171,9 @@ There are lots of other useful tools that should be installed to make your life 
 
     sudo aptitude install dnsutils traceroute nmap bc htop finger curl whois rsync lsof iftop figlet lynx mtr-tiny iperf nload zip unzip attr sshpass dkms mc elinks 
 
-While there are literally tons of tools available for installation in the Ubuntu community, the items listed above are the rock-solid core of he command line system administration tools I rely on on a daily basis. I’m not going to do a tool-by-tool breakdown of usage, but encourage anyone who is curious to read up on these tools by using the `man` command from the command line like so:
+While there are literally tons of tools available for installation in the Ubuntu community, the items listed above are the rock-solid core of the command line system administration tools I rely on on a daily basis.
+
+I’m not going to do a tool-by-tool breakdown of usage in this tutorial, but encourage anyone who is curious to read up on these tools by using the `man` command from the command line like so:
 
     man htop
 
