@@ -79,17 +79,27 @@ Now ensure your timezone is set correctly by configuring `tzdata` like so:
 
     sudo dpkg-reconfigure tzdata
 
-Now let’s set up a daily cron job to check the NTP server to make sure the time is correct and not affected by accidental drifting caused by system reboots or other factors. First, create the `ntpdate` file like so.
+Now let’s set up a daily cron job to check the NTP server to make sure the time is correct and not affected by accidental drifting caused by system reboots or other factors. First, create the `ntpdate` file like so:
 
     sudo nano /etc/cron.daily/ntpdate
 
-#### Add this to that file.
+And add this line to that file:
 
     ntpdate -s ntp.ubuntu.com
 
-#### Make sure the file has executable permissions.
+Then make sure the file has executable permissions:
 
     sudo chmod 755 /etc/cron.daily/ntpdate
+
+
+That said, as of 2012 `ntupdate` is slowly being depreciated. So while the above—which is the traditional way of syncing to a time server—works as expected, the new preferred way is to sync with an ntp server is to use `ntpd` which can be installed as follows:
+
+    sudo aptitude install ntp
+
+The `ntpd` options can be edited here:
+
+    sudo nano /etc/ntp.conf
+
 
 #### Update apt-get & install aptitude.
 
