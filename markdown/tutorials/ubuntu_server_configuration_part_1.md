@@ -146,50 +146,56 @@ I’m not going to do a tool-by-tool breakdown of usage in this tutorial, but if
 
 That would give you the manual page (aka: `man` page) for `htop`; an excellent open source replacement for the commonly used system tool `top`.
 
-
-
-
-
-
 ### Setting default UMASK for group writability.
 
-By default, Unix systems are set to only allow users
+By default, Unix systems are set to only allow users to write to files they themselves have created by using a system-wide UMASK of `022`. But since I like to setup servers which allow users to collaborate when connected to a common group—such as `www-readwrite`—I like to set the system-wide UMASK to `002`.
+
+So the first step in doing this is to open the `login.defs` file for editing like so:
 
     sudo nano /etc/login.defs
+
+Look for the line with the `UMASK` setting that looks like this:
+
+    UMASK           002
+
+And change it to this:
 
     # UMASK         022
     UMASK           002
 
-
-### Setting pam.d UMASK in Ubuntu & other Debian setups.
+Next, you need to change the pam.d UMASK setting in `common-session` by opening the that file for editing like so:
 
     sudo nano /etc/pam.d/common-session
 
-Find the line that reads.
+Then finding the line that looks like this
 
     session optional                        pam_umask.so
 
-Change it to.
+Change it like so.  Note the addition of `umask=0002` at the end of the line:
 
-    session optional                        pam_umask.so	umask=0002
+    session optional                        pam_umask.so    umask=0002
+
+Now with those two settings adjusted, any user who now logs in will be creating files that are group writable. You can test this out with your current user by logging out—and logging back in—and simply creating a dummy test file like so:
+
+    touch test_file.txt
+
+If you do a directory listing in that directory like so:
+
+    ls -la test_file.txt
+
+The file permissions for `test_file.txt` should look like this:
+
+    -rw-rw-r-- 1 sysop www-readwrite 0 Mar 20 05:36 test_file.txt
+
+Note the `rw` for the group permissions which indicates the file can be read & written to. Which all means that your default user group permissions are properly set to allow group writability.
 
 
 
 
 
+### Install compiler, GIT & SVN related stuff.
 
-
-
-
-
-### Install the 'build-essential' tools to allow compiling source code.
-
-
-    sudo aptitude install build-essential
-
-### Install Subversion & GIT related stuff.
-
-    sudo aptitude install git git-core subversion git-svn
+    sudo aptitude install build-essential git git-core subversion git-svn
 
 
 ### Fix for slow SSH client connections by changing the prefered order of authetications
