@@ -31,7 +31,7 @@ I also like to add a standard, non-administrator user to the system as well for 
 
 For both users, be sure to choose a solid password of some sort. Something easy for you to remember but not easy for someone else to guess.
 
-#### Add the new admin user to the ‘sudoers’ file.
+### Add the new admin user to the ‘sudoers’ file.
 
 So now that you have designated a new user to be an administrator, you have to actually add that user to the `sudoers` file so they can be granted `sudo` user rights. So let’s open the file like so:
 
@@ -102,20 +102,29 @@ The `ntpd` options can be edited here:
 
     sudo nano /etc/ntp.conf
 
+When that is done, your server’s time synchronization settings should be all set.
 
+### Edit the ‘sources.list’ to enable partner package updates.
 
-
-
-
-
-#### Edit the 'sources.list' to enable partner package updates.
+While Ubuntu open source community has tons of good software tools, there are tons of other good software tools available that might not be fully open source yet available for free via Canonical’s `partner` repository. So we want to enable access to that repository—so we have direct access—via `aptitude`—to install those tools. First, open the `sources.list` file so it can be edited like so:
 
     sudo nano /etc/apt/sources.list
 
-#### Uncomment the following lines to add Canonical's 'partner' repository.
+Find the following chunk of configuration code:
+
+    ## Uncomment the following two lines to add software from Canonical's
+    ## 'partner' repository.
+    ## This software is not part of Ubuntu, but is offered by Canonical and the
+    ## respective vendors as a service to Ubuntu users.
+    # deb http://archive.canonical.com/ubuntu/ precise partner
+    # deb-src http://archive.canonical.com/ubuntu/ precise partner
+
+And uncomment the last two lines of that to enable access to the `partner` repository:
 
     deb http://archive.canonical.com/ubuntu/ precise partner
     deb-src http://archive.canonical.com/ubuntu/ precise partner
+
+Now with that done, let’s update `aptitude`
 
     sudo aptitude update
 
