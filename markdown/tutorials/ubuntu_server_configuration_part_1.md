@@ -174,7 +174,15 @@ While there are literally tons of tools available for installation in the Ubuntu
     man htop
 
 That would give you the manual page for `htop`; an excellent open source replacement for the commonly used system tool `top`.
-                  
+
+
+
+
+
+
+
+
+
 #### Install the 'build-essential' tools to allow compiling source code.
 
     sudo aptitude install build-essential
