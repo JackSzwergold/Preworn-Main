@@ -146,6 +146,15 @@ I’m not going to do a tool-by-tool breakdown of usage in this tutorial, but if
 
 That would give you the manual page (aka: `man` page) for `htop`; an excellent open source replacement for the commonly used system tool `top`.
 
+### Install compilers, GIT, SVN & general development related stuff.
+
+If you are going to use your Ubuntu server for code development of any level, you need to install some basic tools to get the job done like so:
+
+    sudo aptitude install build-essential git git-core subversion git-svn
+
+That command will install the whole suite of Debian compilers such as `gcc`/`g++` as well as SCM (source code management) tools such as `git`, `svn` (Subversion) & related utilities like `git-svn` which you can use to bridge & convert `svn` repositories to `git` repositories.
+
+
 ### Setting default UMASK for group writability.
 
 By default, Unix systems are set to only allow users to write to files they themselves have created by using a system-wide UMASK of `022`. But since I like to setup servers which allow users to collaborate when connected to a common group—such as `www-readwrite`—I like to set the system-wide UMASK to `002`.
@@ -226,10 +235,6 @@ Now restart the SSH daemon like so:
     sudo service ssh restart
 
 And that problem should be cleared up.
-
-### Install compiler, GIT & SVN related stuff.
-
-    sudo aptitude install build-essential git git-core subversion git-svn
 
 ### Set the MOTD header.
 
