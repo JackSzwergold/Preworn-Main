@@ -8,7 +8,7 @@ The purpose of this tutorial is to explain how I like to configure an Ubuntu ser
 
 ### Be sure to install ‘aptitude’ first.
 
-Before anything else, let’s make sure that `aptitude` is installed. I know some users prefer `apt-get`, but I find `aptitude` to be nicer & easier to use. It appears to be installed by default with Ubuntu 12.04, but in case it isn’t do the following to install `aptitude`:
+Before anything else, let’s make sure that `aptitude` is installed. I know some folks prefer `apt-get`, but I find `aptitude` to be nicer & easier to use. It appears to be installed by default with Ubuntu 12.04, but in case it isn’t do the following to install `aptitude`:
 
     sudo apt-get update
     sudo apt-get install aptitude
