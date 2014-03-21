@@ -177,19 +177,19 @@ With that done, your local `aptitude` setup should now be set to access & instal
 
 ### Install base level tools & utilities.
 
-At this point you should have a somewhat functional Ubuntu server in place with the bare minimum items needed to do some basic things, but we’re not done yet.
+At this point you should have a somewhat functional Ubuntu server in place with the bare minimum items needed to do some basic things. But we’re not done yet.
 
-There are lots of other useful tools that should be installed to make your life easier. And here they are! 
+There are lots of other useful software tools that can be installed to make your life easier. And you can install them via this `aptitude install` command:
 
     sudo aptitude install dnsutils traceroute nmap bc htop finger curl whois rsync lsof iftop figlet lynx mtr-tiny iperf nload zip unzip attr sshpass dkms mc elinks 
 
-While there are literally tons of tools available for installation in the Ubuntu community, the items listed above are the rock-solid core of the command line system administration tools I rely on on a daily basis. 
+While there are literally tons of varied software tools available from the Ubuntu community, the items listed above are the rock-solid core of the command line system administration tools I rely on on a daily basis. 
 
-I’m not going to do a tool-by-tool breakdown of usage in this tutorial, but if you already know anything about how Unix systems work, you can pretty much understand how these tools are used. But if you don’t know what these tools are, I encourage you to read up on these tools by using the `man` command from the command line like so:
+I’m not going to do a tool-by-tool breakdown of usage in this tutorial, but if you already know anything about how Unix systems work, you can pretty much understand how these tools are used by just looking at their names. That said if you don’t know what these tools are, I encourage you to read up on these tools by using the `man` command from the command line like so:
 
     man htop
 
-That would give you the manual page (aka: `man` page) for `htop`; an excellent open source replacement for the commonly used system tool `top`.
+That will give you the manual page (aka: `man` page) for `htop`; an excellent open source replacement for the commonly used system tool `top`.
 
 ### Install compilers, GIT, SVN & general development related stuff.
 
