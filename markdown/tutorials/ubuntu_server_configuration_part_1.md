@@ -8,14 +8,14 @@ The purpose of this tutorial is to explain how I like to configure an Ubuntu ser
 
 ### Be sure to install ‘aptitude’ first.
 
-Before anything else, let’s make sure that `aptitude` is installed. I know some folks prefer `apt-get`, but I find `aptitude` to be nicer & easier to use. It appears to be installed by default with Ubuntu 12.04, but in case it isn’t do the following to install `aptitude`:
+Before anything else, let’s make sure that `aptitude` is installed to manage package installs in Ubuntu. I know some folks prefer `apt-get`, but I find `aptitude` to be nicer & easier to use. It appears to be installed by default with Ubuntu 12.04, but just in case it isn’t do the following to install `aptitude`:
 
     sudo apt-get update
     sudo apt-get install aptitude
 
 ### Disable the ‘root’ account.
 
-Now, depending on how your initial install of Ubuntu occured, you were either prompted to create an initial user with administrator rights or you were assigned a user. I’m not going to run down the list how an initial user is generated, but there is one overarching philosophy here: If your administrative user is named `root` that is not good from a security standpoint.
+Now, depending on how your initial install of Ubuntu occurred, you were either prompted to create an initial user with administrator rights or you were assigned a user. I’m not going to run down the list how an initial user is generated, but there is one overarching philosophy here: If your administrative user is named `root` that is not good from a security standpoint.
 
 There are are tons of hacks & exploits that explicitly look for—and act on—the `root` account. So you should not use the `root` account directly for any reason & instead handle administrative functions via another user who is assigned administrative rights via `sudo`.
 
