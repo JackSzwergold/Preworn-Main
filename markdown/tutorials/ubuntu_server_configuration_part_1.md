@@ -249,4 +249,18 @@ Now let’s open up the `motd.tail` file for editing like so:
 
 And simply copy & paste the ASCII-art-like banner that was just created into that `motd.tail`. Now log out and log back in to see that banner appear once you have successfully logged in.
 
+Additionally, there are some other scripts that run when you login that I find to be annoying—and only get in the way—that I prefer to disable.
+
+First, I get rid if the symbolic links to the `landscape sysinfo` and `cloudguest`:
+
+    sudo rm /etc/update-motd.d/50-landscape-sysinfo
+    sudo rm /etc/update-motd.d/51-cloudguest
+
+Then, I comment out the content of `updates-available` as well as `release-upgrade`:
+
+    sudo nano /etc/update-motd.d/90-updates-available
+    sudo nano /etc/update-motd.d/91-release-upgrade
+
+Technically speaking, I could conceivably just delete the `updates-available` and `release-upgrade` files as well. But I personally do not like destroying files & data that I could potentially need or use in the future. So I find that commenting out the few lines of core functionality in those two files to a preferable way of neutering them in this case.
+
 [1]: http://www.preworn.com/ "Preworn • Jack Szwergold’s Online Portfolio"
