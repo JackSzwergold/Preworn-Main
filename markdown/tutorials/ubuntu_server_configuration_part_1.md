@@ -115,7 +115,7 @@ And the file permissions for `test_file.txt` should look like this:
 
     -rw-rw-r-- 1 sysop www-readwrite 0 Mar 20 05:36 test_file.txt
 
-Note the `rw` for the group permissions which indicates the file can be read from & written to. Which all means that your default user group permissions are properly set to allow group writability.
+Note the `rw` for the group permissions which indicates the file can be read from & written to. Which all means that your system’s default `umask` settings have been properly adjusted to allow for group writability.
 
 ### Set the server time & related timezone info.
 
