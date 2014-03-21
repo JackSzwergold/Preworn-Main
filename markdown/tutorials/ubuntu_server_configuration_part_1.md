@@ -151,16 +151,49 @@ When that is done, your server’s ntp time server synchronization & related tim
 
 ### Ensure that the ‘locale’ settings are correct.
 
-Run 'update-locale'.
+The settings for `locale` help your system determine what language, country, units of measurement & other sundry localization specific items should be used by your system.  By default, your `locale` settings should have been properly set during your initial Ubuntu install. But just in case that didn’t happen—or something went wrong—run `update-locale` as follows:
 
     sudo update-locale
 
-Might need to set the locale file to this.
+If that runs successfully, it should just bring you back to the command prompt. To check the `locale` settings, just run the command bare like this:
+
+    locale
+
+The output should be something like this:
+
+    LANG=en_US.UTF-8
+    LANGUAGE=
+    LC_CTYPE="en_US.UTF-8"
+    LC_NUMERIC="en_US.UTF-8"
+    LC_TIME="en_US.UTF-8"
+    LC_COLLATE="en_US.UTF-8"
+    LC_MONETARY="en_US.UTF-8"
+    LC_MESSAGES="en_US.UTF-8"
+    LC_PAPER="en_US.UTF-8"
+    LC_NAME="en_US.UTF-8"
+    LC_ADDRESS="en_US.UTF-8"
+    LC_TELEPHONE="en_US.UTF-8"
+    LC_MEASUREMENT="en_US.UTF-8"
+    LC_IDENTIFICATION="en_US.UTF-8"
+    LC_ALL=
+
+If your output doesn’t look something like that or you are getting errors about locale specific information missing, you might have to run `locale-gen` to regenerate the locale values:
+
+    sudo locale-gen 
+
+The run `dpkg-reconfigure` to reconfigure the locales data:
+
+    sudo dpkg-reconfigure locales
+
+Finally, if none of that works, you can edit the `/etc/default/locale` manually:
 
     sudo nano /etc/default/locale
 
+And just set the default `locale` setting for `LANG` by cutting & pasting the following into that file:
+
     LANG="en_US.UTF-8"
 
+And of course, if `en_US.UTF-8` is not your locale please be sure to change that to match your actual locale setting.
 
 ### Edit the ‘sources.list’ to enable partner package updates.
 
