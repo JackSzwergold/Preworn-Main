@@ -74,7 +74,7 @@ And finally set the user’s default group to `www-readwrite` so every file they
 
 With that done, your new users should be properly added to the newly created `www-readwrite` group. But to actually allow for universal group writability on the system, you need to do one more thing: adjust the default system `umask` to allow for group writability of files to begin with.
 
-### Setting default UMASK for group writability.
+### Setting default ‘umask’ for group writability.
 
 By default, Unix systems are set to only allow users to write to files they themselves have created by using a system-wide `umask` (aka: user mask) of `022`. But since I like to setup servers which allow users to collaborate when connected to a common group—such as `www-readwrite`—I like to set the system-wide `umask` to `002`.
 
@@ -148,6 +148,19 @@ While you don’t need to adjust anything for daily use, the `ntpd` options can 
     sudo nano /etc/ntp.conf
 
 When that is done, your server’s ntp time server synchronization & related time zone settings should be all set.
+
+### Ensure that the ‘locale’ settings are correct.
+
+Run 'update-locale'.
+
+    sudo update-locale
+
+Might need to set the locale file to this.
+
+    sudo nano /etc/default/locale
+
+    LANG="en_US.UTF-8"
+
 
 ### Edit the ‘sources.list’ to enable partner package updates.
 

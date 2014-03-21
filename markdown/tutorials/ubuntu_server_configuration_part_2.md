@@ -47,14 +47,4 @@ That output reflects the system load average history & allows you to note when�
 
     sudo cp ~/iptables.conf /etc/iptables/rules.v4
 
-Run 'update-locale'.
-
-    sudo update-locale
-
-Might need to set the locale file to this.
-
-    sudo nano /etc/default/locale
-
-    LANG="en_US.UTF-8"
-
 [1]: http://www.preworn.com/ "Preworn • Jack Szwergold’s Online Portfolio"
