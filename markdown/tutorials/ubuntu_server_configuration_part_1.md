@@ -231,11 +231,11 @@ Now add the following line to the bottom of the configuration options in `ssh_co
 
     PreferredAuthentications publickey,password,gssapi-with-mic,hostbased,keyboard-interactive
 
-With that done, restart the SSH daemon like so:
+With that done, restart the SSH daemon:
 
     sudo service ssh restart
 
-When that is all done, initial SSH connections using password authentication
+When all that is done, initial SSH connections to your Ubuntu machine using password authentication should run smoothly & without any unnecessary delay.
 
 ### Adjust the MOTD (Message of the Day) header & related info.
 
