@@ -151,7 +151,7 @@ When that is done, your server’s ntp time server synchronization & related tim
 
 ### Edit the ‘sources.list’ to enable partner package updates.
 
-While Ubuntu open source community has tons of good software tools, there are tons of other good software tools available that might not be fully open source yet available for free via Canonical’s `partner` repository. So we want to enable access to that repository—so we have direct access—via `aptitude`—to install those tools. First, open the `sources.list` file so it can be edited like so:
+While Ubuntu open source community has tons of great software tools, there are tons of other great software tools available that might not be fully open source yet available for free via Canonical’s `partner` repository. So we want to enable access to that repository—so we have direct access—via `aptitude`—to install those tools. First, open the `sources.list` file so it can be edited like so:
 
     sudo nano /etc/apt/sources.list
 
@@ -169,11 +169,9 @@ And uncomment the last two lines of that to enable access to the `partner` repos
     deb http://archive.canonical.com/ubuntu/ precise partner
     deb-src http://archive.canonical.com/ubuntu/ precise partner
 
-Now with that done, let’s update `aptitude`
+Now with that done, let’s update `aptitude` so it can grab the `partner` sources list:
 
-    sudo aptitude update
-
-    sudo aptitude upgrade
+    sudo aptitude update    
 
 ### Install base level tools & utilities.
 
