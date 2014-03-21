@@ -221,6 +221,23 @@ The result returned should be:
 
 Being able to get to content quickly & easily via the command line is invaluable. And `locate` will help make your life working in the command line a bit easier.
 
+### Install POSTFIX & related mail utilities.
+
+    sudo aptitude install postfix
+
+In SOME cases, this is a better option if POSTFIX chokes.
+
+    sudo aptitude install mailutils
+
+Check the postfix config.
+
+    sudo nano /etc/postfix/main.cf
+
+Change these to match your server settings.
+
+    myhostname = sandbox.local
+    mydestination = sandbox.local, localhost.localdomain, localhost
+
 ### Fix for slow SSH client connections.
 
 Sometimes a fresh install of Ubuntu can suffer from slow initial SSH connections when using password authentication. This happens because SSH has `password` authentication set as the last authentication option by default. So you want to edit the SSH config to push `password` authentication closer to the top of the authentication menthod list. First, open up the `ssh_config` for editing:

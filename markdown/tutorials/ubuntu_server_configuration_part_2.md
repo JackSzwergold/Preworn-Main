@@ -6,7 +6,7 @@ Written by [Jack Szwergold][1] on March 20, 2014
 
 So in part 1 of my tutorial, I explained how I like to configure a base level Ubuntu server. In part 2 of my tutorial I will explain how to setup useful monitoring & security tools. You should never be in a situation where you cannot be able to review & assess server health. Being able to monitor & secure your server is the key to running a safe & stable server environment. 
 
-### Install & enable sysstat.
+### Install & enable ‘sysstat.’
 
 One great tool to use to collect, report, or save system activity information is `sysstat`; sometimes referred to as `sar` since that is the actual command used to read the data `sysstat` collects. You can install `sysstat` via `aptitude` like this:
 
@@ -28,7 +28,7 @@ Now wait about 10-15 minutes to a half hour to allow `sysstat` to actually colle
 
     sar -q
 
-The output should be something like this:
+The results should be something like this:
 
     09:55:01 PM   runq-sz  plist-sz   ldavg-1   ldavg-5  ldavg-15   blocked
     10:05:01 PM         2       130      1.18      1.48      1.05         0
@@ -38,23 +38,6 @@ The output should be something like this:
     Average:            2       127      0.45      0.83      0.95         0
 
 That output reflects the system load average history & allows you to note when—and if—there was a spike in system activity. Very useful in diagnosing system issues after they happen.
-
-### Install POSTFIX & related mail utilities.
-
-    sudo aptitude install postfix
-
-In SOME cases, this is a better option if POSTFIX chokes.
-
-    sudo aptitude install mailutils
-
-Check the postfix config.
-
-    sudo nano /etc/postfix/main.cf
-
-Change these to match your server settings.
-
-    myhostname = sandbox.local
-    mydestination = sandbox.local, localhost.localdomain, localhost
 
 ### Install iptables & iptables-persistent & import iptables.conf.
 
