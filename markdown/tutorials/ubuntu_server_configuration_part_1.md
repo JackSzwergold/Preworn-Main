@@ -147,7 +147,7 @@ The `ntpd` options can be edited here:
 
     sudo nano /etc/ntp.conf
 
-When that is done, your server’s time synchronization settings should be all set.
+When that is done, your server’s time synchronization & related time zone settings should be all set.
 
 ### Edit the ‘sources.list’ to enable partner package updates.
 
