@@ -1,4 +1,4 @@
-# Using Ubuntu Server
+# Using an Ubuntu Linux Server
 
 Written by [Jack Szwergold][1] on March 19, 2014
 
