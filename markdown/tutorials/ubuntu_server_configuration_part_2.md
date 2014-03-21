@@ -4,7 +4,7 @@ Written by [Jack Szwergold][1] on March 20, 2014
 
 ## Part 2: Monitoring & Securing Your Ubuntu Server
 
-The purpose of this tutorial is to explain how I like to configure an Ubuntu server. This doesn’t go into details as to how you got Ubuntu installed on a server to begin with, but begins with the assumption that you have an Ubuntu machine setup to the point you have a basic terminal prompt & you can login as a user with administrator rights.
+So in part 1 of my tutorial, I explained how I like to configure a base level Ubuntu server.
 
 ### Let’s get started.
 
