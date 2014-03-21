@@ -119,31 +119,31 @@ Note the `rw` for the group permissions which indicates the file can be read fro
 
 ### Set the server time & related timezone info.
 
-Okay, now it’s time to set your server’s time with data pulled from a remote time server by running `ntpdate` like so:
+Okay, with that done you should set your server’s internal clock with data pulled from a remote time server by running `ntpdate` like so:
 
     sudo ntpdate ntp.ubuntu.com
 
-Now ensure your timezone is set correctly by configuring `tzdata` like so:
+Then you should ensure your system’s timezone is set correctly by configuring `tzdata` like so:
 
     sudo dpkg-reconfigure tzdata
 
-Now let’s set up a daily cron job to check the NTP server to make sure the time is correct and not affected by accidental drifting caused by system reboots or other factors. First, create the `ntpdate` file like so:
+Now let’s set up a cron job to sync with the remote NTP server on a daily basis. You want to do this to ensure the time is correct and not affected by accidental drifting caused by system reboots or other factors. First, create the `ntpdate` file like so:
 
     sudo nano /etc/cron.daily/ntpdate
 
-And add this line to that file:
+Then add this line to that file:
 
     ntpdate -s ntp.ubuntu.com
 
-Then make sure the file has executable permissions:
+Now make sure the file has executable permissions:
 
     sudo chmod 755 /etc/cron.daily/ntpdate
 
-That said, as of 2012 `ntupdate` is slowly being depreciated. So while the above—which is the traditional way of syncing to a time server—works as expected, the new preferred way is to sync with an ntp server is to use `ntpd` which can be installed as follows:
+And that should all be set. But that said, as of 2012 `ntupdate` is slowly being depreciated. So while the above—which is the traditional way of syncing to an ntp time server—works as expected, the new preferred way is to sync with an ntp server is to use `ntpd` daemon which can be installed as follows:
 
     sudo aptitude install ntp
 
-The `ntpd` options can be edited here:
+While you don’t need to adjust anything for daily use, the `ntpd` options can be edited here:
 
     sudo nano /etc/ntp.conf
 
