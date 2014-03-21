@@ -143,11 +143,11 @@ And that should all be set. But that said, as of 2012 `ntupdate` is slowly being
 
     sudo aptitude install ntp
 
-While you don’t need to adjust anything for daily use, the `ntpd` options can be edited here:
+While you don’t need to adjust anything for daily use, the `ntpd` options can be edited here if needed:
 
     sudo nano /etc/ntp.conf
 
-When that is done, your server’s time synchronization & related time zone settings should be all set.
+When that is done, your server’s ntp time server synchronization & related time zone settings should be all set.
 
 ### Edit the ‘sources.list’ to enable partner package updates.
 
