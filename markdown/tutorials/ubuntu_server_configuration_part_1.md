@@ -33,11 +33,11 @@ For both users, be sure to choose a solid password of some sort. Something easy 
 
 ### Add the new sysop (admin) user to the ‘sudoers’ file.
 
-So now that you have designated a new user to be an administrator, you have to actually add that user to the `sudoers` file so they can be granted administrator rights via `sudo`. So let’s open the file like so:
+So now that you have designated a new user to be an administrator, you have to actually add that user to the `sudoers` file so they can be granted administrator rights via `sudo`. Open the file like this:
 
     sudo nano /etc/sudoers
 
-Look for the section that controls user privileges named “User privilege specification”. It should look like this:
+Look for the section that controls user privileges named “User privilege specification” which should look like this:
 
     # User privilege specification
     root   ALL=(ALL:ALL) ALL
