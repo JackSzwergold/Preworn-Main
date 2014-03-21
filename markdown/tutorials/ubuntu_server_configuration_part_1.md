@@ -25,7 +25,7 @@ Okay, so here is where you will create a new administrative user to use in lieu 
 
     sudo adduser sysop
 
-I also like to add a standard, non-administrator user to the system as well for configuration testing like so:
+In addition to an administrative user, I also like to add a standard, non-administrator user to the system as well for configuration testing like so:
 
     sudo adduser user
 
