@@ -21,7 +21,7 @@ There are are tons of hacks & exploits that explicitly look for—and act on—t
 
 ### Create the users.
 
-Okay, so here is where you will create a new administrative user. The name can be anything you like as long as it is not something common & predictable like `admin` or `administrator`. In my case, I like to use the name `sysop` which is short for “system operator” which is a throwback to the old BBS days, but works well for a case like this. Just add the new user using `adduser` like so:
+Okay, so here is where you will create a new administrative user. The name can be anything you like as long as it is not something common & predictable like `admin` or `administrator`. In my case, I like to use the name `sysop` which is short for “system operator” which is a throwback to the old BBS days & works well for a case like this. Just add the new user using `adduser` like so:
 
     sudo adduser sysop
 
