@@ -74,7 +74,7 @@ And finally set the user’s default group to `www-readwrite` so every file they
 
 With that done, your new users should be properly added to the newly created `www-readwrite` group. But to actually allow for universal group writability on the system, you need to do one more thing: adjust the default system `umask` to allow for group writability of files to begin with.
 
-### Setting default UMASK for group writability.
+### Setting default ‘umask’ for group writability.
 
 By default, Unix systems are set to only allow users to write to files they themselves have created by using a system-wide `umask` (aka: user mask) of `022`. But since I like to setup servers which allow users to collaborate when connected to a common group—such as `www-readwrite`—I like to set the system-wide `umask` to `002`.
 
@@ -149,6 +149,52 @@ While you don’t need to adjust anything for daily use, the `ntpd` options can 
 
 When that is done, your server’s ntp time server synchronization & related time zone settings should be all set.
 
+### Ensure that the ‘locale’ settings are correct.
+
+The settings for `locale` help your system determine what language, country, units of measurement & other sundry localization specific items should be used by your system.  By default, your `locale` settings should have been properly set during your initial Ubuntu install. But just in case that didn’t happen—or something went wrong—run `update-locale` as follows:
+
+    sudo update-locale
+
+If that runs successfully, it should just bring you back to the command prompt. To check the `locale` settings, just run the command bare like this:
+
+    locale
+
+The output should be something like this:
+
+    LANG=en_US.UTF-8
+    LANGUAGE=
+    LC_CTYPE="en_US.UTF-8"
+    LC_NUMERIC="en_US.UTF-8"
+    LC_TIME="en_US.UTF-8"
+    LC_COLLATE="en_US.UTF-8"
+    LC_MONETARY="en_US.UTF-8"
+    LC_MESSAGES="en_US.UTF-8"
+    LC_PAPER="en_US.UTF-8"
+    LC_NAME="en_US.UTF-8"
+    LC_ADDRESS="en_US.UTF-8"
+    LC_TELEPHONE="en_US.UTF-8"
+    LC_MEASUREMENT="en_US.UTF-8"
+    LC_IDENTIFICATION="en_US.UTF-8"
+    LC_ALL=
+
+If your output doesn’t look something like that or you are getting errors about locale specific information missing, you might have to run `locale-gen` to regenerate the locale values:
+
+    sudo locale-gen 
+
+The run `dpkg-reconfigure` to reconfigure the locales data:
+
+    sudo dpkg-reconfigure locales
+
+Finally, if none of that works, you can edit the `/etc/default/locale` manually:
+
+    sudo nano /etc/default/locale
+
+And just set the default `locale` setting for `LANG` by cutting & pasting the following into that file:
+
+    LANG="en_US.UTF-8"
+
+And of course, if `en_US.UTF-8` is not your locale please be sure to change that to match your actual locale setting.
+
 ### Edit the ‘sources.list’ to enable partner package updates.
 
 While Ubuntu open source community has tons of great software tools, there are tons of other great software tools available that might not be fully open source yet available for free via Canonical’s `partner` repository. So we want to enable access to that repository—so we have direct access—via `aptitude`—to install those tools. First, open the `sources.list` file so it can be edited like so:
@@ -221,9 +267,28 @@ The result returned should be:
 
 Being able to get to content quickly & easily via the command line is invaluable. And `locate` will help make your life working in the command line a bit easier.
 
+### Install ‘postfix’ & related mail utilities.
+
+Most any Unix server should have basic mail transfer agent (MTA) capabilities. And that is where `postfix` & `mailutils` come into play.
+
+The software tool `postfix` is a great mail transfer agent that’s easy to use, quite powerful & is the one of the most commonly used Unix mail transfer agents out there. The items that comprise the core of `mailutils` are some simple & useful utilities that can make managing your server’s mail subsystem a bit easier. To install them, run the following `aptitude` command:
+
+    sudo aptitude install postfix mailutils
+
+Once installed, open up the `postfix` config file:
+
+    sudo nano /etc/postfix/main.cf
+
+And change these values to to match your server settings:
+
+    myhostname = sandbox.local
+    mydestination = sandbox.local, localhost.localdomain, localhost
+
+Using my example above, the main thing to change is the value of `sandbox.local` which should match whatever the actual hostname of your machine is.
+
 ### Fix for slow SSH client connections.
 
-Sometimes a fresh install of Ubuntu can suffer from slow initial SSH connections when using password authentication. This happens because SSH has `password` authentication set as the last authentication option by default. So you want to edit the SSH config to push `password` authentication closer to the top of the authentication menthod list. First, open up the `ssh_config` for editing:
+Sometimes a fresh install of Ubuntu can suffer from slow initial SSH connections when using password authentication. This happens because SSH has `password` authentication set as the last authentication option by default. So you want to edit the SSH config to push `password` authentication closer to the top of the authentication method list. First, open up the `ssh_config` for editing:
 
     sudo nano /etc/ssh/ssh_config
 
@@ -235,7 +300,7 @@ With that done, restart the SSH daemon:
 
     sudo service ssh restart
 
-When all that is done, initial SSH connections to your Ubuntu machine using password authentication should run smoothly & without any unnecessary delay.
+When all that is done, initial SSH connections to your Ubuntu machine using password authentication should run smoothly & without any unnecessary lags or delays.
 
 ### Adjust the MOTD (Message of the Day) header & related info.
 
