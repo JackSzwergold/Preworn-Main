@@ -171,7 +171,9 @@ And uncomment the last two lines of that to enable access to the `partner` repos
 
 Now with that done, let’s update `aptitude` so it can grab the `partner` sources list:
 
-    sudo aptitude update    
+    sudo aptitude update
+
+With that done, your local `aptitude` setup should now be set to access & install software packages from Canonical’s `partner` repository.
 
 ### Install base level tools & utilities.
 
