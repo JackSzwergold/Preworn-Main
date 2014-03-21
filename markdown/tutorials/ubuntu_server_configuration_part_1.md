@@ -2,7 +2,7 @@
 
 Written by [Jack Szwergold][1] on March 19, 2014
 
-## Part 1: Configuration a Base Level Ubuntu Server
+## Part 1: Configuring a Base Level Ubuntu Server
 
 The purpose of this tutorial is to explain how I like to configure an Ubuntu server. This doesn’t go into details as to how you got Ubuntu installed on a server to begin with. But begins with the assumption that you have an Ubuntu machine set up to the point you have a basic terminal prompt & you can login as a user with administrator rights.
 
