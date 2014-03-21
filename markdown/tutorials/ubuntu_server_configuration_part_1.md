@@ -42,13 +42,13 @@ Look for the section that controls user privileges named “User privilege speci
     # User privilege specification
     root   ALL=(ALL:ALL) ALL
 
-Now comment out the `root` user, and add another line for the `sysop` user like so:
+Now comment out the line with the `root` user, and add another line for the newly created `sysop` like so:
 
     # User privilege specification
-    #root   ALL=(ALL:ALL) ALL
+    # root   ALL=(ALL:ALL) ALL
     sysop ALL=(ALL:ALL) ALL
 
-Once you have that set, just go ahead & lock the `root` user’s account like so:
+Once you have that set, just go ahead & lock the `root` user’s account via `passwd -l` like so:
 
     sudo passwd -l root
 
@@ -56,13 +56,13 @@ And you should now be all set to use `sysop` as your new administrative user wit
 
 ### Create the ‘www-readwrite’ group.
 
-Since I do a lot of web development & systems administration on collaborative Ubuntu servers, I like to create a unique group which I assign users to. This allows me to retain system administrator’s privileges while allowing other non-administrator users to have access to web-specific areas & resources without having to grant them system administrator rights.
+Since I do a lot of collaborative web development & systems administration on Ubuntu servers, I like to create a unique group which I can assign users to. This allows me to retain system administrator’s privileges while allowing other non-administrator users to have access to web-specific areas & resources without having to grant them excessive user rights.
 
-First, create the `www-readwrite` group using `groupadd`:
+The first step is to create the `www-readwrite` group using `groupadd`:
 
     sudo groupadd www-readwrite
 
-Then add the user’s you created above to the newly created `www-readwrite` group:
+Then add the user’s you created previously in this tutorial to the newly created `www-readwrite` group:
 
     sudo adduser sysop www-readwrite
     sudo adduser user www-readwrite
@@ -72,11 +72,11 @@ And finally set the user’s default group to `www-readwrite` so every file they
     sudo usermod -g www-readwrite sysop
     sudo usermod -g www-readwrite user
 
-With that done, let’s adjust the default system UMASK to allow for group writability of files to begin with.
+With that done, your new users should be properly added to the newly created `www-readwrite` group. But to actually allow for universal group writability on the system, you need to do one more thing: adjust the default system `umask` to allow for group writability of files to begin with.
 
 ### Setting default UMASK for group writability.
 
-By default, Unix systems are set to only allow users to write to files they themselves have created by using a system-wide UMASK of `022`. But since I like to setup servers which allow users to collaborate when connected to a common group—such as `www-readwrite`—I like to set the system-wide UMASK to `002`.
+By default, Unix systems are set to only allow users to write to files they themselves have created by using a system-wide `umask` (aka: user mask) of `022`. But since I like to setup servers which allow users to collaborate when connected to a common group—such as `www-readwrite`—I like to set the system-wide UMASK to `002`.
 
 So the first step in doing this is to open the `login.defs` file for editing like so:
 
