@@ -201,13 +201,13 @@ That command will install the whole suite of Debian compilers such as `gcc`/`g++
 
 ### Install & initialize the ‘locate’ tool.
 
-Now we’ll install a tool that will make your life lots easier: `locate`. Simply put, if you know what `Spotlight` is in OS X, then you know what `locate` is. It’s a tool that indexes content on your file system and allows you to quickly find files—including full file paths—with ease.
+Now we’ll install a tool that will make your life lots easier: `locate`. Simply put, if you know what `Spotlight` is in Mac OS X, then you know what `locate` is. It’s a tool that indexes content on your file system and allows you to quickly find files—including full file paths—with ease.
 
 Your first step in using it is to actually install it like so:
 
     sudo aptitude install locate
 
-Next, run the `updatedb` command so the `locate` command actually has database to use:
+Next, run the `updatedb` command so the `locate` command actually has working database to use:
 
     sudo updatedb
 
@@ -223,19 +223,19 @@ Being able to get to content quickly & easily via the command line is invaluable
 
 ### Fix for slow SSH client connections.
 
-Sometimes a fresh install of Ubuntu can have slow a SSH connection when using password authentication. This happens because SSH has `password` authentication set as the last authentication option by default. So you want to edit the SSH config to push `password` authentication closer to the top of the list like so:
+Sometimes a fresh install of Ubuntu can suffer from slow initial SSH connections when using password authentication. This happens because SSH has `password` authentication set as the last authentication option by default. So you want to edit the SSH config to push `password` authentication closer to the top of the authentication menthod list. First, open up the `ssh_config` for editing:
 
     sudo nano /etc/ssh/ssh_config
 
-Now add the following line to the bottom of the configuration options in that file:
+Now add the following line to the bottom of the configuration options in `ssh_config` like so:
 
     PreferredAuthentications publickey,password,gssapi-with-mic,hostbased,keyboard-interactive
 
-Now restart the SSH daemon like so:
+With that done, restart the SSH daemon like so:
 
     sudo service ssh restart
 
-And that problem should be cleared up.
+When that is all done, initial SSH connections using password authentication
 
 ### Adjust the MOTD (Message of the Day) header & related info.
 
