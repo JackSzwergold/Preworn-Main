@@ -56,21 +56,21 @@ And you should now be all set to use `sysop` as your new administrative user wit
 
 ### Create the ‘www-readwrite’ group.
 
-Since I do a lot of web development & systems administration on collaborative Ubuntu servers, I like to create a unique group which I assign users to. This allows me to retain system administrator’s privileges while allowing other non-administrator users to have access to web-specific areas & resources without having to system administrator rights.
+Since I do a lot of web development & systems administration on collaborative Ubuntu servers, I like to create a unique group which I assign users to. This allows me to retain system administrator’s privileges while allowing other non-administrator users to have access to web-specific areas & resources without having to grant them system administrator rights.
+
+First, create the `www-readwrite` group using `groupadd`:
 
     sudo groupadd www-readwrite
 
-First, add the user’s to the `www-readwrite` group:
+Then add the user’s you created above to the newly created `www-readwrite` group:
 
     sudo adduser sysop www-readwrite
     sudo adduser user www-readwrite
 
-And now, let’s set the user’s default group to `www-readwrite` so every file they create is actually assigned the group of `www-readwrite` like so:
+And finally set the user’s default group to `www-readwrite` so every file they create is actually assigned the group of `www-readwrite` like so:
 
     sudo usermod -g www-readwrite sysop
     sudo usermod -g www-readwrite user
-
-With the user & group basics set, let’s move onto the more sundry server setup things.
 
 ### Set the server time & related timezone info.
 
