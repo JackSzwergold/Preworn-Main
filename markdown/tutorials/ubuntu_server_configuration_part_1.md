@@ -76,9 +76,9 @@ With that done, your new users should be properly added to the newly created `ww
 
 ### Setting default UMASK for group writability.
 
-By default, Unix systems are set to only allow users to write to files they themselves have created by using a system-wide `umask` (aka: user mask) of `022`. But since I like to setup servers which allow users to collaborate when connected to a common group—such as `www-readwrite`—I like to set the system-wide UMASK to `002`.
+By default, Unix systems are set to only allow users to write to files they themselves have created by using a system-wide `umask` (aka: user mask) of `022`. But since I like to setup servers which allow users to collaborate when connected to a common group—such as `www-readwrite`—I like to set the system-wide `umask` to `002`.
 
-So the first step in doing this is to open the `login.defs` file for editing like so:
+So the first step in doing this is to open up the `login.defs` file for editing like so:
 
     sudo nano /etc/login.defs
 
@@ -91,7 +91,7 @@ And change it to this:
     # UMASK         022
     UMASK           002
 
-Next, you need to change the pam.d UMASK setting in `common-session` by opening the that file for editing like so:
+Next, you need to adjust the pam.d `umask` setting in `common-session` by opening the that file for editing like so:
 
     sudo nano /etc/pam.d/common-session
 
@@ -103,7 +103,7 @@ Change it like so. Note the addition of `umask=0002` at the end of the line:
 
     session optional                        pam_umask.so    umask=0002
 
-Now with those two settings adjusted, any user who now logs in will be creating files that are group writable. You can test this out with your current user by logging out—and logging back in—and simply creating a dummy test file like so:
+Now with those two settings adjusted, any user who logs in will be creating files that are group writable. You can test this out with your current user by logging out—and logging back in—and simply creating a dummy test file like so:
 
     touch test_file.txt
 
