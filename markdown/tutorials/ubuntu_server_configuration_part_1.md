@@ -72,7 +72,7 @@ And finally set the user’s default group to `www-readwrite` so every file they
     sudo usermod -g www-readwrite sysop
     sudo usermod -g www-readwrite user
 
-With that done, let’s adjust the default system UMASK.
+With that done, let’s adjust the default system UMASK to allow for group writability of files to begin with.
 
 ### Setting default UMASK for group writability.
 
