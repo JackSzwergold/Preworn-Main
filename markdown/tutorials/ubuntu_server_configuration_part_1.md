@@ -193,13 +193,13 @@ That will give you the manual page (aka: `man` page) for `htop`; an excellent op
 
 ### Install compilers, GIT, SVN & general development related stuff.
 
-If you are going to use your Ubuntu server for code development of any level, you need to install some basic tools to get the job done like so:
+If you are going to use your Ubuntu server for software development on any level, you need to install some basic tools to get the job done like so:
 
     sudo aptitude install build-essential git git-core subversion git-svn
 
 That command will install the whole suite of Debian compilers such as `gcc`/`g++` as well as SCM (source code management) tools such as `git`, `svn` (Subversion) & related utilities like `git-svn` which you can use to bridge & convert `svn` repositories to `git` repositories.
 
-### Install ‘locate’.
+### Install & initialize the ‘locate’ tool.
 
 Now we’ll install a tool that will make your life lots easier: `locate`. Simply put, if you know what `Spotlight` is in OS X, then you know what `locate` is. It’s a tool that indexes content on your file system and allows you to quickly find files—including full file paths—with ease.
 
