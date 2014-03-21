@@ -31,7 +31,7 @@ I also like to add a standard, non-administrator user to the system as well for 
 
 For both users, be sure to choose a solid password of some sort. Something easy for you to remember but not easy for someone else to guess.
 
-### Add the new admin user to the ‘sudoers’ file.
+### Add the new sysop (admin) user to the ‘sudoers’ file.
 
 So now that you have designated a new user to be an administrator, you have to actually add that user to the `sudoers` file so they can be granted `sudo` user rights. So let’s open the file like so:
 
@@ -48,11 +48,11 @@ Now comment out the `root` user, and add another line for the `sysop` user like 
     #root   ALL=(ALL:ALL) ALL
     sysop ALL=(ALL:ALL) ALL
 
-Okay, have that set? Then go ahead & lock the `root` user’s account like so:
+Once you have that set, just go ahead & lock the `root` user’s account like so:
 
     sudo passwd -l root
 
-And you should now be all set to use `sysop` as your new administrative user with rights granted via `sudo`!
+And you should now be all set to use `sysop` as your new administrative user with rights granted via `sudo`.
 
 ### Create the ‘www-readwrite’ group.
 
