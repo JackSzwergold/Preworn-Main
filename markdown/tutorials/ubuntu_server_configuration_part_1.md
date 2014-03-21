@@ -4,13 +4,13 @@ Written by [Jack Szwergold][1] on March 19, 2014
 
 ## Part 1: Configuration a Base Level Ubuntu Server
 
-The purpose of this tutorial is to explain how I like to configure an Ubuntu server. This doesn’t go into details as to how you got Ubuntu installed on a server to begin with, but begins with the assumption that you have an Ubuntu machine setup to the point you have a basic terminal prompt & you can login as a user with administrator rights.
+The purpose of this tutorial is to explain how I like to configure an Ubuntu server. This doesn’t go into details as to how you got Ubuntu installed on a server to begin with. But begins with the assumption that you have an Ubuntu machine set up to the point you have a basic terminal prompt & you can login as a user with administrator rights.
 
 ### Let’s get started.
 
 First & foremost depending on how your initial install of Ubuntu went, you were either prompted to create an initial user with administrator rights or you were assigned a user. I’m not going to run down the list how an initial user is generated, but there is one overarching philosophy here: If your administrative user is named `root` that is not good from a security standpoint.
 
-There are are tons of hacks & exploits that explicitly look for—and act on—the `root` account, so you should not use that account for any reason & instead handle administrative functions via another user assigned administrative rights via `sudo`.
+There are are tons of hacks & exploits that explicitly look for—and act on—the `root` account. So you should not use the `root` account directly for any reason & instead handle administrative functions via another user who is assigned administrative rights via `sudo`.
 
 ### First, make sure ‘aptitude’ is installed.
 
