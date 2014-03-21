@@ -221,26 +221,28 @@ The result returned should be:
 
 Being able to get to content quickly & easily via the command line is invaluable. And `locate` will help make your life working in the command line a bit easier.
 
-### Install POSTFIX & related mail utilities.
+### Install ‘postfix’ & related mail utilities.
 
-    sudo aptitude install postfix
+Most any Unix server should have basic mail transfer agent (MTA) capabilities. And that is where `postfix` & `mailutils` come into play.
 
-In SOME cases, this is a better option if POSTFIX chokes.
+The software tool `postfix` is a great mail transfer agent that’s easy to use, quite powerful & is the one of the most commonly used Unix mail transfer agents out there. The items that comprise the core of `mailutils` are some simple & useful utilities that can make managing your server’s mail subsystem a bit easier. To install them, run the following `aptitude` command:
 
-    sudo aptitude install mailutils
+    sudo aptitude install postfix mailutils
 
-Check the postfix config.
+Once installed, open up the `postfix` config file:
 
     sudo nano /etc/postfix/main.cf
 
-Change these to match your server settings.
+And change these values to to match your server settings:
 
     myhostname = sandbox.local
     mydestination = sandbox.local, localhost.localdomain, localhost
 
+Using my example above, the main thing to change is the value of `sandbox.local` which should match whatever the actual hostname of your machine is.
+
 ### Fix for slow SSH client connections.
 
-Sometimes a fresh install of Ubuntu can suffer from slow initial SSH connections when using password authentication. This happens because SSH has `password` authentication set as the last authentication option by default. So you want to edit the SSH config to push `password` authentication closer to the top of the authentication menthod list. First, open up the `ssh_config` for editing:
+Sometimes a fresh install of Ubuntu can suffer from slow initial SSH connections when using password authentication. This happens because SSH has `password` authentication set as the last authentication option by default. So you want to edit the SSH config to push `password` authentication closer to the top of the authentication method list. First, open up the `ssh_config` for editing:
 
     sudo nano /etc/ssh/ssh_config
 
@@ -252,7 +254,7 @@ With that done, restart the SSH daemon:
 
     sudo service ssh restart
 
-When all that is done, initial SSH connections to your Ubuntu machine using password authentication should run smoothly & without any unnecessary delay.
+When all that is done, initial SSH connections to your Ubuntu machine using password authentication should run smoothly & without any unnecessary lags or delays.
 
 ### Adjust the MOTD (Message of the Day) header & related info.
 
