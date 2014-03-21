@@ -103,15 +103,15 @@ Change it like so. Note the addition of `umask=0002` at the end of the line:
 
     session optional                        pam_umask.so    umask=0002
 
-Now with those two settings adjusted, any user who logs in will be creating files that are group writable. You can test this out with your current user by logging out—and logging back in—and simply creating a dummy test file like so:
+Now with those two settings adjusted, any user who logs in will be creating files that are group writable. You can test this out with your current user by logging out—and logging back in—and creating a dummy test file using `touch` like so:
 
     touch test_file.txt
 
-If you do a directory listing in that directory like so:
+Then do a directory listing on that file like so:
 
     ls -la test_file.txt
 
-The file permissions for `test_file.txt` should look like this:
+And the file permissions for `test_file.txt` should look like this:
 
     -rw-rw-r-- 1 sysop www-readwrite 0 Mar 20 05:36 test_file.txt
 
