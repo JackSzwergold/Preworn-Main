@@ -239,9 +239,14 @@ When all that is done, initial SSH connections to your Ubuntu machine using pass
 
 ### Adjust the MOTD (Message of the Day) header & related info.
 
-    figlet SANDBOX
+And now, let’s adjust the MOTD (Message of the Day) settings to streamline the initial “Welcome” screen you see when you first login. The first thing I like to do is to use `figlet` to create an ASCII-art-like banner that clearly identifies what server I just logged into. I do this because—let’s face it—sometimes things can get so frenzied you can loose sight of what machine you are logging into. Which is not a good thing. So let’s create a banner for our server—in this case named `Sandbox`—like so:
+
+    figlet Sandbox
+
+Now let’s open up the `motd.tail` file for editing like so:
 
     sudo nano /etc/motd.tail
 
+And simply copy & paste the ASCII-art-like banner that was just created into that `motd.tail`. Now log out and log back in to see that banner appear once you have successfully logged in.
 
 [1]: http://www.preworn.com/ "Preworn • Jack Szwergold’s Online Portfolio"
