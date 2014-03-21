@@ -4,7 +4,7 @@ Written by [Jack Szwergold][1] on March 20, 2014
 
 ## Part 2: Monitoring & Securing Your Ubuntu Server
 
-So in part 1 of my tutorial, I explained how I like to configure a base level Ubuntu server.
+So in part 1 of my tutorial, I explained how I like to configure a base level Ubuntu server. In part 2 of my tutorial I will explain how to setup useful monitoring & security tools. You should never be in a situation where you cannot be able to review & assess server health. Being able to monitor & secure your server is the key to running a safe & stable server environment. 
 
 ### Let’s get started.
 
