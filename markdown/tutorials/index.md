@@ -26,4 +26,4 @@ If you are going to be doing serious we development or Unix systems administrati
 [4]: mamp_windows_with_virtualbox_part_1 "Overall Virtualization Concepts"
 [5]: mamp_windows_with_virtualbox_part_2 "Basic — Using a Single Network Interface Setup"
 [6]: mamp_windows_with_virtualbox_part_3 "Advanced — Using a Dual Network Interface Setup with a Host-Only Interface"
-[7]: ubuntu_server_configuration_part_1 "Configuring a Base Level Ubuntu Server"
+[7]: ubuntu_server_usage_part_1 "Configuring a Base Level Ubuntu Server"
