@@ -286,6 +286,39 @@ And change these values to to match your server settings:
 
 Using my example above, the main thing to change is the value of `sandbox.local` which should match whatever the actual hostname of your machine is.
 
+### Install & enable ‘sysstat.’
+
+One great tool to use to collect, report, or save system activity information is `sysstat`; sometimes referred to as `sar` since that is the actual command used to read the data `sysstat` collects. You can install `sysstat` via `aptitude` like this:
+
+    sudo aptitude install sysstat
+
+Now open the `sysstat` config file like so:
+
+    sudo nano /etc/default/sysstat
+
+And set the `ENABLED` value to `true`:
+
+    ENABLED="true"
+
+Once that is done, restart the `sysstat` service:
+
+    sudo service sysstat restart
+
+Now wait about 10-15 minutes to a half hour to allow `sysstat` to actually collect data and run the the `sar` command like so:
+
+    sar -q
+
+The results should be something like this:
+
+    09:55:01 PM   runq-sz  plist-sz   ldavg-1   ldavg-5  ldavg-15   blocked
+    10:05:01 PM         2       130      1.18      1.48      1.05         0
+    10:15:02 PM         1       126      0.01      0.80      1.11         0
+    10:25:01 PM         1       126      0.01      0.18      0.64         0
+    10:35:02 PM         2       135      1.58      1.59      1.10         0
+    Average:            2       127      0.45      0.83      0.95         0
+
+That output reflects the system load average history & allows you to note when—and if—there was a spike in system activity. Very useful in diagnosing system issues after they happen.
+
 ### Fix for slow SSH client connections.
 
 Sometimes a fresh install of Ubuntu can suffer from slow initial SSH connections when using password authentication. This happens because SSH has `password` authentication set as the last authentication option by default. So you want to edit the SSH config to push `password` authentication closer to the top of the authentication method list. First, open up the `ssh_config` for editing:
