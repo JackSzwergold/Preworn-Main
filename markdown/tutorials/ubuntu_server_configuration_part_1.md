@@ -361,6 +361,15 @@ And now, let’s adjust the MOTD (Message of the Day) settings to streamline the
 
     figlet Sandbox
 
+The output of that should be an ASCII-art-like banner that looks like this:
+
+     ____                  _ _               
+    / ___|  __ _ _ __   __| | |__   _____  __
+    \___ \ / _` | '_ \ / _` | '_ \ / _ \ \/ /
+     ___) | (_| | | | | (_| | |_) | (_) >  < 
+    |____/ \__,_|_| |_|\__,_|_.__/ \___/_/\_\
+                                         
+
 Now let’s open up the `motd.tail` file for editing like so:
 
     sudo nano /etc/motd.tail
