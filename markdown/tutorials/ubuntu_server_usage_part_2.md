@@ -6,21 +6,21 @@ Written by [Jack Szwergold][1] on March 22, 2014
 
 So in part 1 of my tutorial, I explained how I like to configure a base level Ubuntu server. In part 2 of my tutorial I will explain how to setup useful & solid LAMP stack that can be used as a production server or a development/sandbox server for web development needs.
 
-### Install ‘apache’ & some ‘php’ basics.
+### Install ‘apache’ & some basic ‘php’ stuff.
 
     sudo aptitude install apache2 apache2-threaded-dev php5 libapache2-mod-php5 php-pear
 
-### Install the PHP5 modules.
+### Install the ‘php’ modules.
 
     sudo aptitude install php5-mysql php5-pgsql php5-odbc php5-sybase php5-sqlite php5-xmlrpc php5-json php5-xsl php5-curl php5-geoip php-getid3 php5-imap php5-ldap php5-mcrypt php5-pspell php5-gmp php5-gd
     
-### Harden PHP.
+### Harden ‘php.’
 
     sudo nano /etc/php5/apache2/php.ini
     
     expose_php = Off
 
-### Harden Apache.
+### Harden ‘apache.’
 
     sudo nano /etc/apache2/conf.d/security
     
@@ -36,9 +36,9 @@ Locate 'TraceEnable' and disable.
 
     TraceEnable Off
 
-### Set the 'default' Apache config.
+### Set the default ‘apache’ config.
 
-sudo nano /etc/apache2/sites-available/default
+    sudo nano /etc/apache2/sites-available/default
 
     <VirtualHost *:80>
       DocumentRoot /var/www
@@ -62,7 +62,7 @@ sudo nano /etc/apache2/sites-available/default
 
     </VirtualHost>
 
-### Set a nicer default index instead of that "It works!" HTML file.
+### Set a nicer default ‘php’-based index file instead of the standard “It works!” index file.
 
     sudo rm /var/www/index.html
 
@@ -78,26 +78,26 @@ sudo nano /etc/apache2/sites-available/default
 
     ?>
 
-### Enable Apache2 Modules.
+### Enable ‘apache’ modules.
 
     sudo a2enmod rewrite headers include proxy proxy_http
     
-### Adjust Apache config to allow group 'www-readwrite' access.
+### Adjust ‘apache’ config to allow group ‘www-readwrite’ access.
 
-Setting Apache2 UMASK in Ubuntu & other Debian setups.
+Setting Apache2 `umask` in Ubuntu & other Debian setups.
 
     sudo nano /etc/apache2/envvars
 
-MIGHT NOT BE NEEDED ANYMORE: Append this to the end of the file.
+Append this to the end of the file.
 
     umask 002
 
-Also, in /etc/apache2/envvars change the Apache2 group to www-readwrite.
+Also, in `/etc/apache2/envvars` change the `APACHE_RUN_GROUP` group to `www-readwrite.`
 
     # export APACHE_RUN_GROUP=www-data
     export APACHE_RUN_GROUP=www-readwrite
 
-### Adjust Apache logs to allow group 'www-readwrite' access.
+### Adjust ‘apache’ logs to allow group ‘www-readwrite’ access.
 
     sudo chmod o+rx /var/log/apache2
 
@@ -130,7 +130,7 @@ Also, in /etc/apache2/envvars change the Apache2 group to www-readwrite.
             endscript
     }
 
-### Install PHP APC.
+### Install APC for ‘php.’
 
     sudo pear upgrade pear
 
