@@ -150,7 +150,7 @@ Nice basic config I use.
 
     extension=apc.so
 
-    apc.enabled = 0
+    apc.enabled = 1
     apc.shm_segments = 1
     apc.shm_size = 32M
     apc.ttl = 0
@@ -160,6 +160,7 @@ Nice basic config I use.
     apc.mmap_file_mask = /dev/zero
     apc.enable_cli = 0
     apc.max_file_size = 1M
+    apc.num_files_hint = 512
 
 Disable apc.
 
