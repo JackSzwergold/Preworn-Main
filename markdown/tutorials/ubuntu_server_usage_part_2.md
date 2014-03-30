@@ -197,9 +197,21 @@ Now, edit the `apc.ini` file:
 
     sudo nano /etc/php5/conf.d/apc.ini
 
-Nice basic config I use.
+And make sure the extension is activated. If this line is in it, it’s enabled:
 
     extension=apc.so
+
+Now restart `apache` and all should be good. If you want to disable it, you can open up that same `apc.ini` file & comment out the `extension` line like so:
+
+    ; extension=apc.so
+
+Restart `apache` again, and the extension is disabled.
+
+Now—for most web servers—APC works fine out of the box with it’s defaults. But if you want to really fine-tune APC, open up that `apc.ini` file like so:
+
+    sudo nano /etc/php5/conf.d/apc.ini
+
+And edit values like this. This is a set of APC tweaks I have used on some servers. But again, these settings are not universal & should be tweaked if needed based on an individual server’s needs:
 
     apc.enabled = 1
     apc.shm_segments = 1
@@ -213,8 +225,5 @@ Nice basic config I use.
     apc.max_file_size = 1M
     apc.num_files_hint = 512
 
-Disable apc.
-
-    ;extension=apc.so
 
 [1]: http://www.preworn.com/ "Preworn • Jack Szwergold’s Online Portfolio"
