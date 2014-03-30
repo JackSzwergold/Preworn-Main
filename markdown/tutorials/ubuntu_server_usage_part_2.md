@@ -46,7 +46,7 @@ Locate `TraceEnable` and disable that as well:
 
 ### Set the default ‘apache’ config.
 
-While `apache` already has a decent `default` config in place, I find it to be excessive & confussing for my purposes:
+While `apache` already has a decent `default` config in place, I find it to be excessive & confusing for my purposes:
 
     sudo nano /etc/apache2/sites-available/default
 
@@ -115,19 +115,25 @@ Also, in `/etc/apache2/envvars` change the `APACHE_RUN_GROUP` group to `www-read
 
 ### Adjust ‘apache’ logs to allow group ‘www-readwrite’ access.
 
-Since I like to set up servers to be collaborative environments
+Since I like to set up servers to be collaborative environments based on a user’s access to the `www-readwrite` group, I also like to give them clear & easy access to the `apache` logs. It’s generally helpful for debugging. And here is how I do it.
+
+First, change the parent permissions on the `apache` log directory so others can read & execute it for basic directory listings:
 
     sudo chmod o+rx /var/log/apache2
 
-    ls -latr /var/log/apache2/
-
-    ls -la /var/log/apache2/*.log
+Now, change the group ownership of the contents of the `apache` log directory to the group `www-readwrite`:
 
     sudo chgrp www-readwrite /var/log/apache2/*
 
+And change the file permissions of the contents of the `apache` log directory to `644`:
+
     sudo chmod 644 /var/log/apache2/*
 
+Now edit the `log rotate` daemon script for `apache`:
+
     sudo nano /etc/logrotate.d/apache2
+
+It should look something like this. You can probably just copy & paste this in place to replace what was installed by default. But the key item in this case is the line that reads `create 640 root www-readwrite`:
 
     /var/log/apache2/*.log {
             weekly
