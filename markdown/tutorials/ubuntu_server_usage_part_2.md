@@ -22,37 +22,42 @@ Now let’s install a basic set of `php` modules.
 
 I am not going to do a deep breakdown of each module, but from my experience this is the most basic, complete and useful set of `php` modules most any web developer will be using.
 
-### Harden ‘php.’
+### Harden the ‘php’ install.
 
-With that done, let’s “harden” the `php` install by disabling `expose_php`.
+With that done, let’s “harden” the `php` install by disabling `expose_php`. You want to do harden the install to prevent exposing your server to hacking scripts & other unwanted intrusions:
 
     sudo nano /etc/php5/apache2/php.ini
-    
+
+Now do a search for `expose_php` and change that setting to `Off`:
+
     expose_php = Off
 
-### Harden ‘apache.’
+### Harden the ‘apache’ install.
 
-Now let’s “harden” the `apache` install by adjusting the values of `ServerTokens`, `ServerSignature` & `TraceEnable`. First, open up the main `apache` security file:
+Now let’s “harden” the `apache` install by adjusting the values of `ServerTokens`, `ServerSignature` & `TraceEnable`. You want to do harden the install to prevent exposing your server to hacking scripts & other unwanted intrusions. First, open up the main `apache` security configuration file:
 
     sudo nano /etc/apache2/conf.d/security
     
-Locate `ServerTokens` and set it to the “production” value:
+First, locate `ServerTokens` and set it to the “production” value:
 
     ServerTokens Prod
 
-Locate `ServerSignature` and disable it:
+Now, locate `ServerSignature` and disable that as well if it isn’t disabled already:
 
     ServerSignature Off
 
-Locate `TraceEnable` and disable that as well:
+Locate `TraceEnable` and disable that as well if it isn’t disabled already:
 
     TraceEnable Off
 
 ### Set the default ‘apache’ config.
 
-While `apache` already has a decent `default` config in place, I find it to be excessive & confusing for my purposes:
+Now, while `apache` already has a decent `default` config in place, I find it to be excessive & confusing for my purposes. First, open up the `apache` `default` config file like this:
 
     sudo nano /etc/apache2/sites-available/default
+
+And then replace the contents with the following basic `apache` config I like to use as a `default`:
+
 
     <VirtualHost *:80>
       DocumentRoot /var/www
@@ -69,16 +74,18 @@ While `apache` already has a decent `default` config in place, I find it to be e
       RedirectMatch 404 /(builds|configs|content)(/|$)
 
       # Including common items in a common file for ssl & non-ssl.
-      include /etc/apache2/sites-available/common.conf
+      # include /etc/apache2/sites-available/common.conf
 
       # Including common ModSecurity related items.
       # include /etc/apache2/sites-available/common_mod_security.conf
 
     </VirtualHost>
 
+Note the commented out entries for including the contents of `common.conf` and `common_mod_security.conf` in the config. We’re not going to address those just yet, but those “common” files are there to make the job of including commonly used basic config & security settings easier.
+
 ### Set a nicer default ‘php’-based index file instead of the standard “It works!” index file.
 
-And in a similar vein, the default “It works!” page that is installed in `index.html` is problematic from a security standpoint & also fairly useless.  So let’s get rid of that:
+And in a similar vein, `apache` installs a default “It works!” page in `index.html` that is fairly useless & problematic from a security standpoint. So let’s get rid of that file like this:
 
     sudo rm /var/www/index.html
 
@@ -95,6 +102,8 @@ And replace it with a new `php`-based `index.php` file:
     # echo $_SERVER['SERVER_ADDR'];
 
     ?>
+
+If you look at the contents of the new `php` file, you see most of the items are commented out. But this is basically the small set of commands I find useful to have at my disposal when setting up a server. The default command I like to set is the `echo $_SERVER['SERVER_NAME'];` which returns the domain or IP address used to connect to the server. It’s very useful for setting up—and debugging—Apache virtual host setups.
 
 ### Enable ‘apache’ modules.
 
