@@ -50,12 +50,14 @@ Locate `TraceEnable` and disable that as well if it isn’t disabled already:
 
     TraceEnable Off
 
-
 ### Set the default ‘apache’ config.
 
-While `apache` already has a decent `default` config in place, I find it to be excessive & confusing for my purposes:
+Now, while `apache` already has a decent `default` config in place, I find it to be excessive & confusing for my purposes. First, open up the `apache` `default` config file like this:
 
     sudo nano /etc/apache2/sites-available/default
+
+And then replace the contents with the following basic `apache` config I like to use as a `default`:
+
 
     <VirtualHost *:80>
       DocumentRoot /var/www
@@ -72,12 +74,14 @@ While `apache` already has a decent `default` config in place, I find it to be e
       RedirectMatch 404 /(builds|configs|content)(/|$)
 
       # Including common items in a common file for ssl & non-ssl.
-      include /etc/apache2/sites-available/common.conf
+      # include /etc/apache2/sites-available/common.conf
 
       # Including common ModSecurity related items.
       # include /etc/apache2/sites-available/common_mod_security.conf
 
     </VirtualHost>
+
+Note the commented out entries for including the contents of `common.conf` and `common_mod_security.conf` in the config. We’re not going to address those just yet, but those “common” files are there to make the job of including commonly used basic config & security settings easier.
 
 ### Set a nicer default ‘php’-based index file instead of the standard “It works!” index file.
 
