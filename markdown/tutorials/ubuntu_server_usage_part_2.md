@@ -22,17 +22,19 @@ Now let’s install a basic set of `php` modules.
 
 I am not going to do a deep breakdown of each module, but from my experience this is the most basic, complete and useful set of `php` modules most any web developer will be using.
 
-### Harden ‘php.’
+### Harden the ‘php’ install.
 
-With that done, let’s “harden” the `php` install by disabling `expose_php`.
+With that done, let’s “harden” the `php` install by disabling `expose_php`. You want to do harden the install to prevent exposing your server to hacking scripts & other unwanted intrusions:
 
     sudo nano /etc/php5/apache2/php.ini
-    
+
+Now do a search for `expose_php` and change that setting to `Off`:
+
     expose_php = Off
 
-### Harden ‘apache.’
+### Harden the ‘apache’ install.
 
-Now let’s “harden” the `apache` install by adjusting the values of `ServerTokens`, `ServerSignature` & `TraceEnable`. First, open up the main `apache` security file:
+Now let’s “harden” the `apache` install by adjusting the values of `ServerTokens`, `ServerSignature` & `TraceEnable`. You want to do harden the install to prevent exposing your server to hacking scripts & other unwanted intrusions. First, open up the main `apache` security configuration file:
 
     sudo nano /etc/apache2/conf.d/security
     
