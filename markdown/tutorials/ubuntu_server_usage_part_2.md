@@ -152,7 +152,7 @@ Now edit the `log rotate` daemon script for `apache`:
 
     sudo nano /etc/logrotate.d/apache2
 
-It should look something like this. You can probably just copy & paste this in place to replace what was installed by default. But the key item in this case is the line that reads `create 640 root www-readwrite`:
+The contents of the script should look something like this. You can probably just copy & paste this in place to replace what was installed by default. But the key item in this case is the line that reads `create 640 root www-readwrite`:
 
     /var/log/apache2/*.log {
             weekly
@@ -173,13 +173,15 @@ It should look something like this. You can probably just copy & paste this in p
             endscript
     }
 
-### Install APC for ‘php.’
+### Install APC (Alternative PHP Cache) for ‘php’ to improve caching.
 
-    sudo pear upgrade pear
+APC (Alternative PHP Cache) is a great—and very widely used—opcode cache module for PHP. APC does not do front-end content caching as much as it aids in caching PHP intermediate code behind the scenes to speed things up. There are two main ways one can install APC. The first way is to simply to install it via the Ubuntu package installer like so:
 
     sudo aptitude install php-apc
 
-Start installing.
+Seems simple enough, right? Well the problem with this approach is the repository version of APC is usually older than what is available in the real-world. In some cases, this is no big deal. The big test is simply: Does APC actually work well for your setup? Or is it bombing with tons of “segmentation faults” in Apache? If you run your setup with the repository version & things seem fine, then you are okay. But if it causes your website to fail with “segmentation faults” then your next best bet is to install it from source via `pecl`:
+
+    sudo pear upgrade pear
 
     sudo aptitude install php5-dev libpcre3-dev
 
