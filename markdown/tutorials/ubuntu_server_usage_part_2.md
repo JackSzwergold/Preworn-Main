@@ -12,12 +12,16 @@ First, let’s install the core of the `apache` & `php` related stuff.
 
     sudo aptitude install apache2 apache2-threaded-dev php5 libapache2-mod-php5 php-pear
 
+This is a fairly simple set of items that will be installed. `apache2` and `apache2-threaded-dev` are required for basic `apache` functionality. While `php5` and `libapache2-mod-php5` are required for basic `php` functionality on your system. The `php-pear` install is to allow you to do package installs from the `php` extension & application repository, aka: `pear`.
+
 ### Install the ‘php’ modules.
 
 Now let’s install a basic set of `php` modules.
 
     sudo aptitude install php5-mysql php5-pgsql php5-odbc php5-sybase php5-sqlite php5-xmlrpc php5-json php5-xsl php5-curl php5-geoip php-getid3 php5-imap php5-ldap php5-mcrypt php5-pspell php5-gmp php5-gd
-    
+
+I am not going to do a deep breakdown of each module, but from my experience this is the most basic, complete and useful set of `php` modules most any web developer will be using.
+
 ### Harden ‘php.’
 
 With that done, let’s “harden” the `php` install by disabling `expose_php`.
