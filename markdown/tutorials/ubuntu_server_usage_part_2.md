@@ -115,18 +115,22 @@ The list of modules is fairly simple to understand. The `rewrite` module allows 
 
 ### Adjust ‘apache’ config to allow group ‘www-readwrite’ access.
 
-Setting Apache2 `umask` in Ubuntu & other Debian setups:
+Since I like to set up servers to be collaborative environments based on a user’s access to the `www-readwrite` group. Let’s adjust `apache` itself so it interacts with the system via the `www-readwrite` group & creates files that have a `umask` setting that allows for group reading & writing. First let’s open up the `envvars` file like so:
 
     sudo nano /etc/apache2/envvars
 
-Append this to the end of the file:
+Append this to the end of the file to set the default `apache` `umask`:
 
     umask 002
 
-Also, in `/etc/apache2/envvars` change the `APACHE_RUN_GROUP` group to `www-readwrite`:
+With that done, change the `APACHE_RUN_GROUP` group in `envvars` to `www-readwrite`:
 
     # export APACHE_RUN_GROUP=www-data
     export APACHE_RUN_GROUP=www-readwrite
+
+Now restart `apache` so those settings can take affect:
+
+    sudo service apache2 restart
 
 ### Adjust ‘apache’ logs to allow group ‘www-readwrite’ access.
 
