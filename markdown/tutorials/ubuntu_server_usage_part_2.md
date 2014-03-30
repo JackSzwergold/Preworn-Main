@@ -8,13 +8,19 @@ So in part 1 of my tutorial, I explained how I like to configure a base level Ub
 
 ### Install ‘apache’ & some basic ‘php’ stuff.
 
+First, let’s install the core of the `apache` & `php` related stuff.
+
     sudo aptitude install apache2 apache2-threaded-dev php5 libapache2-mod-php5 php-pear
 
 ### Install the ‘php’ modules.
 
+Now let’s install a basic set of `php` modules.
+
     sudo aptitude install php5-mysql php5-pgsql php5-odbc php5-sybase php5-sqlite php5-xmlrpc php5-json php5-xsl php5-curl php5-geoip php-getid3 php5-imap php5-ldap php5-mcrypt php5-pspell php5-gmp php5-gd
     
 ### Harden ‘php.’
+
+With that done, let’s “harden” the `php` install by disabling `expose_php`.
 
     sudo nano /etc/php5/apache2/php.ini
     
@@ -22,21 +28,25 @@ So in part 1 of my tutorial, I explained how I like to configure a base level Ub
 
 ### Harden ‘apache.’
 
+Now let’s “harden” the `apache` install by adjusting the values of `ServerTokens`, `ServerSignature` & `TraceEnable`. First, open up the main `apache` security file:
+
     sudo nano /etc/apache2/conf.d/security
     
-Locate 'ServerTokens' and set to production.
+Locate `ServerTokens` and set it to the “production” value:
 
     ServerTokens Prod
 
-Locate 'ServerSignature' and disable.
+Locate `ServerSignature` and disable it:
 
     ServerSignature Off
 
-Locate 'TraceEnable' and disable.
+Locate `TraceEnable` and disable that as well:
 
     TraceEnable Off
 
 ### Set the default ‘apache’ config.
+
+While `apache` already has a decent `default` config in place, I find it to be excessive & confussing for my purposes:
 
     sudo nano /etc/apache2/sites-available/default
 
