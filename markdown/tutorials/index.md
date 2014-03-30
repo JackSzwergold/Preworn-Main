@@ -19,6 +19,7 @@ These tutorials outline the two main ways I like to connect to a host machine fr
 ### Using an Ubuntu Linux Server
 If you are going to be doing serious we development or Unix systems administration, you need to know how to use a Unix server. And Ubuntu is a great open-source Linux operating system for everyday Unix server use & general web development. These tutorials delve into the basics of how I like to use & configure Ubuntu Linux servers.
 * [Part 1: Configuring a Base Level Ubuntu Server][7]
+* [Part 2: Setting Up a LAMP Stack][8]
 
 [1]: mamp_part_1 "Setting Up a Basic, Useful MAMP Environment"
 [2]: mamp_part_2 "Configuring Name-Based Virtual Hosts"
@@ -27,3 +28,4 @@ If you are going to be doing serious we development or Unix systems administrati
 [5]: mamp_windows_with_virtualbox_part_2 "Basic — Using a Single Network Interface Setup"
 [6]: mamp_windows_with_virtualbox_part_3 "Advanced — Using a Dual Network Interface Setup with a Host-Only Interface"
 [7]: ubuntu_server_usage_part_1 "Configuring a Base Level Ubuntu Server"
+[8]: ubuntu_server_usage_part_2 "Setting Up a LAMP Stack"
