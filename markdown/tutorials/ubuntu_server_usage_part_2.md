@@ -115,6 +115,8 @@ Also, in `/etc/apache2/envvars` change the `APACHE_RUN_GROUP` group to `www-read
 
 ### Adjust ‘apache’ logs to allow group ‘www-readwrite’ access.
 
+Since I like to set up servers to be collaborative environments
+
     sudo chmod o+rx /var/log/apache2
 
     ls -latr /var/log/apache2/
