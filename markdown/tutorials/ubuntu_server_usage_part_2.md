@@ -85,7 +85,7 @@ Note the commented out entries for including the contents of `common.conf` and `
 
 ### Set a nicer default ‘php’-based index file instead of the standard “It works!” index file.
 
-And in a similar vein, the default “It works!” page that is installed in `index.html` is problematic from a security standpoint & also fairly useless.  So let’s get rid of that:
+And in a similar vein, `apache` installs a default “It works!” page in `index.html` that is fairly useless & problematic from a security standpoint. So let’s get rid of that file like this:
 
     sudo rm /var/www/index.html
 
@@ -102,6 +102,8 @@ And replace it with a new `php`-based `index.php` file:
     # echo $_SERVER['SERVER_ADDR'];
 
     ?>
+
+If you look at the contents of the new `php` file, you see most of the items are commented out. But this is basically the small set of commands I find useful to have at my disposal when setting up a server. The default command I like to set is the `echo $_SERVER['SERVER_NAME'];` which returns the domain or IP address used to connect to the server. It’s very useful for setting up—and debugging—Apache virtual host setups.
 
 ### Enable ‘apache’ modules.
 
