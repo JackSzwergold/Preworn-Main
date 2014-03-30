@@ -74,7 +74,11 @@ While `apache` already has a decent `default` config in place, I find it to be e
 
 ### Set a nicer default ‘php’-based index file instead of the standard “It works!” index file.
 
+And in a similar vein, the default “It works!” page that is installed in `index.html` is problematic from a security standpoint & also fairly useless.  So let’s get rid of that:
+
     sudo rm /var/www/index.html
+
+And replace it with a new `php`-based `index.php` file:
 
     sudo nano /var/www/index.php
 
@@ -90,19 +94,21 @@ While `apache` already has a decent `default` config in place, I find it to be e
 
 ### Enable ‘apache’ modules.
 
+Now enable some basic `apache` modules if they are not enabled already:
+
     sudo a2enmod rewrite headers include proxy proxy_http
     
 ### Adjust ‘apache’ config to allow group ‘www-readwrite’ access.
 
-Setting Apache2 `umask` in Ubuntu & other Debian setups.
+Setting Apache2 `umask` in Ubuntu & other Debian setups:
 
     sudo nano /etc/apache2/envvars
 
-Append this to the end of the file.
+Append this to the end of the file:
 
     umask 002
 
-Also, in `/etc/apache2/envvars` change the `APACHE_RUN_GROUP` group to `www-readwrite.`
+Also, in `/etc/apache2/envvars` change the `APACHE_RUN_GROUP` group to `www-readwrite`:
 
     # export APACHE_RUN_GROUP=www-data
     export APACHE_RUN_GROUP=www-readwrite
