@@ -179,15 +179,21 @@ APC (Alternative PHP Cache) is a great—and very widely used—opcode cache mod
 
     sudo aptitude install php-apc
 
-Seems simple enough, right? Well the problem with this approach is the repository version of APC is usually older than what is available in the real-world. In some cases, this is no big deal. The big test is simply: Does APC actually work well for your setup? Or is it bombing with tons of “segmentation faults” in Apache? If you run your setup with the repository version & things seem fine, then you are okay. But if it causes your website to fail with “segmentation faults” then your next best bet is to install it from source via `pecl`:
+Seems simple enough, right? Well the problem with this approach is the repository version of APC is usually older than what is available in the real-world. In some cases, this is no big deal. The big test is simply: Does APC actually work well for your setup? Or is it bombing with tons of “segmentation faults” in Apache? If you run your setup with the repository version & things seem fine, then you are okay. But if it causes your website to fail with “segmentation faults” then your next best bet is to install it from source via `pecl`.
+
+So let’s start by checking if the install of `pear` on the system ups updated like so:
 
     sudo pear upgrade pear
 
+Next, install `php5-dev` & `libpcre3-dev` so we’re suer all dependencies are met when APC is compiled:
+
     sudo aptitude install php5-dev libpcre3-dev
+
+Now run the `pecl` command to compile & install APC from source. Note the `-f` command which tells `pecl` to force the install of APC even if another version exists. The other version will be overwritten by the `-f` command:
 
     sudo pecl install -f apc
 
-Edit the apc.ini file.
+Now, edit the `apc.ini` file:
 
     sudo nano /etc/php5/conf.d/apc.ini
 
