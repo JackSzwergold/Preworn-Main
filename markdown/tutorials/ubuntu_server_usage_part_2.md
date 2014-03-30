@@ -103,14 +103,16 @@ And replace it with a new `php`-based `index.php` file:
 
     ?>
 
-If you look at the contents of the new `php` file, you see most of the items are commented out. But this is basically the small set of commands I find useful to have at my disposal when setting up a server. The default command I like to set is the `echo $_SERVER['SERVER_NAME'];` which returns the domain or IP address used to connect to the server. It’s very useful for setting up—and debugging—Apache virtual host setups.
+If you look at the contents of the new `php` file, you see most of the items are commented out. That’s fine because this is basically the small set of commands I find useful to have at my disposal when setting up a server. The default command I like to set is the `echo $_SERVER['SERVER_NAME'];` which returns the domain or IP address used to connect to the server. It’s very useful for setting up—and debugging—Apache virtual host setups.
 
 ### Enable ‘apache’ modules.
 
 Now enable some basic `apache` modules if they are not enabled already:
 
     sudo a2enmod rewrite headers include proxy proxy_http
-    
+
+The list of modules is fairly simple to understand. The `rewrite` module allows you to setup Apache `mod_rewrite` rules. The `headers` module allows you to set & adjust headers. The `include` module allows you to load extra config settings via the `include` directive. The `proxy` & `proxy_http` allow you to set proxy settings on an Apache server.
+
 ### Adjust ‘apache’ config to allow group ‘www-readwrite’ access.
 
 Setting Apache2 `umask` in Ubuntu & other Debian setups:
