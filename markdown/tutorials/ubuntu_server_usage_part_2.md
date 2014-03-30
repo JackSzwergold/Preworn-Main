@@ -152,7 +152,7 @@ Now edit the `log rotate` daemon script for `apache`:
 
     sudo nano /etc/logrotate.d/apache2
 
-It should look something like this. You can probably just copy & paste this in place to replace what was installed by default. But the key item in this case is the line that reads `create 640 root www-readwrite`:
+The contents of the script should look something like this. You can probably just copy & paste this in place to replace what was installed by default. But the key item in this case is the line that reads `create 640 root www-readwrite`:
 
     /var/log/apache2/*.log {
             weekly
@@ -173,25 +173,45 @@ It should look something like this. You can probably just copy & paste this in p
             endscript
     }
 
-### Install APC for ‘php.’
+### Install APC (Alternative PHP Cache) for ‘php’ to improve caching.
 
-    sudo pear upgrade pear
+APC (Alternative PHP Cache) is a great—and very widely used—opcode cache module for PHP. APC does not do front-end content caching as much as it aids in caching PHP intermediate code behind the scenes to speed things up. There are two main ways one can install APC. The first way is to simply to install it via the Ubuntu package installer like so:
 
     sudo aptitude install php-apc
 
-Start installing.
+Seems simple enough, right? Well the problem with this approach is the repository version of APC is usually older than what is available in the real-world. In some cases, this is no big deal. The big test is simply: Does APC actually work well for your setup? Or is it bombing with tons of “segmentation faults” in Apache? If you run your setup with the repository version & things seem fine, then you are okay. But if it causes your website to fail with “segmentation faults” then your next best bet is to install it from source via `pecl`.
+
+So let’s start by checking if the install of `pear` on the system ups updated like so:
+
+    sudo pear upgrade pear
+
+Next, install `php5-dev` & `libpcre3-dev` so we’re suer all dependencies are met when APC is compiled:
 
     sudo aptitude install php5-dev libpcre3-dev
 
+Now run the `pecl` command to compile & install APC from source. Note the `-f` command which tells `pecl` to force the install of APC even if another version exists. The other version will be overwritten by the `-f` command:
+
     sudo pecl install -f apc
 
-Edit the apc.ini file.
+Now, edit the `apc.ini` file:
 
     sudo nano /etc/php5/conf.d/apc.ini
 
-Nice basic config I use.
+And make sure the extension is activated. If this line is in it, it’s enabled:
 
     extension=apc.so
+
+Now restart `apache` and all should be good. If you want to disable it, you can open up that same `apc.ini` file & comment out the `extension` line like so:
+
+    ; extension=apc.so
+
+Restart `apache` again, and the extension is disabled.
+
+Now—for most web servers—APC works fine out of the box with it’s defaults. But if you want to really fine-tune APC, open up that `apc.ini` file like so:
+
+    sudo nano /etc/php5/conf.d/apc.ini
+
+And edit values like this. This is a set of APC tweaks I have used on some servers. But again, these settings are not universal & should be tweaked if needed based on an individual server’s needs:
 
     apc.enabled = 1
     apc.shm_segments = 1
@@ -205,8 +225,5 @@ Nice basic config I use.
     apc.max_file_size = 1M
     apc.num_files_hint = 512
 
-Disable apc.
-
-    ;extension=apc.so
 
 [1]: http://www.preworn.com/ "Preworn • Jack Szwergold’s Online Portfolio"
