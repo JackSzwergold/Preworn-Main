@@ -38,17 +38,18 @@ Now let’s “harden” the `apache` install by adjusting the values of `Server
 
     sudo nano /etc/apache2/conf.d/security
     
-Locate `ServerTokens` and set it to the “production” value:
+First, locate `ServerTokens` and set it to the “production” value:
 
     ServerTokens Prod
 
-Locate `ServerSignature` and disable it:
+Now, locate `ServerSignature` and disable that as well if it isn’t disabled already:
 
     ServerSignature Off
 
-Locate `TraceEnable` and disable that as well:
+Locate `TraceEnable` and disable that as well if it isn’t disabled already:
 
     TraceEnable Off
+
 
 ### Set the default ‘apache’ config.
 
