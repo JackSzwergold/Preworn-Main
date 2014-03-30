@@ -115,7 +115,7 @@ The list of modules is fairly simple to understand. The `rewrite` module allows 
 
 ### Adjust ‘apache’ config to allow group ‘www-readwrite’ access.
 
-Since I like to set up servers to be collaborative environments based on a user’s access to the `www-readwrite` group. Let’s adjust `apache` itself so it interacts with the system via the `www-readwrite` group & creates files that have a `umask` setting that allows for group reading & writing. First let’s open up the `envvars` file like so:
+As explained before, I like to set up servers to be collaborative environments based on a user’s access to the `www-readwrite` group. So with that in mind, let’s adjust `apache` itself so it interacts with the system via the `www-readwrite` group & creates files that have a `umask` value that allows for group reading & writing. First let’s open up the `envvars` file like so:
 
     sudo nano /etc/apache2/envvars
 
@@ -128,13 +128,13 @@ With that done, change the `APACHE_RUN_GROUP` group in `envvars` to `www-readwri
     # export APACHE_RUN_GROUP=www-data
     export APACHE_RUN_GROUP=www-readwrite
 
-Now restart `apache` so those settings can take affect:
+Now restart `apache` so those settings can take effect:
 
     sudo service apache2 restart
 
 ### Adjust ‘apache’ logs to allow group ‘www-readwrite’ access.
 
-Since I like to set up servers to be collaborative environments based on a user’s access to the `www-readwrite` group, I also like to give them clear & easy access to the `apache` logs. It’s generally helpful for debugging. And here is how I do it.
+Since I like to set up servers to be collaborative environments, I also like to give them clear & easy access to the `apache` logs. It’s generally helpful for debugging. And here is how I do it.
 
 First, change the parent permissions on the `apache` log directory so others can read & execute it for basic directory listings:
 
