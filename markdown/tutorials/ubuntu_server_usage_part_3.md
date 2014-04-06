@@ -37,9 +37,7 @@ Next, we’re going to create a very basic set of `iptables` rules to start off 
     :FORWARD ACCEPT [0:0]
     :OUTPUT ACCEPT [21:3342]
     :SSH_CHECK - [0:0]
-    :TOR - [0:0]
     -A INPUT -p tcp -m tcp --dport 22 -m state --state NEW -j SSH_CHECK
-    -A INPUT -j TOR
     -A INPUT -i lo -j ACCEPT
     -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
     -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
@@ -56,7 +54,7 @@ Next, we’re going to create a very basic set of `iptables` rules to start off 
     COMMIT
     # Completed on Sun Apr  6 11:50:24 2014
 
-It seems like there is a lot of stuff happening here—and there is—but it’s pretty simple: The stuff in `nat` & `mangle` are boilerplate defaults from an iptables rule set export.
+It seems like there is a lot of stuff happening here—and there is—but it’s pretty simple: The stuff in `*nat` & `*mangle` are boilerplate defaults from an iptables rule set export. The stuff in `*filter` is where the basic cool stuff happens. The important lines in there includes the `SSH_CHECK` which protects against someone “wardialing” your SSH connection. The next set of rules 
 
 
     sudo iptables-restore < iptables.conf
