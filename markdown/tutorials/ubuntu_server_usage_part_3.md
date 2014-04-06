@@ -1,6 +1,6 @@
 # Using an Ubuntu Linux Server
 
-Written by [Jack Szwergold][1] on March 30, 2014
+Written by [Jack Szwergold][1] on April 6, 2014
 
 ## Part 3: Monitoring & Securing Your Ubuntu Server
 
@@ -54,8 +54,9 @@ Next, we’re going to create a very basic set of `iptables` rules to start off 
     COMMIT
     # Completed on Sun Apr  6 11:50:24 2014
 
-It seems like there is a lot of stuff happening here—and there is—but it’s pretty simple: The stuff in `*nat` & `*mangle` are boilerplate defaults from an iptables rule set export. The stuff in `*filter` is where the basic cool stuff happens. The important lines in there includes the `SSH_CHECK` which protects against someone “wardialing” your SSH connection. It’s called as part of the `INPUT` chain at the top of the list, but it’s behavior is defined near the bottom of the list. The next set of rules 
+It seems like there is a lot of stuff happening here—and there is—but it’s pretty simple. Here is an explanation. If you don’t need these kind of details just yet, just move onto the next part: The stuff in `*nat` & `*mangle` are boilerplate defaults from an iptables rule set export. The stuff in `*filter` is where the basic cool stuff happens. The important lines in there includes the `SSH_CHECK` which protects against someone “war dialing” your SSH connection. It’s called as part of the `INPUT` chain at the top of the list, but it’s behavior is defined near the bottom of the list. The next set of rules define other sundry `INPUT` points, but the ones you should care about are the rules connected to port `80` as well as `443`. Those open up port `80` which is the basic `http` protocol port used by web servers & port `443` which is used by the `https` protocol used for secure webpage connections. If you need to open up any additional ports on your server, just copy the basic format shown in those two lines & change the port number to match the desired port number you need to have opened.
 
+Now, run this command to immediately load the rules in `iptables.conf` into your servers `iptables` setup:
 
     sudo iptables-restore < iptables.conf
 
