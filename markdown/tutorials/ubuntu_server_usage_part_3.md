@@ -91,7 +91,7 @@ You should see output that looks something like this which reflects all currentl
 
     Chain SSH_CHECK (1 references)
     target     prot opt source               destination         
-           all  --  0.0.0.0/0            0.0.0.0/0            recent: SET name: SSH side: source
+               all  --  0.0.0.0/0            0.0.0.0/0            recent: SET name: SSH side: source
     DROP       all  --  0.0.0.0/0            0.0.0.0/0            recent: UPDATE seconds: 60 hit_count: 4 name: SSH side: source
 
 Which is great! But the issue is that if you restart you server, all of your rules will be gone. That is where `iptables-persistent` comes in. And using it is pretty simple.
