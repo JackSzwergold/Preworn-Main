@@ -54,7 +54,7 @@ Next, we’re going to create a very basic set of `iptables` rules to start off 
     COMMIT
     # Completed on Sun Apr  6 11:50:24 2014
 
-It seems like there is a lot of stuff happening here—and there is—but it’s pretty simple: The stuff in `*nat` & `*mangle` are boilerplate defaults from an iptables rule set export. The stuff in `*filter` is where the basic cool stuff happens. The important lines in there includes the `SSH_CHECK` which protects against someone “wardialing” your SSH connection. The next set of rules 
+It seems like there is a lot of stuff happening here—and there is—but it’s pretty simple: The stuff in `*nat` & `*mangle` are boilerplate defaults from an iptables rule set export. The stuff in `*filter` is where the basic cool stuff happens. The important lines in there includes the `SSH_CHECK` which protects against someone “wardialing” your SSH connection. It’s called as part of the `INPUT` chain at the top of the list, but it’s behavior is defined near the bottom of the list. The next set of rules 
 
 
     sudo iptables-restore < iptables.conf
