@@ -60,7 +60,41 @@ Now, run this command to immediately load the rules in `iptables.conf` into your
 
     sudo iptables-restore < iptables.conf
 
-Now if you run the following command, you should 
+Now if you run the following command:
+
+    sudo iptables -L -n
+
+You should see output that looks something like this which reflects all currently active `iptables` rules:
+
+    Chain INPUT (policy ACCEPT)
+    target     prot opt source               destination         
+    ACCEPT     tcp  --  50.14.92.170         0.0.0.0/0            tcp dpt:22
+    SSH_CHECK  tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:22 state NEW
+    TOR        all  --  0.0.0.0/0            0.0.0.0/0           
+    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           
+    ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:80
+    ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:443
+    ACCEPT     icmp --  0.0.0.0/0            0.0.0.0/0            icmptype 255
+    ACCEPT     esp  --  0.0.0.0/0            0.0.0.0/0           
+    ACCEPT     ah   --  0.0.0.0/0            0.0.0.0/0           
+    ACCEPT     udp  --  0.0.0.0/0            224.0.0.251          udp dpt:5353
+    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0            state RELATED,ESTABLISHED
+    ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            state NEW tcp dpt:22
+    REJECT     all  --  0.0.0.0/0            0.0.0.0/0            reject-with icmp-host-prohibited
+
+    Chain FORWARD (policy ACCEPT)
+    target     prot opt source               destination         
+    TOR        all  --  0.0.0.0/0            0.0.0.0/0           
+
+    Chain OUTPUT (policy ACCEPT)
+    target     prot opt source               destination         
+
+    Chain SSH_CHECK (1 references)
+    target     prot opt source               destination         
+           all  --  0.0.0.0/0            0.0.0.0/0            recent: SET name: SSH side: source
+    DROP       all  --  0.0.0.0/0            0.0.0.0/0            recent: UPDATE seconds: 60 hit_count: 4 name: SSH side: source
+
+W
 
     sudo cp ~/iptables.conf /etc/iptables/rules.v4
 
