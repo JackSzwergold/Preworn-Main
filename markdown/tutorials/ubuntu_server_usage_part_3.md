@@ -94,8 +94,10 @@ You should see output that looks something like this which reflects all currentl
            all  --  0.0.0.0/0            0.0.0.0/0            recent: SET name: SSH side: source
     DROP       all  --  0.0.0.0/0            0.0.0.0/0            recent: UPDATE seconds: 60 hit_count: 4 name: SSH side: source
 
-W
+Which is great! But the issue is that if you restart you server, all of your rules will be gone. That is where `iptables-persistent` comes in. And using it is pretty simple. Simply copy the `iptables.conf` file you created just now into `/etc/iptables/rules.v4`:
 
     sudo cp ~/iptables.conf /etc/iptables/rules.v4
+
+Now if your server restarts, `iptables-persistent` will load all of the rules in `/etc/iptables/rules.v4` when the machine starts so your `iptables` rules will always be in place.
 
 [1]: http://www.preworn.com/ "Preworn • Jack Szwergold’s Online Portfolio"
