@@ -100,6 +100,6 @@ Just copy the `iptables.conf` file you created just now into `/etc/iptables/rule
 
     sudo cp ~/iptables.conf /etc/iptables/rules.v4
 
-Now when your server restarts, `iptables-persistent` will load all of the rules stored in `/etc/iptables/rules.v4`so your `iptables` rule set will always be active.
+Now when your server restarts, `iptables-persistent` will load all of the rules stored in `/etc/iptables/rules.v4` so your `iptables` rule set will always be active.
 
 [1]: http://www.preworn.com/ "Preworn • Jack Szwergold’s Online Portfolio"
