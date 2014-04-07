@@ -14,6 +14,9 @@ The best way to keep running tabs on your server’s overall health is to use `m
 
 If you notice we are installing `munin` itself as well as `munin-node` since `munin` can act as a centralized hub for the data `munin-node` generates. In this case we are going to host `munin` and `munin-node` on the same server.
 
+Now, when `munin` is installed, it sets up a symbolic link from it’s default Apache config to the real Apache config area. I’m not so into that. So I like to remove that symbolic link:
+
+    sudo rm /etc/apache2/conf.d/munin
 
 
 ### Install the ‘iptables’ firewall.
