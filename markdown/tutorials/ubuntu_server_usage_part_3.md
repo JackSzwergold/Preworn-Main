@@ -6,6 +6,13 @@ Written by [Jack Szwergold][1] on April 6, 2014
 
 In part 3 of my tutorial I will explain how to setup useful monitoring & security tools. You should never be in a situation where you cannot be able to review & assess server health. Being able to monitor & secure your server is the key to running a safe & stable server environment. 
 
+### Install the ‘munin’ to monitor system vitals.
+
+The best way to keep running tabs on your server’s overall health is to use `munin`. It 
+
+
+sudo aptitude install munin munin-node
+
 ### Install the ‘iptables’ firewall.
 
 First we’re going to install `iptables`, which is an excellent & widely used software-based firewall.  We’ll also be installing `iptables-persistent` which is a simply companion tool that allows `iptables` to be reloaded & active if/when a server reboots:
