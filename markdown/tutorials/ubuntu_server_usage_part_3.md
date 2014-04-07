@@ -91,6 +91,52 @@ Finally, if you want to receive e-mail alerts when `munin` notices something out
 
     sudo nano /etc/munin/munin.conf
 
+Now look for the lines that read:
+
+    # Drop somejuser@fnord.comm and anotheruser@blibb.comm an email everytime
+    # something changes (OK -> WARNING, CRITICAL -> OK, etc)
+    #contact.someuser.command mail -s "Munin notification" somejuser@fnord.comm
+    #contact.anotheruser.command mail -s "Munin notification" anotheruser@blibb.comm
+    #
+    # For those with Nagios, the following might come in handy. In addition,
+    # the services must be defined in the Nagios server as well.
+    #contact.nagios.command /usr/bin/send_nsca nagios.host.comm -c /etc/nsca.conf
+
+And change that to add your e-mail contact info to the `contact.` settings:
+
+    # Drop somejuser@fnord.comm and anotheruser@blibb.comm an email everytime
+    # something changes (OK -> WARNING, CRITICAL -> OK, etc)
+    #contact.someuser.command mail -s "Munin notification" somejuser@fnord.comm
+    #contact.anotheruser.command mail -s "Munin notification" anotheruser@blibb.comm
+    #
+
+    contact.serveralert.command mail -s "MUNIN - ${var:group} :: ${var:host}" JackSzwergold@gmail.com
+    contact.serveralert.always_send warning critical
+
+    # For those with Nagios, the following might come in handy. In addition,
+    # the services must be defined in the Nagios server as well.
+    #contact.nagios.command /usr/bin/send_nsca nagios.host.comm -c /etc/nsca.conf
+
+Now look for the lines that define the `host tree` settings like so:
+
+    # a simple host tree
+    [localhost]
+        address 127.0.0.1
+        use_node_name yes
+
+And adjust them so it now has a `contacts` setting like so:
+
+    # a simple host tree
+    [localhost]
+        address 127.0.0.1
+        use_node_name yes
+        contacts serveralert
+
+And now restart `munin-node` for the changes to take effect:
+
+    sudo service munin-node restart
+
+Now `munin` should be fully setup & configured to not only monitor your server, but e-mail you with alerts when something odd comes up.
 
 ### Install the ‘iptables’ firewall.
 
