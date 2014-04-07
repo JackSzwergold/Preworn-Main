@@ -138,6 +138,17 @@ And now restart `munin-node` for the changes to take effect:
 
 Now `munin` should be fully setup & configured to not only monitor your server, but e-mail you with alerts when something odd comes up.
 
+### Install ‘monit’ to monitor & manage specific services.
+
+A fantastic system administrator’s tool that I like to use—and have barely scratched the surface of—is `monit`. It’s basically a scriptable daemon that can monitor system services & take action on certain system service conditions based on your settings.
+
+First, let’s install `monit` like so:
+
+    sudo aptitude install monit
+
+The main thing I currently use it for is to monitor `apache`, detect if the service is up or down & then restart it as necessary.
+
+
 ### Install the ‘iptables’ firewall.
 
 Now we’re going to install `iptables`, which is an excellent & widely used software-based firewall.  We’ll also be installing `iptables-persistent` which is a simply companion tool that allows `iptables` to be reloaded & active if/when a server reboots:
