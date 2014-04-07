@@ -47,7 +47,7 @@ You should now see the beginnings of some Munin charts. Which is great! But let�
 
 ### Install the ‘iptables’ firewall.
 
-First we’re going to install `iptables`, which is an excellent & widely used software-based firewall.  We’ll also be installing `iptables-persistent` which is a simply companion tool that allows `iptables` to be reloaded & active if/when a server reboots:
+Now we’re going to install `iptables`, which is an excellent & widely used software-based firewall.  We’ll also be installing `iptables-persistent` which is a simply companion tool that allows `iptables` to be reloaded & active if/when a server reboots:
 
     sudo aptitude install iptables iptables-persistent
 
