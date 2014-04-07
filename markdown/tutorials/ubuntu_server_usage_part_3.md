@@ -183,7 +183,20 @@ Now restart `monit` like so:
 
     sudo service monit restart
 
-That simple script will monitor your `apache` service on the localhost address of `127.0.0.1` running on port `80`. If it fails with a timeout after 15 seconds, it will automatically restart itself & alert you about the outage via e-mail.
+That simple script will monitor your `apache` service on the localhost address of `127.0.0.1` running on port `80`. If it fails with a timeout after 15 seconds, it will automatically restart itself & alert you about the outage via e-mail. To me this is an invaluable tool to help keep a server up and running.  You can also add a server load average check to the mix like so:
+
+    check process apache with pidfile /var/run/apache2.pid
+            start "/etc/init.d/apache2 start"
+            stop  "/etc/init.d/apache2 stop"
+            if failed host 127.0.0.1 port 80
+                    with timeout 15 seconds
+            then restart
+            if loadavg (1min) greater than 7
+                    for 5 cycles
+            then restart
+            alert my@emailaddress.com only on { timeout, nonexist }
+
+
 
 
 ### Install the ‘iptables’ firewall.
