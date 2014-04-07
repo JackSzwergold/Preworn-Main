@@ -8,10 +8,13 @@ In part 3 of my tutorial I will explain how to setup useful monitoring & securit
 
 ### Install the ‘munin’ to monitor system vitals.
 
-The best way to keep running tabs on your server’s overall health is to use `munin`. It 
+The best way to keep running tabs on your server’s overall health is to use `munin`. It basically keeps a running, web accessible visual log of your server’s overall health. Thing of it as an EKG for your server. To use it, first install it like so:
+
+    sudo aptitude install munin munin-node
+
+If you notice we are installing `munin` itself as well as `munin-node` since `munin` can act as a centralized hub for the data `munin-node` generates. In this case we are going to host `munin` and `munin-node` on the same server.
 
 
-sudo aptitude install munin munin-node
 
 ### Install the ‘iptables’ firewall.
 
