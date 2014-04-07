@@ -18,6 +18,31 @@ Now, when `munin` is installed, it sets up a symbolic link from it’s default A
 
     sudo rm /etc/apache2/conf.d/munin
 
+And create a new `munin.conf` file like so:
+
+    sudo nano /etc/apache2/conf.d/munin.conf
+
+And add this to that file:
+
+    <Directory "/var/cache/munin/www">
+      Options Indexes MultiViews FollowSymLinks
+      AllowOverride None
+
+      <IfModule mod_expires.c>
+        ExpiresActive On
+        ExpiresDefault M310
+      </IfModule>
+
+    </Directory>
+
+Now wait about 10-15 minutes, restart `apache`:
+
+    sudo service apache2 restart
+
+
+
+
+
 
 ### Install the ‘iptables’ firewall.
 
