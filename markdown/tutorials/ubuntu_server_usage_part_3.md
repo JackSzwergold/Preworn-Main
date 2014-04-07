@@ -14,7 +14,7 @@ The best way to keep running tabs on your server’s overall health is to use `m
 
 If you notice we are installing `munin` itself as well as `munin-node` since `munin` can act as a centralized hub for the data `munin-node` generates. In this case we are going to host `munin` and `munin-node` on the same server.
 
-Now, when `munin` is installed, it sets up a symbolic link from it’s default Apache config to the real Apache config area. I’m not so into that. So I like to remove that symbolic link:
+Now, when `munin` is installed, it sets up a symbolic link from it’s default `apache` config to the real `apache` config area. I’m not so into that. So I like to remove that symbolic link:
 
     sudo rm /etc/apache2/conf.d/munin
 
@@ -43,7 +43,100 @@ And go to the default host or IP of your web server like so:
 
     http://192.168.56.10/munin
 
-You should now see the beginnings of some Munin charts. Which is great! But let’s tune a few things first.
+You should now see the beginnings of some Munin charts. Which is great! But let’s tune a few things first, such as activating some `apache`, `mysql` & `postfix` specific `munin` plugins like so:
+
+    sudo ln -s /usr/share/munin/plugins/apache_accesses /etc/munin/plugins/apache_accesses
+    sudo ln -s /usr/share/munin/plugins/apache_processes /etc/munin/plugins/apache_processes
+    sudo ln -s /usr/share/munin/plugins/apache_volume /etc/munin/plugins/apache_volume
+    sudo ln -s /usr/share/munin/plugins/mysql_bytes /etc/munin/plugins/mysql_bytes
+    sudo ln -s /usr/share/munin/plugins/mysql_innodb /etc/munin/plugins/mysql_innodb
+    sudo ln -s /usr/share/munin/plugins/mysql_queries /etc/munin/plugins/mysql_queries
+    sudo ln -s /usr/share/munin/plugins/mysql_slowqueries /etc/munin/plugins/mysql_slowqueries
+    sudo ln -s /usr/share/munin/plugins/mysql_threads /etc/munin/plugins/mysql_threads
+    sudo ln -s /usr/share/munin/plugins/postfix_mailqueue /etc/munin/plugins/postfix_mailqueue
+    sudo ln -s /usr/share/munin/plugins/postfix_mailvolume /etc/munin/plugins/postfix_mailvolume
+
+And now restart `munin-node` for the changes to take effect:
+
+    sudo service munin-node restart
+
+Now there is an annoying bug in `munin` that will cause it to report InnoDB free tablespace to be low even when `autoextend` for MySQL is active. A complete false positive scenario that will drive you nuts if you have e-mail alerts set up. The solution is to add the following configuration options to your `munin-node` config like so:
+
+    sudo nano /etc/munin/plugin-conf.d/munin-node
+
+Now scroll to the bottom of the file & add these configuration settings:
+
+    [mysql_innodb]
+    env.warning 0
+    env.critical 0
+
+And now restart `munin-node` for the changes to take effect:
+
+    sudo service munin-node restart
+
+Also, for some reason the `iostat` plugin skips hard drive volumes that have a number in them by default. I’m not too sure what the benefit of doing that is, but can be annoying. To deactivate the default behavior, just open up the `munin-node` config file:
+
+    sudo nano /etc/munin/plugin-conf.d/munin-node
+
+And add these lines to the bottom of it like so:
+
+    [iostat]
+    env.SHOW_NUMBERED 1
+
+And now restart `munin-node` for the changes to take effect:
+
+    sudo service munin-node restart
+
+Finally, if you want to receive e-mail alerts when `munin` notices something out of whack, open up the main `munin` config file like so:
+
+    sudo nano /etc/munin/munin.conf
+
+Now look for the lines that read:
+
+    # Drop somejuser@fnord.comm and anotheruser@blibb.comm an email everytime
+    # something changes (OK -> WARNING, CRITICAL -> OK, etc)
+    #contact.someuser.command mail -s "Munin notification" somejuser@fnord.comm
+    #contact.anotheruser.command mail -s "Munin notification" anotheruser@blibb.comm
+    #
+    # For those with Nagios, the following might come in handy. In addition,
+    # the services must be defined in the Nagios server as well.
+    #contact.nagios.command /usr/bin/send_nsca nagios.host.comm -c /etc/nsca.conf
+
+And change that to add your e-mail contact info to the `contact.` settings:
+
+    # Drop somejuser@fnord.comm and anotheruser@blibb.comm an email everytime
+    # something changes (OK -> WARNING, CRITICAL -> OK, etc)
+    #contact.someuser.command mail -s "Munin notification" somejuser@fnord.comm
+    #contact.anotheruser.command mail -s "Munin notification" anotheruser@blibb.comm
+    #
+
+    contact.serveralert.command mail -s "MUNIN - ${var:group} :: ${var:host}" JackSzwergold@gmail.com
+    contact.serveralert.always_send warning critical
+
+    # For those with Nagios, the following might come in handy. In addition,
+    # the services must be defined in the Nagios server as well.
+    #contact.nagios.command /usr/bin/send_nsca nagios.host.comm -c /etc/nsca.conf
+
+Now look for the lines that define the `host tree` settings like so:
+
+    # a simple host tree
+    [localhost]
+        address 127.0.0.1
+        use_node_name yes
+
+And adjust them so it now has a `contacts` setting like so:
+
+    # a simple host tree
+    [localhost]
+        address 127.0.0.1
+        use_node_name yes
+        contacts serveralert
+
+And now restart `munin-node` for the changes to take effect:
+
+    sudo service munin-node restart
+
+Now `munin` should be fully setup & configured to not only monitor your server, but e-mail you with alerts when something odd comes up.
 
 ### Install the ‘iptables’ firewall.
 
