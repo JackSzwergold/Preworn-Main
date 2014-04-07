@@ -183,7 +183,9 @@ Now restart `monit` like so:
 
     sudo service monit restart
 
-That simple script will monitor your `apache` service on the localhost address of `127.0.0.1` running on port `80`. If it fails with a timeout after 15 seconds, it will automatically restart itself & alert you about the outage via e-mail. To me this is an invaluable tool to help keep a server up and running.  You can also add a server load average check to the mix like so:
+That simple script will monitor your `apache` service on the localhost address of `127.0.0.1` running on port `80`. If it fails with a timeout after 15 seconds, it will automatically restart the `apache` service & alert you about the outage via e-mail. To me this is an invaluable tool to help keep a server up and running.
+
+You can also add a server load average check to the mix like so:
 
     check process apache with pidfile /var/run/apache2.pid
             start "/etc/init.d/apache2 start"
@@ -196,7 +198,7 @@ That simple script will monitor your `apache` service on the localhost address o
             then restart
             alert my@emailaddress.com only on { timeout, nonexist }
 
-
+The configuration is just like the first one, but note the `if loadavg` section. That will check the system load average every minute. And if it has a load average that is greater than 7 for 5 one minute cycles, it will restart the `apache` service & alert you about the outage via e-mail. I selectively use the `loadavg` setting depending on server setup since many different factors can contribute to a high system load. But in general, a web server that is spiraling out of control due to DDoS can be saved by this script’s careful monitoring system load.
 
 
 ### Install the ‘iptables’ firewall.
