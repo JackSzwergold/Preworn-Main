@@ -18,11 +18,11 @@ Now, when `munin` is installed, it sets up a symbolic link from it’s default A
 
     sudo rm /etc/apache2/conf.d/munin
 
-And create a new `munin.conf` file like so:
+Create a new `munin.conf` file like so:
 
     sudo nano /etc/apache2/conf.d/munin.conf
 
-And add this to that file:
+Then add this to that file:
 
     <Directory "/var/cache/munin/www">
       Options Indexes MultiViews FollowSymLinks
@@ -39,10 +39,11 @@ Now wait about 10-15 minutes, restart `apache`:
 
     sudo service apache2 restart
 
+And go to the default host or IP of your web server like so:
 
+    http://192.168.56.10/munin
 
-
-
+You should now see the beginnings of some Munin charts. Which is great! But let’s tune a few things first.
 
 ### Install the ‘iptables’ firewall.
 
