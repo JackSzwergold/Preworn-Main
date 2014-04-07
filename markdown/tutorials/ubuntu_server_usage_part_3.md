@@ -56,11 +56,11 @@ You should now see the beginnings of some Munin charts. Which is great! But let�
     sudo ln -s /usr/share/munin/plugins/postfix_mailqueue /etc/munin/plugins/postfix_mailqueue
     sudo ln -s /usr/share/munin/plugins/postfix_mailvolume /etc/munin/plugins/postfix_mailvolume
 
-And restart `munin-node` for the changes to take effect:
+And now restart `munin-node` for the changes to take effect:
 
     sudo service munin-node restart
 
-Now there is an annoying bug in `munin` that will cause it to report InnoDB free tablespace to be low even when `autoextend` for MySQL is active. A complete false positive scenario that will drive you nuts if you have e-mail alerts set up. The solution is to add the following configuration options to your `munin` config like so:
+Now there is an annoying bug in `munin` that will cause it to report InnoDB free tablespace to be low even when `autoextend` for MySQL is active. A complete false positive scenario that will drive you nuts if you have e-mail alerts set up. The solution is to add the following configuration options to your `munin-node` config like so:
 
     sudo nano /etc/munin/plugin-conf.d/munin-node
 
@@ -70,11 +70,26 @@ Now scroll to the bottom of the file & add these configuration settings:
     env.warning 0
     env.critical 0
 
-And restart `munin-node` for the changes to take effect:
+And now restart `munin-node` for the changes to take effect:
 
     sudo service munin-node restart
 
+Also, for some reason the `iostat` plugin skips hard drive volumes that have a number in them by default. I’m not too sure what the benefit of doing that is, but can be annoying. To deactivate the default behavior, just open up the `munin-node` config file:
 
+    sudo nano /etc/munin/plugin-conf.d/munin-node
+
+And add these lines to the bottom of it like so:
+
+    [iostat]
+    env.SHOW_NUMBERED 1
+
+And now restart `munin-node` for the changes to take effect:
+
+    sudo service munin-node restart
+
+Finally, if you want to receive e-mail alerts when `munin` notices something out of whack, open up the main `munin` config file like so:
+
+    sudo nano /etc/munin/munin.conf
 
 
 ### Install the ‘iptables’ firewall.
