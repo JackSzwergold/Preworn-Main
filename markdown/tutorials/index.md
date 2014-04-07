@@ -30,4 +30,4 @@ If you are going to be doing serious we development or Unix systems administrati
 [6]: mamp_windows_with_virtualbox_part_3 "Advanced — Using a Dual Network Interface Setup with a Host-Only Interface"
 [7]: ubuntu_server_usage_part_1 "Configuring a Base Level Ubuntu Server"
 [8]: ubuntu_server_usage_part_2 "Setting Up a LAMP Stack"
-[8]: ubuntu_server_usage_part_3 "Monitoring & Securing Your Ubuntu Server"
+[9]: ubuntu_server_usage_part_3 "Monitoring & Securing Your Ubuntu Server"
