@@ -6,6 +6,45 @@ Written by [Jack Szwergold][1] on April 6, 2014
 
 In part 3 of my tutorial I will explain how to setup useful monitoring & security tools. You should never be in a situation where you cannot be able to review & assess server health. Being able to monitor & secure your server is the key to running a safe & stable server environment. 
 
+### Install the ‘munin’ to monitor system vitals.
+
+The best way to keep running tabs on your server’s overall health is to use `munin`. It basically keeps a running, web accessible visual log of your server’s overall health. Thing of it as an EKG for your server. To use it, first install it like so:
+
+    sudo aptitude install munin munin-node
+
+If you notice we are installing `munin` itself as well as `munin-node` since `munin` can act as a centralized hub for the data `munin-node` generates. In this case we are going to host `munin` and `munin-node` on the same server.
+
+Now, when `munin` is installed, it sets up a symbolic link from it’s default Apache config to the real Apache config area. I’m not so into that. So I like to remove that symbolic link:
+
+    sudo rm /etc/apache2/conf.d/munin
+
+Create a new `munin.conf` file like so:
+
+    sudo nano /etc/apache2/conf.d/munin.conf
+
+Then add this to that file:
+
+    <Directory "/var/cache/munin/www">
+      Options Indexes MultiViews FollowSymLinks
+      AllowOverride None
+
+      <IfModule mod_expires.c>
+        ExpiresActive On
+        ExpiresDefault M310
+      </IfModule>
+
+    </Directory>
+
+Now wait about 10-15 minutes, restart `apache`:
+
+    sudo service apache2 restart
+
+And go to the default host or IP of your web server like so:
+
+    http://192.168.56.10/munin
+
+You should now see the beginnings of some Munin charts. Which is great! But let’s tune a few things first.
+
 ### Install the ‘iptables’ firewall.
 
 First we’re going to install `iptables`, which is an excellent & widely used software-based firewall.  We’ll also be installing `iptables-persistent` which is a simply companion tool that allows `iptables` to be reloaded & active if/when a server reboots:
