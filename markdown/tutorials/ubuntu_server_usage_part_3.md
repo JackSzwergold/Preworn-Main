@@ -102,7 +102,7 @@ Now look for the lines that read:
     # the services must be defined in the Nagios server as well.
     #contact.nagios.command /usr/bin/send_nsca nagios.host.comm -c /etc/nsca.conf
 
-And change that to add your e-mail contact info to the `contact.` settings:
+And change that to add your e-mail contact info to the `contact.` settings. Be sure to change `my@emailaddress.com` to match your e-mail address:
 
     # Drop somejuser@fnord.comm and anotheruser@blibb.comm an email everytime
     # something changes (OK -> WARNING, CRITICAL -> OK, etc)
@@ -110,7 +110,7 @@ And change that to add your e-mail contact info to the `contact.` settings:
     #contact.anotheruser.command mail -s "Munin notification" anotheruser@blibb.comm
     #
 
-    contact.serveralert.command mail -s "MUNIN - ${var:group} :: ${var:host}" JackSzwergold@gmail.com
+    contact.serveralert.command mail -s "MUNIN - ${var:group} :: ${var:host}" my@emailaddress.com
     contact.serveralert.always_send warning critical
 
     # For those with Nagios, the following might come in handy. In addition,
@@ -137,6 +137,54 @@ And now restart `munin-node` for the changes to take effect:
     sudo service munin-node restart
 
 Now `munin` should be fully setup & configured to not only monitor your server, but e-mail you with alerts when something odd comes up.
+
+### Install ‘monit’ to monitor & manage specific services.
+
+A fantastic system administrator’s tool that I like to use—and have barely scratched the surface of—is `monit`. It’s basically a scriptable daemon that can monitor system services & take action on certain system service conditions based on your settings.
+
+First, let’s install `monit` like so:
+
+    sudo aptitude install monit
+
+Now we want to adjust adjust `monit` so it has an e-mail server it can use. So let’s open the main `monit` config file:
+
+    sudo nano /etc/monit/monitrc
+
+Look for this chunk of commented out configuration code:
+
+    ## Set the list of mail servers for alert delivery. Multiple servers may be
+    ## specified using a comma separator. If the first mail server fails, Monit
+    # will use the second mail server in the list and so on. By default Monit uses
+    # port 25 - it is possible to override this with the PORT option.
+    # 
+    # set mailserver mail.bar.baz,               # primary mailserver
+    #                backup.bar.baz port 10025,  # backup mailserver on port 10025
+    #                localhost                   # fallback relay
+
+Found it? Good! Now enter a space or two after that chunk & enter this configuration line for the mail server:
+
+    set mailserver localhost
+
+With that done, let’s set a simple `monit` script. The main thing I currently use `monit` for is to monitor `apache` & detect if the service is active. If it’s down? Then the script automatically restarts it. First, let’s create the `apache` config for `monit` like so:
+
+    sudo nano /etc/monit/conf.d/apache2.conf
+
+With that new file open, let’s copy this script into it. Be sure to change `my@emailaddress.com` to match your e-mail address:
+
+    check process apache with pidfile /var/run/apache2.pid
+            start "/etc/init.d/apache2 start"
+            stop  "/etc/init.d/apache2 stop"
+            if failed host 127.0.0.1 port 80
+                    with timeout 15 seconds
+            then restart
+            alert my@emailaddress.com only on { timeout, nonexist }
+
+Now restart `monit` like so:
+
+    sudo service monit restart
+
+That simple script will monitor your `apache` service on the localhost address of `127.0.0.1` running on port `80`. If it fails with a timeout after 15 seconds, it will automatically restart itself & alert you about the outage via e-mail.
+
 
 ### Install the ‘iptables’ firewall.
 
