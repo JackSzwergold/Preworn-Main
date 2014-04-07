@@ -4,9 +4,15 @@ Written by [Jack Szwergold][1] on April 6, 2014
 
 ## Part 3: Monitoring & Securing Your Ubuntu Server
 
-In part 3 of my tutorial I will explain how to setup useful monitoring & security tools. You should never be in a situation where you cannot be able to review & assess server health. Being able to monitor & secure your server is the key to running a safe & stable server environment. 
+In part 3 of my tutorial I will explain how to setup useful monitoring & security tools. You should never be in a situation where you cannot be able to review & assess server health. Being able to monitor & secure your server is the key to running a safe & stable server environment.
 
-### Install the ‘munin’ to monitor system vitals.
+### Table of contents.
+
+* [Install the ‘munin’ to monitor system vitals.](ubuntu_server_usage_part_3#install_munin)
+* [Install ‘monit’ to monitor & manage specific services.](ubuntu_server_usage_part_3#install_monit)
+* [Install the ‘iptables’ firewall.](ubuntu_server_usage_part_3#install_iptables)
+
+### <a name="install_munin"></a> Install the ‘munin’ to monitor system vitals.
 
 The best way to keep running tabs on your server’s overall health is to use `munin`. It basically keeps a running, web accessible visual log of your server’s overall health. Thing of it as an EKG for your server. To use it, first install it like so:
 
@@ -138,7 +144,7 @@ And now restart `munin-node` for the changes to take effect:
 
 Now `munin` should be fully setup & configured to not only monitor your server, but e-mail you with alerts when something odd comes up.
 
-### Install ‘monit’ to monitor & manage specific services.
+### <a name="install_monit"></a> Install ‘monit’ to monitor & manage specific services.
 
 A fantastic system administrator’s tool that I like to use—and have barely scratched the surface of—is `monit`. It’s basically a scriptable daemon that can monitor system services & take action on certain system service conditions based on your settings.
 
@@ -183,10 +189,26 @@ Now restart `monit` like so:
 
     sudo service monit restart
 
-That simple script will monitor your `apache` service on the localhost address of `127.0.0.1` running on port `80`. If it fails with a timeout after 15 seconds, it will automatically restart itself & alert you about the outage via e-mail.
+That simple script will monitor your `apache` service on the localhost address of `127.0.0.1` running on port `80`. If it fails with a timeout after 15 seconds, it will automatically restart the `apache` service & alert you about the outage via e-mail. To me this is an invaluable tool to help keep a server up and running.
 
+You can also add a server load average check to the mix like so:
 
-### Install the ‘iptables’ firewall.
+    check process apache with pidfile /var/run/apache2.pid
+            start "/etc/init.d/apache2 start"
+            stop  "/etc/init.d/apache2 stop"
+            if failed host 127.0.0.1 port 80
+                    with timeout 15 seconds
+            then restart
+            if loadavg (1min) greater than 7
+                    for 5 cycles
+            then restart
+            alert my@emailaddress.com only on { timeout, nonexist }
+
+The configuration is just like the first one, but note the `if loadavg` section. That will check the system load average every minute. And if it has a load average that is greater than 7 for 5 one minute cycles, it will restart the `apache` service & alert you about the outage via e-mail. I selectively use the `loadavg` setting depending on server setup since many different factors can contribute to a high system load. But in general, a web server that is spiraling out of control due to DDoS can be saved by this script’s careful monitoring system load.
+
+But always remember: While `monit` scripts can save you the headache of a server outage, but only a real human with the knowledge of how a server should work can determine what the real issue is. So if `monit` sends you an e-mail, you should take that alert seriously by logging into your server & monitoring it for a while.
+
+### <a name="install_iptables"></a> Install the ‘iptables’ firewall.
 
 Now we’re going to install `iptables`, which is an excellent & widely used software-based firewall.  We’ll also be installing `iptables-persistent` which is a simply companion tool that allows `iptables` to be reloaded & active if/when a server reboots:
 
