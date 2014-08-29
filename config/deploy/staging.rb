@@ -7,7 +7,7 @@ set :branch, "develop"
 
 server "www.preworn.com", :app, :web, :db, :primary => true
 set :web_builds, "#{deployment_root}/builds"
-set :content_data_path, "#{deployment_root}/content/#{application}/staging"
+set :content_data_path, "#{deployment_root}/content"
 set :live_root, "#{deployment_root}/staging.preworn.com"
 
 set :deploy_to, "#{web_builds}/#{application}/staging"
