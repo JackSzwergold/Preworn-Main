@@ -4,6 +4,9 @@ Options +FollowSymlinks
 
 RewriteEngine on
 
+RewriteRule ^(clients)($|/) - [L]
+# RewriteCond %{REQUEST_URI} !^(clients/.*)$ [NC]
+
 # This redirects any call to this directory to an index file with $_GET parameters.
 # The 'controller=$1&page=$2&section=$3&subsection=$4' passes the pathname as an HTML param called 'controller', 'page', 'section' & 'subsection'.
 # RewriteRule     ^([a-z0-9-_]+)/?([^/]*)$       index.php?controller=$1&$2 [QSA]
