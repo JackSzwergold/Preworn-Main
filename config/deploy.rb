@@ -22,9 +22,9 @@ namespace :deploy do
 end
 
 # Link the 'images' folder into the current directory; removes whatever 'images' exists in the repo.
-#task :link_content do
-#  run "cd #{current_release} && if [ -d images ]; then rm -rf images; fi && ln -s #{content_data_path}/images ./images"
-#end
+task :link_content do
+  run "cd #{current_release} && if [ -d images ]; then rm -rf images; fi && ln -s #{content_data_path}/clients ./clients"
+end
 
 # Clean up the stray symlinks: current, log, public & tmp
 task :delete_extra_symlink do
@@ -55,6 +55,6 @@ end
 
 before "deploy:update", "deploy:create_release_dir"
 before "deploy:create_symlink", :delete_cap_files
-# after "deploy:create_symlink", :link_content
+after "deploy:create_symlink", :link_content
 after "deploy:update", :delete_extra_symlink
 after "deploy:update", :echo_current_path
