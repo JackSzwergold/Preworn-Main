@@ -8,6 +8,7 @@ set :scm, :git
 set :use_sudo, false
 set :keep_releases, 3
 ssh_options[:forward_agent] = true
+# ssh_options[:config] = false # 2014-10-17: Potential fix for NetSSH versions choking on authentication.
 
 set :web_root, "/var/www"
 set :deployment_root, "#{web_root}"
