@@ -295,33 +295,48 @@ Now if you run the following command:
 
 You should see output that looks something like this which reflects all currently active `iptables` rules:
 
-    Chain INPUT (policy ACCEPT)
-    target     prot opt source               destination         
-    ACCEPT     tcp  --  50.14.92.170         0.0.0.0/0            tcp dpt:22
-    SSH_CHECK  tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:22 state NEW
-    TOR        all  --  0.0.0.0/0            0.0.0.0/0           
-    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           
-    ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:80
-    ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:443
-    ACCEPT     icmp --  0.0.0.0/0            0.0.0.0/0            icmptype 255
-    ACCEPT     esp  --  0.0.0.0/0            0.0.0.0/0           
-    ACCEPT     ah   --  0.0.0.0/0            0.0.0.0/0           
-    ACCEPT     udp  --  0.0.0.0/0            224.0.0.251          udp dpt:5353
-    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0            state RELATED,ESTABLISHED
-    ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            state NEW tcp dpt:22
-    REJECT     all  --  0.0.0.0/0            0.0.0.0/0            reject-with icmp-host-prohibited
-
-    Chain FORWARD (policy ACCEPT)
-    target     prot opt source               destination         
-    TOR        all  --  0.0.0.0/0            0.0.0.0/0           
-
-    Chain OUTPUT (policy ACCEPT)
-    target     prot opt source               destination         
-
-    Chain SSH_CHECK (1 references)
-    target     prot opt source               destination         
-               all  --  0.0.0.0/0            0.0.0.0/0            recent: SET name: SSH side: source
-    DROP       all  --  0.0.0.0/0            0.0.0.0/0            recent: UPDATE seconds: 60 hit_count: 4 name: SSH side: source
+	Chain INPUT (policy ACCEPT)
+	target     prot opt source               destination         
+	ACCEPT     tcp  --  50.14.92.170         0.0.0.0/0            tcp dpt:22
+	SSH_CHECK  tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:22 state NEW
+	TOR        all  --  0.0.0.0/0            0.0.0.0/0           
+	ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           
+	REJECT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcpflags: 0x3F/0x17 reject-with icmp-port-unreachable
+	REJECT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcpflags: 0x03/0x03 reject-with icmp-port-unreachable
+	REJECT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcpflags: 0x06/0x06 reject-with icmp-port-unreachable
+	REJECT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcpflags: 0x3F/0x00 reject-with icmp-port-unreachable
+	REJECT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcpflags: 0x3F/0x3F reject-with icmp-port-unreachable
+	REJECT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcpflags: 0x3F/0x29 reject-with icmp-port-unreachable
+	REJECT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcpflags: 0x05/0x05 reject-with icmp-port-unreachable
+	REJECT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcpflags: 0x11/0x01 reject-with icmp-port-unreachable
+	REJECT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcpflags: 0x18/0x08 reject-with icmp-port-unreachable
+	REJECT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcpflags: 0x30/0x20 reject-with icmp-port-unreachable
+	REJECT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcpflags:! 0x17/0x02 state NEW reject-with icmp-port-unreachable
+	REJECT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcpflags: 0x3F/0x3F reject-with icmp-port-unreachable
+	ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:80
+	ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:443
+	ACCEPT     icmp --  0.0.0.0/0            0.0.0.0/0            icmptype 255
+	ACCEPT     esp  --  0.0.0.0/0            0.0.0.0/0           
+	ACCEPT     ah   --  0.0.0.0/0            0.0.0.0/0           
+	ACCEPT     udp  --  0.0.0.0/0            224.0.0.251          udp dpt:5353
+	ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0            state RELATED,ESTABLISHED
+	ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            state NEW tcp dpt:22
+	REJECT     all  --  0.0.0.0/0            0.0.0.0/0            reject-with icmp-host-prohibited
+	
+	Chain FORWARD (policy ACCEPT)
+	target     prot opt source               destination         
+	TOR        all  --  0.0.0.0/0            0.0.0.0/0           
+	
+	Chain OUTPUT (policy ACCEPT)
+	target     prot opt source               destination         
+	
+	Chain SSH_CHECK (1 references)
+	target     prot opt source               destination         
+	           all  --  0.0.0.0/0            0.0.0.0/0            recent: SET name: SSH side: source
+	DROP       all  --  0.0.0.0/0            0.0.0.0/0            recent: UPDATE seconds: 60 hit_count: 20 name: SSH side: source
+	
+	Chain TOR (2 references)
+	target     prot opt source               destination
 
 Which is great! But the issue is that if you restart you server, all of your rules will be gone. That is where `iptables-persistent` comes in. And using it is pretty simple.
 
