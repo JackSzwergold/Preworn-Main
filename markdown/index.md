@@ -4,11 +4,9 @@ This site is Jack Szwergold’s the calling card, gallery, portfolio, playground
 
 ### Current Projects
 
-[Image Mosaic][1] • A dynamically generated image mosaic using PHP, the GD graphics library, HTML & CSS.
-
-[Image ASCII][2] • A dynamically generated ASCII art image using PHP, the GD graphics library, HTML & CSS.
-
-[Tutorials][3] • This is where I will be compiling things I have learned over my 20+ years of being a tech person & problem solver.
+- [**Image Mosaic**][1] • A dynamically generated image mosaic using PHP, the GD graphics library, HTML & CSS.
+- [**Image ASCII**][2] • A dynamically generated ASCII art image using PHP, the GD graphics library, HTML & CSS.
+- [**Tutorials**][3] • This is where I will be compiling things I have learned over my 20+ years of being a tech person & problem solver.
 
 ### Skills
 
@@ -18,7 +16,8 @@ I work primarily on the Ubuntu & Mac OS X platforms but have deep experience wit
 
 ### Contact
 
-me [at] preworn [dot] com ([PGP Public Key][4])
+- **Email** • me [at] preworn [dot] com
+- **PGP Public Key** • Is available [here][4].
 
 ### Community
 [Stack Overflow][5] • [Server Fault][6] • [LinkedIn][7] • [GitHub][8]
