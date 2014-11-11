@@ -28,7 +28,7 @@ I work primarily on the Ubuntu & Mac OS X platforms but have deep experience wit
 [1]: mosaic/ "Image Mosaic"
 [2]: ascii/ "Image ASCII"
 [3]: tutorials/ "Tutorials"
-[4]: preworn.asc.txt
+[4]: pgp_public_key-preworn.asc.txt
 [5]: http://stackoverflow.com/users/117259/jakegould "Stack Overflow"
 [6]: http://serverfault.com/users/100013/jakegould "Server Fault"
 [7]: http://www.linkedin.com/in/jackszwergold "Linked In"
