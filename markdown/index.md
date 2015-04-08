@@ -23,13 +23,14 @@ I work primarily on the Ubuntu & Mac OS X platforms but have deep experience wit
 **PGP Public Key** • Is available [here][4].
 
 ### Community
-[Stack Overflow][5] • [Server Fault][6] • [LinkedIn][7] • [GitHub][8]
+[Stack Overflow][5] • [Super User][6] • [Server Fault][7] • [LinkedIn][8] • [GitHub][9]
 
 [1]: mosaic/ "Image Mosaic"
 [2]: ascii/ "Image ASCII"
 [3]: tutorials/ "Tutorials"
 [4]: pgp_public_key-preworn.asc.txt
 [5]: http://stackoverflow.com/users/117259/jakegould "Stack Overflow"
-[6]: http://serverfault.com/users/100013/jakegould "Server Fault"
-[7]: http://www.linkedin.com/in/jackszwergold "Linked In"
-[8]: https://github.com/JackSzwergold
+[6]: http://superuser.com/users/167207/jakegould "Super User"
+[7]: http://serverfault.com/users/100013/jakegould "Server Fault"
+[8]: http://www.linkedin.com/in/jackszwergold "Linked In"
+[9]: https://github.com/JackSzwergold
