@@ -97,7 +97,7 @@ $frontendDisplayClass = new frontendDisplay('text/html', 'utf-8', FALSE, FALSE);
 $frontendDisplayClass->setViewMode('mega');
 $frontendDisplayClass->setPageTitle($page_title);
 $frontendDisplayClass->setPageURL('http://www.preworn.com/' . join('/', $url_parts));
-$frontendDisplayClass->setPageCopyright('(c) Copyright ' . date('Y') . ' Jack Szwergold. All rights reserved.');
+$frontendDisplayClass->setPageCopyright('(c) Copyright ' . date('Y') . ' Jack Szwergold. Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.');
 $frontendDisplayClass->setPageDescription('This site is Jack Szwergold’s the calling card, gallery, portfolio, playground, white wall, black box, idea sandbox & daily distraction.');
 $frontendDisplayClass->setPageContentMarkdown($markdown_file);
 // $frontendDisplayClass->setPageContent('Hello world!');
