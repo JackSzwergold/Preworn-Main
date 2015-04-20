@@ -1,9 +1,16 @@
 <?php
 
 /**
- * Preworn Index Controller (index.php)
+ * Index Controller (index.php) (c) by Jack Szwergold
  *
- * Programming: Jack Szwergold <JackSzwergold@gmail.com>
+ * Index Controller is licensed under a
+ * Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+ *
+ * You should have received a copy of the license along with this
+ * work. If not, see <http://creativecommons.org/licenses/by-nc-sa/4.0/>. 
+ *
+ * w: http://www.preworn.com
+ * e: me@preworn.com
  *
  * Created: 2014-01-20, js
  * Version: 2014-01-20, js: creation
