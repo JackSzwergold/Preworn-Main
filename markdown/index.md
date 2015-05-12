@@ -8,7 +8,9 @@ This site is Jack Szwergold’s the calling card, gallery, portfolio, playground
 
 [**Image ASCII**][2] • A dynamically generated ASCII art image using PHP, the GD graphics library, HTML & CSS.
 
-[**Tutorials**][3] • This is where I will be compiling things I have learned over my 20+ years of being a tech person & problem solver.
+[**Slider**][3] • A simple and elegant content slider—which works well on mobile and desktop devices—created with JavaScript, jQuery, iScroll and basic HTML.
+
+[**Tutorials**][4] • This is where I will be compiling things I have learned over my 20+ years of being a tech person & problem solver.
 
 ### Skills
 
@@ -20,17 +22,18 @@ I work primarily on the Ubuntu & Mac OS X platforms but have deep experience wit
 
 **Email** • me [at] preworn [dot] com
 
-**PGP Public Key** • Is available [here][4].
+**PGP Public Key** • Is available [here][5].
 
 ### Community
-[Stack Overflow][5] • [Super User][6] • [Server Fault][7] • [LinkedIn][8] • [GitHub][9]
+[Stack Overflow][6] • [Super User][7] • [Server Fault][8] • [LinkedIn][9] • [GitHub][10]
 
 [1]: mosaic/ "Image Mosaic"
 [2]: ascii/ "Image ASCII"
-[3]: tutorials/ "Tutorials"
-[4]: pgp_public_key-preworn.asc.txt
-[5]: http://stackoverflow.com/users/117259/jakegould "Stack Overflow"
-[6]: http://superuser.com/users/167207/jakegould "Super User"
-[7]: http://serverfault.com/users/100013/jakegould "Server Fault"
-[8]: http://www.linkedin.com/in/jackszwergold "Linked In"
-[9]: https://github.com/JackSzwergold
+[3]: slider/ "Slider"
+[4]: tutorials/ "Tutorials"
+[5]: pgp_public_key-preworn.asc.txt
+[6]: http://stackoverflow.com/users/117259/jakegould "Stack Overflow"
+[7]: http://superuser.com/users/167207/jakegould "Super User"
+[8]: http://serverfault.com/users/100013/jakegould "Server Fault"
+[9]: http://www.linkedin.com/in/jackszwergold "Linked In"
+[10]: https://github.com/JackSzwergold
