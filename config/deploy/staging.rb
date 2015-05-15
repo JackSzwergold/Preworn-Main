@@ -5,40 +5,51 @@
 
 set :branch, "develop"
 
-server "www.preworn.com", :app, :web, :db, :primary => true
-set :web_builds, "#{deployment_root}/builds"
-set :content_data_path, "#{deployment_root}/content"
-set :live_root, "#{deployment_root}/staging.preworn.com"
+server 'www.preworn.com', user: 'sysop', roles: %w{app db web}, my_property: :my_value
 
-set :deploy_to, "#{web_builds}/#{application}/staging"
+set :web_builds, "#{deploy_to}/builds"
+set :content_data_path, "#{deploy_to}/content"
+set :live_root, "#{deploy_to}/staging.preworn.com"
 
-# Remote caching will keep a local git repository on the server you're deploying to and
-# simply run a fetch from that rather than an entire clone. This is probably the best
-# option as it will only fetch the changes since the last deploy.
-set :deploy_via, :remote_cache
+set :deploy_to, "/var/www/builds/#{fetch(:application)}/staging"
 
 # Disable warnings about the absence of the styleseheets, javscripts & images directories.
 set :normalize_asset_timestamps, false
 
-# before "deploy:create_symlink", :make_cache_link
+# Set symbollic links and other related items.
+namespace :deploy do
 
-after "deploy:create_symlink" do
-  # Link the image mosaic stuff to 'mosaic'
-  run "cd #{current_release} && ln -s #{web_builds}/image_mosaic/staging/current mosaic"
-  # Link the preworn ascii art stuff to 'ascii'
-  run "cd #{current_release} && ln -s #{web_builds}/image_ascii/staging/current ascii"
-  # Link the preworn slider stuff to 'slider'
-  run "cd #{current_release} && ln -s #{web_builds}/preworn_slider/staging/current slider"
-  # Link the colorspace conversions stuff to 'colorspace'
-  run "cd #{current_release} && ln -s #{web_builds}/colorspace_conversions/staging/current colorspace"
-  # If there is no directory & no symbolic link to 'site' then create a directory named 'site'.
-  # run "cd #{live_root} && if [ ! -d site ]; then if [ ! -h site ]; then mkdir ./site; fi; fi"
-  # If there is no symbolic link called site' and 'site' is a directory, delete that directory.
-  run "cd #{live_root} && if [ ! -h site ]; then if [ -d site ]; then rm -rf ./site; fi; fi"
-  # If there is a symbolic link called 'site', delete that directory.
-  run "cd #{live_root} && if [ -h site ]; then rm ./site; fi"
-  # If there is a symbolic link to 'site' then create a symbolic link called 'site'.
-  run "cd #{live_root} && if [ ! -h site ]; then if [ ! -d site ]; then ln -sf #{current_path} ./site; fi; fi"
+  desc "Set the symbolic links."
+  task :create_symlink do
+    on roles(:app) do
+
+        info "Link the image mosaic stuff to 'mosaic'."
+        execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/image_mosaic/staging/current mosaic"
+
+        info "Link the preworn ascii art stuff to 'ascii'."
+        execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/image_ascii/staging/current ascii"
+
+        info "Link the preworn slider stuff to 'slider'."
+        execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/preworn_slider/staging/current slider"
+
+        info "Link the colorspace conversions stuff to 'colorspace'."
+        execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/colorspace_conversions/staging/current colorspace"
+
+        # info "If there is no directory & no symbolic link to 'site' then create a directory named 'site'."
+        # execute "cd #{fetch(:live_root)} && if [ ! -d site ]; then if [ ! -h site ]; then mkdir ./site; fi; fi"
+
+        # info "If there is no symbolic link called site' and 'site' is a directory, delete that directory."
+        execute "cd #{fetch(:live_root)} && if [ ! -h site ]; then if [ -d site ]; then rm -rf ./site; fi; fi"
+
+        # info "If there is a symbolic link called 'site', delete that directory."
+        execute "cd #{fetch(:live_root)} && if [ -h site ]; then rm ./site; fi"
+
+        # info "If there is a symbolic link to 'site' then create a symbolic link called 'site'."
+        execute "cd #{fetch(:live_root)} && if [ ! -h site ]; then if [ ! -d site ]; then ln -sf #{current_path} ./site; fi; fi"
+
+    end
+  end
+
 end
 
-after "deploy:update", "deploy:cleanup"
+after :deploy, "deploy:create_symlink"
