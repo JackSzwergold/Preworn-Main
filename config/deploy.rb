@@ -4,10 +4,7 @@ lock '3.4.0'
 set :application, 'preworn_www'
 set :repo_url, 'git@github.com:JackSzwergold/Preworn-Main.git'
 
-# Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
-
-# Default deploy_to directory is /var/www/my_app_name
+# Set the 'deploy_to' directory.
 set :deploy_to, '/var/www'
 
 # Default value for :scm is :git
@@ -20,7 +17,7 @@ set :format, :pretty
 set :log_level, :debug
 
 # Default value for :pty is false
-# set :pty, true
+set :pty, false
 
 # Default value for :linked_files is []
 # set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
