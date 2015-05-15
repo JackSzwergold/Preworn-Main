@@ -1,5 +1,11 @@
 # Installing Capistrano
 
+**NOTE:** As of May 15, 2015 this document is for reference only since much of the advice has beem obsoleted by a recent upgrade of the deployment scripts to use Capistrano 3; specifically version 3.4.0. Installing Capistrano like this should suffice to get the code deployed:
+
+    sudo gem install capistrano:3.4.0
+
+***
+
 The purpose of this document is to explain how to setup `capistrano` on your local system to allow for clean & easy deployment of code from GitHub to a destination server.
 
 ### Ruby GEMs Install
