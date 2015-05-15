@@ -4,6 +4,14 @@
 
     sudo gem install capistrano:3.4.0
 
+And then deployment would be handled as follows:
+
+    cap production deploy
+
+Or if you want to deploy as a different user, just set the `CAP_USER` environment variable like this:
+
+    export CAP_USER=username && cap production deploy
+
 ***
 
 The purpose of this document is to explain how to setup `capistrano` on your local system to allow for clean & easy deployment of code from GitHub to a destination server.
