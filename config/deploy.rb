@@ -2,6 +2,7 @@
 lock '3.4.0'
 
 set :application, 'preworn_www'
+set :short_name, 'site'
 set :repo_url, 'git@github.com:JackSzwergold/Preworn-Main.git'
 
 # Set the 'deploy_to' directory.
