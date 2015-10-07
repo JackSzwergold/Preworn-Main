@@ -30,13 +30,13 @@ Now we’re going to see if you have PEAR installed in your system. We do this u
 
 And the output—if you are on a basic Mac OS X install—should be blank. Great! Nothing better than starting things off [tabula rasa][4]!
 
-So now with that established, let’s edit your shell `.profile` file to recognized your MAMP install binaries.
+So now with that established, let’s edit your shell `.bash_profile` file to recognized your MAMP install binaries.
 
 ### Setting your MAMP binary path in your shell.
 
-Now that we know what your MAMP PHP binary path is, let’s edit your `.profile` so it can be properly recognized. So open up your `.profile` file like so:
+Now that we know what your MAMP PHP binary path is, let’s edit your `.bash_profile` so it can be properly recognized. So open up your `.bash_profile` file like so:
 
-	bbedit ~/.profile
+	bbedit ~/.bash_profile
 
 The contents of the file should be something like this:
 
@@ -46,9 +46,9 @@ And change the `PATH=` value so it adds the MAMP PHP binary path like this; note
 
 	export PATH=/Applications/MAMP/bin/php/php5.4.10/bin:/usr/bin
 
-Now reload the newly edited bash `.profile` in the terminal current terminal window like so:
+Now reload the newly edited bash `.bash_profile` in the terminal current terminal window like so:
 
-	source ~/.profile
+	source ~/.bash_profile
 
 And then use `which` again:
 
