@@ -1,6 +1,2 @@
-User-agent: PrewornBot
-Allow: /
-Crawl-delay: 1
-
 User-agent: *
 Disallow: /
