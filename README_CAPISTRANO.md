@@ -1,6 +1,6 @@
-# Installing Capistrano
+# Capistrano Related Items
 
-**NOTE:** As of May 15, 2015 this document is for reference only since much of the advice has beem obsoleted by a recent upgrade of the deployment scripts to use Capistrano 3; specifically version 3.4.0. Installing Capistrano like this should suffice to get the code deployed:
+**NOTE:** As of May 15, 2015 this document is for reference only since much of the advice has been obsoleted by a recent upgrade of the deployment scripts to use Capistrano 3; specifically version 3.4.0. Installing Capistrano like this should suffice to get the code deployed:
 
     sudo gem install capistrano:3.4.0
 
@@ -16,9 +16,9 @@ Or if you want to deploy as a different user, just set the `CAP_USER` environmen
 
 The purpose of this document is to explain how to setup `capistrano` on your local system to allow for clean & easy deployment of code from GitHub to a destination server.
 
-### Ruby GEMs Install
+### Installing Capistrano
 
-There are only three (3) Ruby GEMs that need to be installed to facilitate `capistrano` on your local macine. But for compatibility reasons they should be specific versions. Details follow.
+There are only three (3) Ruby GEMs that need to be installed to facilitate `capistrano` on your local machine. But for compatibility reasons they should be specific versions. Details follow.
 
 #### Capistrano’s version should be 2.12 or higher.
 
@@ -55,7 +55,7 @@ Ruby 2.0 method of installing a specific version of `net-ssh`.
 
 > connection failed for: www.preworn.com (Net::SSH::AuthenticationFailed: Authentication failed for user sysop@www.preworn.com)
 
-This bizarre error comes from verisons of `net-ssh` erroneously disabling `KbdInteractiveAuthentication` (aka: keyboard interaction) when `ChallengeResponseAuthentication` is set on your host system. The most viable thing to do is to ensure `net-ssh` is only using version 2.7.0 by uninstalling any other version `capistrano` might install.
+This bizarre error comes from versions of `net-ssh` erroneously disabling `KbdInteractiveAuthentication` (aka: keyboard interaction) when `ChallengeResponseAuthentication` is set on your host system. The most viable thing to do is to ensure `net-ssh` is only using version 2.7.0 by uninstalling any other version `capistrano` might install.
 
     sudo gem uninstall net-ssh --version 2.9.1
 
@@ -92,7 +92,7 @@ First, open up the terminal & go into the locally copied repository. Once in the
 
 That will allow you to deploy the `staging` branch to the destination server as long as the user name on your local machine matches the user name you are using for SSH access on the remote machine. But in some cases that might not be the case, so it is best to explicitly set the user name for deployment like this:
 
-    cap -s user=itadmin staging deploy
+    cap -s user=sysop staging deploy
 
 Just enter your SSH password for the remote server & you are off.
 
@@ -101,16 +101,3 @@ As for what a successful deployment looks like, it’s actually easier to explai
 Now errors are not good, but you shouldn’t worry too much. The reality is `capistrano` is very error resilient and at no point will it deploy a “half baked” deployment. Meaning, the deployment won’t be finalized until all steps are clean & error free.
 
 So let’s say your Internet connection is bad & drops out during a deployment. No need to worry about your codebase on the destination server going bad. The old deployment—whenever that was made—will always be in place until a newer deployment is successfully completely.
-
-
-
-
-
-
-
-
-
-
-
-
-
