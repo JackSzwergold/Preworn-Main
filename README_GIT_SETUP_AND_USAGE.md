@@ -12,7 +12,7 @@ Now test the connection by running this command:
 
     ssh -T git@github.com
 
-It will ask to add `github.com` to your system’s list of known hosts. Type in `yes` as the answer and the respons returned should be:
+It will ask to add `github.com` to your system’s list of known hosts. Type in `yes` as the answer and the response returned should be:
 
 > Hi `username`! You've successfully authenticated, but GitHub does not provide shell access.
 
@@ -38,7 +38,7 @@ Then test the connection by running this command:
 
     ssh -T git@github.com
 
-It will ask to add `github.com` to your system’s list of known hosts. Type in `yes` as the answer and the respons returned should be:
+It will ask to add `github.com` to your system’s list of known hosts. Type in `yes` as the answer and the response returned should be:
 
 > Hi `username`! You've successfully authenticated, but GitHub does not provide shell access.
 
