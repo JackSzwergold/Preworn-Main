@@ -47,7 +47,9 @@ namespace :deploy do
   desc "Echo the current path."
   task :echo_current_path do
     on roles(:app) do
+
         execute "echo #{release_path} > #{release_path}/CURRENT_PATH"
+
     end
   end
 
