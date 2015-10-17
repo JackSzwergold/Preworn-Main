@@ -53,6 +53,27 @@ namespace :deploy do
     end
   end
 
+  # Remove repository cruft from the deployment.
+  desc "Remove cruft from the deploy."
+  task :remove_cruft do
+    on roles(:app) do
+
+        # Remove any README file that ends in '.md' or '.txt'.
+        execute "cd #{current_path} && rm -f README*.{md,txt}"
+
+        # Remove the Capisrano related files and directories.
+        execute "cd #{current_path} && rm -rf config && rm -f Capfile"
+
+        # Remove the 'htaccess.txt' file.
+        execute "cd #{current_path} && rm -f htaccess.txt"
+
+        # Remove the 'LICENSE.txt' file.
+        execute "cd #{current_path} && rm -f LICENSE.txt"
+
+    end
+  end
+
 end
 
 after "deploy:published", "deploy:echo_current_path"
+after "deploy:finishing", "deploy:remove_cruft"
