@@ -43,4 +43,14 @@ namespace :deploy do
     end
   end
 
+  # Echo the current path to a file. Needed for WordPress deployments.
+  desc "Echo the current path."
+  task :echo_current_path do
+    on roles(:app) do
+        execute "echo #{release_path} > #{release_path}/CURRENT_PATH"
+    end
+  end
+
 end
+
+after "deploy:published", "deploy:echo_current_path"

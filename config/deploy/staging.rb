@@ -2,7 +2,13 @@
 set :branch, "develop"
 
 # The details of the destination server you will be deploying to.
-server 'www.preworn.com', user: ENV["CAP_USER"] || 'sysop', roles: %w{app db web}, my_property: :my_value
+server 'preworn.com', user: ENV["CAP_USER"] || 'sysop', roles: %w{app db web}, my_property: :my_value
+
+# Set the name for the deployment type.
+set :deployment_type, "staging"
+
+# The live, web root directory which the current version will be linked to.
+set :live_root, "#{deploy_to}/staging.preworn.com"
 
 # The directory on the server into which the actual source code will deployed.
 set :web_builds, "#{deploy_to}/builds"
@@ -10,11 +16,8 @@ set :web_builds, "#{deploy_to}/builds"
 # The directory on the server that stores content related data.
 set :content_data_path, "#{deploy_to}/content"
 
-# The live, web root directory which the current version will be linked to.
-set :live_root, "#{deploy_to}/staging.preworn.com"
-
 # Set the 'deploy_to' directory for this task.
-set :deploy_to, "/var/www/builds/#{fetch(:application)}/staging"
+set :deploy_to, "/var/www/builds/#{fetch(:application)}/#{fetch(:deployment_type)}"
 
 # Disable warnings about the absence of the styleseheets, javscripts & images directories.
 set :normalize_asset_timestamps, false
@@ -27,16 +30,16 @@ namespace :deploy do
     on roles(:app) do
 
         info "Link the image mosaic stuff to 'mosaic'."
-        execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/image_mosaic/staging/current mosaic"
+        execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/image_mosaic/#{fetch(:deployment_type)}/current mosaic"
 
         info "Link the preworn ascii art stuff to 'ascii'."
-        execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/image_ascii/staging/current ascii"
+        execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/image_ascii/#{fetch(:deployment_type)}/current ascii"
 
         info "Link the preworn slider stuff to 'slider'."
-        execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/preworn_slider/staging/current slider"
+        execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/preworn_slider/#{fetch(:deployment_type)}/current slider"
 
         info "Link the colorspace conversions stuff to 'colorspace'."
-        execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/colorspace_conversions/staging/current colorspace"
+        execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/colorspace_conversions/#{fetch(:deployment_type)}/current colorspace"
 
         # info "If there is no directory & no symbolic link to '#{fetch(:short_name)}' then create a directory named '#{fetch(:short_name)}'."
         # execute "cd #{fetch(:live_root)} && if [ ! -d #{fetch(:short_name)} ]; then if [ ! -h #{fetch(:short_name)} ]; then mkdir ./#{fetch(:short_name)}; fi; fi"
@@ -55,5 +58,4 @@ namespace :deploy do
 
 end
 
-# after :deploy, "deploy:create_symlink"
 after "deploy:published", "deploy:create_symlink"
