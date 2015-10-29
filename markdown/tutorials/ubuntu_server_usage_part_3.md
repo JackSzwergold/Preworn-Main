@@ -212,7 +212,7 @@ But always remember: While `monit` scripts can save you the headache of a server
 
 Now we’re going to install `iptables`, which is an excellent & widely used software-based firewall.  We’ll also be installing `iptables-persistent` which is a simply companion tool that allows `iptables` to be reloaded & active if/when a server reboots:
 
-    sudo aptitude install iptables iptables-persistent
+    sudo aptitude install iptables iptables-persistent ipset
 
 Next, we’re going to create a very basic set of `iptables` rules to start off with. Below is a simple `iptables` rule set export of a basic setup I like to use:
 
