@@ -10,7 +10,9 @@ This site is Jack Szwergold’s the calling card, gallery, portfolio, playground
 
 [**Slider**][3] • A simple and elegant content slider—which works well on mobile and desktop devices—created with JavaScript, jQuery, iScroll and basic HTML.
 
-[**Tutorials**][4] • This is where I will be compiling things I have learned over my 20+ years of being a tech person & problem solver.
+[**Tutorials**][4] • A collection tutorials based on things I have learned over the years.
+
+[**Cheat Sheets**][5] • A collection of my technical cheat sheets I’ve compiled over the years.
 
 ### Skills
 
@@ -22,18 +24,19 @@ I work primarily on the Ubuntu & Mac OS X platforms but have deep experience wit
 
 **Email** • me [at] preworn [dot] com
 
-**PGP Public Key** • Is available [here][5].
+**PGP Public Key** • Is available [here][6].
 
 ### Community
-[Stack Overflow][6] • [Super User][7] • [Server Fault][8] • [LinkedIn][9] • [GitHub][10]
+[Stack Overflow][7] • [Super User][8] • [Server Fault][9] • [LinkedIn][10] • [GitHub][11]
 
 [1]: mosaic/ "Image Mosaic"
 [2]: ascii/ "Image ASCII"
 [3]: slider/ "Slider"
 [4]: tutorials/ "Tutorials"
-[5]: pgp_public_key-preworn.asc.txt
-[6]: http://stackoverflow.com/users/117259/jakegould "Stack Overflow"
-[7]: http://superuser.com/users/167207/jakegould "Super User"
-[8]: http://serverfault.com/users/100013/jakegould "Server Fault"
-[9]: http://www.linkedin.com/in/jackszwergold "Linked In"
-[10]: https://github.com/JackSzwergold
+[5]: cheat_sheets/ "Cheat Sheets"
+[6]: pgp_public_key-preworn.asc.txt
+[7]: http://stackoverflow.com/users/117259/jakegould "Stack Overflow"
+[8]: http://superuser.com/users/167207/jakegould "Super User"
+[9]: http://serverfault.com/users/100013/jakegould "Server Fault"
+[10]: http://www.linkedin.com/in/jackszwergold "Linked In"
+[11]: https://github.com/JackSzwergold
