@@ -9,12 +9,12 @@ RewriteRule ^(clients)($|/) - [L]
 
 # This redirects any call to this directory to an index file with $_GET parameters.
 # The 'controller=$1&page=$2&section=$3&subsection=$4' passes the pathname as an HTML param called 'controller', 'page', 'section' & 'subsection'.
-# RewriteRule     ^([A-Za-z0-9-_\s]+)/?([^/]*)$       index.php?controller=$1&$2 [QSA]
-RewriteRule     ^([A-Za-z0-9-_\s]+)/([A-Za-z0-9-_\s]+)/([A-Za-z0-9-_\s]+)/([A-Za-z0-9-_\s]+)/?$    index.php?controller=$1&page=$2&section=$3&subsection=$4 [L]
-RewriteRule     ^([A-Za-z0-9-_\s]+)/([A-Za-z0-9-_\s]+)/([A-Za-z0-9-_\s]+)/?$    index.php?controller=$1&page=$2&section=$3 [L]
-RewriteRule     ^([A-Za-z0-9-_\s]+)/([A-Za-z0-9-_\s]+)/?$   index.php?controller=$1&page=$2 [L]
+# RewriteRule     ^([A-Za-z0-9-_,\s]+)/?([^/]*)$       index.php?controller=$1&$2 [QSA]
+RewriteRule     ^([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/?$    index.php?controller=$1&page=$2&section=$3&subsection=$4 [L]
+RewriteRule     ^([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/?$    index.php?controller=$1&page=$2&section=$3 [L]
+RewriteRule     ^([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/?$   index.php?controller=$1&page=$2 [L]
 
 # This setup allows us to have files or directoires on the root of the site without conflicting with rewrite rules.
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule     ^([A-Za-z0-9-_\s]+)/?$    index.php?controller=$1 [L]
+RewriteRule     ^([A-Za-z0-9-_,\s]+)/?$    index.php?controller=$1 [L]
