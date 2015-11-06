@@ -54,7 +54,7 @@ namespace :deploy do
   end
 
   # Remove repository cruft from the deployment.
-  desc "Remove cruft from the deploy deployment."
+  desc "Remove cruft from the deployment."
   task :remove_cruft do
     on roles(:app) do
 
