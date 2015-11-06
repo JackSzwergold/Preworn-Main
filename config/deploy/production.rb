@@ -41,6 +41,9 @@ namespace :deploy do
         info "Link the colorspace conversions stuff to 'colorspace'."
         execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/colorspace_conversions/#{fetch(:deployment_type)}/current colorspace"
 
+        info "Link the cheat sheet stuff to 'cheat_sheets'."
+        execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/cheat_sheets/#{fetch(:deployment_type)}/current markdown/cheat_sheets"
+
         # info "If there is no directory & no symbolic link to '#{fetch(:short_name)}' then create a directory named '#{fetch(:short_name)}'."
         # execute "cd #{fetch(:live_root)} && if [ ! -d #{fetch(:short_name)} ]; then if [ ! -h #{fetch(:short_name)} ]; then mkdir ./#{fetch(:short_name)}; fi; fi"
 
