@@ -2,7 +2,7 @@
 set :branch, "master"
 
 # The details of the destination server you will be deploying to.
-server 'preworn.com', user: ENV["CAP_USER"] || 'sysop', roles: %w{app db web}, my_property: :my_value
+server 'prod0.preworn.com', user: ENV["CAP_USER"] || 'sysop', roles: %w{app db web}, my_property: :my_value
 
 # Set the name for the deployment type.
 set :deployment_type, "production"
