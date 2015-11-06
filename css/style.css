@@ -27,6 +27,15 @@ ul, li { list-style: none; }
 :focus { -moz-outline-style: none; }
 a { outline: none; }
 
+hr
+{
+	border: 0;
+	background-color: #000;
+	height: 1px;
+	margin: 0 0 10px 0;
+	clear: both;
+}
+
 /**************************************************************************************************/
 .Core, .Content, .Section, 
 .Padding, .Border, .Image, .Icon,
@@ -88,7 +97,7 @@ ul, li
 .Core .Padding { padding: 0; }
 
 /**************************************************************************************************/
-.Core h1, .Core h2, .Core h3, .Core p, .Core ul
+.Core h1, .Core h2, .Core h3, .Core h4, .Core p, .Core ul
 {
 	font-family: Georgia, "New York", "Times New Roman", Times, serif;
 	font-weight: normal;
@@ -99,10 +108,12 @@ ul, li
 
 .Core h2 { margin: 10px 0 10px 0; }
 .Core h3 { margin: 25px 0 10px 0; }
+.Core h4 { margin: 25px 0 10px 0; }
 
 .Core h1 a, .Core h1 a:active, .Core h1 a:hover, .Core h1 a:visited,
 .Core h2 a, .Core h2 a:active, .Core h2 a:hover, .Core h2 a:visited,
 .Core h3 a, .Core h3 a:active, .Core h3 a:hover, .Core h3 a:visited,
+.Core h4 a, .Core h4 a:active, .Core h4 a:hover, .Core h4 a:visited,
 .Core p a, .Core p a:active, .Core p a:hover, .Core p a:visited
 {
 	text-decoration: none;
@@ -112,7 +123,8 @@ ul, li
 
 .Core h1 a:active, .Core h1 a:hover,
 .Core h2 a:active, .Core h2 a:hover,
-.Core h3 a:active, .Core h3 a:hover { border-color: #666; }
+.Core h3 a:active, .Core h3 a:hover,
+.Core h4 a:active, .Core h4 a:hover { border-color: #666; }
 
 /**************************************************************************************************/
 .Core h1 { font-size: 350%; }
@@ -122,6 +134,9 @@ ul, li
 
 /**************************************************************************************************/
 .Core h3 { font-size: 170%; }
+
+/**************************************************************************************************/
+.Core h4 { font-size: 140%; }
 
 /**************************************************************************************************/
 .Core p { font-size: 120%; }
