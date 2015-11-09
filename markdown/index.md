@@ -20,6 +20,10 @@ Excellent set of skills for DevOps as well as Level 2/3 support & related consul
 
 I work primarily on the Ubuntu & Mac OS X platforms but have deep experience with many different flavors of Unix spanning back to the early 1990s. So I can jump onto the console, maneuver around the terminal and get the job done regardless of OS.
 
+### Support
+
+If you like any of the work I have done, will do, or am doing—or you just owe me money—please consider [tossing me a donation of some kind via PayPal][12]. Or if you can’t donate money—but you plan on buying stuff on Amazon—just [click this Amazon affiliate link][13] so I can get something out of that transaction.
+
 ### Contact
 
 **Email** • me [at] preworn [dot] com
@@ -29,14 +33,16 @@ I work primarily on the Ubuntu & Mac OS X platforms but have deep experience wit
 ### Community
 [Stack Overflow][7] • [Super User][8] • [Server Fault][9] • [LinkedIn][10] • [GitHub][11]
 
-[1]: mosaic/ "Image Mosaic"
-[2]: ascii/ "Image ASCII"
-[3]: slider/ "Slider"
-[4]: tutorials/ "Tutorials"
-[5]: cheat_sheets/ "Cheat Sheets"
-[6]: pgp_public_key-preworn.asc.txt
-[7]: http://stackoverflow.com/users/117259/jakegould "Stack Overflow"
-[8]: http://superuser.com/users/167207/jakegould "Super User"
-[9]: http://serverfault.com/users/100013/jakegould "Server Fault"
-[10]: http://www.linkedin.com/in/jackszwergold "Linked In"
-[11]: https://github.com/JackSzwergold
+  [1]: mosaic/ "Image Mosaic"
+  [2]: ascii/ "Image ASCII"
+  [3]: slider/ "Slider"
+  [4]: tutorials/ "Tutorials"
+  [5]: cheat_sheets/ "Cheat Sheets"
+  [6]: pgp_public_key-preworn.asc.txt
+  [7]: http://stackoverflow.com/users/117259/jakegould "Stack Overflow"
+  [8]: http://superuser.com/users/167207/jakegould "Super User"
+  [9]: http://serverfault.com/users/100013/jakegould "Server Fault"
+  [10]: http://www.linkedin.com/in/jackszwergold "Linked In"
+  [11]: https://github.com/JackSzwergold
+  [12]: https://www.paypal.me/JackSzwergold "Support me with a PayPal donation."
+  [13]: http://www.amazon.com/?tag=preworn-20 "Support me when you buy things on Amazon with this link."
