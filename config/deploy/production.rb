@@ -29,17 +29,17 @@ namespace :deploy do
   task :create_symlink do
     on roles(:app) do
 
-        info "Link the image mosaic stuff to 'mosaic'."
-        execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/image_mosaic/#{fetch(:deployment_type)}/current mosaic"
+        # info "Link the image mosaic stuff to 'mosaic'."
+        # execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/image_mosaic/#{fetch(:deployment_type)}/current mosaic"
 
-        info "Link the preworn ascii art stuff to 'ascii'."
-        execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/image_ascii/#{fetch(:deployment_type)}/current ascii"
+        # info "Link the preworn ascii art stuff to 'ascii'."
+        # execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/image_ascii/#{fetch(:deployment_type)}/current ascii"
 
-        info "Link the preworn slider stuff to 'slider'."
-        execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/preworn_slider/#{fetch(:deployment_type)}/current slider"
+        # info "Link the preworn slider stuff to 'slider'."
+        # execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/preworn_slider/#{fetch(:deployment_type)}/current slider"
 
-        info "Link the colorspace conversions stuff to 'colorspace'."
-        execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/colorspace_conversions/#{fetch(:deployment_type)}/current colorspace"
+        # info "Link the colorspace conversions stuff to 'colorspace'."
+        # execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/colorspace_conversions/#{fetch(:deployment_type)}/current colorspace"
 
         info "Link the cheat sheet stuff to 'cheat_sheets'."
         execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/cheat_sheets/#{fetch(:deployment_type)}/current markdown/cheat_sheets"
