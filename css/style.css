@@ -56,7 +56,7 @@ ul, li
 	width: 100%;
 	margin: 0 0 10px 0;
 	padding: 0;
-	background-color: #AF7505;
+	background-color: #6D3011;
 }
 
 .Nameplate .Padding { padding: 3px 0 3px 0; }
@@ -117,7 +117,7 @@ ul, li
 .Nameplate .Left ul li#amazon p a:visited
 {
 	color: #fff;
-	background-color: #995905;
+	background-color: #933311;
 	padding: 5px 80px 5px 20px;
 	border-radius: 6px;
 }
@@ -136,7 +136,7 @@ ul, li
 .Nameplate .Left ul li#paypal p a:visited
 {
 	color: #fff;
-	background-color: #995905;
+	background-color: #933311;
 	padding: 5px 80px 5px 20px;
 	border-radius: 6px;
 }
