@@ -35,6 +35,16 @@ $SITE_COPYRIGHT = '(c) Copyright ' . date('Y') . ' Jack Szwergold. Creative Comm
 $SITE_ROBOTS = 'noindex, nofollow';
 $SITE_VIEWPORT = 'width=device-width, initial-scale=0.4, maximum-scale=2, minimum-scale=0.4, user-scalable=yes';
 
+$AMAZON_INFO = array();
+$AMAZON_INFO['short_name'] = 'amazon';
+$AMAZON_INFO['url'] = 'http://www.amazon.com/?tag=preworn-20';
+$AMAZON_INFO['description'] = 'Support me when you buy things on Amazon with this link.';
+
+$PAYPAL_INFO = array();
+$PAYPAL_INFO['short_name'] = 'paypal';
+$PAYPAL_INFO['url'] = 'https://www.paypal.me/JackSzwergold';
+$PAYPAL_INFO['description'] = 'Support me with a PayPal donation.';
+
 $VALID_CONTROLLERS = array('controller');
 $DISPLAY_CONTROLLERS = array('controller');
 

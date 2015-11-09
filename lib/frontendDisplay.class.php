@@ -53,6 +53,9 @@ class frontendDisplay {
   private $page_viewport = '';
   private $page_robots = '';
 
+  private $amazon_info = array();
+  private $paypal_info = array();
+
   private $page_markdown_file = NULL;
 
   public function __construct($content_type = NULL, $charset = NULL, $json_encode = NULL, $DEBUG_MODE = NULL) {
@@ -167,11 +170,25 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
-  // Set the page depth.
+  // Set the page depth and markdown part.
   function setPageURLParts($markdown_parts = array()) {
     $this->page_depth = count($markdown_parts);
     $this->markdown_parts = $markdown_parts;
   } // setPageURLParts
+
+
+  //**************************************************************************************//
+  // Set the Amazon Info
+  function setAmazonInfo($amazon_info = null) {
+    $this->amazon_info = $amazon_info;
+  } // setAmazonInfo
+
+
+  //**************************************************************************************//
+  // Set the PayPal Info
+  function setPayPalInfo($paypal_info = null) {
+    $this->paypal_info = $paypal_info;
+  } // setPayPalInfo
 
 
   //**************************************************************************************//
@@ -438,6 +455,7 @@ class frontendDisplay {
   function setNameplate($content = null) {
 
     $list_items = array();
+
     if ($this->page_depth > 0) {
       $last_part = array_slice($this->markdown_parts,-1,1);
       if ($last_part[0] == 'index') {
@@ -452,13 +470,30 @@ class frontendDisplay {
                     ;
     }
 
-    $list_items[] = '<li id="amazon"><p><a href="http://www.amazon.com/?tag=lastplacechamp-20" title="Support me when you buy things on Amazon with this link.">amazon</a></p></li>';
-    $list_items[] = '<li id="paypal"><p><a href="https://www.paypal.me/JackSzwergold" title="Support me with a PayPal donation.">paypal</a></p></li>';
+    if (!empty($this->amazon_info)) {
+      $list_items[] = sprintf('<li id="%s">', $this->amazon_info['short_name'])
+                    . '<p>'
+                    . sprintf('<a href="%s" title="%s">%s</a>', $this->amazon_info['url'], $this->amazon_info['description'], $this->amazon_info['short_name'])
+                    . '</p>'
+                    . '</li>'
+                    ;
+    }
 
-    $content = '<ul>'
-             . implode('', $list_items)
-             . '</ul>'
-             ;
+    if (!empty($this->paypal_info)) {
+      $list_items[] = sprintf('<li id="%s">', $this->paypal_info['short_name'])
+                    . '<p>'
+                    . sprintf('<a href="%s" title="%s">%s</a>', $this->paypal_info['url'], $this->paypal_info['description'], $this->paypal_info['short_name'])
+                    . '</p>'
+                    . '</li>'
+                    ;
+    }
+
+    if (!empty($list_items)) {
+      $content = '<ul>'
+               . implode('', $list_items)
+               . '</ul>'
+               ;
+    }
 
     $ret = '<div class="Nameplate">'
          . '<div class="Padding">'
@@ -484,7 +519,8 @@ class frontendDisplay {
 
     $nameplate = $this->setNameplate();
 
-    $ret = '<div class="Wrapper">'
+    $ret = $nameplate
+         . '<div class="Wrapper">'
          . '<div class="Padding">'
 
          . '<div class="Content">'
