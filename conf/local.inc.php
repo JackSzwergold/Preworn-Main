@@ -29,7 +29,7 @@ else {
 // Define localized defaults.
 
 $SITE_TITLE = 'Preworn';
-$SITE_DESCRIPTION = 'This site is Jack Szwergold’s the calling card, gallery, portfolio, playground, white wall, black box, idea sandbox & daily distraction.';
+$SITE_DESCRIPTION = 'This site is Jack Szwergold’s the technical calling card and portfolio.';
 $SITE_URL = 'http://www.preworn.com/';
 $SITE_COPYRIGHT = '(c) Copyright ' . date('Y') . ' Jack Szwergold. Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.';
 $SITE_ROBOTS = 'noindex, nofollow';
