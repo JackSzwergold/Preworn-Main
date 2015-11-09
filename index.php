@@ -41,7 +41,7 @@ $DEBUG_OUTPUT_JSON = false;
 // Init the arrays.
 $url_parts = array();
 $markdown_parts = array();
-$title_parts = array('Preworn');
+$title_parts = array($SITE_TITLE);
 
 // Parse the '$_GET' parameters.
 foreach($VALID_GET_PARAMETERS as $get_parameter) {
@@ -75,7 +75,7 @@ $markdown_file = 'markdown/' . join('/', $markdown_parts) . '.md';
 
 if (!file_exists($markdown_file)) {
   $markdown_file = 'markdown/index.md';
-  $title_parts = array('Preworn');
+  $title_parts = array($SITE_TITLE);
 }
 
 // Set the page title.
@@ -96,15 +96,16 @@ else {
 $frontendDisplayClass = new frontendDisplay('text/html', 'utf-8', FALSE, FALSE);
 $frontendDisplayClass->setViewMode('mega');
 $frontendDisplayClass->setPageTitle($page_title);
-$frontendDisplayClass->setPageURL('http://www.preworn.com/' . join('/', $url_parts));
-$frontendDisplayClass->setPageCopyright('(c) Copyright ' . date('Y') . ' Jack Szwergold. Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.');
-$frontendDisplayClass->setPageDescription('This site is Jack Szwergold’s the calling card, gallery, portfolio, playground, white wall, black box, idea sandbox & daily distraction.');
+$frontendDisplayClass->setPageURL($SITE_URL . join('/', $url_parts));
+$frontendDisplayClass->setPageCopyright($SITE_COPYRIGHT);
+$frontendDisplayClass->setPageDescription($SITE_DESCRIPTION);
 $frontendDisplayClass->setPageContentMarkdown($markdown_file);
 // $frontendDisplayClass->setPageContent('Hello world!');
-$frontendDisplayClass->setPageViewport('width=device-width, initial-scale=0.4, maximum-scale=2, minimum-scale=0.4, user-scalable=yes');
-$frontendDisplayClass->setPageRobots('noindex, nofollow');
+$frontendDisplayClass->setPageViewport($SITE_VIEWPORT);
+$frontendDisplayClass->setPageRobots($SITE_ROBOTS);
 // $frontendDisplayClass->setJavascripts(array('script/common.js'));
 $frontendDisplayClass->setPageBase($page_base);
+$frontendDisplayClass->setPageURLParts($markdown_parts);
 $frontendDisplayClass->initContent();
 
 

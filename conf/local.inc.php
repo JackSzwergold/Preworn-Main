@@ -28,6 +28,13 @@ else {
 /**************************************************************************************************/
 // Define localized defaults.
 
+$SITE_TITLE = 'Preworn';
+$SITE_DESCRIPTION = 'This site is Jack Szwergold’s the calling card, gallery, portfolio, playground, white wall, black box, idea sandbox & daily distraction.';
+$SITE_URL = 'http://www.preworn.com/';
+$SITE_COPYRIGHT = '(c) Copyright ' . date('Y') . ' Jack Szwergold. Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.';
+$SITE_ROBOTS = 'noindex, nofollow';
+$SITE_VIEWPORT = 'width=device-width, initial-scale=0.4, maximum-scale=2, minimum-scale=0.4, user-scalable=yes';
+
 $VALID_CONTROLLERS = array('controller');
 $DISPLAY_CONTROLLERS = array('controller');
 
