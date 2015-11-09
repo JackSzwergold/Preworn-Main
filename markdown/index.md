@@ -4,11 +4,11 @@ This site is Jack Szwergold’s the technical calling card and portfolio. If you
 
 ### [Tutorials][2]
 
-Here is a [collection of tutorials][1] based on things I have learned over the years.
+Here is a [collection of tutorials][2] based on things I have learned over the years.
 
 ### [Cheat Sheets][3]
 
-Here is a [collection of my technical cheat sheets][2] I’ve compiled over the years.
+Here is a [collection of my technical cheat sheets][3] I’ve compiled over the years.
 
 ### Skills
 
