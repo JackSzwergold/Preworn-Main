@@ -12,9 +12,9 @@ Here is a [collection of my technical cheat sheets][3] I’ve compiled over the 
 
 ### Skills
 
-Excellent set of skills for DevOps as well as Level 2/3 support & related consulting. Unix systems administration, shell scripting & other common web/Unix/Internet scripting languages as well as software development using PHP (object oriented & flat), Ruby (on Rails and off), MySQL, MongoDB, Redis, Elasticsearch, JavaScript, JSON, CSS, HTML, dHTML, XHTML & XML. Very comfortable working in the Unix shell in Ubuntu, RedHat, CentOS & Solaris environments. Can install/configure packages from repositories & compile from source code on most any platform.
+Excellent set of skills for DevOps as well as Level 2/3 support and related consulting. Unix systems administration, shell scripting and other common web/Unix/Internet scripting languages as well as software development using PHP (object oriented and flat), Ruby (on Rails and off), MySQL, MongoDB, Redis, Elasticsearch, JavaScript, JSON, CSS, HTML, dHTML, XHTML and XML. Very comfortable working in the Unix shell in Ubuntu, RedHat, CentOS and Solaris environments. Can install/configure packages from repositories and compile from source code on most any platform.
 
-I work primarily on the Ubuntu & Mac OS X platforms but have deep experience with many different flavors of Unix spanning back to the early 1990s. So I can jump onto the console, maneuver around the terminal and get the job done regardless of OS.
+I work primarily on the Ubuntu and Mac OS X platforms but have deep experience with many different flavors of Unix spanning back to the early 1990s. So I can jump onto the console, maneuver around the terminal and get the job done regardless of OS.
 
 ### Support
 
