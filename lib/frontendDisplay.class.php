@@ -40,6 +40,8 @@ class frontendDisplay {
   private $javascripts = array();
 
   private $base = NULL;
+  private $page_depth = 0;
+  private $markdown_parts = array();
 
   private $view_mode = NULL;
   private $page_url = NULL;
@@ -165,6 +167,14 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
+  // Set the page depth.
+  function setPageURLParts($markdown_parts = array()) {
+    $this->page_depth = count($markdown_parts);
+    $this->markdown_parts = $markdown_parts;
+  } // setPageURLParts
+
+
+  //**************************************************************************************//
   // Init the content.
   function initContent($response_header = NULL) {
     global $VALID_CONTROLLERS;
@@ -277,8 +287,8 @@ class frontendDisplay {
     // Set the javascript values.
     $javascripts = array();
     $javascripts[] = BASE_URL . 'script/json2.js';
-    $javascripts[] = BASE_URL . 'script/jquery/jquery-1.10.2.min.js';
-    $javascripts[] = BASE_URL . 'script/jquery/jquery-1.10.2.min.map';
+    $javascripts[] = BASE_URL . 'script/jquery/jquery-1.11.3.min.js';
+    $javascripts[] = BASE_URL . 'script/jquery/jquery-1.11.3.min.map';
     $javascripts[] = BASE_URL . 'script/jquery/jquery.noconflict.js';
 
     // Merge the base JavaScripts with the passed array of javasccripts.
@@ -303,22 +313,22 @@ class frontendDisplay {
 
     $favicons['standard']['rel'] = 'icon';
     $favicons['standard']['type'] = 'image/png';
-    $favicons['standard']['href'] = 'favicons/favicon.ico';
+    $favicons['standard']['href'] = BASE_URL . 'favicons/favicon.ico';
 
     $favicons['opera']['rel'] = 'icon';
     $favicons['opera']['type'] = 'image/png';
-    $favicons['opera']['href'] = 'favicons/speeddial-160px.png';
+    $favicons['opera']['href'] = BASE_URL . 'favicons/speeddial-160px.png';
 
     $favicons['iphone']['rel'] = 'apple-touch-icon-precomposed';
-    $favicons['iphone']['href'] = 'favicons/apple-touch-icon-57x57-precomposed.png';
+    $favicons['iphone']['href'] = BASE_URL . 'favicons/apple-touch-icon-57x57-precomposed.png';
 
     $favicons['iphone4_retina']['rel'] = 'apple-touch-icon-precomposed';
     $favicons['iphone4_retina']['sizes'] = '114x114';
-    $favicons['iphone4_retina']['href'] = 'favicons/apple-touch-icon-114x114-precomposed.png';
+    $favicons['iphone4_retina']['href'] = BASE_URL . 'favicons/apple-touch-icon-114x114-precomposed.png';
 
     $favicons['ipad']['rel'] = 'apple-touch-icon-precomposed';
     $favicons['ipad']['sizes'] = '72x72';
-    $favicons['ipad']['href'] = 'favicons/apple-touch-icon-72x72-precomposed.png';
+    $favicons['ipad']['href'] = BASE_URL . 'favicons/apple-touch-icon-72x72-precomposed.png';
 
     $ret = array();
     foreach ($favicons as $favicon_type => $favicon_parts) {
@@ -424,8 +434,55 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
+  // Set the header.
+  function setNameplate($content = null) {
+
+    $list_items = array();
+    if ($this->page_depth > 0) {
+      $last_part = array_slice($this->markdown_parts,-1,1);
+      if ($last_part[0] == 'index') {
+        $back_url = BASE_PATH;
+      }
+      else {
+        $back_url = BASE_PATH . $this->markdown_parts[0];
+      }
+      $list_items[] = '<li id="back"><p>'
+                    . sprintf('<a href="%s" title="back">«</a>', $back_url)
+                    . '</p></li>'
+                    ;
+    }
+
+    $list_items[] = '<li id="amazon"><p><a href="http://www.amazon.com/?tag=lastplacechamp-20" title="Support me when you buy things on Amazon with this link.">amazon</a></p></li>';
+    $list_items[] = '<li id="paypal"><p><a href="https://www.paypal.me/JackSzwergold" title="Support me with a PayPal donation.">paypal</a></p></li>';
+
+    $content = '<ul>'
+             . implode('', $list_items)
+             . '</ul>'
+             ;
+
+    $ret = '<div class="Nameplate">'
+         . '<div class="Padding">'
+         . '<div class="Left">'
+         . '<div class="Padding">'
+
+         . $content
+
+         . '</div><!-- .Padding -->'
+         . '</div><!-- .Left -->'
+         . '</div><!-- .Padding -->'
+         . '</div><!-- .Nameplate -->'
+         ;
+
+    return $ret;
+
+  } // setNameplate
+
+
+  //**************************************************************************************//
   // Set the wrapper.
   function setWrapper($body = null) {
+
+    $nameplate = $this->setNameplate();
 
     $ret = '<div class="Wrapper">'
          . '<div class="Padding">'
@@ -440,31 +497,21 @@ class frontendDisplay {
          . '<div class="Core">'
          . '<div class="Padding">'
 
-         . '<div class="Grid">'
-         . '<div class="Padding">'
-
-         . '<div class="PixelBoxWrapper">'
-
          . $body
 
-         . '</div><!-- .PixelBoxWrapper -->'
-
          . '</div><!-- .Padding -->'
-         . '</div><!-- .Grid -->'
+         . '</div><!-- .Core -->'
 
          . '</div><!-- .Middle -->'
          . '</div><!-- .Padding -->'
          . '</div><!-- .Section -->'
 
          . '</div><!-- .Padding -->'
-         . '</div><!-- .Core -->'
-
-         . '</div><!-- .Padding -->'
          . '</div><!-- .Content -->'
 
-          . '</div><!-- .Padding -->'
-          . '</div><!-- .Wrapper -->'
-          ;
+         . '</div><!-- .Padding -->'
+         . '</div><!-- .Wrapper -->'
+         ;
 
     return $ret;
 
