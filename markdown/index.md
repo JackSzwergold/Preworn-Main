@@ -1,6 +1,6 @@
 # Preworn
 
-This site is Jack Szwergold’s the technical calling card and portfolio. If you are interested in my creative work—writing, computer art, visual art and such—please check out [Last Place Champ][1].
+This site is Jack Szwergold’s the technical calling card and portfolio. If you are interested in my creative work—writing, computer art, visual art and such—please check out *[Last Place Champ][1]*.
 
 ### [Tutorials][2]
 
