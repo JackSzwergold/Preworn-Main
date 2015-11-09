@@ -22,7 +22,7 @@ If you like any of the work I have done, will do, or am doing—or you just owe 
 
 ### Contact
 
-**Email** • [me@preworn.com](mailto:me@preworn.com)
+**Email** • [me@preworn.com](mailto:me@preworn.com?Subject=Preworn%20Website%20Query)
 
 **PGP Public Key** • Is available [here][5].
 
