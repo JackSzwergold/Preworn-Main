@@ -4,7 +4,7 @@ This site is Jack Szwergold’s the technical calling card and portfolio. If you
 
 ### [Tutorials and Cheat Sheets][2]
 
-Here is a [collection of tutorials and cheat sheets][2] I’ve compliled for my own personal reference—and to share with clients as well as other techs—over the years.
+Here is a [collection of tutorials and cheat sheets][2] I’ve compiled for my own personal reference—and to share with clients as well as other techs—over the years.
 
 ### Skills
 
