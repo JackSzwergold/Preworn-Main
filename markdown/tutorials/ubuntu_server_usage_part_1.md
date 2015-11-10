@@ -1,6 +1,6 @@
 # Using an Ubuntu Linux Server
 
-Written by [Jack Szwergold][1] on March 19, 2014
+By Jack Szwergold, March 19, 2014
 
 ## Part 1: Configuring a Base Level Ubuntu Server
 
@@ -389,5 +389,3 @@ Then, I comment out the content of `updates-available` as well as `release-upgra
     sudo nano /etc/update-motd.d/91-release-upgrade
 
 Technically speaking, I could conceivably just delete the `updates-available` and `release-upgrade` files as well. But I personally do not like destroying files & data that I could potentially need or use in the future. So I find that commenting out the few lines of core functionality in those two files to a preferable way of neutering them in this case.
-
-[1]: http://www.preworn.com/ "Preworn • Jack Szwergold’s Online Portfolio"

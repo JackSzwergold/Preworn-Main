@@ -1,6 +1,6 @@
 # Developing With MAMP 2.1.4
 
-Written by [Jack Szwergold][1] on February 17, 2014
+By Jack Szwergold, February 17, 2014
 
 ## Part 2: Configuring Name-Based Virtual Hosts in MAMP
 
@@ -8,7 +8,7 @@ In this part of my tutorial I will show you how to use the power of Apache name-
 
 Why would you want more than one website document root served via your local MAMP install? Easy. As a developer, chances are you will be juggling lots of different projects. And while some projects can easily be self-contained into a separate directory of your MAMP install that is served off of the default `http://localhost:8888` site, some projects might require your codebase be served on an explicitly set document root. So instead of having to rip apart apart your MAMP setup & codebase each time you want to switch gears, Apache name-based virtual hosts allow you to have a more flexible MAMP development environment to begin with.
 
-You can read up on [how Apache name-based virtual hosts work over here][2]. But it basically boils down to this: Traditional ip-based virtual hosts restrict you to having one website document root per IP address. But name-based virtual hosts allows Apache to recognize the different hostnames connected to a single IP address. Which means you can have multiple website document roots if you use name-based virtual hosts.
+You can read up on [how Apache name-based virtual hosts work over here][1]. But it basically boils down to this: Traditional ip-based virtual hosts restrict you to having one website document root per IP address. But name-based virtual hosts allows Apache to recognize the different hostnames connected to a single IP address. Which means you can have multiple website document roots if you use name-based virtual hosts.
 
 Which—for Mac users—means that you can utilize the way your Mac has a machine specific Bonjour MDNS hostname like `MY_MACHINE.local`—in addition to the traditional `localhost` hostname—to enable Apache name-based virtual hosts in your local MAMP install.
 
@@ -88,5 +88,4 @@ The `index.php` page you’re viewing on `MY_MACHINE.local:8888` should be 100% 
 
 So thanks to the flexibility of name-based virtual hosts, Apache in your MAMP setup sees `MY_MACHINE.local:8888` and `localhost:8888` as two distinct and unique web servers. Which should make your life as web developer a bit easier.
 
-[1]: http://www.preworn.com/ "Preworn • Jack Szwergold’s Online Portfolio"
-[2]: http://httpd.apache.org/docs/2.2/vhosts/name-based.html "Apache HTTP Server • Name-based Virtual Host Support"
+[1]: http://httpd.apache.org/docs/2.2/vhosts/name-based.html "Apache HTTP Server • Name-based Virtual Host Support"

@@ -1,6 +1,6 @@
 # Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox
 
-Written by [Jack Szwergold][1] on March 2, 2014
+By Jack Szwergold, March 2, 2014
 ## Part 2: Basic — Using a Single Network Interface Setup
 
 In this tutorial I am going to outline one of the most basic ways to connect to a `host` machine from a `guest` machine within VirtualBox from a fresh Windows `guest` OS install using the main VirtualBox network interface.
@@ -13,4 +13,3 @@ The main drawback of this method is there is no easy way to connect from the `ho
 ### Conclusion.
 
 So now you should be able to connect to anything on **MY_MACHINE.local:8888** and view it as if it were being viewed from MAMP on your Mac desktop. But in the case of the localhost equivalent of **MY_MACHINE:8888** depending on the codebase configuration of whatever you are testing, you might need to temporarily adjust the config files in your local MAMP set to reflect the new **MY_MACHINE:8888** address since **localhost:8888** won’t be reachable.
-[1]: http://www.preworn.com/ "Preworn • Jack Szwergold’s Online Portfolio"

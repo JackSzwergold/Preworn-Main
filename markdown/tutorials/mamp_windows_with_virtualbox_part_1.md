@@ -1,6 +1,6 @@
 # Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox
 
-Written by [Jack Szwergold][1] on March 2, 2014
+By Jack Szwergold, March 2, 2014
 ## Part 1: Overall Virtualization ConceptsOkay, so if you already understand what emulation, virtualization & VirtualBox is, then you can skip this whole intro. But if you’re a novice who wants to take advantage of the power of virtualization for web development—and engaging in the painful task of Microsoft Internet Explorer web browser cross-platform compatibility testing—then please read on.### What’s emulation versus virtualization?
 Simply put, emulation is a software method where one combination of hardware & software to behave like another completely combination of hardware & software.
 
@@ -20,4 +20,4 @@ In the past, I literally had another completely separate Windows PC I would use 
 But now thanks to virtualization, I can have Windows in a `guest` machine running on my desktop via VirtualBox right next to my development environment on the `host` machine running MAMP. This is simply great since it streamlines the whole development process.### What is a host machine versus a guest machine?
 
 If it’s unclear to you what a `host` machine is compared to a `guest` machine: A `host` machine is the computer running the VirtualBox application itself and a `guest` machine is a virtual machine that runs within the VirtualBox application itself.
-So in this case, the `host` machine is my Macintosh running Mac OS X & the `guest` machine is a version of Windows running via VirtualBox.[1]: http://www.preworn.com/ "Preworn • Jack Szwergold’s Online Portfolio"
+So in this case, the `host` machine is my Macintosh running Mac OS X & the `guest` machine is a version of Windows running via VirtualBox.

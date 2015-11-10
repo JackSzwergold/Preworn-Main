@@ -1,6 +1,6 @@
 # Developing With MAMP 2.1.4
 
-Written by [Jack Szwergold][1] on February 17, 2014
+By Jack Szwergold, February 17, 2014
 
 ## Part 3: Upgrading the PHP Pear Library in MAMP
 
@@ -12,7 +12,7 @@ So if none of that means anything to you, then don’t worry about any of this &
 
 ### Let’s get started.
 
-First, you need to determine what version of PHP you are using. You can figure that out by checking the output of [phpinfo()][2]. In this case I know I am using PHP version 5.4.10. And if you maneuver through the directory structure of MAMP, you can find the path to installed MAMP PHP binaries which should look something like this:
+First, you need to determine what version of PHP you are using. You can figure that out by checking the output of [phpinfo()][1]. In this case I know I am using PHP version 5.4.10. And if you maneuver through the directory structure of MAMP, you can find the path to installed MAMP PHP binaries which should look something like this:
 
 	/Applications/MAMP/bin/php/php5.4.10/bin
 
@@ -24,11 +24,11 @@ Which is great! Because we need to use that PEAR binary to upgrade. But just mak
 
 ### Checking if PEAR is already installed in your system.
 
-Now we’re going to see if you have PEAR installed in your system. We do this using the UNIX command [`which`][3] which shows the full path of shell commands & related binaries. So just type the following into a terminal window like so:
+Now we’re going to see if you have PEAR installed in your system. We do this using the UNIX command [`which`][2] which shows the full path of shell commands & related binaries. So just type the following into a terminal window like so:
 
 	which pear
 
-And the output—if you are on a basic Mac OS X install—should be blank. Great! Nothing better than starting things off [tabula rasa][4]!
+And the output—if you are on a basic Mac OS X install—should be blank. Great! Nothing better than starting things off [tabula rasa][3]!
 
 So now with that established, let’s edit your shell `.bash_profile` file to recognized your MAMP install binaries.
 
@@ -66,11 +66,11 @@ Okay, the first thing you should know is somehow the PEAR config file in MAMP is
 
 	rm /Applications/MAMP/bin/php/php5.4.10/conf/pear.conf
 
-Now do a fetch of the PEAR [`remote-list`][5]—which lists remote packages on a specific PEAR channel—like so:
+Now do a fetch of the PEAR [`remote-list`][4]—which lists remote packages on a specific PEAR channel—like so:
 
 	pear remote-list
 
-While it might take a while for the list to be returned by that command, you might need to do a [`channel-update`][6] to get PEAR to see the proper channel if it completely bombs out. Just do that like so:
+While it might take a while for the list to be returned by that command, you might need to do a [`channel-update`][5] to get PEAR to see the proper channel if it completely bombs out. Just do that like so:
 
 	pear channel-update pear.php.net
 
@@ -123,9 +123,8 @@ When the dust settles you should have the complete PEAR library installed in you
 
 And check the size. By default it is usually about 14MB in size. But after this upgrade process it will grow to about 100MB in size.
 
-[1]: http://www.preworn.com/ "Preworn • Jack Szwergold’s Online Portfolio"
-[2]: http://us3.php.net/phpinfo "Info on phpinfo()."
-[3]: http://unixhelp.ed.ac.uk/CGI/man-cgi?which "Info on the Unix 'which' command."
-[4]: http://en.wiktionary.org/wiki/tabula_rasa "Dictionary definition of tabula rasa."
-[5]: http://pear.php.net/manual/en/pyrus.commands.remotelist.php "Info on the pear 'remote-list' command."
-[6]: http://pear.php.net/manual/en/guide.users.commandline.commands.php "Info on pear commands inkling 'channel-update'."
+[1]: http://us3.php.net/phpinfo "Info on phpinfo()."
+[2]: http://unixhelp.ed.ac.uk/CGI/man-cgi?which "Info on the Unix 'which' command."
+[3]: http://en.wiktionary.org/wiki/tabula_rasa "Dictionary definition of tabula rasa."
+[4]: http://pear.php.net/manual/en/pyrus.commands.remotelist.php "Info on the pear 'remote-list' command."
+[5]: http://pear.php.net/manual/en/guide.users.commandline.commands.php "Info on pear commands inkling 'channel-update'."

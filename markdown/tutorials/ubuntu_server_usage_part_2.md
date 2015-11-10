@@ -1,6 +1,6 @@
 # Using an Ubuntu Linux Server
 
-Written by [Jack Szwergold][1] on March 30, 2014
+By Jack Szwergold, March 30, 2014
 
 ## Part 2: Setting Up a LAMP Stack
 
@@ -253,5 +253,3 @@ And one last thing: Whenever MySQL is installed or upgraded, it adds a few “te
     sudo mysql_secure_installation
 
 It will initially ask for your root password. Enter it & move on. The next question will ask you to reset the root password which makes no sense since you just entered it. So answer “no” to that question. Then answer “yes” to all other other questions such as, “Remove anonymous users?”, “Disallow root login remotely?” & “Remove test database and access to it?” Then the final question should be “Reload privilege tables now?” Answer “yes” to that one & your MySQL setup should be all solid & secure.
-
-[1]: http://www.preworn.com/ "Preworn • Jack Szwergold’s Online Portfolio"
