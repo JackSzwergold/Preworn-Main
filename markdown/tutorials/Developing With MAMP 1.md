@@ -4,7 +4,7 @@ By Jack Szwergold,  February 16, 2014
 
 ## Part 1: Setting Up a Basic, Useful MAMP Environment
 
-I like using MAMP because it’s a quick & easy way to get a very basic—and very standard—LAMP (Linux, Apache, MySQL & PHP) environment working on a Mac. While there are some purists who believe that coding on a pure Linux setup—virtual or physical—is the way the go, for pretty much every PHP task I have ever come across, MAMP has always worked well. And since it operates on on the Mac desktop like any other application, it allows me to use the great development tools that exist for Macs without much hassle. A complete win-win development setup for Mac developers who code in the LAMP world.
+I like using MAMP because it’s a quick and easy way to get a very basic—and very standard—LAMP (Linux, Apache, MySQL and PHP) environment working on a Mac. While there are some purists who believe that coding on a pure Linux setup—virtual or physical—is the way the go, for pretty much every PHP task I have ever come across, MAMP has always worked well. And since it operates on on the Mac desktop like any other application, it allows me to use the great development tools that exist for Macs without much hassle. A complete win-win development setup for Mac developers who code in the LAMP world.
 
 That said, there are some simple tweaks I like to do on any MAMP install that will make my life as a developer easier. If you are familiar with basic PHP ini configuration changes, you’ll pick up what I am doing right away.
 
@@ -26,7 +26,7 @@ Once you find the `Loaded Configuration File` value and you figure out which PHP
 
 	bbedit /Applications/MAMP/bin/php/php5.4.10/conf/php.ini
 
-That will open BBEdit via the command line & open the `php.ini` at the same time. Or if you are more comfortable doing it all in the command line, you can open the file with [GNU nano][3]—the command line editor I like to use which comes with all Mac OS X installs—like so:
+That will open BBEdit via the command line and open the `php.ini` at the same time. Or if you are more comfortable doing it all in the command line, you can open the file with [GNU nano][3]—the command line editor I like to use which comes with all Mac OS X installs—like so:
 
 	nano /Applications/MAMP/bin/php/php5.4.10/conf/php.ini
 
@@ -43,9 +43,9 @@ Unless you are actually in Berlin—or have a need to have your time zone set to
 	; date.timezone = "Europe/Berlin"
 	date.timezone = "America/New_York"
 
-Also, as you can see, I like to comment out changes that I make & leave them in place instead of deleting them. In general, you should get into the habit of commenting out small tweaks like this & leaving them in place for future reference instead of outright overwriting or deleting them. In a case like this it might seem superfluous, but remember: What might seem like a simple change now, might be the cause of a debugging issue months or years from now.
+Also, as you can see, I like to comment out changes that I make and leave them in place instead of deleting them. In general, you should get into the habit of commenting out small tweaks like this and leaving them in place for future reference instead of outright overwriting or deleting them. In a case like this it might seem superfluous, but remember: What might seem like a simple change now, might be the cause of a debugging issue months or years from now.
 
-### Adjusting resource limits & error reporting.
+### Adjusting resource limits and error reporting.
 
 Server resources are idiosyncratic from server to server and from application to application. In general, the simplest resource limit adjustment you should make is to `memory_limit` so your PHP scripts don’t bomb out due to lack of memory. So look for the *Resource Limits* section of the PHP ini configuration that looks like this:
 
@@ -58,7 +58,7 @@ And change the `memory_limit` value to something like `64M`:
 	; memory_limit = 32M;
 	memory_limit = 64M;
 
-Once that is done, look for the *Error handling and logging* section of the PHP ini configuration and adjust `error_reporting` so you don’t loose your mind due to excessive warnings, errors & notices popping up when debugging. The `error_reporting` should look something like this:
+Once that is done, look for the *Error handling and logging* section of the PHP ini configuration and adjust `error_reporting` so you don’t loose your mind due to excessive warnings, errors and notices popping up when debugging. The `error_reporting` should look something like this:
 
 	error_reporting = E_ALL
 
@@ -77,7 +77,7 @@ And change that from `Off` to `On`:
 	display_errors = On
 
 
-Now with all that done, restart MAMP so the PHP ini configuration file is properly reloaded with the new settings. Remember, PHP is a module in Apache. So when you restart MAMP, you are restarting Apache & thus forcing the PHP ini configuration file to be reloaded.
+Now with all that done, restart MAMP so the PHP ini configuration file is properly reloaded with the new settings. Remember, PHP is a module in Apache. So when you restart MAMP, you are restarting Apache and thus forcing the PHP ini configuration file to be reloaded.
 
 ### Conclusion.
 
@@ -93,7 +93,7 @@ And then copy in this short but sweet PHP script into that file:
 
 	?>
 
-Save the file & reload your browser. The text, “Hello world!” should be displayed in the brower. Which means now you’re done setting up your basic MAMP development environment!
+Save the file and reload your browser. The text, “Hello world!” should be displayed in the brower. Which means now you’re done setting up your basic MAMP development environment!
 
 ***
 

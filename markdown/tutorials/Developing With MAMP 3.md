@@ -8,7 +8,7 @@ Now we’ll install the whole PHP Pear library under MAMP. Yes, the whole PEAR l
 
 Why? Easy. While MAMP includes a few common items from the PEAR library, it does not include everything. And since I am often dealing with developers—or projects—that make use of PEAR items that are not common to the base MAMP install, I might as well just install the whole PEAR library all at once in MAMP so I don’t have to worry about it.
 
-So if none of that means anything to you, then don’t worry about any of this & stop reading now. Want to know more about how you can upgrade the PEAR librarian MAMP? Read on.
+So if none of that means anything to you, then don’t worry about any of this and stop reading now. Want to know more about how you can upgrade the PEAR librarian MAMP? Read on.
 
 ### Let’s get started.
 
@@ -24,7 +24,7 @@ Which is great! Because we need to use that PEAR binary to upgrade. But just mak
 
 ### Checking if PEAR is already installed in your system.
 
-Now we’re going to see if you have PEAR installed in your system. We do this using the UNIX command [`which`][2] which shows the full path of shell commands & related binaries. So just type the following into a terminal window like so:
+Now we’re going to see if you have PEAR installed in your system. We do this using the UNIX command [`which`][2] which shows the full path of shell commands and related binaries. So just type the following into a terminal window like so:
 
 	which pear
 
@@ -94,7 +94,7 @@ Okay, now we’re in business. Now pipe that `pear remote-list` command into a t
 
 	pear remote-list | awk '{print $1}' > pear-pacakge-list
 
-Wait for the process to end & then edit the `pear-pacakge-list` to get rid of the unnecessary header stuff that looks like this:
+Wait for the process to end and then edit the `pear-pacakge-list` to get rid of the unnecessary header stuff that looks like this:
 
 	CHANNEL
 	========================================
@@ -113,7 +113,7 @@ The goal is to pipe the contents of `pear-pacakge-list` into `pear install` so w
 
 	cat pear-pacakge-list | xargs -n 1 pear install
 
-This process can take a while depending on how fast your Internet connection is. So I would recommend letting that process churn & revisiting it later.
+This process can take a while depending on how fast your Internet connection is. So I would recommend letting that process churn and revisiting it later.
 
 ### Conclusion.
 

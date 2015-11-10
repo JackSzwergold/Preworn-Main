@@ -4,7 +4,7 @@ By Jack Szwergold, March 19, 2014
 
 ## Part 1: Configuring a Base Level Ubuntu Server
 
-The purpose of this tutorial is to explain how I like to configure a base level Ubuntu server. This doesn’t go into details as to how you got Ubuntu installed on a server to begin with. But begins with the assumption that you have an Ubuntu machine set up to the point you have a basic terminal prompt & you can login as a user with administrator rights.
+The purpose of this tutorial is to explain how I like to configure a base level Ubuntu server. This doesn’t go into details as to how you got Ubuntu installed on a server to begin with. But begins with the assumption that you have an Ubuntu machine set up to the point you have a basic terminal prompt and you can login as a user with administrator rights.
 
 ### Table of contents.
 
@@ -14,21 +14,21 @@ The purpose of this tutorial is to explain how I like to configure a base level 
 - [Add the new sysop user to the ‘sudoers’ file.](ubuntu_server_usage_part_1#add_sysop_to_sudoers)
 - [Create the ‘www-readwrite’ group.](ubuntu_server_usage_part_1#create_wwwreadwrite)
 - [Adjust default ‘umask’ for group writability.](ubuntu_server_usage_part_1#adjust_default_umask)
-- [Set the server time & related timezone info.](ubuntu_server_usage_part_1#set_time_and_timezone)
+- [Set the server time and related timezone info.](ubuntu_server_usage_part_1#set_time_and_timezone)
 - [Ensure that the ‘locale’ settings are correct.](ubuntu_server_usage_part_1#locale_settings)
 - [Edit the ‘sources.list’ to enable partner package updates.](ubuntu_server_usage_part_1#enable_partner_pacakages)
-- [Install base level tools & utilities.](ubuntu_server_usage_part_1#install_base_level_tools)
-- [Install compilers, GIT, SVN & general development related stuff.](ubuntu_server_usage_part_1#install_development_tools)
-- [Install & initialize the ‘locate’ tool.](ubuntu_server_usage_part_1#install_locate_tool)
-- [Install ‘postfix’ & related mail tools.](ubuntu_server_usage_part_1#install_postfix_and_mail_tools)
-- [Install & enable ‘sysstat.’](ubuntu_server_usage_part_1#install_sysstat)
+- [Install base level tools and utilities.](ubuntu_server_usage_part_1#install_base_level_tools)
+- [Install compilers, GIT, SVN and general development related stuff.](ubuntu_server_usage_part_1#install_development_tools)
+- [Install and initialize the ‘locate’ tool.](ubuntu_server_usage_part_1#install_locate_tool)
+- [Install ‘postfix’ and related mail tools.](ubuntu_server_usage_part_1#install_postfix_and_mail_tools)
+- [Install and enable ‘sysstat.’](ubuntu_server_usage_part_1#install_sysstat)
 - [Fix for slow SSH client connections.](ubuntu_server_usage_part_1#fix_slow_ssh_connections)
-- [Adjust the MOTD (Message of the Day) header & related info.](ubuntu_server_usage_part_1#adjust_motd)
+- [Adjust the MOTD (Message of the Day) header and related info.](ubuntu_server_usage_part_1#adjust_motd)
 
 
 ### <a name="aptitude"></a> Be sure to install ‘aptitude’ first.
 
-Before anything else, let’s make sure that `aptitude` is installed to manage package installs in Ubuntu. I know some folks prefer `apt-get`, but I find `aptitude` to be nicer & easier to use. It appears to be installed by default with Ubuntu 12.04, but just in case it isn’t do the following to install `aptitude`:
+Before anything else, let’s make sure that `aptitude` is installed to manage package installs in Ubuntu. I know some folks prefer `apt-get`, but I find `aptitude` to be nicer and easier to use. It appears to be installed by default with Ubuntu 12.04, but just in case it isn’t do the following to install `aptitude`:
 
     sudo apt-get update
     sudo apt-get install aptitude
@@ -37,11 +37,11 @@ Before anything else, let’s make sure that `aptitude` is installed to manage p
 
 Now, depending on how your initial install of Ubuntu occurred, you were either prompted to create an initial user with administrator rights or you were assigned a user. I’m not going to run down the list how an initial user might have been generated, but there is one overarching philosophy here: If your administrative user is named `root` that is not good from a security standpoint.
 
-There are are tons of hacks & exploits that explicitly look for—and act on—the `root` account. So you should not use the `root` account directly for any reason & instead handle administrative functions via another user who is assigned administrative rights via `sudo`.
+There are are tons of hacks and exploits that explicitly look for—and act on—the `root` account. So you should not use the `root` account directly for any reason and instead handle administrative functions via another user who is assigned administrative rights via `sudo`.
 
 ### <a name="create_users"></a> Create the users.
 
-Okay, so here is where you will create a new administrative user to use in lieu of the `root` account. The name of the account can be anything you like as long as it is not something common & predictable like `admin` or `administrator`. In my case, I like to use the name `sysop` which is short for “system operator” which is a throwback to the old BBS days & works well for a case like this. Just add the new user using `adduser` like so:
+Okay, so here is where you will create a new administrative user to use in lieu of the `root` account. The name of the account can be anything you like as long as it is not something common and predictable like `admin` or `administrator`. In my case, I like to use the name `sysop` which is short for “system operator” which is a throwback to the old BBS days and works well for a case like this. Just add the new user using `adduser` like so:
 
     sudo adduser sysop
 
@@ -68,7 +68,7 @@ Now comment out the line with the `root` user, and add another line for the newl
     # root   ALL=(ALL:ALL) ALL
     sysop ALL=(ALL:ALL) ALL
 
-Once you have that set, just go ahead & lock the `root` user’s account via `passwd -l` like so:
+Once you have that set, just go ahead and lock the `root` user’s account via `passwd -l` like so:
 
     sudo passwd -l root
 
@@ -76,7 +76,7 @@ And you should now be all set to use `sysop` as your new administrative user wit
 
 ### <a name="create_wwwreadwrite"></a> Create the ‘www-readwrite’ group.
 
-Since I do a lot of collaborative web development & systems administration on Ubuntu servers, I like to create a unique group which I can assign users to. This allows me to retain system administrator’s privileges while allowing other non-administrator users to have access to web-specific areas & resources without having to grant them excessive user rights.
+Since I do a lot of collaborative web development and systems administration on Ubuntu servers, I like to create a unique group which I can assign users to. This allows me to retain system administrator’s privileges while allowing other non-administrator users to have access to web-specific areas and resources without having to grant them excessive user rights.
 
 The first step is to create the `www-readwrite` group using `groupadd`:
 
@@ -135,9 +135,9 @@ And the file permissions for `test_file.txt` should look like this:
 
     -rw-rw-r-- 1 sysop www-readwrite 0 Mar 20 05:36 test_file.txt
 
-Note the `rw` for the group permissions which indicates the file can be read from & written to. Which all means that your system’s default `umask` settings have been properly adjusted to allow for group writability.
+Note the `rw` for the group permissions which indicates the file can be read from and written to. Which all means that your system’s default `umask` settings have been properly adjusted to allow for group writability.
 
-### <a name="set_time_and_timezone"></a> Set the server time & related timezone info.
+### <a name="set_time_and_timezone"></a> Set the server time and related timezone info.
 
 Okay, with that done you should set your server’s internal clock with data pulled from a remote time server by running `ntpdate` like so:
 
@@ -167,11 +167,11 @@ While you don’t need to adjust anything for daily use, the `ntpd` options can 
 
     sudo nano /etc/ntp.conf
 
-When that is done, your server’s ntp time server synchronization & related time zone settings should be all set.
+When that is done, your server’s ntp time server synchronization and related time zone settings should be all set.
 
 ### <a name="locale_settings"></a> Ensure that the ‘locale’ settings are correct.
 
-The settings for `locale` help your system determine what language, country, units of measurement & other sundry localization specific items should be used by your system.  By default, your `locale` settings should have been properly set during your initial Ubuntu install. But just in case that didn’t happen—or something went wrong—run `update-locale` as follows:
+The settings for `locale` help your system determine what language, country, units of measurement and other sundry localization specific items should be used by your system.  By default, your `locale` settings should have been properly set during your initial Ubuntu install. But just in case that didn’t happen—or something went wrong—run `update-locale` as follows:
 
     sudo update-locale
 
@@ -209,7 +209,7 @@ Finally, if none of that works, you can edit the `/etc/default/locale` manually:
 
     sudo nano /etc/default/locale
 
-And just set the default `locale` setting for `LANG` by cutting & pasting the following into that file:
+And just set the default `locale` setting for `LANG` by cutting and pasting the following into that file:
 
     LANG="en_US.UTF-8"
 
@@ -239,9 +239,9 @@ Now with that done, let’s update `aptitude` so it can grab the `partner` sourc
 
     sudo aptitude update
 
-With that done, your local `aptitude` setup should now be set to access & install software packages from Canonical’s `partner` repository.
+With that done, your local `aptitude` setup should now be set to access and install software packages from Canonical’s `partner` repository.
 
-### <a name="install_base_level_tools"></a> Install base level tools & utilities.
+### <a name="install_base_level_tools"></a> Install base level tools and utilities.
 
 At this point you should have a somewhat functional Ubuntu server in place with the bare minimum items needed to do some basic things. But we’re not done yet.
 
@@ -257,15 +257,15 @@ I’m not going to do a tool-by-tool breakdown of usage in this tutorial, but if
 
 That will give you the manual page (aka: `man` page) for `htop`; an excellent open source replacement for the commonly used system tool `top`.
 
-### <a name="install_development_tools"></a> Install compilers, GIT, SVN & general development related stuff.
+### <a name="install_development_tools"></a> Install compilers, GIT, SVN and general development related stuff.
 
 If you are going to use your Ubuntu server for software development on any level, you need to install some basic tools to get the job done like so:
 
     sudo aptitude install build-essential git git-core subversion git-svn
 
-That command will install the whole suite of Debian compilers such as `gcc`/`g++` as well as SCM (source code management) tools such as `git`, `svn` (Subversion) & related utilities like `git-svn` which you can use to bridge & convert `svn` repositories to `git` repositories.
+That command will install the whole suite of Debian compilers such as `gcc`/`g++` as well as SCM (source code management) tools such as `git`, `svn` (Subversion) and related utilities like `git-svn` which you can use to bridge and convert `svn` repositories to `git` repositories.
 
-### <a name="install_locate_tool"></a> Install & initialize the ‘locate’ tool.
+### <a name="install_locate_tool"></a> Install and initialize the ‘locate’ tool.
 
 Now we’ll install a tool that will make your life lots easier: `locate`. Simply put, if you know what `Spotlight` is in Mac OS X, then you know what `locate` is. It’s a tool that indexes content on your file system and allows you to quickly find files—including full file paths—with ease.
 
@@ -285,13 +285,13 @@ The result returned should be:
 
     /home/sysop/test_file.txt
 
-Being able to get to content quickly & easily via the command line is invaluable. And `locate` will help make your life working in the command line a bit easier.
+Being able to get to content quickly and easily via the command line is invaluable. And `locate` will help make your life working in the command line a bit easier.
 
-### <a name="install_postfix_and_mail_tools"></a> Install ‘postfix’ & related mail tools.
+### <a name="install_postfix_and_mail_tools"></a> Install ‘postfix’ and related mail tools.
 
-Most any Unix server should have basic mail transfer agent (MTA) capabilities. And that is where `postfix` & `mailutils` come into play.
+Most any Unix server should have basic mail transfer agent (MTA) capabilities. And that is where `postfix` and `mailutils` come into play.
 
-The software tool `postfix` is a great mail transfer agent that’s easy to use, quite powerful & is the one of the most commonly used Unix mail transfer agents out there. The items that comprise the core of `mailutils` are some simple & useful tools that can make managing your server’s mail subsystem a bit easier. To install them, run the following `aptitude` command:
+The software tool `postfix` is a great mail transfer agent that’s easy to use, quite powerful and is the one of the most commonly used Unix mail transfer agents out there. The items that comprise the core of `mailutils` are some simple and useful tools that can make managing your server’s mail subsystem a bit easier. To install them, run the following `aptitude` command:
 
     sudo aptitude install postfix mailutils
 
@@ -306,7 +306,7 @@ And change these values to to match your server settings:
 
 Using my example above, the main thing to change is the value of `sandbox.local` which should match whatever the actual hostname of your machine is.
 
-### <a name="install_sysstat"></a> Install & enable ‘sysstat.’
+### <a name="install_sysstat"></a> Install and enable ‘sysstat.’
 
 One great tool to use to collect, report, or save system activity information is `sysstat`; sometimes referred to as `sar` since that is the actual command used to read the data `sysstat` collects. You can install `sysstat` via `aptitude` like this:
 
@@ -337,7 +337,7 @@ The results should be something like this:
     10:35:02 PM         2       135      1.58      1.59      1.10         0
     Average:            2       127      0.45      0.83      0.95         0
 
-That output reflects the system load average history & allows you to note when—and if—there was a spike in system activity. Very useful in diagnosing system issues after they happen.
+That output reflects the system load average history and allows you to note when—and if—there was a spike in system activity. Very useful in diagnosing system issues after they happen.
 
 ### <a name="fix_slow_ssh_connections"></a> Fix for slow SSH client connections.
 
@@ -353,9 +353,9 @@ With that done, restart the SSH daemon:
 
     sudo service ssh restart
 
-When all that is done, initial SSH connections to your Ubuntu machine using password authentication should run smoothly & without any unnecessary lags or delays.
+When all that is done, initial SSH connections to your Ubuntu machine using password authentication should run smoothly and without any unnecessary lags or delays.
 
-### <a name="adjust_motd"></a> Adjust the MOTD (Message of the Day) header & related info.
+### <a name="adjust_motd"></a> Adjust the MOTD (Message of the Day) header and related info.
 
 And now, let’s adjust the MOTD (Message of the Day) settings to streamline the initial “Welcome” screen you see when you first login. The first thing I like to do is to use `figlet` to create an ASCII-art-like banner that clearly identifies what server I just logged into. I do this because—let’s face it—sometimes things can get so frenzied you can loose sight of what machine you are logging into. Which is not a good thing. So let’s create a banner for our server—in this case named `Sandbox`—like so:
 
@@ -374,7 +374,7 @@ Now let’s open up the `motd.tail` file for editing like so:
 
     sudo nano /etc/motd.tail
 
-And simply copy & paste the ASCII-art-like banner that was just created into that `motd.tail`. Now log out and log back in to see that banner appear once you have successfully logged in.
+And simply copy and paste the ASCII-art-like banner that was just created into that `motd.tail`. Now log out and log back in to see that banner appear once you have successfully logged in.
 
 Additionally, there are some other scripts that run when you login that I find to be annoying—and only get in the way—that I prefer to disable.
 
@@ -388,7 +388,7 @@ Then, I comment out the content of `updates-available` as well as `release-upgra
     sudo nano /etc/update-motd.d/90-updates-available
     sudo nano /etc/update-motd.d/91-release-upgrade
 
-Technically speaking, I could conceivably just delete the `updates-available` and `release-upgrade` files as well. But I personally do not like destroying files & data that I could potentially need or use in the future. So I find that commenting out the few lines of core functionality in those two files to a preferable way of neutering them in this case.
+Technically speaking, I could conceivably just delete the `updates-available` and `release-upgrade` files as well. But I personally do not like destroying files and data that I could potentially need or use in the future. So I find that commenting out the few lines of core functionality in those two files to a preferable way of neutering them in this case.
 
 ***
 

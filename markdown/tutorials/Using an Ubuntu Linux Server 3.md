@@ -4,12 +4,12 @@ By Jack Szwergold, April 6, 2014
 
 ## Part 3: Monitoring and Securing Your Ubuntu Server
 
-In part 3 of my tutorial I will explain how to setup useful monitoring & security tools. You should never be in a situation where you cannot be able to review & assess server health. Being able to monitor & secure your server is the key to running a safe & stable server environment.
+In part 3 of my tutorial I will explain how to setup useful monitoring and security tools. You should never be in a situation where you cannot be able to review and assess server health. Being able to monitor and secure your server is the key to running a safe and stable server environment.
 
 ### Table of contents.
 
 - [Install the ‘munin’ to monitor system vitals.](ubuntu_server_usage_part_3#install_munin)
-- [Install ‘monit’ to monitor & manage specific services.](ubuntu_server_usage_part_3#install_monit)
+- [Install ‘monit’ to monitor and manage specific services.](ubuntu_server_usage_part_3#install_monit)
 - [Install the ‘iptables’ firewall.](ubuntu_server_usage_part_3#install_iptables)
 
 ### <a name="install_munin"></a> Install the ‘munin’ to monitor system vitals.
@@ -49,7 +49,7 @@ And go to the default host or IP of your web server like so:
 
     http://192.168.56.10/munin
 
-You should now see the beginnings of some Munin charts. Which is great! But let’s tune a few things first, such as activating some `apache`, `mysql` & `postfix` specific `munin` plugins like so:
+You should now see the beginnings of some Munin charts. Which is great! But let’s tune a few things first, such as activating some `apache`, `mysql` and `postfix` specific `munin` plugins like so:
 
     sudo ln -s /usr/share/munin/plugins/apache_accesses /etc/munin/plugins/apache_accesses
     sudo ln -s /usr/share/munin/plugins/apache_processes /etc/munin/plugins/apache_processes
@@ -70,7 +70,7 @@ Now there is an annoying bug in `munin` that will cause it to report InnoDB free
 
     sudo nano /etc/munin/plugin-conf.d/munin-node
 
-Now scroll to the bottom of the file & add these configuration settings:
+Now scroll to the bottom of the file and add these configuration settings:
 
     [mysql_innodb]
     env.warning 0
@@ -142,11 +142,11 @@ And now restart `munin-node` for the changes to take effect:
 
     sudo service munin-node restart
 
-Now `munin` should be fully setup & configured to not only monitor your server, but e-mail you with alerts when something odd comes up.
+Now `munin` should be fully setup and configured to not only monitor your server, but e-mail you with alerts when something odd comes up.
 
-### <a name="install_monit"></a> Install ‘monit’ to monitor & manage specific services.
+### <a name="install_monit"></a> Install ‘monit’ to monitor and manage specific services.
 
-A fantastic system administrator’s tool that I like to use—and have barely scratched the surface of—is `monit`. It’s basically a scriptable daemon that can monitor system services & take action on certain system service conditions based on your settings.
+A fantastic system administrator’s tool that I like to use—and have barely scratched the surface of—is `monit`. It’s basically a scriptable daemon that can monitor system services and take action on certain system service conditions based on your settings.
 
 First, let’s install `monit` like so:
 
@@ -167,11 +167,11 @@ Look for this chunk of commented out configuration code:
     #                backup.bar.baz port 10025,  # backup mailserver on port 10025
     #                localhost                   # fallback relay
 
-Found it? Good! Now enter a space or two after that chunk & enter this configuration line for the mail server:
+Found it? Good! Now enter a space or two after that chunk and enter this configuration line for the mail server:
 
     set mailserver localhost
 
-With that done, let’s set a simple `monit` script. The main thing I currently use `monit` for is to monitor `apache` & detect if the service is active. If it’s down? Then the script automatically restarts it. First, let’s create the `apache` config for `monit` like so:
+With that done, let’s set a simple `monit` script. The main thing I currently use `monit` for is to monitor `apache` and detect if the service is active. If it’s down? Then the script automatically restarts it. First, let’s create the `apache` config for `monit` like so:
 
     sudo nano /etc/monit/conf.d/apache2.conf
 
@@ -189,7 +189,7 @@ Now restart `monit` like so:
 
     sudo service monit restart
 
-That simple script will monitor your `apache` service on the localhost address of `127.0.0.1` running on port `80`. If it fails with a timeout after 15 seconds, it will automatically restart the `apache` service & alert you about the outage via e-mail. To me this is an invaluable tool to help keep a server up and running.
+That simple script will monitor your `apache` service on the localhost address of `127.0.0.1` running on port `80`. If it fails with a timeout after 15 seconds, it will automatically restart the `apache` service and alert you about the outage via e-mail. To me this is an invaluable tool to help keep a server up and running.
 
 You can also add a server load average check to the mix like so:
 
@@ -204,13 +204,13 @@ You can also add a server load average check to the mix like so:
             then restart
             alert my@emailaddress.com only on { timeout, nonexist }
 
-The configuration is just like the first one, but note the `if loadavg` section. That will check the system load average every minute. And if it has a load average that is greater than 7 for 5 one minute cycles, it will restart the `apache` service & alert you about the outage via e-mail. I selectively use the `loadavg` setting depending on server setup since many different factors can contribute to a high system load. But in general, a web server that is spiraling out of control due to DDoS can be saved by this script’s careful monitoring system load.
+The configuration is just like the first one, but note the `if loadavg` section. That will check the system load average every minute. And if it has a load average that is greater than 7 for 5 one minute cycles, it will restart the `apache` service and alert you about the outage via e-mail. I selectively use the `loadavg` setting depending on server setup since many different factors can contribute to a high system load. But in general, a web server that is spiraling out of control due to DDoS can be saved by this script’s careful monitoring system load.
 
-But always remember: While `monit` scripts can save you the headache of a server outage, but only a real human with the knowledge of how a server should work can determine what the real issue is. So if `monit` sends you an e-mail, you should take that alert seriously by logging into your server & monitoring it for a while.
+But always remember: While `monit` scripts can save you the headache of a server outage, but only a real human with the knowledge of how a server should work can determine what the real issue is. So if `monit` sends you an e-mail, you should take that alert seriously by logging into your server and monitoring it for a while.
 
 ### <a name="install_iptables"></a> Install the ‘iptables’ firewall.
 
-Now we’re going to install `iptables`, which is an excellent & widely used software-based firewall.  We’ll also be installing `iptables-persistent` which is a simply companion tool that allows `iptables` to be reloaded & active if/when a server reboots:
+Now we’re going to install `iptables`, which is an excellent and widely used software-based firewall.  We’ll also be installing `iptables-persistent` which is a simply companion tool that allows `iptables` to be reloaded and active if/when a server reboots:
 
     sudo aptitude install iptables iptables-persistent ipset
 
@@ -283,7 +283,7 @@ Next, we’re going to create a very basic set of `iptables` rules to start off 
 	COMMIT
 	# Completed on Sun Apr  6 11:50:24 2014
 
-It seems like there is a lot of stuff happening here—and there is—but it’s pretty simple. Here’s a somewhat quick, but wordy explanation but if you don’t need these kind of details just yet, just move onto the next part: The stuff in `*nat` & `*mangle` are boilerplate defaults from an iptables rule set export. The stuff in `*filter` is where the basic cool stuff happens. The important lines in there includes the `SSH_CHECK` which protects against someone “war dialing” your SSH connection. It’s called as part of the `INPUT` chain at the top of the list, but it’s behavior is defined near the bottom of the list. The next set of rules define other sundry `INPUT` points, but the ones you should care about are the rules connected to port `80` as well as `443`. Those open up port `80` which is the basic `http` protocol port used by web servers & port `443` which is used by the `https` protocol used for secure webpage connections. If you need to open up any additional ports on your server, just copy the basic format shown in those two lines & change the port number to match the desired port number you need to have opened.
+It seems like there is a lot of stuff happening here—and there is—but it’s pretty simple. Here’s a somewhat quick, but wordy explanation but if you don’t need these kind of details just yet, just move onto the next part: The stuff in `*nat` and `*mangle` are boilerplate defaults from an iptables rule set export. The stuff in `*filter` is where the basic cool stuff happens. The important lines in there includes the `SSH_CHECK` which protects against someone “war dialing” your SSH connection. It’s called as part of the `INPUT` chain at the top of the list, but it’s behavior is defined near the bottom of the list. The next set of rules define other sundry `INPUT` points, but the ones you should care about are the rules connected to port `80` as well as `443`. Those open up port `80` which is the basic `http` protocol port used by web servers and port `443` which is used by the `https` protocol used for secure webpage connections. If you need to open up any additional ports on your server, just copy the basic format shown in those two lines and change the port number to match the desired port number you need to have opened.
 
 Now, run this command to immediately load the rules in `iptables.conf` into your server’s `iptables` setup:
 
