@@ -18,6 +18,8 @@
  *          2014-01-23, js: refinements
  *          2014-02-17, js: setting a 'base'
  *          2014-02-27, js: adding a page URL
+ *          2015-05-10, js: adding DIV wrapper class & id
+ *          2015-05-11, js: setting dynamic DIV wrapper creation
  *
  */
 
@@ -49,7 +51,11 @@ class frontendDisplay {
   private $page_title = NULL;
   private $page_description = NULL;
   private $page_content = NULL;
-  
+
+  private $page_div_wrapper_class = NULL;
+  private $page_div_wrapper_id = NULL;
+  private $page_div_wrappper_array = array();
+
   private $page_viewport = '';
   private $page_robots = '';
 
@@ -139,6 +145,21 @@ class frontendDisplay {
   function setPageContent($content = null) {
     $this->content = $content;
   } // setPageContent
+
+
+  //**************************************************************************************//
+  // Set the page DIVs.
+  function setPageDivs($page_div_wrappper_array = array()) {
+    $this->page_div_wrappper_array = $page_div_wrappper_array;
+  } // setPageDivs
+
+
+  //**************************************************************************************//
+  // Set the page DIV wrapper.
+  function setPageDivWrapper($page_div_wrapper_class = null, $page_div_wrapper_id = null) {
+    $this->page_div_wrapper_class = $page_div_wrapper_class;
+    $this->page_div_wrapper_id = $page_div_wrapper_id;
+  } // setPageDivWrapper
 
 
   //**************************************************************************************//
@@ -519,34 +540,36 @@ class frontendDisplay {
 
     $nameplate = $this->setNameplate();
 
+    $body_div_stuff = array();
+    $body_div_close_stuff = array();
+
+    if (!empty($this->page_div_wrapper_class)) {
+      $body_div_stuff[] = sprintf('class="%s"', $this->page_div_wrapper_class);
+      $body_div_close_stuff[] = sprintf('.%s', $this->page_div_wrapper_class);
+    }
+
+    if (!empty($this->page_div_wrapper_id)) {
+      $body_div_stuff[] = sprintf('id="%s"', $this->page_div_wrapper_id);
+    }
+
+    if (!empty($this->page_div_wrapper_class) || (!empty($this->page_div_wrapper_class) && !empty($this->page_div_wrapper_id))) {
+      $body = sprintf('<div %s>', implode($body_div_stuff, ' '))
+            . $body
+            . sprintf('</div><!-- %s -->', implode($body_div_close_stuff, ' '))
+            ;
+    }
+
+    // Set the wrapper divs.
+    $div_opening = $div_closing = '';
+    if (!empty($this->page_div_wrappper_array)) {
+      $div_opening = '<div class="' . implode($this->page_div_wrappper_array, '">' . "\n" . '<div class="') . '">';
+      $div_closing = '</div><!-- .' . implode(array_reverse($this->page_div_wrappper_array), '-->' . "\n" . '</div><!-- .') . ' -->';
+    }
+
     $ret = $nameplate
-         . '<div class="Wrapper">'
-         . '<div class="Padding">'
-
-         . '<div class="Content">'
-         . '<div class="Padding">'
-
-         . '<div class="Section">'
-         . '<div class="Padding">'
-         . '<div class="Middle">'
-
-         . '<div class="Core">'
-         . '<div class="Padding">'
-
+         . $div_opening
          . $body
-
-         . '</div><!-- .Padding -->'
-         . '</div><!-- .Core -->'
-
-         . '</div><!-- .Middle -->'
-         . '</div><!-- .Padding -->'
-         . '</div><!-- .Section -->'
-
-         . '</div><!-- .Padding -->'
-         . '</div><!-- .Content -->'
-
-         . '</div><!-- .Padding -->'
-         . '</div><!-- .Wrapper -->'
+         . $div_closing
          ;
 
     return $ret;
