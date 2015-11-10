@@ -29,7 +29,7 @@ If you like any of the work I have done, will do, or am doing—or you just owe 
 [Stack Overflow][6] • [Super User][7] • [Server Fault][8] • [LinkedIn][9] • [GitHub][10]
 
   [1]: http://www.lastplacechamp.com/ "last Place Champ"
-  [2]: cheat_sheets/ "Tutorials"
+  [2]: tutorials_and_cheat_sheets/ "Tutorials and Cheat Sheets"
   [3]: https://www.paypal.me/JackSzwergold "Support me with a PayPal donation."
   [4]: http://www.amazon.com/?tag=preworn-20 "Support me when you buy things on Amazon with this link."
   [5]: pgp_public_key-preworn.asc.txt
