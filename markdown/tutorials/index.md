@@ -32,12 +32,12 @@ If you are going to be doing serious we development or Unix systems administrati
 ###### [Part 2: Setting Up a LAMP Stack][8]
 ###### [Part 3: Monitoring and Securing Your Ubuntu Server][9]
 
-[1]: mamp_part_1 "Setting Up a Basic, Useful MAMP Environment"
-[2]: mamp_part_2 "Configuring Name-Based Virtual Hosts"
-[3]: mamp_part_3 "Upgrading the PHP Pear Library in MAMP"
-[4]: mamp_windows_with_virtualbox_part_1 "Overall Virtualization Concepts"
-[5]: mamp_windows_with_virtualbox_part_2 "Basic — Using a Single Network Interface Setup"
-[6]: mamp_windows_with_virtualbox_part_3 "Advanced — Using a Dual Network Interface Setup with a Host-Only Interface"
-[7]: ubuntu_server_usage_part_1 "Configuring a Base Level Ubuntu Server"
-[8]: ubuntu_server_usage_part_2 "Setting Up a LAMP Stack"
-[9]: ubuntu_server_usage_part_3 "Monitoring & Securing Your Ubuntu Server"
+[1]: Developing%20With%20MAMP%201/ "Setting Up a Basic, Useful MAMP Environment"
+[2]: Developing%20With%20MAMP%202/ "Configuring Name-Based Virtual Hosts"
+[3]: Developing%20With%20MAMP%203/ "Upgrading the PHP Pear Library in MAMP"
+[4]: Connecting%20to%20MAMP%20from%20Windows%20on%20a%20Mac%20OS%20X%20Install%20of%20VirtualBox%201/ "Overall Virtualization Concepts"
+[5]: Connecting%20to%20MAMP%20from%20Windows%20on%20a%20Mac%20OS%20X%20Install%20of%20VirtualBox%202/ "Basic — Using a Single Network Interface Setup"
+[6]: Connecting%20to%20MAMP%20from%20Windows%20on%20a%20Mac%20OS%20X%20Install%20of%20VirtualBox%203/ "Advanced — Using a Dual Network Interface Setup with a Host-Only Interface"
+[7]: Using%20an%20Ubuntu%20Linux%20Server%201/ "Configuring a Base Level Ubuntu Server"
+[8]: Using%20an%20Ubuntu%20Linux%20Server%202/ "Setting Up a LAMP Stack"
+[9]: Using%20an%20Ubuntu%20Linux%20Server%203/ "Monitoring & Securing Your Ubuntu Server"
