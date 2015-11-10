@@ -95,6 +95,12 @@ And then copy in this short but sweet PHP script into that file:
 
 Save the file & reload your browser. The text, “Hello world!” should be displayed in the brower. Which means now you’re done setting up your basic MAMP development environment!
 
+***
+
+*Developing With MAMP 2.1.4 • Part 1: Setting Up a Basic, Useful MAMP Environment (c) by Jack Szwergold*
+
+*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+
 [1]: http://us3.php.net/phpinfo "Info on phpinfo()."
 [2]: http://www.barebones.com/products/bbedit/ "Bare Bones Software’s BBEdit page."
 [3]: http://www.nano-editor.org "Info on GNO nano."

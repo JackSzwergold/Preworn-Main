@@ -13,3 +13,9 @@ The main drawback of this method is there is no easy way to connect from the `ho
 ### Conclusion.
 
 So now you should be able to connect to anything on **MY_MACHINE.local:8888** and view it as if it were being viewed from MAMP on your Mac desktop. But in the case of the localhost equivalent of **MY_MACHINE:8888** depending on the codebase configuration of whatever you are testing, you might need to temporarily adjust the config files in your local MAMP set to reflect the new **MY_MACHINE:8888** address since **localhost:8888** won’t be reachable.
+
+***
+
+*Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox • Part 2: Basic — Using a Single Network Interface Setup (c) by Jack Szwergold*
+
+*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

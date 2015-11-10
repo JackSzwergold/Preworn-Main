@@ -37,3 +37,9 @@ At this point you should see an *Adapter 1* pane and that should be set to NAT. 
 Now when you launch your virtual machine, you can connect to the gateway address of the host-only adapter, which is **192.168.56.1**. So if you were connecting to MAMP via this setup, the address would be:	http://192.168.56.1:8888And then when editing the `hosts` file the entries would be something like:	192.168.56.1	MY_MACHINE	192.168.56.1	MY_MACHINE.localThe other benefit of this setup is on your Windows machine you can setup a static IP address—like for example 192.168.56.10—and use that address to connect from your `host` setup to your `guest` setup.
 
 Again, for basic Windows browser compatibility testing, that might not be a factor but it is a nice option to have. And having a separate network interface for host-only traffic can help eliminate the potential issues associated with having all traffic going through the main **10.0.2.2** interface.
+
+***
+
+*Connecting to MAMP from Windows on a Mac OS X Install of VirtualBox • Part 3: Advanced — Using a Dual Network Interface Setup with a Host-Only Interface (c) by Jack Szwergold*
+
+*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

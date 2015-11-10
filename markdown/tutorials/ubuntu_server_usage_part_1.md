@@ -8,22 +8,22 @@ The purpose of this tutorial is to explain how I like to configure a base level 
 
 ### Table of contents.
 
-* [Be sure to install ‘aptitude’ first.](ubuntu_server_usage_part_1#aptitude)
-* [Disable the ‘root’ account.](ubuntu_server_usage_part_1#disable_root)
-* [Create the users.](ubuntu_server_usage_part_1#create_users)
-* [Add the new sysop user to the ‘sudoers’ file.](ubuntu_server_usage_part_1#add_sysop_to_sudoers)
-* [Create the ‘www-readwrite’ group.](ubuntu_server_usage_part_1#create_wwwreadwrite)
-* [Adjust default ‘umask’ for group writability.](ubuntu_server_usage_part_1#adjust_default_umask)
-* [Set the server time & related timezone info.](ubuntu_server_usage_part_1#set_time_and_timezone)
-* [Ensure that the ‘locale’ settings are correct.](ubuntu_server_usage_part_1#locale_settings)
-* [Edit the ‘sources.list’ to enable partner package updates.](ubuntu_server_usage_part_1#enable_partner_pacakages)
-* [Install base level tools & utilities.](ubuntu_server_usage_part_1#install_base_level_tools)
-* [Install compilers, GIT, SVN & general development related stuff.](ubuntu_server_usage_part_1#install_development_tools)
-* [Install & initialize the ‘locate’ tool.](ubuntu_server_usage_part_1#install_locate_tool)
-* [Install ‘postfix’ & related mail tools.](ubuntu_server_usage_part_1#install_postfix_and_mail_tools)
-* [Install & enable ‘sysstat.’](ubuntu_server_usage_part_1#install_sysstat)
-* [Fix for slow SSH client connections.](ubuntu_server_usage_part_1#fix_slow_ssh_connections)
-* [Adjust the MOTD (Message of the Day) header & related info.](ubuntu_server_usage_part_1#adjust_motd)
+- [Be sure to install ‘aptitude’ first.](ubuntu_server_usage_part_1#aptitude)
+- [Disable the ‘root’ account.](ubuntu_server_usage_part_1#disable_root)
+- [Create the users.](ubuntu_server_usage_part_1#create_users)
+- [Add the new sysop user to the ‘sudoers’ file.](ubuntu_server_usage_part_1#add_sysop_to_sudoers)
+- [Create the ‘www-readwrite’ group.](ubuntu_server_usage_part_1#create_wwwreadwrite)
+- [Adjust default ‘umask’ for group writability.](ubuntu_server_usage_part_1#adjust_default_umask)
+- [Set the server time & related timezone info.](ubuntu_server_usage_part_1#set_time_and_timezone)
+- [Ensure that the ‘locale’ settings are correct.](ubuntu_server_usage_part_1#locale_settings)
+- [Edit the ‘sources.list’ to enable partner package updates.](ubuntu_server_usage_part_1#enable_partner_pacakages)
+- [Install base level tools & utilities.](ubuntu_server_usage_part_1#install_base_level_tools)
+- [Install compilers, GIT, SVN & general development related stuff.](ubuntu_server_usage_part_1#install_development_tools)
+- [Install & initialize the ‘locate’ tool.](ubuntu_server_usage_part_1#install_locate_tool)
+- [Install ‘postfix’ & related mail tools.](ubuntu_server_usage_part_1#install_postfix_and_mail_tools)
+- [Install & enable ‘sysstat.’](ubuntu_server_usage_part_1#install_sysstat)
+- [Fix for slow SSH client connections.](ubuntu_server_usage_part_1#fix_slow_ssh_connections)
+- [Adjust the MOTD (Message of the Day) header & related info.](ubuntu_server_usage_part_1#adjust_motd)
 
 
 ### <a name="aptitude"></a> Be sure to install ‘aptitude’ first.
@@ -389,3 +389,9 @@ Then, I comment out the content of `updates-available` as well as `release-upgra
     sudo nano /etc/update-motd.d/91-release-upgrade
 
 Technically speaking, I could conceivably just delete the `updates-available` and `release-upgrade` files as well. But I personally do not like destroying files & data that I could potentially need or use in the future. So I find that commenting out the few lines of core functionality in those two files to a preferable way of neutering them in this case.
+
+***
+
+*Using an Ubuntu Linux Server • Part 1: Configuring a Base Level Ubuntu Server (c) by Jack Szwergold*
+
+*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

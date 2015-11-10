@@ -8,9 +8,9 @@ In part 3 of my tutorial I will explain how to setup useful monitoring & securit
 
 ### Table of contents.
 
-* [Install the ‘munin’ to monitor system vitals.](ubuntu_server_usage_part_3#install_munin)
-* [Install ‘monit’ to monitor & manage specific services.](ubuntu_server_usage_part_3#install_monit)
-* [Install the ‘iptables’ firewall.](ubuntu_server_usage_part_3#install_iptables)
+- [Install the ‘munin’ to monitor system vitals.](ubuntu_server_usage_part_3#install_munin)
+- [Install ‘monit’ to monitor & manage specific services.](ubuntu_server_usage_part_3#install_monit)
+- [Install the ‘iptables’ firewall.](ubuntu_server_usage_part_3#install_iptables)
 
 ### <a name="install_munin"></a> Install the ‘munin’ to monitor system vitals.
 
@@ -345,3 +345,9 @@ Just copy the `iptables.conf` file you created just now into `/etc/iptables/rule
     sudo cp ~/iptables.conf /etc/iptables/rules.v4
 
 Now when your server restarts, `iptables-persistent` will load all of the rules stored in `/etc/iptables/rules.v4` so your `iptables` rule set will always be active.
+
+***
+
+*Using an Ubuntu Linux Server • Part 3: Monitoring and Securing Your Ubuntu Server (c) by Jack Szwergold*
+
+*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

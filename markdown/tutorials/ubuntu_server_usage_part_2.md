@@ -8,18 +8,17 @@ So in part 1 of my tutorial, I explained how I like to configure a base level Ub
 
 ### Table of contents.
 
-* [Install ‘apache’ & some basic ‘php’ stuff.](ubuntu_server_usage_part_2#apache_and_php)
-* [Install the ‘php’ modules.](ubuntu_server_usage_part_2#php_modules)
-* [Harden the ‘php’ install.](ubuntu_server_usage_part_2#harden_php)
-* [Harden the ‘apache’ install.](ubuntu_server_usage_part_2#harden_apache)
-* [Set the default ‘apache’ config.](ubuntu_server_usage_part_2#apache_default_config)
-* [Set a nicer default ‘php’-based index file.](ubuntu_server_usage_part_2#nicer_index_file)
-* [Enable ‘apache’ modules.](ubuntu_server_usage_part_2#enable_apache_modules)
-* [Adjust the ‘apache’ config to allow group ‘www-readwrite’ access.](ubuntu_server_usage_part_2#adjust_apache_group)
-* [Adjust ‘apache’ logs to allow group ‘www-readwrite’ access.](ubuntu_server_usage_part_2#adjust_apache_logs)
-* [Install APC (Alternative PHP Cache) for ‘php’ to improve caching.](ubuntu_server_usage_part_2#apc_for_php)
-* [Install the ‘mysql’ stuff.](ubuntu_server_usage_part_2#mysql)
-
+- [Install ‘apache’ & some basic ‘php’ stuff.](ubuntu_server_usage_part_2#apache_and_php)
+- [Install the ‘php’ modules.](ubuntu_server_usage_part_2#php_modules)
+- [Harden the ‘php’ install.](ubuntu_server_usage_part_2#harden_php)
+- [Harden the ‘apache’ install.](ubuntu_server_usage_part_2#harden_apache)
+- [Set the default ‘apache’ config.](ubuntu_server_usage_part_2#apache_default_config)
+- [Set a nicer default ‘php’-based index file.](ubuntu_server_usage_part_2#nicer_index_file)
+- [Enable ‘apache’ modules.](ubuntu_server_usage_part_2#enable_apache_modules)
+- [Adjust the ‘apache’ config to allow group ‘www-readwrite’ access.](ubuntu_server_usage_part_2#adjust_apache_group)
+- [Adjust ‘apache’ logs to allow group ‘www-readwrite’ access.](ubuntu_server_usage_part_2#adjust_apache_logs)
+- [Install APC (Alternative PHP Cache) for ‘php’ to improve caching.](ubuntu_server_usage_part_2#apc_for_php)
+- [Install the ‘mysql’ stuff.](ubuntu_server_usage_part_2#mysql)
 
 ### <a name="apache_and_php"></a> Install ‘apache’ & some basic ‘php’ stuff.
 
@@ -253,3 +252,9 @@ And one last thing: Whenever MySQL is installed or upgraded, it adds a few “te
     sudo mysql_secure_installation
 
 It will initially ask for your root password. Enter it & move on. The next question will ask you to reset the root password which makes no sense since you just entered it. So answer “no” to that question. Then answer “yes” to all other other questions such as, “Remove anonymous users?”, “Disallow root login remotely?” & “Remove test database and access to it?” Then the final question should be “Reload privilege tables now?” Answer “yes” to that one & your MySQL setup should be all solid & secure.
+
+***
+
+*Using an Ubuntu Linux Server • Part 2: Setting Up a LAMP Stack (c) by Jack Szwergold*
+
+*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*

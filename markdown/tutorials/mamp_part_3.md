@@ -123,6 +123,12 @@ When the dust settles you should have the complete PEAR library installed in you
 
 And check the size. By default it is usually about 14MB in size. But after this upgrade process it will grow to about 100MB in size.
 
+***
+
+*Developing With MAMP 2.1.4 • Part 3: Upgrading the PHP Pear Library in MAMP (c) by Jack Szwergold*
+
+*This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).*
+
 [1]: http://us3.php.net/phpinfo "Info on phpinfo()."
 [2]: http://unixhelp.ed.ac.uk/CGI/man-cgi?which "Info on the Unix 'which' command."
 [3]: http://en.wiktionary.org/wiki/tabula_rasa "Dictionary definition of tabula rasa."
