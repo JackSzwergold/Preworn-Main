@@ -211,7 +211,6 @@ ul, li
 .Core h5 { margin: 1.5em 0 0.7em 0; }
 .Core h6 { margin: 1.5em 0 0.8em 0; }
 .Core p { margin: 0 0 1.25em 0; }
-.Core ul { margin: 0 0 0.5em 0; }
 
 .Core h1 a, .Core h1 a:active, .Core h1 a:hover, .Core h1 a:visited,
 .Core h2 a, .Core h2 a:active, .Core h2 a:hover, .Core h2 a:visited,
@@ -304,7 +303,7 @@ ul, li
 .Core ul, ol
 {
 	margin: 0;
-	padding: 0;
+	padding: 0 0 1.5em 0;
 	clear: both;
 }
 
