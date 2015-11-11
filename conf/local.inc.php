@@ -7,7 +7,7 @@
  * Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
  *
  * You should have received a copy of the license along with this
- * work. If not, see <http://creativecommons.org/licenses/by-nc-sa/4.0/>. 
+ * work. If not, see <http://creativecommons.org/licenses/by-nc-sa/4.0/>.
  *
  * w: http://www.preworn.com
  * e: me@preworn.com
@@ -20,6 +20,9 @@
 
 /**************************************************************************************************/
 // Define localized defaults.
+
+// Enable or disable JSON debugging output.
+$DEBUG_OUTPUT_JSON = false;
 
 // Set the base URL path.
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
@@ -63,11 +66,7 @@ $PAGE_DIVS_ARRAY[] = 'Padding';
 
 // Set the javascript values.
 $JAVASCRIPTS_ARRAY = array();
-//$JAVASCRIPTS_ARRAY[] = 'script/json2.js';
-//$JAVASCRIPTS_ARRAY[] = 'script/jquery/jquery-1.11.3.min.js';
-//$JAVASCRIPTS_ARRAY[] = 'script/jquery/jquery-1.11.3.min.map';
-//$JAVASCRIPTS_ARRAY[] = 'script/jquery/jquery.noconflict.js';
-    
+
 // Set the controller and parameter stuff.
 $VALID_CONTROLLERS = array('controller');
 $DISPLAY_CONTROLLERS = array('controller');

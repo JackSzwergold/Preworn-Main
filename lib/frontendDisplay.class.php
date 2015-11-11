@@ -1,4 +1,4 @@
-<?
+<?php
 
 /**
  * Frontend Display Class (frontendDisplay.class.php) (c) by Jack Szwergold
