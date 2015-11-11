@@ -37,6 +37,7 @@ function parse_parameters ($SITE_TITLE, $VALID_GET_PARAMETERS) {
   $url_parts = array();
   $markdown_parts = array();
   $title_parts = array($SITE_TITLE);
+  $markdown_file = '';
 
   // Parse the '$_GET' parameters.
   foreach($VALID_GET_PARAMETERS as $get_parameter) {
@@ -66,11 +67,39 @@ function parse_parameters ($SITE_TITLE, $VALID_GET_PARAMETERS) {
   }
 
   // Set the final markdown file path.
-  $markdown_file = 'markdown/' . join('/', $markdown_parts) . '.md';
+  if (count($markdown_parts) > 0) {
+    $markdown_file = 'markdown/' . join('/', $markdown_parts) . '.md';
+  }
 
+  // Check of the final markdown file exists.
   if (!file_exists($markdown_file)) {
-    $markdown_file = 'markdown/index.md';
-    $title_parts = array($SITE_TITLE);
+
+    // If the file doesn’t exist, just go to the next parent directory.
+    $markdown_file = 'markdown/' . join('/', array_slice($markdown_parts, 0, -1)) . '/index.md';
+
+    // This might no longer be needed.
+    if (TRUE) {
+      // Set the title.
+      $title_parts = array($SITE_TITLE);
+      if (!empty($controller)) {
+        $title_parts[] = ucwords($controller);
+      }
+    }
+
+    // If the file doesn’t exist, just go to the next parent directory.
+    if (count($markdown_parts) > 0 && file_exists($markdown_file)) {
+      // header($_SERVER["SERVER_PROTOCOL"] . " 404 Not Found");
+      header("HTTP/1.1 301 Moved Permanently");
+      header('Location: ' . BASE_URL . join('/', array_slice($markdown_parts, 0, -1)));
+    }
+
+    // And if that parent directory doesn’t exist, just bounce back to the base URL of the site.
+    if (!file_exists($markdown_file)) {
+      // header($_SERVER["SERVER_PROTOCOL"] . " 404 Not Found");
+      header("HTTP/1.1 301 Moved Permanently");
+      header('Location: ' . BASE_URL);
+    }
+
   }
 
   // Set the page title.
