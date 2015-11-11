@@ -62,5 +62,4 @@ $frontendDisplayClass->setAmazonInfo($AMAZON_INFO);
 $frontendDisplayClass->setPayPalInfo($PAYPAL_INFO);
 $frontendDisplayClass->initContent();
 
-
 ?>
