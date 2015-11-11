@@ -75,7 +75,7 @@ function parse_parameters ($SITE_TITLE, $VALID_GET_PARAMETERS) {
 
   return array($controller, $page, $page_title, $url_parts, $markdown_parts, $markdown_file);
 
-}
+} // parse_parameters
 
 //**************************************************************************************//
 // Run the actual function and get the parts.
