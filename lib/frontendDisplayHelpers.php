@@ -24,6 +24,11 @@
 require_once BASE_FILEPATH . '/lib/Parsedown.php';
 
 //**************************************************************************************//
+// Set the mode.
+
+$mode = 'mega';
+
+//**************************************************************************************//
 // Here is the function to parse the parameters.
 
 function parse_parameters ($SITE_TITLE, $VALID_GET_PARAMETERS) {

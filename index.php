@@ -44,7 +44,7 @@ else {
 // Init the "frontendDisplay()" class.
 
 $frontendDisplayClass = new frontendDisplay('text/html', 'utf-8', FALSE, FALSE);
-$frontendDisplayClass->setViewMode('mega');
+$frontendDisplayClass->setViewMode($mode);
 $frontendDisplayClass->setPageTitle($page_title);
 $frontendDisplayClass->setPageURL($SITE_URL . join('/', $url_parts));
 $frontendDisplayClass->setPageCopyright($SITE_COPYRIGHT);
