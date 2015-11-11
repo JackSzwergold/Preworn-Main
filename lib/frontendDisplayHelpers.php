@@ -70,7 +70,8 @@ function parse_parameters ($SITE_TITLE, $VALID_GET_PARAMETERS) {
 
   // Set the page title.
   $page_title = join(' / ', $title_parts);
-  $page_title = ucwords(preg_replace('/_/', ' ', $page_title));
+  $page_title = preg_replace('/_/', ' ', $page_title);
+  // $page_title = ucwords($page_title);
 
   return array($controller, $page, $page_title, $url_parts, $markdown_parts, $markdown_file);
 
