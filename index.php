@@ -29,7 +29,6 @@ require_once 'conf/conf.inc.php';
 require_once BASE_FILEPATH . '/common/functions.inc.php';
 require_once BASE_FILEPATH . '/lib/frontendDisplay.class.php';
 require_once BASE_FILEPATH . '/lib/frontendDisplayHelpers.php';
-require_once BASE_FILEPATH . '/lib/Parsedown.php';
 
 //**************************************************************************************//
 // Set the page base.

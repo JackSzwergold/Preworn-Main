@@ -19,6 +19,11 @@
  */
 
 //**************************************************************************************//
+// Require the basic configuration settings & functions.
+
+require_once BASE_FILEPATH . '/lib/Parsedown.php';
+
+//**************************************************************************************//
 // Get the URL param & set the markdown file as well as the page title.
 
 // Init the arrays.
