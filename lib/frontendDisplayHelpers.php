@@ -55,23 +55,20 @@ function parse_parameters ($SITE_TITLE, $VALID_GET_PARAMETERS) {
     $markdown_file = 'markdown/' . join('/', $markdown_parts) . '.md';
   }
 
-  // If that file doens’t exist, let’s assume it’s a directory.
-  // Messy, but works for the 4 level structure the framework has.
+  // If that full path for a file doens’t exist do the following.
   if (!file_exists($markdown_file)) {
+
+    // For this test we are assuming of the file doesn’t exist, it might be a directory.
     $markdown_offset = 0;
     $markdown_file = 'markdown/' . join('/', $markdown_parts) . '/index.md';
+
+    // Test if the file exists or not and test up the parent path tree.
     if (!file_exists($markdown_file)) {
-      $markdown_offset = -1;
-      $markdown_sliced = array_slice($markdown_parts, 0, $markdown_offset);
-      $markdown_file = 'markdown/' . join('/', $markdown_sliced) . '/index.md';
-      if (!file_exists($markdown_file)) {
-        $markdown_offset = -2;
+      for ($markdown_offset = -1; $markdown_offset >= -count($markdown_parts); $markdown_offset--) {
         $markdown_sliced = array_slice($markdown_parts, 0, $markdown_offset);
         $markdown_file = 'markdown/' . join('/', $markdown_sliced) . '/index.md';
-        if (!file_exists($markdown_file)) {
-          $markdown_offset = -3;
-          $markdown_sliced = array_slice($markdown_parts, 0, $markdown_offset);
-          $markdown_file = 'markdown/' . join('/', $markdown_sliced) . '/index.md';
+        if (file_exists($markdown_file)) {
+          break;
         }
       }
     }
@@ -83,7 +80,6 @@ function parse_parameters ($SITE_TITLE, $VALID_GET_PARAMETERS) {
       if ($markdown_offset < 0 && file_exists($markdown_file)) {
         header("HTTP/1.1 301 Moved Permanently");
         header('Location: ' . BASE_URL .  $redirect_path);
-        // header('Location: ' . BASE_URL);
       }
     }
 
