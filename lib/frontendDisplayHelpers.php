@@ -34,70 +34,57 @@ $mode = 'mega';
 function parse_parameters ($SITE_TITLE, $VALID_GET_PARAMETERS) {
 
   // Init the arrays.
-  $url_parts = array();
   $markdown_parts = array();
   $title_parts = array($SITE_TITLE);
-  $markdown_file = '';
 
   // Parse the '$_GET' parameters.
+  $params = array();
   foreach($VALID_GET_PARAMETERS as $get_parameter) {
-    $$get_parameter = '';
     if (array_key_exists($get_parameter, $_GET) && !empty($_GET[$get_parameter])) {
       if (in_array($get_parameter, $VALID_GET_PARAMETERS)) {
-        $$get_parameter = $_GET[$get_parameter];
+        $params[$get_parameter] = $_GET[$get_parameter];
+        $markdown_parts[$get_parameter] = $_GET[$get_parameter];
+        $title_parts[$get_parameter] = ucwords($_GET[$get_parameter]);
       }
     }
   }
 
-  // Set the controller.
-  if (!empty($controller)) {
-    $url_parts[] = $controller;
-    $markdown_parts[] = $controller;
-    $title_parts[] = ucwords($controller);
-    if (empty($page)) {
-      $markdown_parts[] = 'index';
-    }
-  }
-
-  // Set the page.
-  if (!empty($controller) && !empty($page)) {
-    $url_parts[] = $page;
-    $markdown_parts[] = $page;
-    $title_parts[] = $page;
-  }
-
-  // Set the final markdown file path.
+  // Assume the full path given is for an actual Markdown file.
+  $markdown_file = '';
   if (count($markdown_parts) > 0) {
     $markdown_file = 'markdown/' . join('/', $markdown_parts) . '.md';
   }
 
-  // Check of the final markdown file exists.
+  // If that file doens’t exist, let’s assume it’s a directory.
+  // Messy, but works for the 4 level structure the framework has.
   if (!file_exists($markdown_file)) {
-
-    // If the file doesn’t exist, just go to the next parent directory.
-    $markdown_file = 'markdown/' . join('/', array_slice($markdown_parts, 0, -1)) . '/index.md';
-
-    // This might no longer be needed.
-    if (TRUE) {
-      // Set the title.
-      $title_parts = array($SITE_TITLE);
-      if (!empty($controller)) {
-        $title_parts[] = ucwords($controller);
+    $markdown_offset = 0;
+    $markdown_file = 'markdown/' . join('/', $markdown_parts) . '/index.md';
+    if (!file_exists($markdown_file)) {
+      $markdown_offset = -1;
+      $markdown_sliced = array_slice($markdown_parts, 0, $markdown_offset);
+      $markdown_file = 'markdown/' . join('/', $markdown_sliced) . '/index.md';
+      if (!file_exists($markdown_file)) {
+        $markdown_offset = -2;
+        $markdown_sliced = array_slice($markdown_parts, 0, $markdown_offset);
+        $markdown_file = 'markdown/' . join('/', $markdown_sliced) . '/index.md';
+        if (!file_exists($markdown_file)) {
+          $markdown_offset = -3;
+          $markdown_sliced = array_slice($markdown_parts, 0, $markdown_offset);
+          $markdown_file = 'markdown/' . join('/', $markdown_sliced) . '/index.md';
+        }
       }
     }
 
     // If the file doesn’t exist, just go to the next parent directory.
     if (count($markdown_parts) > 0 && file_exists($markdown_file)) {
-      // header($_SERVER["SERVER_PROTOCOL"] . " 404 Not Found");
-      header("HTTP/1.1 301 Moved Permanently");
-      header('Location: ' . BASE_URL . join('/', array_slice($markdown_parts, 0, -1)));
-    }
-
-    // And if that parent directory doesn’t exist, just bounce back to the base URL of the site.
-    if (!file_exists($markdown_file)) {
-      // header($_SERVER["SERVER_PROTOCOL"] . " 404 Not Found");
-      header("HTTP/1.1 301 Moved Permanently");
-      header('Location: ' . BASE_URL);
+      $markdown_sliced = array_slice($markdown_parts, 0, $markdown_offset);
+      $redirect_path = join('/', $markdown_sliced);
+      if ($markdown_offset < 0 && file_exists($markdown_file)) {
+        header("HTTP/1.1 301 Moved Permanently");
+        header('Location: ' . BASE_URL .  $redirect_path);
+        // header('Location: ' . BASE_URL);
+      }
     }
 
   }
@@ -106,6 +93,11 @@ function parse_parameters ($SITE_TITLE, $VALID_GET_PARAMETERS) {
   $page_title = join(' / ', $title_parts);
   $page_title = preg_replace('/_/', ' ', $page_title);
   // $page_title = ucwords($page_title);
+
+  // Silly hacks for silly logic that I need to clean up at some point.
+  $controller = (array_key_exists('controller', $params) && !empty($params['controller'])) ? $params['controller'] : '';
+  $page = (array_key_exists('page', $params) && !empty($params['page'])) ? $params['page'] : '';
+  $url_parts = $params;
 
   return array($controller, $page, $page_title, $url_parts, $markdown_parts, $markdown_file);
 
