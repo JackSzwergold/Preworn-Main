@@ -28,13 +28,19 @@
 require_once 'conf/conf.inc.php';
 require_once BASE_FILEPATH . '/common/functions.inc.php';
 require_once BASE_FILEPATH . '/lib/frontendDisplay.class.php';
-require_once BASE_FILEPATH . '/lib/frontendDisplayHelpers.php';
+require_once BASE_FILEPATH . '/lib/contentCreation.class.php';
+
+//**************************************************************************************//
+// Init the "contentCreation()" class.
+
+$contentCreationClass = new contentCreation();
+list($params, $page_title, $markdown_file) = $contentCreationClass->init();
 
 //**************************************************************************************//
 // Set the page base.
 
-if (isset($controller) && !empty($controller)) {
-  $page_base = BASE_URL . $controller . '/';
+if (array_key_exists('controller', $params) && !empty($params['controller'])) {
+  $page_base = BASE_URL . $params['controller'] . '/';
 }
 else {
   $page_base = BASE_URL;
@@ -44,9 +50,9 @@ else {
 // Init the "frontendDisplay()" class.
 
 $frontendDisplayClass = new frontendDisplay('text/html', 'utf-8', FALSE, FALSE);
-$frontendDisplayClass->setViewMode($mode);
+$frontendDisplayClass->setViewMode($VIEW_MODE);
 $frontendDisplayClass->setPageTitle($page_title);
-$frontendDisplayClass->setPageURL($SITE_URL . join('/', $url_parts));
+$frontendDisplayClass->setPageURL($SITE_URL . join('/', $params));
 $frontendDisplayClass->setPageCopyright($SITE_COPYRIGHT);
 $frontendDisplayClass->setPageDescription($SITE_DESCRIPTION);
 $frontendDisplayClass->setPageContentMarkdown($markdown_file);
@@ -57,7 +63,7 @@ $frontendDisplayClass->setPageViewport($SITE_VIEWPORT);
 $frontendDisplayClass->setPageRobots($SITE_ROBOTS);
 $frontendDisplayClass->setJavascripts($JAVASCRIPTS_ARRAY);
 $frontendDisplayClass->setPageBase($page_base);
-$frontendDisplayClass->setPageURLParts($markdown_parts);
+$frontendDisplayClass->setPageURLParts($params);
 $frontendDisplayClass->setAmazonInfo($AMAZON_INFO);
 $frontendDisplayClass->setPayPalInfo($PAYPAL_INFO);
 $frontendDisplayClass->initContent();
