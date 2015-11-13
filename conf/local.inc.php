@@ -32,6 +32,9 @@ else {
   define('BASE_PATH', '/');
 }
 
+// Set the view mode.
+$VIEW_MODE = 'mega';
+
 // Site descriptive info.
 $SITE_TITLE = 'Preworn';
 $SITE_DESCRIPTION = 'This site is Jack Szwergold’s the technical calling card and portfolio.';
