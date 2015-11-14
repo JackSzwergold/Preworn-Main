@@ -57,7 +57,7 @@ ul, li
 	min-height: 30px;
 	margin: 0 0 10px 0;
 	padding: 0;
-	background-color: #AF7505;
+	background-color: #6D3011;
 }
 
 .Nameplate .Padding { padding: 3px 0 3px 0; }
@@ -131,7 +131,7 @@ ul, li
 .Nameplate .Right ul li#amazon p a, .Nameplate .Right ul li#amazon p a:active,
 .Nameplate .Right ul li#amazon p a:hover, .Nameplate .Right ul li#amazon p a:visited
 {
-	background-color: #995905;
+	background-color: #933311;
 	padding: 5px 40px 5px 20px;
 }
 
@@ -148,7 +148,7 @@ ul, li
 .Nameplate .Right ul li#paypal p a, .Nameplate .Right ul li#paypal p a:active,
 .Nameplate .Right ul li#paypal p a:hover, .Nameplate .Right ul li#paypal p a:visited
 {
-	background-color: #995905;
+	background-color: #933311;
 	padding: 5px 40px 5px 20px;
 }
 
