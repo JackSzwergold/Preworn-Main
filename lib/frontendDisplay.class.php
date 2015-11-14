@@ -178,14 +178,14 @@ class frontendDisplay {
 
   //**************************************************************************************//
   // Set the JavaScript stuff.
-  function setJavaScriptItems($javascripts = null) {
+  function setJavaScriptItems($javascripts = array()) {
     $this->javascripts = $javascripts;
   } // setJavaScriptItems
 
 
   //**************************************************************************************//
   // Set the CSS stuff.
-  function setCSSItems($css = null) {
+  function setCSSItems($css = array()) {
     $this->css = $css;
   } // setCSSItems
 
@@ -331,7 +331,7 @@ class frontendDisplay {
     // Roll through the '$javascripts' array.
     $ret = array();
     foreach($this->javascripts as $javascript) {
-      $ret[] = sprintf('<script src="%s" type="%s"></script>', $javascript, 'text/javascript');
+      $ret[] = sprintf('<script src="' . BASE_URL . '%s" type="%s"></script>', $javascript, 'text/javascript');
     }
 
     return $ret;

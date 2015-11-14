@@ -68,6 +68,10 @@ $PAGE_DIVS_ARRAY[] = 'Padding';
 
 // Set the JavaScript array.
 $JAVASCRIPTS_ITEMS = array();
+// $JAVASCRIPTS_ITEMS[] = 'script/json2.js';
+// $JAVASCRIPTS_ITEMS[] = 'script/jquery/jquery-1.11.3.min.js';
+// $JAVASCRIPTS_ITEMS[] = 'script/jquery/jquery-1.11.3.min.map';
+// $JAVASCRIPTS_ITEMS[] = 'script/jquery/jquery.noconflict.js';
 
 // Set the CSS array.
 $CSS_ITEMS = array();
