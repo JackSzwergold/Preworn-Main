@@ -47,7 +47,7 @@ $SITE_VIEWPORT = 'width=device-width, initial-scale=0.4, maximum-scale=2, minimu
 $PAYMENT_INFO = array();
 $PAYMENT_INFO['amazon']['short_name'] = 'Amazon';
 $PAYMENT_INFO['amazon']['emoji'] = '🎥📚📀';
-$PAYMENT_INFO['amazon']['url'] = 'http://www.amazon.com/?tag=lastplacechamp-20';
+$PAYMENT_INFO['amazon']['url'] = 'http://www.amazon.com/?tag=preworn-20';
 $PAYMENT_INFO['amazon']['description'] = 'Support me when you buy things on Amazon with this link.';
 $PAYMENT_INFO['paypal']['short_name'] = 'PayPal';
 $PAYMENT_INFO['paypal']['emoji'] = '💰💸💳';
