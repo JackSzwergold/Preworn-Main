@@ -64,8 +64,7 @@ $frontendDisplayClass->setPageRobots($SITE_ROBOTS);
 $frontendDisplayClass->setJavascripts($JAVASCRIPTS_ARRAY);
 $frontendDisplayClass->setPageBase($page_base);
 $frontendDisplayClass->setPageURLParts($params);
-$frontendDisplayClass->setAmazonInfo($AMAZON_INFO);
-$frontendDisplayClass->setPayPalInfo($PAYPAL_INFO);
+$frontendDisplayClass->setPaymentInfo($PAYMENT_INFO);
 $frontendDisplayClass->initContent();
 
 ?>

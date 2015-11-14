@@ -56,11 +56,10 @@ class frontendDisplay {
   private $page_div_wrapper_id = NULL;
   private $page_div_wrappper_array = array();
 
-  private $page_viewport = '';
-  private $page_robots = '';
+  private $page_viewport = NULL;
+  private $page_robots = NULL;
 
-  private $amazon_info = array();
-  private $paypal_info = array();
+  private $payment_info = array();
 
   private $page_markdown_file = NULL;
 
@@ -199,17 +198,10 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
-  // Set the Amazon Info
-  function setAmazonInfo($amazon_info = null) {
-    $this->amazon_info = $amazon_info;
-  } // setAmazonInfo
-
-
-  //**************************************************************************************//
-  // Set the PayPal Info
-  function setPayPalInfo($paypal_info = null) {
-    $this->paypal_info = $paypal_info;
-  } // setPayPalInfo
+  // Set the payment info.
+  function setPaymentInfo($payment_info = null) {
+    $this->payment_info = $payment_info;
+  } // setPaymentInfo
 
 
   //**************************************************************************************//
@@ -468,51 +460,54 @@ class frontendDisplay {
   // Set the header.
   function setNameplate($content = null) {
 
-    $list_items = array();
+    $li_items_l = array();
     if ($this->page_depth > 0) {
       $markdown_sliced = array_slice(array_values($this->markdown_parts), 0, -1);
       $back_url = BASE_PATH . join('/', $markdown_sliced);
-      $list_items[] = '<li id="back"><p>'
+      $li_items_l[] = '<li id="back"><p>'
                     . sprintf('<a href="%s" title="back">«</a>', $back_url)
                     . '</p></li>'
                     ;
     }
 
-    if (!empty($this->amazon_info)) {
-      $list_items[] = sprintf('<li id="%s">', $this->amazon_info['short_name'])
-                    . '<p>'
-                    . sprintf('<a href="%s" title="%s">%s</a>', $this->amazon_info['url'], $this->amazon_info['description'], $this->amazon_info['short_name'])
-                    . '</p>'
-                    . '</li>'
-                    ;
+    if (!empty($this->payment_info)) {
+      foreach($this->payment_info as $payment_key => $payment_value) {
+        $li_items_r[] = sprintf('<li id="%s">', $payment_key)
+                      . '<p>'
+                      . sprintf('<a href="%s" title="%s">%s %s</a>', $payment_value['url'], $payment_value['description'], $payment_value['short_name'], $payment_value['emoji'])
+                      . '</p>'
+                      . '</li>'
+                      ;
+      }
     }
 
-    if (!empty($this->paypal_info)) {
-      $list_items[] = sprintf('<li id="%s">', $this->paypal_info['short_name'])
-                    . '<p>'
-                    . sprintf('<a href="%s" title="%s">%s</a>', $this->paypal_info['url'], $this->paypal_info['description'], $this->paypal_info['short_name'])
-                    . '</p>'
-                    . '</li>'
-                    ;
+    if (!empty($li_items_l)) {
+      $content_l = sprintf('<ul>%s</ul>', implode('', $li_items_l));
     }
 
-    if (!empty($list_items)) {
-      $content = '<ul>'
-               . implode('', $list_items)
-               . '</ul>'
-               ;
+    if (!empty($li_items_r)) {
+      $content_r = sprintf('<ul>%s</ul>', implode('', $li_items_r));
     }
+
+    $div_l = '<div class="Left">'
+           . '<div class="Padding">'
+           . $content_l
+           . '</div><!-- .Padding -->'
+           . '</div><!-- .Left -->'
+           ;
+
+    $div_r = '<div class="Right">'
+           . '<div class="Padding">'
+           . $content_r
+           . '</div><!-- .Padding -->'
+           . '</div><!-- .Right -->'
+           ;
 
     $ret = '<div class="Nameplate">'
-         . '<div class="Padding">'
-         . '<div class="Left">'
-         . '<div class="Padding">'
-
-         . $content
-
-         . '</div><!-- .Padding -->'
-         . '</div><!-- .Left -->'
-         . '</div><!-- .Padding -->'
+         // . '<div class="Padding">'
+         . $div_l
+         . $div_r
+         // . '</div><!-- .Padding -->'
          . '</div><!-- .Nameplate -->'
          ;
 
