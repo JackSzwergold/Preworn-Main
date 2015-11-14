@@ -66,8 +66,13 @@ $PAGE_DIVS_ARRAY[] = 'Middle';
 $PAGE_DIVS_ARRAY[] = 'Core';
 $PAGE_DIVS_ARRAY[] = 'Padding';
 
-// Set the javascript values.
-$JAVASCRIPTS_ARRAY = array();
+// Set the JavaScript array.
+$JAVASCRIPTS_ITEMS = array();
+
+// Set the CSS array.
+$CSS_ITEMS = array();
+$CSS_ITEMS[] = 'css/style.css';
+$CSS_ITEMS[] = 'css/colors.css';
 
 // Set the controller and parameter stuff.
 $VALID_CONTROLLERS = array('controller');

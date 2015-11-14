@@ -40,6 +40,7 @@ class frontendDisplay {
   private $params = array();
 
   private $javascripts = array();
+  private $css = array();
 
   private $base = NULL;
   private $page_depth = 0;
@@ -176,10 +177,17 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
-  // Set the additional javascripts.
-  function setJavascripts($javascripts = null) {
+  // Set the JavaScript stuff.
+  function setJavaScriptItems($javascripts = null) {
     $this->javascripts = $javascripts;
-  } // setJavascripts
+  } // setJavaScriptItems
+
+
+  //**************************************************************************************//
+  // Set the CSS stuff.
+  function setCSSItems($css = null) {
+    $this->css = $css;
+  } // setCSSItems
 
 
   //**************************************************************************************//
@@ -249,7 +257,13 @@ class frontendDisplay {
       //**********************************************************************************//
       // Set the JavaScript.
 
-      $javascript = $this->setJavaScript();
+      $javascript_array = $this->setJavaScriptArray();
+
+
+      //**********************************************************************************//
+      // Set the CSS.
+
+      $css_array = $this->setCSSArray();
 
 
       //**********************************************************************************//
@@ -267,9 +281,9 @@ class frontendDisplay {
            . '<head>'
            . '<title>' . $this->page_title . '</title>'
            . join('', $meta_content)
-           . '<link rel="stylesheet" href="' . BASE_URL . 'css/style.css" type="text/css" />'
+           . join('', $css_array)
            . join('', $favicons)
-           . join('', $javascript)
+           . join('', $javascript_array)
            . (!empty($this->base) ? '<base href="' . $this->base . '" />' : '')
            . '</head>'
            . '<body>'
@@ -311,10 +325,10 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
-  // Set the JavaScript.
-  function setJavaScript() {
+  // Set the JavaScript stuff.
+  function setJavaScriptArray() {
 
-    // Roll through the '$javascripts'
+    // Roll through the '$javascripts' array.
     $ret = array();
     foreach($this->javascripts as $javascript) {
       $ret[] = sprintf('<script src="%s" type="%s"></script>', $javascript, 'text/javascript');
@@ -322,7 +336,22 @@ class frontendDisplay {
 
     return $ret;
 
-  } // setJavaScript
+  } // setJavaScriptArray
+
+
+  //**************************************************************************************//
+  // Set the CSS stuff.
+  function setCSSArray() {
+
+    // Roll through the '$css' array.
+    $ret = array();
+    foreach($this->css as $css) {
+      $ret[] = sprintf('<link rel="stylesheet" href="' . BASE_URL . '%s" type="text/css" />', $css);
+    }
+
+    return $ret;
+
+  } // setCSSArray
 
 
   //**************************************************************************************//

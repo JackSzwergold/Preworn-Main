@@ -1,0 +1,30 @@
+/**************************************************************************************************/
+.Nameplate { background-color: #6D3011; }
+
+/**************************************************************************************************/
+.Nameplate .Left ul li#amazon p a, .Nameplate .Left ul li#amazon p a:active,
+.Nameplate .Left ul li#amazon p a:hover, .Nameplate .Left ul li#amazon p a:visited,
+.Nameplate .Right ul li#amazon p a, .Nameplate .Right ul li#amazon p a:active,
+.Nameplate .Right ul li#amazon p a:hover, .Nameplate .Right ul li#amazon p a:visited { background-color: #933311; }
+
+/**************************************************************************************************/
+.Nameplate .Left ul li#paypal p a, .Nameplate .Left ul li#paypal p a:active,
+.Nameplate .Left ul li#paypal p a:hover, .Nameplate .Left ul li#paypal p a:visited,
+.Nameplate .Right ul li#paypal p a, .Nameplate .Right ul li#paypal p a:active,
+.Nameplate .Right ul li#paypal p a:hover, .Nameplate .Right ul li#paypal p a:visited { background-color: #933311; }
+
+/**************************************************************************************************/
+.Nameplate .Left ul li#amazon p a:active, .Nameplate .Left ul li#amazon p a:hover,
+.Nameplate .Right ul li#amazon p a:active, .Nameplate .Right ul li#amazon p a:hover
+{
+	color: #333;
+	background-color: #999;
+}
+
+/**************************************************************************************************/
+.Nameplate .Left ul li#paypal p a:active, .Nameplate .Left ul li#paypal p a:hover,
+.Nameplate .Right ul li#paypal p a:active, .Nameplate .Right ul li#paypal p a:hover
+{
+	color: #333;
+	background-color: #999;
+}

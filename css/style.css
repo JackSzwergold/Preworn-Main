@@ -37,11 +37,11 @@ hr
 }
 
 /**************************************************************************************************/
-.Core, .Content, .Section, 
+.Core, .Content, .Section,
 .Padding, .Border, .Image, .Icon,
 .Entry, .Text,
 .Nameplate,
-.Top, .Between, .Bottom, 
+.Top, .Between, .Bottom,
 .Left, .Right, .Middle,
 ul, li
 {
@@ -57,7 +57,6 @@ ul, li
 	min-height: 30px;
 	margin: 0 0 10px 0;
 	padding: 0;
-	background-color: #6D3011;
 }
 
 .Nameplate .Padding { padding: 3px 0 3px 0; }
@@ -129,35 +128,13 @@ ul, li
 .Nameplate .Left ul li#amazon p a, .Nameplate .Left ul li#amazon p a:active,
 .Nameplate .Left ul li#amazon p a:hover, .Nameplate .Left ul li#amazon p a:visited,
 .Nameplate .Right ul li#amazon p a, .Nameplate .Right ul li#amazon p a:active,
-.Nameplate .Right ul li#amazon p a:hover, .Nameplate .Right ul li#amazon p a:visited
-{
-	background-color: #933311;
-	padding: 5px 40px 5px 20px;
-}
-
-.Nameplate .Left ul li#amazon p a:active, .Nameplate .Left ul li#amazon p a:hover,
-.Nameplate .Right ul li#amazon p a:active, .Nameplate .Right ul li#amazon p a:hover
-{
-	color: #333;
-	background-color: #999;
-}
+.Nameplate .Right ul li#amazon p a:hover, .Nameplate .Right ul li#amazon p a:visited { padding: 5px 40px 5px 20px; }
 
 /**************************************************************************************************/
 .Nameplate .Left ul li#paypal p a, .Nameplate .Left ul li#paypal p a:active,
 .Nameplate .Left ul li#paypal p a:hover, .Nameplate .Left ul li#paypal p a:visited,
 .Nameplate .Right ul li#paypal p a, .Nameplate .Right ul li#paypal p a:active,
-.Nameplate .Right ul li#paypal p a:hover, .Nameplate .Right ul li#paypal p a:visited
-{
-	background-color: #933311;
-	padding: 5px 40px 5px 20px;
-}
-
-.Nameplate .Left ul li#paypal p a:active, .Nameplate .Left ul li#paypal p a:hover,
-.Nameplate .Right ul li#paypal p a:active, .Nameplate .Right ul li#paypal p a:hover
-{
-	color: #333;
-	background-color: #999;
-}
+.Nameplate .Right ul li#paypal p a:hover, .Nameplate .Right ul li#paypal p a:visited { padding: 5px 40px 5px 20px; }
 
 /**************************************************************************************************/
 .Wrapper
