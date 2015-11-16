@@ -1,6 +1,6 @@
 # Preworn
 
-This site is Jack Szwergold’s the technical calling card and portfolio. If you are interested in my creative work—writing, computer art, visual art and such—please check out *[Last Place Champ][1]*. To check out my coding skills—via actual code samples—please head over to [my GitHub repository][4].
+This site is Jack Szwergold’s the technical calling card and portfolio. If you are interested in my creative work—writing, computer art, visual art and such—please check out *[Last Place Champ][1]*. To check out my coding skills—via actual code samples—please head over to [my GitHub repository][10].
 
 ### [Tutorials and Cheat Sheets 📚][2]
 
