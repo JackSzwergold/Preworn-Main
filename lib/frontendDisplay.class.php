@@ -414,7 +414,7 @@ class frontendDisplay {
     }
     $meta_names['apple-mobile-web-app-capable'] = 'yes';
 
-    // Set the meta property values.
+    // Set the Facebook Open Graph meta property values.
     $meta_properties = array();
     $meta_properties['og:title'] = $this->page_title;
     if (!empty($description)) {
@@ -428,6 +428,14 @@ class frontendDisplay {
     if (!empty($this->page_title)) {
       $meta_properties['og:site_name'] = $this->page_title;
     }
+
+    // Set the Twitter meta property values.
+    $meta_properties['twitter:card'] = 'summary';
+    $meta_properties['twitter:title'] = $this->page_title;
+    if (!empty($description)) {
+      $meta_properties['twitter:description'] = $description;
+    }
+
 
     $ret = array();
 
