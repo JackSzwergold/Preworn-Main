@@ -414,7 +414,7 @@ class frontendDisplay {
     }
     $meta_names['apple-mobile-web-app-capable'] = 'yes';
 
-    // Set the Facebook Open Graph meta property values.
+    // Set the meta property values.
     $meta_properties = array();
     $meta_properties['og:title'] = $this->page_title;
     if (!empty($description)) {
@@ -428,14 +428,6 @@ class frontendDisplay {
     if (!empty($this->page_title)) {
       $meta_properties['og:site_name'] = $this->page_title;
     }
-
-    // Set the Twitter meta property values.
-    $meta_properties['twitter:card'] = 'summary';
-    $meta_properties['twitter:title'] = $this->page_title;
-    if (!empty($description)) {
-      $meta_properties['twitter:description'] = $description;
-    }
-
 
     $ret = array();
 
@@ -480,7 +472,7 @@ class frontendDisplay {
 
   //**************************************************************************************//
   // Set the header.
-  function setNameplate($content = null) {
+  function setNameplate() {
 
     $li_items_l = array();
     if ($this->page_depth > 0) {
@@ -492,6 +484,7 @@ class frontendDisplay {
                     ;
     }
 
+    $li_items_r = array();
     if (!empty($this->payment_info)) {
       foreach($this->payment_info as $payment_key => $payment_value) {
         $li_items_r[] = sprintf('<li id="%s">', $payment_key)
@@ -511,27 +504,36 @@ class frontendDisplay {
       $content_r = sprintf('<ul>%s</ul>', implode('', $li_items_r));
     }
 
-    $div_l = '<div class="Left">'
-           . '<div class="Padding">'
-           . $content_l
-           . '</div><!-- .Padding -->'
-           . '</div><!-- .Left -->'
-           ;
+    $div_l = '';
+    if (!empty($content_l)) {
+      $div_l = '<div class="Left">'
+             . '<div class="Padding">'
+             . $content_l
+             . '</div><!-- .Padding -->'
+             . '</div><!-- .Left -->'
+             ;
+    }
 
-    $div_r = '<div class="Right">'
-           . '<div class="Padding">'
-           . $content_r
-           . '</div><!-- .Padding -->'
-           . '</div><!-- .Right -->'
-           ;
+    $div_r = '';
+    if (!empty($content_r)) {
+      $div_r = '<div class="Right">'
+             . '<div class="Padding">'
+             . $content_r
+             . '</div><!-- .Padding -->'
+             . '</div><!-- .Right -->'
+             ;
+    }
 
-    $ret = '<div class="Nameplate">'
-         // . '<div class="Padding">'
-         . $div_l
-         . $div_r
-         // . '</div><!-- .Padding -->'
-         . '</div><!-- .Nameplate -->'
-         ;
+    $ret = '';
+    if (!empty($content_l) || !empty($content_r)) {
+      $ret = '<div class="Nameplate">'
+           // . '<div class="Padding">'
+           . $div_l
+           . $div_r
+           // . '</div><!-- .Padding -->'
+           . '</div><!-- .Nameplate -->'
+           ;
+    }
 
     return $ret;
 
@@ -570,7 +572,7 @@ class frontendDisplay {
       $div_closing = '</div><!-- .' . implode(array_reverse($this->page_div_wrappper_array), '-->' . "\n" . '</div><!-- .') . ' -->';
     }
 
-    $ret = $nameplate
+    $ret = (!empty($nameplate) ? $nameplate : '')
          . $div_opening
          . $body
          . $div_closing
