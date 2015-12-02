@@ -39,17 +39,23 @@ list($params, $page_title, $markdown_file) = $contentCreationClass->init();
 //**************************************************************************************//
 // Set the page base.
 
+$page_base = BASE_URL;
 if (array_key_exists('controller', $params) && !empty($params['controller'])) {
   $page_base = BASE_URL . $params['controller'] . '/';
-}
-else {
-  $page_base = BASE_URL;
 }
 
 //**************************************************************************************//
 // Init the "frontendDisplay()" class.
 
-$frontendDisplayClass = new frontendDisplay('text/html', 'utf-8', FALSE, FALSE);
+$frontendDisplayClass = new frontendDisplay(FALSE, FALSE);
+if ($params['controller'] == 'json') {
+  $frontendDisplayClass->setContentType('application/json');
+  $frontendDisplayClass->setPageContentJSON($json_content);
+}
+else {
+  $frontendDisplayClass->setContentType('text/html');
+}
+$frontendDisplayClass->setCharset('utf-8');
 $frontendDisplayClass->setViewMode($VIEW_MODE);
 $frontendDisplayClass->setPageTitle($page_title);
 $frontendDisplayClass->setPageURL($SITE_URL . join('/', $params));
