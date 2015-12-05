@@ -8,7 +8,8 @@ Options +FollowSymlinks
 
 RewriteEngine on
 
-RewriteRule ^(clients|art)($|/) - [L]
+# Ignore these base directories.
+RewriteRule ^(clients|art|css|favicons|script)($|/) - [L]
 # RewriteCond %{REQUEST_URI} !^(clients/.*)$ [NC]
 
 # This redirects any call to this directory to an index file with $_GET parameters.
