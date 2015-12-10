@@ -21,9 +21,6 @@
 /**************************************************************************************************/
 // Define localized defaults.
 
-// Enable or disable JSON debugging output.
-$DEBUG_OUTPUT_JSON = false;
-
 // Set the base URL path.
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
   define('BASE_PATH', '/Preworn-Main/');

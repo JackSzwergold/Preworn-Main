@@ -37,26 +37,37 @@ $contentCreationClass = new contentCreation();
 list($params, $page_title, $markdown_file) = $contentCreationClass->init();
 
 //**************************************************************************************//
+// Set the debug mode value.
+
+$DEBUG_MODE = array_key_exists('_debug', $params);
+
+//**************************************************************************************//
+// Set the JSON mode value.
+
+$JSON_MODE = array_key_exists('json', $params);
+
+//**************************************************************************************//
 // Set the page base.
 
 $page_base = BASE_URL;
-if (array_key_exists('controller', $params) && !empty($params['controller'])) {
+$controller = 'small';
+if (array_key_exists('controller', $params) && !empty($params['controller']) && $params['controller'] != 'index') {
+  $controller = $params['controller'];
   $page_base = BASE_URL . $params['controller'] . '/';
 }
 
 //**************************************************************************************//
-// Init the "frontendDisplay()" class.
+// Set the query suffix to the page base.
 
-$frontendDisplayClass = new frontendDisplay(FALSE, FALSE);
-// if (array_key_exists('json', $params) && !empty($params['json']) && $params['controller'] == 'json') {
-if (array_key_exists('json', $params)) {
-  // $frontendDisplayClass->setContentType('application/vnd.api+json');
-  $frontendDisplayClass->setContentType('application/json');
-  $frontendDisplayClass->setPageContentJSON($json_content);
-}
-else {
-  $frontendDisplayClass->setContentType('text/html');
-}
+$page_base_suffix = $JSON_MODE ? '?json' : '';
+
+//**************************************************************************************//
+// Init the front end display class and set other things.
+
+$frontendDisplayClass = new frontendDisplay();
+$frontendDisplayClass->setJSONMode($JSON_MODE);
+$frontendDisplayClass->setDebugMode($DEBUG_MODE);
+$frontendDisplayClass->setContentType(($JSON_MODE ? 'application/json' : 'text/html'));
 $frontendDisplayClass->setCharset('utf-8');
 $frontendDisplayClass->setViewMode($VIEW_MODE);
 $frontendDisplayClass->setPageTitle($page_title);
@@ -64,7 +75,6 @@ $frontendDisplayClass->setPageURL($SITE_URL . join('/', $params));
 $frontendDisplayClass->setPageCopyright($SITE_COPYRIGHT);
 $frontendDisplayClass->setPageDescription($SITE_DESCRIPTION);
 $frontendDisplayClass->setPageContentMarkdown($markdown_file);
-// $frontendDisplayClass->setPageContent('Hello world!');
 $frontendDisplayClass->setPageDivs($PAGE_DIVS_ARRAY);
 $frontendDisplayClass->setPageDivWrapper();
 $frontendDisplayClass->setPageViewport($SITE_VIEWPORT);
@@ -72,7 +82,7 @@ $frontendDisplayClass->setPageRobots($SITE_ROBOTS);
 $frontendDisplayClass->setJavaScriptItems($JAVASCRIPTS_ITEMS);
 $frontendDisplayClass->setCSSItems($CSS_ITEMS);
 $frontendDisplayClass->setFaviconItems($FAVICONS);
-$frontendDisplayClass->setPageBase($page_base);
+$frontendDisplayClass->setPageBase($page_base . $page_base_suffix);
 $frontendDisplayClass->setPageURLParts($params);
 $frontendDisplayClass->setPaymentInfo($PAYMENT_INFO);
 $frontendDisplayClass->initContent();
