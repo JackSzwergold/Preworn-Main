@@ -5,7 +5,7 @@ set :branch, "develop"
 server 'sandbox.local', user: ENV["CAP_USER"] || 'sysop', roles: %w{app db web}, my_property: :my_value
 
 # Set the name for the deployment type.
-set :deployment_type, "www"
+set :deployment_type, "production"
 
 # The live, web root directory which the current version will be linked to.
 set :live_root, "#{deploy_to}/www.preworn.com"
