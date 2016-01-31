@@ -29,20 +29,20 @@ namespace :deploy do
   task :create_symlink do
     on roles(:app) do
 
-        info "Link the cheat sheet stuff to 'tutorials_and_cheat_sheets'."
-        execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/tutorials_and_cheat_sheets/#{fetch(:deployment_type)}/current markdown/tutorials_and_cheat_sheets"
+      info "Link the cheat sheet stuff to 'tutorials_and_cheat_sheets'."
+      execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/tutorials_and_cheat_sheets/#{fetch(:deployment_type)}/current markdown/tutorials_and_cheat_sheets"
 
-        # info "If there is no directory & no symbolic link to '#{fetch(:short_name)}' then create a directory named '#{fetch(:short_name)}'."
-        # execute "cd #{fetch(:live_root)} && if [ ! -d #{fetch(:short_name)} ]; then if [ ! -h #{fetch(:short_name)} ]; then mkdir ./#{fetch(:short_name)}; fi; fi"
+      # info "If there is no directory & no symbolic link to '#{fetch(:short_name)}' then create a directory named '#{fetch(:short_name)}'."
+      # execute "cd #{fetch(:live_root)} && if [ ! -d #{fetch(:short_name)} ]; then if [ ! -h #{fetch(:short_name)} ]; then mkdir ./#{fetch(:short_name)}; fi; fi"
 
-        # info "If there is no symbolic link called #{fetch(:short_name)}' and '#{fetch(:short_name)}' is a directory, delete that directory."
-        execute "cd #{fetch(:live_root)} && if [ ! -h #{fetch(:short_name)} ]; then if [ -d #{fetch(:short_name)} ]; then rm -rf ./#{fetch(:short_name)}; fi; fi"
+      # info "If there is no symbolic link called #{fetch(:short_name)}' and '#{fetch(:short_name)}' is a directory, delete that directory."
+      execute "cd #{fetch(:live_root)} && if [ ! -h #{fetch(:short_name)} ]; then if [ -d #{fetch(:short_name)} ]; then rm -rf ./#{fetch(:short_name)}; fi; fi"
 
-        # info "If there is a symbolic link called '#{fetch(:short_name)}', delete that directory."
-        execute "cd #{fetch(:live_root)} && if [ -h #{fetch(:short_name)} ]; then rm ./#{fetch(:short_name)}; fi"
+      # info "If there is a symbolic link called '#{fetch(:short_name)}', delete that directory."
+      execute "cd #{fetch(:live_root)} && if [ -h #{fetch(:short_name)} ]; then rm ./#{fetch(:short_name)}; fi"
 
-        # info "If there is a symbolic link to '#{fetch(:short_name)}' then create a symbolic link called '#{fetch(:short_name)}'."
-        execute "cd #{fetch(:live_root)} && if [ ! -h #{fetch(:short_name)} ]; then if [ ! -d #{fetch(:short_name)} ]; then ln -sf #{current_path} ./#{fetch(:short_name)}; fi; fi"
+      # info "If there is a symbolic link to '#{fetch(:short_name)}' then create a symbolic link called '#{fetch(:short_name)}'."
+      execute "cd #{fetch(:live_root)} && if [ ! -h #{fetch(:short_name)} ]; then if [ ! -d #{fetch(:short_name)} ]; then ln -sf #{current_path} ./#{fetch(:short_name)}; fi; fi"
 
     end
   end
