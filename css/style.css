@@ -51,7 +51,6 @@ ul, li
 /* .smallView .Wrapper, .smallView .Content { width: 714px; } */
 /* .largeView .Wrapper, .largeView .Content { width: 472px; } */
 /* .megaView .Wrapper, .megaView .Content { width: 732px; } */
-
 /**************************************************************************************************/
 /* Media queries. */
 
@@ -309,34 +308,16 @@ ul, li
 	padding: 0;
 }
 
-.Nameplate .Padding { padding: 3px 0 3px 0; }
-
-.Nameplate .Left
-{
-	position: absolute;
-	top: 3px;
-	left: 0;
-}
-
+.Nameplate .Left,
 .Nameplate .Right
 {
 	position: absolute;
 	top: 3px;
-	right: 0;
 	min-width: 304px;
 }
 
-.Nameplate .Left .Padding,
-.Nameplate .Right .Padding { padding: 0; }
-.Nameplate .Left ul,
-.Nameplate .Right ul { margin: 0 0 0 3px; }
-
-.Nameplate .Left ul li,
-.Nameplate .Right ul li
-{
-	margin: 0 3px 0 0;
-	padding: 0;
-}
+.Nameplate .Left { left: 0; }
+.Nameplate .Right { right: 0; }
 
 .Nameplate .Left p,
 .Nameplate .Right p
@@ -367,12 +348,8 @@ ul, li
 }
 
 /**************************************************************************************************/
-.Nameplate .Left ul li#back,
-.Nameplate .Right ul li#back { margin: 0 3px 0 0; }
-.Nameplate .Left ul li#amazon,
-.Nameplate .Right ul li#amazon { margin: 0 3px 0 0; }
-.Nameplate .Left ul li#paypal,
-.Nameplate .Right ul li#paypal { margin: 0 3px 0 0; }
+.Nameplate .Left ul li,
+.Nameplate .Right ul li { margin: 0 3px 0 0; }
 
 /**************************************************************************************************/
 .Nameplate .Left ul li#amazon p a, .Nameplate .Left ul li#amazon p a:active,
