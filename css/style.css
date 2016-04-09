@@ -46,22 +46,21 @@ ul, li
 }
 
 /**************************************************************************************************/
-.microView .Content { width: 336px; }
-.tinyView .Content { width: 510px; }
-.smallView .Content { width: 714px; }
-.largeView .Content { width: 472px; }
-.megaView .Content { width: 732px; }
+.microView .Wrapper, .microView .Content { width: 336px; }
+.tinyView .Wrapper, .tinyView .Content { width: 510px; }
+.smallView .Wrapper, .smallView .Content { width: 714px; }
+.largeView .Wrapper, .largeView .Content { width: 472px; }
+.megaView .Wrapper, .megaView .Content { width: 732px; }
 
 /**************************************************************************************************/
 .Wrapper
 {
 	display: flex;
-	overflow: hidden;
 	/* flex-direction: column; */
 	/* flex-direction: column-reverse; */
 	/* flex-direction: row; */
 	/* flex-direction: row-reverse; */
-	flex-direction: row;
+	flex-direction: column;
 	/* flex-wrap: nowrap; */
 	/* flex-wrap: wrap; */
 	/* flex-wrap: wrap-reverse; */
@@ -88,7 +87,7 @@ ul, li
 	width: calc(100% - 30px);
 	height: calc(100% - 30px);
 	margin: 10px;
-	padding: 0 0 10px 10px;
+	padding: 0 10px 0 10px;
 }
 
 /**************************************************************************************************/
