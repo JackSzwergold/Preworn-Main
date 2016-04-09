@@ -46,11 +46,12 @@ ul, li
 }
 
 /**************************************************************************************************/
-.microView .Wrapper, .microView .Content { width: 336px; }
-.tinyView .Wrapper, .tinyView .Content { width: 510px; }
-.smallView .Wrapper, .smallView .Content { width: 714px; }
-.largeView .Wrapper, .largeView .Content { width: 472px; }
-.megaView .Wrapper, .megaView .Content { width: 732px; }
+/* .microView .Wrapper, .microView .Content { width: 336px; } */
+/* .tinyView .Wrapper, .tinyView .Content { width: 510px; } */
+/* .smallView .Wrapper, .smallView .Content { width: 714px; } */
+/* .largeView .Wrapper, .largeView .Content { width: 472px; } */
+.megaView .Wrapper { min-width: 732px; }
+.megaView .Content { width: 732px; }
 
 /**************************************************************************************************/
 .Wrapper
@@ -84,8 +85,6 @@ ul, li
 	/* align-content: space-between; */
 	/* align-content: space-around; */
 	align-content: center;
-	width: calc(100% - 30px);
-	height: calc(100% - 30px);
 	margin: 10px;
 	padding: 0 10px 0 10px;
 }
@@ -248,6 +247,7 @@ ul, li
 }
 
 /**************************************************************************************************/
+/* 2016-04-08: WTF is this for? */
 .Content .Text .Padding { padding: 15px 0 15px 0; }
 
 /**************************************************************************************************/
