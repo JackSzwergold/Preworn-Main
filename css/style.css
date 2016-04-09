@@ -144,10 +144,9 @@ ul, li
 .megaView .Content { width: 732px; }
 
 /**************************************************************************************************/
-.Content { width: 100%; }
-
-.Content .Padding
+.Content
 {
+	text-align: left;
 	padding: 0;
 	margin: 0 0 10px 0;
 }
@@ -299,24 +298,6 @@ ul, li
 	color: #080;
 	border-color: #080;
 }
-
-/**************************************************************************************************/
-.Content .Grid .Padding { padding: 6px 3px 0 3px; }
-
-.Content .Grid ul,
-.Content .Grid ol
-{
-	position: relative;
-	float: left;
-	display: inline;
-	margin: 0 0 20px 0;
-	padding: 20px 20px 20px 10px;
-	border-radius: 5px;
-	background-color: #eee;
-}
-
-.Content .Grid ul li .Padding,
-.Content .Grid ol li .Padding { padding: 0 3px 6px 3px; }
 
 /**************************************************************************************************/
 .Content .Text .Padding { padding: 15px 0 15px 0; }
