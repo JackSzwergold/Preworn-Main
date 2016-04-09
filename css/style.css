@@ -50,8 +50,59 @@ ul, li
 /* .tinyView .Wrapper, .tinyView .Content { width: 510px; } */
 /* .smallView .Wrapper, .smallView .Content { width: 714px; } */
 /* .largeView .Wrapper, .largeView .Content { width: 472px; } */
-.megaView .Wrapper { min-width: 732px; }
-.megaView .Content { width: 732px; }
+.megaView .Wrapper { min-width: 768px; }
+.megaView .Content { width: 768px; }
+
+/**************************************************************************************************/
+/* Media queries. */
+
+@media (min-width : 320px)
+{
+	.megaView .Wrapper { min-width: 320px; }
+	.megaView .Content { width: 320px; }
+}
+
+@media (min-width : 375px)
+{
+	.megaView .Wrapper { min-width: 375px; }
+	.megaView .Content { width: 375px; }
+}
+
+@media (min-width : 414px)
+{
+	.megaView .Wrapper { min-width: 414px; }
+	.megaView .Content { width: 414px; }
+}
+
+@media (min-width : 480px)
+{
+	.megaView .Wrapper { min-width: 480px; }
+	.megaView .Content { width: 480px; }
+}
+
+@media (min-width : 640px)
+{
+	.megaView .Wrapper { min-width: 640px; }
+	.megaView .Content { width: 640px; }
+}
+
+@media (min-width : 768px)
+{
+	.megaView .Wrapper { min-width: 768px; }
+	.megaView .Content { width: 768px; }
+}
+
+@media (min-width : 1024px)
+{
+	.megaView .Wrapper { min-width: 768px; }
+	.megaView .Content { width: 768px; }
+}
+
+@media (min-width : 768px)
+{
+	.megaView .Wrapper { min-width: 768px; }
+	.megaView .Content { width: 768px; }
+}
 
 /**************************************************************************************************/
 .Wrapper
