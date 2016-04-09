@@ -53,7 +53,7 @@ ul, li
 .megaView .Content { width: 732px; }
 
 /**************************************************************************************************/
-.Content
+.Wrapper
 {
 	display: flex;
 	overflow: hidden;
@@ -85,11 +85,19 @@ ul, li
 	/* align-content: space-between; */
 	/* align-content: space-around; */
 	align-content: center;
-	text-align: left;
 	width: calc(100% - 30px);
 	height: calc(100% - 30px);
 	margin: 10px;
 	padding: 0 0 10px 10px;
+}
+
+/**************************************************************************************************/
+.Content
+{
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: auto;
+	text-align: left;
 }
 
 /**************************************************************************************************/
@@ -328,5 +336,3 @@ ul, li
 .Nameplate .Left ul li#paypal p a:hover, .Nameplate .Left ul li#paypal p a:visited,
 .Nameplate .Right ul li#paypal p a, .Nameplate .Right ul li#paypal p a:active,
 .Nameplate .Right ul li#paypal p a:hover, .Nameplate .Right ul li#paypal p a:visited { padding: 5px 40px 5px 20px; }
-
-

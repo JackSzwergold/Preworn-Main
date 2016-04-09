@@ -70,7 +70,7 @@ $PAYMENT_INFO['paypal']['description'] = 'Support me with a PayPal donation.';
 
 // Set the page DIVs array.
 $PAGE_DIVS_ARRAY = array();
-// $PAGE_DIVS_ARRAY[] = 'Wrapper';
+$PAGE_DIVS_ARRAY[] = 'Wrapper';
 // $PAGE_DIVS_ARRAY[] = 'Padding';
 $PAGE_DIVS_ARRAY[] = 'Content';
 // $PAGE_DIVS_ARRAY[] = 'Padding';
