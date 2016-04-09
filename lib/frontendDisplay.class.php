@@ -513,9 +513,11 @@ class frontendDisplay {
     if ($this->page_depth > 0) {
       $markdown_sliced = array_slice(array_values($this->markdown_parts), 0, -1);
       $back_url = BASE_PATH . join('/', $markdown_sliced);
-      $li_items_l[] = '<li id="back"><p>'
+      $li_items_l[] = '<li id="back">'
+                    . '<p>'
                     . sprintf('<a href="%s" title="back">«</a>', $back_url)
-                    . '</p></li>'
+                    . '</p>'
+                    . '</li>'
                     ;
     }
 
@@ -542,9 +544,7 @@ class frontendDisplay {
     $div_l = '';
     if (!empty($content_l)) {
       $div_l = '<div class="Left">'
-             . '<div class="Padding">'
              . $content_l
-             . '</div><!-- .Padding -->'
              . '</div><!-- .Left -->'
              ;
     }
@@ -552,9 +552,7 @@ class frontendDisplay {
     $div_r = '';
     if (!empty($content_r)) {
       $div_r = '<div class="Right">'
-             . '<div class="Padding">'
              . $content_r
-             . '</div><!-- .Padding -->'
              . '</div><!-- .Right -->'
              ;
     }
@@ -562,10 +560,8 @@ class frontendDisplay {
     $ret = '';
     if (!empty($content_l) || !empty($content_r)) {
       $ret = '<div class="Nameplate">'
-           // . '<div class="Padding">'
            . $div_l
            . $div_r
-           // . '</div><!-- .Padding -->'
            . '</div><!-- .Nameplate -->'
            ;
     }
