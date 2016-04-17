@@ -1,6 +1,6 @@
 # Preworn
 
-This site is Jack Szwergold’s the technical calling card and portfolio. If you are interested in my creative work—writing, computer art, visual art and such—please check out *[Last Place Champ][1]*. To check out my coding skills—via actual code samples—please head over to [my GitHub repository][10].
+This site is Jack Szwergold’s the technical calling card and portfolio. If you are interested in my creative work—writing, computer art, visual art and such—please check out *[Last Place Champ][1]*. To check out my coding skills—via actual code samples—please head over to [my GitHub repository][8].
 
 ### [Tutorials and Cheat Sheets][2]
 
@@ -16,21 +16,19 @@ I work primarily on the Ubuntu Linux and Mac OS X platforms but have deep experi
 
 **Email** • [me@preworn.com](mailto:me@preworn.com?Subject=Preworn%20Website%20Query)
 
-**PGP Public Key** • Is available [here][5].
+**PGP Public Key** • Is available [here][3].
 
 **Mail** • P.O. Box 325, 201 Varick Street, Village Station NY 10014-0325
 
 ### Community
 
-[Stack Overflow][6] • [Super User][7] • [Server Fault][8] • [LinkedIn][9] • [GitHub][10]
+[Stack Overflow][4] • [Super User][5] • [Server Fault][6] • [LinkedIn][7] • [GitHub][8]
 
   [1]: http://www.lastplacechamp.com/ "last Place Champ"
   [2]: tutorials_and_cheat_sheets/ "Tutorials and Cheat Sheets"
-  [3]: https://www.paypal.me/JackSzwergold "Support me with a PayPal donation."
-  [4]: http://www.amazon.com/?tag=preworn-20 "Support me when you buy things on Amazon with this link."
-  [5]: pgp_public_key-preworn.asc.txt
-  [6]: http://stackoverflow.com/users/117259/jakegould "Stack Overflow"
-  [7]: http://superuser.com/users/167207/jakegould "Super User"
-  [8]: http://serverfault.com/users/100013/jakegould "Server Fault"
-  [9]: http://www.linkedin.com/in/jackszwergold "Linked In"
-  [10]: https://github.com/JackSzwergold
+  [3]: pgp_public_key-preworn.asc.txt
+  [4]: http://stackoverflow.com/users/117259/jakegould "Stack Overflow"
+  [5]: http://superuser.com/users/167207/jakegould "Super User"
+  [6]: http://serverfault.com/users/100013/jakegould "Server Fault"
+  [7]: http://www.linkedin.com/in/jackszwergold "Linked In"
+  [8]: https://github.com/JackSzwergold
