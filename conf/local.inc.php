@@ -30,7 +30,8 @@ else {
 }
 
 // Set the view mode.
-$VIEW_MODE = 'mega';
+// $VIEW_MODE = 'mega';
+$VIEW_MODE = null;
 
 // Site descriptive info.
 $SITE_TITLE = 'Preworn';

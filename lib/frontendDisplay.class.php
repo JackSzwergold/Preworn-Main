@@ -308,10 +308,15 @@ class frontendDisplay {
       //**********************************************************************************//
       // Set the view wrapper.
 
-      $body = sprintf('<div class="%sView">', $this->view_mode)
-            . $this->setWrapper($html_content)
-            . sprintf('</div><!-- .%sView -->', $this->view_mode)
-            ;
+      if (!empty($this->view_mode)) {
+        $body = sprintf('<div class="%sView">', $this->view_mode)
+              . $this->setWrapper($html_content)
+              . sprintf('</div><!-- .%sView -->', $this->view_mode)
+              ;
+      }
+      else {
+        $body = $this->setWrapper($html_content);
+      }
 
       //**********************************************************************************//
       // Set the final HTML content.
