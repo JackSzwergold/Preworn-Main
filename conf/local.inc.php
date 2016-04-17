@@ -60,14 +60,14 @@ $FAVICONS['ipad']['href'] = 'favicons/apple-touch-icon-72x72-precomposed.png';
     
 // Payment info.
 $PAYMENT_INFO = array();
-// $PAYMENT_INFO['amazon']['short_name'] = 'Amazon';
-// $PAYMENT_INFO['amazon']['emoji'] = '🎥📚📀';
-// $PAYMENT_INFO['amazon']['url'] = 'http://www.amazon.com/?tag=preworn-20';
-// $PAYMENT_INFO['amazon']['description'] = 'Support me when you buy things on Amazon with this link.';
-// $PAYMENT_INFO['paypal']['short_name'] = 'PayPal';
-// $PAYMENT_INFO['paypal']['emoji'] = '💰💸💳';
-// $PAYMENT_INFO['paypal']['url'] = 'https://www.paypal.me/JackSzwergold';
-// $PAYMENT_INFO['paypal']['description'] = 'Support me with a PayPal donation.';
+$PAYMENT_INFO['amazon']['short_name'] = 'Amazon';
+$PAYMENT_INFO['amazon']['emoji'] = '🎥📚📀';
+$PAYMENT_INFO['amazon']['url'] = 'http://www.amazon.com/?tag=preworn-20';
+$PAYMENT_INFO['amazon']['description'] = 'Support me when you buy things on Amazon with this link.';
+$PAYMENT_INFO['paypal']['short_name'] = 'PayPal';
+$PAYMENT_INFO['paypal']['emoji'] = '💰💸💳';
+$PAYMENT_INFO['paypal']['url'] = 'https://www.paypal.me/JackSzwergold';
+$PAYMENT_INFO['paypal']['description'] = 'Support me with a PayPal donation.';
 
 // Set the page DIVs array.
 $PAGE_DIVS_ARRAY = array();

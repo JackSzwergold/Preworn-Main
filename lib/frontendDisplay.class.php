@@ -580,8 +580,7 @@ class frontendDisplay {
   // Set the wrapper.
   function setWrapper($body = null) {
 
-    // $nameplate = $this->setNameplate();
-    $nameplate = null;
+    $nameplate = $this->setNameplate();
 
     $body_div_stuff = array();
     $body_div_close_stuff = array();
