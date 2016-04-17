@@ -37,7 +37,6 @@ hr
 }
 
 /**************************************************************************************************/
-.Nameplate,
 ul, li
 {
 	position: relative;
@@ -298,67 +297,3 @@ ul, li
 /**************************************************************************************************/
 /* 2016-04-08: WTF is this for? */
 .Content .Text .Padding { padding: 15px 0 15px 0; }
-
-/**************************************************************************************************/
-.Nameplate
-{
-	width: 100%;
-	min-height: 30px;
-	margin: 0 0 10px 0;
-	padding: 0;
-}
-
-.Nameplate .Left,
-.Nameplate .Right
-{
-	position: absolute;
-	top: 3px;
-	min-width: 304px;
-}
-
-.Nameplate .Left { left: 0; }
-.Nameplate .Right { right: 0; }
-
-.Nameplate .Left p,
-.Nameplate .Right p
-{
-	text-transform: none;
-	color: #fff;
-}
-
-.Nameplate .Left p a, .Nameplate .Left p a:active,
-.Nameplate .Left p a:hover, .Nameplate .Left p a:visited,
-.Nameplate .Right p a, .Nameplate .Right p a:active,
-.Nameplate .Right p a:hover, .Nameplate .Right p a:visited
-{
-	text-decoration: none;
-	color: #fff;
-	background-color: #333;
-	font-weight: normal;
-	display: block;
-	padding: 5px 30px 5px 30px;
-	border-radius: 6px;
-}
-
-.Nameplate .Left p a:active, .Nameplate .Left p a:hover,
-.Nameplate .Right p a:active, .Nameplate .Right p a:hover
-{
-	color: #333;
-	background-color: #999;
-}
-
-/**************************************************************************************************/
-.Nameplate .Left ul li { margin: 0 0 0 3px; }
-.Nameplate .Right ul li { margin: 0 3px 0 0; }
-
-/**************************************************************************************************/
-.Nameplate .Left ul li#amazon p a, .Nameplate .Left ul li#amazon p a:active,
-.Nameplate .Left ul li#amazon p a:hover, .Nameplate .Left ul li#amazon p a:visited,
-.Nameplate .Right ul li#amazon p a, .Nameplate .Right ul li#amazon p a:active,
-.Nameplate .Right ul li#amazon p a:hover, .Nameplate .Right ul li#amazon p a:visited { padding: 5px 40px 5px 20px; }
-
-/**************************************************************************************************/
-.Nameplate .Left ul li#paypal p a, .Nameplate .Left ul li#paypal p a:active,
-.Nameplate .Left ul li#paypal p a:hover, .Nameplate .Left ul li#paypal p a:visited,
-.Nameplate .Right ul li#paypal p a, .Nameplate .Right ul li#paypal p a:active,
-.Nameplate .Right ul li#paypal p a:hover, .Nameplate .Right ul li#paypal p a:visited { padding: 5px 40px 5px 20px; }
