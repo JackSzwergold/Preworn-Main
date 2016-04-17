@@ -12,10 +12,6 @@ Excellent set of skills for DevOps as well as Level 2/3 support and related cons
 
 I work primarily on the Ubuntu Linux and Mac OS X platforms but have deep experience with many different flavors of Unix spanning back to the early 1990s. So I can jump onto the console, maneuver around the terminal and get the job done regardless of OS.
 
-### Support 💰
-
-If you like any of the work I have done, will do, or am doing—or you just owe me money—please consider [tossing me a donation of some kind via PayPal][3]. Or if you can’t donate money—but you plan on buying stuff on Amazon—just [click this Amazon affiliate link][4] so I can get something out of that transaction.
-
 ### Contact ✉️
 
 **Email** • [me@preworn.com](mailto:me@preworn.com?Subject=Preworn%20Website%20Query)
