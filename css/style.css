@@ -264,6 +264,7 @@ ul, li
 	clear: both;
 }
 
+/**************************************************************************************************/
 .Content ul li, ol li
 {
 	font-family: Georgia, "New York", "Times New Roman", Times, serif;
@@ -290,7 +291,7 @@ ul, li
 }
 
 .Content ul li a, .Content ul li a:active, .Content ul li a:hover, .Content ul li a:visited,
-.Content ol li a, .Content ol li a:active, .Content ol li a:hover, .Content ol li a:visited { border-bottom: 1px #000 solid; }
+.Content ol li a, .Content ol li a:active, .Content ol li a:hover, .Content ol li a:visited { border-bottom: 0px #000 solid; }
 
 .Content ul li a:active, .Content ul li a:hover,
 .Content ol li a:active, .Content ol li a:hover
