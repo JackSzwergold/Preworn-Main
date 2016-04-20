@@ -8,7 +8,9 @@ Here is a [collection of tutorials and cheat sheets][2] I’ve compiled for my o
 
 ### Skills
 
-Excellent set of skills for DevOps as well as Level 2/3 support and related consulting. Unix systems administration, shell scripting and other common web/Unix/Internet scripting languages as well as software development using PHP (object oriented and flat), Ruby (on Rails and off), MySQL, MongoDB, Redis, Elasticsearch, JavaScript, JSON, CSS, HTML, dHTML, XHTML and XML. Very comfortable working in the Unix shell in Ubuntu, RedHat, CentOS and Solaris environments. Can install/configure packages from repositories and compile from source code on most any platform.
+I’m a highly skilled Unix systems administrator, web developer and systems engineer with 20+ years of experience which includes a strong professional history in the fine art world.
+
+Excellent set of skills for DevOps as well as Level 2/3 support and related consulting. Unix systems administration, shell scripting and other common web/Unix/Internet scripting languages as well as software development using HTML5, CSS3, XHTML, XML, JavaScript (jQuery, AngularJS, NodeNS, EmberJS, Scriptaculous and Prototype), PHP (Flat & OOP, Zend, Codeigniter, Symfony, Laravel), Apache Cordova (Ionic), Ruby (Flat & OOP, Ruby on Rails), Java, MySQL, MongoDB, Elasticsearch, Unix/Linux shell scripting and other common server scripting languages. Very comfortable working in the Unix shell in Ubuntu, RedHat, CentOS and Solaris environments. Can install/configure packages from repositories and compile from source code on most any platform.
 
 I work primarily on the Ubuntu Linux and Mac OS X platforms but have deep experience with many different flavors of Unix spanning back to the early 1990s. So I can jump onto the console, maneuver around the terminal and get the job done regardless of OS.
 
