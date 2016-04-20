@@ -13,6 +13,9 @@ set :live_root, "#{deploy_to}/staging.preworn.com"
 # The directory on the server into which the actual source code will deployed.
 set :web_builds, "#{deploy_to}/builds"
 
+# The path where projects get deployed.
+set :projects_path, "projects"
+
 # The directory on the server that stores content related data.
 set :content_data_path, "#{deploy_to}/content"
 
@@ -29,8 +32,23 @@ namespace :deploy do
   task :create_symlink do
     on roles(:app) do
 
-      info "Link the cheat sheet stuff to 'tutorials_and_cheat_sheets'."
+      # info "Link the cheat sheet stuff to 'tutorials_and_cheat_sheets'."
       execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/tutorials_and_cheat_sheets/#{fetch(:deployment_type)}/current markdown/tutorials_and_cheat_sheets"
+
+      # info "Link the image mosaic stuff to 'mosaic'."
+      execute "cd #{current_path} && ln -sf #{fetch(:web_builds)}/mosaic/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/mosaic"
+
+      # info "Link the mosaic javascript stuff to 'mosaic_js'."
+      execute "cd #{current_path} && ln -sf #{fetch(:web_builds)}/mosaic_js_dist/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/mosaic_js"
+
+      # info "Link the preworn ascii art stuff to 'ascii'."
+      execute "cd #{current_path} && ln -sf #{fetch(:web_builds)}/ascii/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/ascii"
+
+      # info "Link the preworn slider stuff to 'slider'."
+      execute "cd #{current_path} && ln -sf #{fetch(:web_builds)}/slider/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/slider"
+
+      # info "Link the colorspace conversions stuff to 'colorspace'."
+      execute "cd #{current_path} && ln -sf #{fetch(:web_builds)}/colorspace_conversions/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/colorspace"
 
       # info "If there is no directory & no symbolic link to '#{fetch(:short_name)}' then create a directory named '#{fetch(:short_name)}'."
       # execute "cd #{fetch(:live_root)} && if [ ! -d #{fetch(:short_name)} ]; then if [ ! -h #{fetch(:short_name)} ]; then mkdir ./#{fetch(:short_name)}; fi; fi"
