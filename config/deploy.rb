@@ -32,6 +32,18 @@ set :pty, false
 # Default value for keep_releases is 5
 set :keep_releases, 3
 
+# Disable warnings about the absence of the stylesheets, javscripts & images directories.
+set :normalize_asset_timestamps, false
+
+# The directory on the server into which the actual source code will deployed.
+set :web_builds, "#{deploy_to}/builds"
+
+# The directory on the server that stores content related data.
+set :content_data_path, "#{deploy_to}/content"
+
+# The path where projects get deployed.
+set :projects_path, "projects"
+
 namespace :deploy do
 
   after :restart, :clear_cache do
@@ -114,4 +126,5 @@ namespace :deploy do
 end
 
 after "deploy:published", "deploy:echo_current_path"
+after "deploy:published", "deploy:create_symlink"
 after "deploy:finishing", "deploy:remove_cruft"
