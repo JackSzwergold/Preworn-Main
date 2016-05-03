@@ -1,4 +1,52 @@
 /**************************************************************************************************/
+html, body { background-color: transparent; }
+hr { background-color: #000; }
+a, a:visited, a:hover, a:active { color: #000; }
+
+/**************************************************************************************************/
+.Content h1 a, .Content h1 a:active, .Content h1 a:hover, .Content h1 a:visited,
+.Content h2 a, .Content h2 a:active, .Content h2 a:hover, .Content h2 a:visited,
+.Content h3 a, .Content h3 a:active, .Content h3 a:hover, .Content h3 a:visited,
+.Content h4 a, .Content h4 a:active, .Content h4 a:hover, .Content h4 a:visited,
+.Content h5 a, .Content h5 a:active, .Content h5 a:hover, .Content h5 a:visited,
+.Content h6 a, .Content h6 a:active, .Content h6 a:hover, .Content h6 a:visited,
+.Content p a, .Content p a:active, .Content p a:hover, .Content p a:visited { color: #000; }
+
+/**************************************************************************************************/
+.Content h1 a:active, .Content h1 a:hover,
+.Content h2 a:active, .Content h2 a:hover,
+.Content h3 a:active, .Content h3 a:hover,
+.Content h4 a:active, .Content h4 a:hover,
+.Content h5 a:active, .Content h5 a:hover,
+.Content h6 a:active, .Content h6 a:hover { border-color: #666; }
+
+/**************************************************************************************************/
+.Content p a, .Content p a:active, .Content p a:hover, .Content p a:visited { border-color: #000; }
+
+.Content p a:active, .Content p a:hover
+{
+	color: #080;
+	border-color: #080;
+}
+
+.Content pre
+{
+	color: #0d0;
+	background-color: #333;
+}
+
+/**************************************************************************************************/
+.Content ul li a, .Content ul li a:active, .Content ul li a:hover, .Content ul li a:visited,
+.Content ol li a, .Content ol li a:active, .Content ol li a:hover, .Content ol li a:visited { border-color: #000; }
+
+.Content ul li a:active, .Content ul li a:hover,
+.Content ol li a:active, .Content ol li a:hover
+{
+	color: #080;
+	border-color: #080;
+}
+
+/**************************************************************************************************/
 .Nameplate { background-color: #6D3011; }
 
 /**************************************************************************************************/

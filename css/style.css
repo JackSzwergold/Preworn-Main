@@ -4,11 +4,7 @@
 	padding: 0;
 }
 
-html
-{
-	font-size: 9pt;
-	background-color: transparent;
-}
+html { font-size: 9pt; }
 
 body
 {
@@ -18,7 +14,6 @@ body
 	font-size: 100%;
 	line-height: 1.2em;
 	text-align: center;
-	background-color: transparent;
 }
 
 html, body
@@ -28,12 +23,7 @@ html, body
 }
 
 /**************************************************************************************************/
-a, a:visited, a:hover, a:active
-{
-	text-decoration: none;
-	color: #000;
-}
-
+a, a:visited, a:hover, a:active { text-decoration: none; }
 ul, li { list-style: none; }
 :focus { -moz-outline-style: none; }
 a { outline: none; }
@@ -41,7 +31,6 @@ a { outline: none; }
 hr
 {
 	border: 0;
-	background-color: #000;
 	height: 1px;
 	margin: 0.75em 0 1.5em 0;
 	clear: both;
@@ -178,16 +167,8 @@ ul, li
 .Content p a, .Content p a:active, .Content p a:hover, .Content p a:visited
 {
 	text-decoration: none;
-	color: #000;
 	font-weight: normal;
 }
-
-.Content h1 a:active, .Content h1 a:hover,
-.Content h2 a:active, .Content h2 a:hover,
-.Content h3 a:active, .Content h3 a:hover,
-.Content h4 a:active, .Content h4 a:hover,
-.Content h5 a:active, .Content h5 a:hover,
-.Content h6 a:active, .Content h6 a:hover { border-color: #666; }
 
 /**************************************************************************************************/
 .Content h1
@@ -235,12 +216,6 @@ ul, li
 .Content p { font-size: 120%; }
 .Content p a, .Content p a:active, .Content p a:hover, .Content p a:visited { border-bottom: 1px #000 solid; }
 
-.Content p a:active, .Content p a:hover
-{
-	color: #080;
-	border-color: #080;
-}
-
 .Content pre
 {
 	white-space: pre-wrap;
@@ -248,8 +223,6 @@ ul, li
 	font-weight: normal;
 	line-height: 1.4em;
 	border-radius: 5px;
-	color: #0d0;
-	background-color: #333;
 	padding: 20px 20px 20px 30px;
 	margin: 0 0 10px 0;
 }
@@ -292,13 +265,6 @@ ul, li
 
 .Content ul li a, .Content ul li a:active, .Content ul li a:hover, .Content ul li a:visited,
 .Content ol li a, .Content ol li a:active, .Content ol li a:hover, .Content ol li a:visited { border-bottom: 0px #000 solid; }
-
-.Content ul li a:active, .Content ul li a:hover,
-.Content ol li a:active, .Content ol li a:hover
-{
-	color: #080;
-	border-color: #080;
-}
 
 /**************************************************************************************************/
 /* 2016-04-08: WTF is this for? */
