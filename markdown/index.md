@@ -2,16 +2,16 @@
 
 This site is Jack Szwergold’s the technical calling card and portfolio. If you are interested in my creative work—writing, visual art and such—please check out *[Last Place Champ][1]*. To check out my coding skills—via actual code samples—please head over to [my GitHub repository][12].
 
-### [Tutorials and Cheat Sheets][2]
+## [Tutorials and Cheat Sheets][2]
 
 Here is a [collection of tutorials and cheat sheets][2] I’ve compiled for my own personal reference—and to share with clients as well as other techs—over the years.
 
 
-### Projects
+## Projects
 
 I’ve created some simple projects to stretch/show off my frontend deisgn/engineering skills such as these [dynamically generated image mosaics][3] using record album artwork as the basis ([here is a functional test of the the EmberJS JavaScript front end][4]) and these [dynamically generated ASCII art images][5] which were created using PHP, the GD graphics library, HTML and CSS. This [simple slider][6]—which works well on desktop as well as mobile browsers—is something I created using jQuery and CSS3 WebKit extensions.
 
-### Skills
+## Skills
 
 I’m a highly skilled Unix systems administrator, web developer and systems engineer with 20+ years of experience which includes a strong professional history in the fine art world.
 
@@ -19,7 +19,7 @@ Excellent set of skills for DevOps as well as Level 2/3 support and related cons
 
 I work primarily on the Ubuntu Linux and Mac OS X platforms but have deep experience with many different flavors of Unix spanning back to the early 1990s. So I can jump onto the console, maneuver around the terminal and get the job done regardless of OS.
 
-### Contact
+## Contact
 
 **Email** • [me@preworn.com](mailto:me@preworn.com?Subject=Preworn%20Website%20Query)
 
@@ -27,7 +27,7 @@ I work primarily on the Ubuntu Linux and Mac OS X platforms but have deep experi
 
 **Mail** • P.O. Box 325, 201 Varick Street, Village Station NY 10014-0325
 
-### Community
+## Community
 
 [Stack Overflow][8] • [Super User][9] • [Server Fault][10] • [LinkedIn][11] • [GitHub][12]
 
