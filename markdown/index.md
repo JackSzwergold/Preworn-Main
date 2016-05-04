@@ -1,15 +1,17 @@
 # Preworn
 
-This site is Jack Szwergold’s the technical calling card and portfolio. If you are interested in my creative work—writing, visual art and such—please check out *[Last Place Champ][1]*. To check out my coding skills—via actual code samples—please head over to [my GitHub repository][12].
+## Skilled Tech, Developer, Administrator and Security Analyst
 
-## [Tutorials and Cheat Sheets][2]
+This is Jack Szwergold’s technical portfolio and calling card.
 
-Here is a [collection of tutorials and cheat sheets][2] I’ve compiled for my own personal reference—and to share with clients as well as other techs—over the years.
+* If you are interested check out my development skills—via actual code samples—please head over to [my GitHub repository][12].
+* I’ve also compiled a [collection of tutorials and cheat sheets][2] over the years; mainly for my own personal reference but for others as well.
 
+If you are interested in my non-technical creative work—writing, visual art and such—please check out my other website, *[Last Place Champ][1]*. 
 
 ## Projects
 
-I’ve created some simple projects to stretch/show off my frontend deisgn/engineering skills such as these [dynamically generated image mosaics][3] using record album artwork as the basis ([here is a functional test of the the EmberJS JavaScript front end][4]) and these [dynamically generated ASCII art images][5] which were created using PHP, the GD graphics library, HTML and CSS. This [simple slider][6]—which works well on desktop as well as mobile browsers—is something I created using jQuery and CSS3 WebKit extensions.
+I’ve created some simple projects to stretch/show off my front-end design/engineering skills such as these [dynamically generated image mosaics][3] using record album artwork as the basis ([here is a functional test of the the EmberJS JavaScript front end][4]) and these [dynamically generated ASCII art images][5] which were created using PHP, the GD graphics library, HTML and CSS. This [simple slider][6]—which works well on desktop as well as mobile browsers—is something I created using jQuery and CSS3 WebKit extensions.
 
 ## Skills
 
