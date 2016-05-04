@@ -164,7 +164,7 @@ ul, li
 	clear: both;
 }
 
-.Content p, .Content ul
+.Content p
 {
 	font-family: Georgia, "New York", "Times New Roman", Times, serif;
 	font-weight: normal;
@@ -269,7 +269,7 @@ ul, li
 {
 	font-family: Georgia, "New York", "Times New Roman", Times, serif;
 	font-weight: normal;
-	font-size: 120%;
+	font-size: 130%;
 	line-height: 1.4em;
 	margin: 0 0 5px 1.75em;
 	padding: 0;

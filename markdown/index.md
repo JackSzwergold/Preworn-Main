@@ -21,15 +21,17 @@ I work primarily on the Ubuntu Linux and Mac OS X platforms but have deep experi
 
 ## Contact
 
-**Email** • [me@preworn.com](mailto:me@preworn.com?Subject=Preworn%20Website%20Query)
-
-**PGP Public Key** • Is available [here][7].
-
-**Mail** • P.O. Box 325, 201 Varick Street, Village Station NY 10014-0325
+* **Email** • [me@preworn.com](mailto:me@preworn.com?Subject=Preworn%20Website%20Query)
+* **PGP Public Key** • Is available [here][7].
+* **Mail** • P.O. Box 325, 201 Varick Street, Village Station, NY 10014-0325
 
 ## Community
 
-[Stack Overflow][8] • [Super User][9] • [Server Fault][10] • [LinkedIn][11] • [GitHub][12]
+* [Stack Overflow][8]
+* [Super User][9]
+* [Server Fault][10]
+* [LinkedIn][11]
+* [GitHub][12]
 
   [1]: http://www.lastplacechamp.com/ "last Place Champ"
   [2]: tutorials_and_cheat_sheets/ "Tutorials and Cheat Sheets"
