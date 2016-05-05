@@ -265,6 +265,7 @@ ul, li
 
 .Content ul li, .Content ol li
 {
+	font-size: 100%;
 	margin: 0 0 0.75em  1.75em;
 	padding: 0;
 	clear: both;
