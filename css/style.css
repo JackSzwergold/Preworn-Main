@@ -175,9 +175,6 @@ ul, li
 	clear: both;
 }
 
-.Content h5 { margin: 1.5em 0 0.7em 0; }
-.Content h6 { margin: 1.5em 0 0.8em 0; }
-
 .Content h1 a, .Content h1 a:active, .Content h1 a:hover, .Content h1 a:visited,
 .Content h2 a, .Content h2 a:active, .Content h2 a:hover, .Content h2 a:visited,
 .Content h3 a, .Content h3 a:active, .Content h3 a:hover, .Content h3 a:visited,
@@ -228,6 +225,7 @@ ul, li
 {
 	font-size: 170%;
 	line-height: 1.1em;
+	margin: 1.5em 0 0.7em 0;
 }
 
 /**************************************************************************************************/
@@ -235,6 +233,7 @@ ul, li
 {
 	font-size: 160%;
 	line-height: 1.1em;
+	margin: 1.5em 0 0.8em 0;
 }
 
 /**************************************************************************************************/
