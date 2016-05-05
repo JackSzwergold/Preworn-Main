@@ -11,7 +11,12 @@ If you are interested in my non-technical creative work—writing, visual art an
 
 ## Projects
 
-I’ve created some simple projects to stretch my skills and show off my front-end design/engineering skills such as these [dynamically generated image mosaics][3] using record album artwork as the basis ([here is a functional test of the the EmberJS JavaScript front end][4]) and these [dynamically generated ASCII art images][5] which were created using PHP, the GD graphics library, HTML and CSS. This [simple slider][6]—which works well on desktop as well as mobile browsers—is something I created using jQuery and CSS3 WebKit extensions.
+Here are some simple projects to stretch my skills and show off my front-end design and engineering skills:
+
+* **[Mosaic][3]:** Dynamically generated image mosaics using record album artwork as the basis. Reload the page to view another random image.
+* **[MosaicJS][4]**: This is an EmberJS (JavaScript) version of the [Mosaic][3] project that uses an EmberJS front-end to pull data in from the PHP backend of [Mosaic][3]. The benefit of this method is the page does not have to be reloaded for new data to be pulled in; client side JavaScript handles it all.
+* **[ASCII][5]:** Dynamically generated ASCII art images which were created using PHP, the GD graphics library, HTML and CSS. Reload the page to view another random image.
+* **[Slider][6]:** This simple slider—which works well on desktop as well as mobile browsers—is something I created using jQuery and CSS3 WebKit extensions.
 
 ## Skills
 
