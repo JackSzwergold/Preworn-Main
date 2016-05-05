@@ -11,15 +11,32 @@ If you are interested in my non-technical creative work—writing, visual art an
 
 ## Projects
 
-I’ve created some simple projects to stretch/show off my front-end design/engineering skills such as these [dynamically generated image mosaics][3] using record album artwork as the basis ([here is a functional test of the the EmberJS JavaScript front end][4]) and these [dynamically generated ASCII art images][5] which were created using PHP, the GD graphics library, HTML and CSS. This [simple slider][6]—which works well on desktop as well as mobile browsers—is something I created using jQuery and CSS3 WebKit extensions.
+I’ve created some simple projects to stretch my skills and show off my front-end design/engineering skills such as these [dynamically generated image mosaics][3] using record album artwork as the basis ([here is a functional test of the the EmberJS JavaScript front end][4]) and these [dynamically generated ASCII art images][5] which were created using PHP, the GD graphics library, HTML and CSS. This [simple slider][6]—which works well on desktop as well as mobile browsers—is something I created using jQuery and CSS3 WebKit extensions.
 
 ## Skills
 
-I’m a highly skilled Unix systems administrator, web developer and systems engineer with 20+ years of experience which includes a strong professional history in the fine art world.
+I’m a highly skilled software developer, Unix systems administrator and overall systems engineer with 20+ years of experience which includes a strong professional history in the art, publishing and non-profit world.
 
-Excellent set of skills for DevOps as well as Level 2/3 support and related consulting. Unix systems administration, shell scripting and other common web/Unix/Internet scripting languages as well as software development using HTML5, CSS3, XHTML, XML, JSON, JavaScript (jQuery, AngularJS, NodeJS, EmberJS, Scriptaculous and Prototype), PHP (Flat and OOP, Zend, Codeigniter, Symfony, Laravel), Apache Cordova (Ionic), Ruby (Flat and OOP, Ruby on Rails), Java, MySQL, MongoDB, Elasticsearch, Unix/Linux shell scripting and other common server scripting languages. Very comfortable working in the Unix shell in Ubuntu, RedHat, CentOS and Solaris environments. Can install/configure packages from repositories and compile from source code on most any platform.
+Excellent set of skills for DevOps as well as Level 2/3 support and related software development. Very comfortable working in the terminal console on Mac OS X, Ubuntu, Debian, RedHat, CentOS and Solaris environments. Can install/configure software packages from core repositories as well as compile binaries from source on most any platform. Adept at Unix/Linux shell scripting and other sundry programming languages, protocols and frameworks such as:
 
-I work primarily on the Ubuntu Linux and Mac OS X platforms but have deep experience with many different flavors of Unix spanning back to the early 1990s. So I can jump onto the console, maneuver around the terminal and get the job done regardless of OS.
+* **HTML5**
+* **CSS3**
+* **JSON**
+* **XHTML**
+* **XML**
+* **JavaScript** (jQuery, AngularJS, NodeJS, EmberJS, Scriptaculous and Prototype)
+* **PHP** (Flat and OOP, Zend, Codeigniter, Symfony, Laravel)
+* **Ruby** (Flat and OOP, Ruby on Rails)
+* **Apache Cordova** (Flat and Ionic Framework)
+* **Java**
+* **MySQL**
+* **MongoDB**
+* **Elasticsearch**
+* **Solr**
+* **Nutch**
+* **Hadoop**
+
+I work primarily on the Ubuntu Linux and Mac OS X platforms but have deep experience with many different flavors of Unix/Linux spanning back to the early 1990s. So I can jump onto the terminal console and maneuvering around to get the job done regardless of OS.
 
 ## Contact
 
