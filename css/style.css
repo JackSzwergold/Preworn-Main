@@ -261,7 +261,6 @@ ul, li
 	margin: 0;
 	padding: 0 0 1.25em 0;
 	clear: both;
-	-webkit-appearance: none;
 }
 
 .Content ul li, .Content ol li
@@ -270,7 +269,6 @@ ul, li
 	margin: 0 0 0.75em  1.75em;
 	padding: 0;
 	clear: both;
-	-webkit-appearance: none;
 }
 
 .Content ul li
