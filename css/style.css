@@ -168,11 +168,13 @@ ul, li
 {
 	font-family: Georgia, "New York", "Times New Roman", Times, serif;
 	font-weight: normal;
+	font-size: 130%;
 	line-height: 1.4em;
+	margin: 0 0 1.25em 0;
+	padding: 0;
 	clear: both;
 }
 
-.Content h4 { }
 .Content h5 { margin: 1.5em 0 0.7em 0; }
 .Content h6 { margin: 1.5em 0 0.8em 0; }
 
@@ -181,12 +183,13 @@ ul, li
 .Content h3 a, .Content h3 a:active, .Content h3 a:hover, .Content h3 a:visited,
 .Content h4 a, .Content h4 a:active, .Content h4 a:hover, .Content h4 a:visited,
 .Content h5 a, .Content h5 a:active, .Content h5 a:hover, .Content h5 a:visited,
-.Content h6 a, .Content h6 a:active, .Content h6 a:hover, .Content h6 a:visited,
-.Content p a, .Content p a:active, .Content p a:hover, .Content p a:visited
+.Content h6 a, .Content h6 a:active, .Content h6 a:hover, .Content h6 a:visited
 {
 	text-decoration: none;
 	font-weight: normal;
 }
+
+.Content p a, .Content p a:active, .Content p a:hover, .Content p a:visited { border-bottom: 1px #000 solid; }
 
 /**************************************************************************************************/
 .Content h1
@@ -235,14 +238,6 @@ ul, li
 }
 
 /**************************************************************************************************/
-.Content p
-{
-	font-size: 130%;
-	margin: 0 0 1.25em 0;
-}
-
-.Content p a, .Content p a:active, .Content p a:hover, .Content p a:visited { border-bottom: 1px #000 solid; }
-
 .Content pre
 {
 	white-space: pre-wrap;
@@ -257,7 +252,7 @@ ul, li
 .Content p code { font-weight: bold; }
 .Content pre code { font-weight: normal; }
 
-.Content ul, ol
+.Content ul, .Content ol
 {
 	margin: 0;
 	padding: 0 0 1.5em 0;
@@ -265,13 +260,13 @@ ul, li
 }
 
 /**************************************************************************************************/
-.Content ul li, ol li
+.Content ul li, .Content ol li
 {
 	font-family: Georgia, "New York", "Times New Roman", Times, serif;
 	font-weight: normal;
 	font-size: 130%;
 	line-height: 1.4em;
-	margin: 0 0 5px 1.75em;
+	margin: 0 0 0.75em  1.75em;
 	padding: 0;
 	clear: both;
 }
