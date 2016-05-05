@@ -88,6 +88,12 @@ namespace :deploy do
       # info "Link the cheat sheet stuff to 'tutorials_and_cheat_sheets'."
       execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/tutorials_and_cheat_sheets/#{fetch(:deployment_type)}/current markdown/tutorials_and_cheat_sheets"
 
+      # info "Link the floating cube stuff to 'floatingcube_js'."
+      execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/floatingcube_js_dist/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/floatingcube_js"
+
+      # info "Link the nine dots stuff to 'ninedots_js'."
+      execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/ninedots_js_dist/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/ninedots_js"
+
       # info "If there is no directory & no symbolic link to '#{fetch(:short_name)}' then create a directory named '#{fetch(:short_name)}'."
       # execute "cd #{fetch(:live_root)} && if [ ! -d #{fetch(:short_name)} ]; then if [ ! -h #{fetch(:short_name)} ]; then mkdir ./#{fetch(:short_name)}; fi; fi"
 
