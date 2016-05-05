@@ -251,20 +251,20 @@ ul, li
 .Content p code { font-weight: bold; }
 .Content pre code { font-weight: normal; }
 
-.Content ul, .Content ol
-{
-	margin: 0;
-	padding: 0 0 1.25em 0;
-	clear: both;
-}
-
 /**************************************************************************************************/
-.Content ul li, .Content ol li
+.Content ul, .Content ol
 {
 	font-family: Georgia, "New York", "Times New Roman", Times, serif;
 	font-weight: normal;
 	font-size: 130%;
 	line-height: 1.4em;
+	margin: 0;
+	padding: 0 0 1.25em 0;
+	clear: both;
+}
+
+.Content ul li, .Content ol li
+{
 	margin: 0 0 0.75em  1.75em;
 	padding: 0;
 	clear: both;
