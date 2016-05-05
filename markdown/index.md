@@ -11,7 +11,7 @@ If you are interested in my non-technical creative work—writing, visual art an
 
 ## Projects
 
-Here are some simple projects to stretch my skills and show off my front-end design and engineering skills:
+Here are some simple projects I’ve done to stretch my skills and show off my front-end design and engineering skills:
 
 * **[Mosaic][3]:** Dynamically generated image mosaics using record album artwork as the basis. Reload the page to view another random image.
 * **[MosaicJS][4]**: This is an EmberJS (JavaScript) version of the [Mosaic][3] project that uses an EmberJS front-end to pull data in from the PHP backend of [Mosaic][3]. The benefit of this method is the page does not have to be reloaded for new data to be pulled in; client side JavaScript handles it all.
