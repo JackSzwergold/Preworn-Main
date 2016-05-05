@@ -46,7 +46,7 @@ class contentCreation {
 
     return array($params, $page_title, $markdown_file);
 
-  } // parse_parameters
+  } // init
 
   //**************************************************************************************//
   // Process the 'GET' parameters parameters.

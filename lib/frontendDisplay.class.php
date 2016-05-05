@@ -503,6 +503,7 @@ class frontendDisplay {
     $ret = '';
 
     $markdown_file_contents = file_get_contents($markdown_file);
+    // TODO: This is where we can do some preprocessing of the markdown file contents.
     $ret = Parsedown::instance()->parse($markdown_file_contents);
 
     return $ret;
