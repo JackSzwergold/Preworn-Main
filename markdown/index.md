@@ -21,9 +21,10 @@ Excellent set of skills for DevOps as well as Level 2/3 support and related soft
 
 * **HTML5**
 * **CSS3**
-* **JSON**
 * **XHTML**
+* **JSON**
 * **XML**
+* **YAML**
 * **JavaScript** (jQuery, AngularJS, NodeJS, EmberJS, Scriptaculous and Prototype)
 * **PHP** (Flat and OOP, Zend, Codeigniter, Symfony, Laravel)
 * **Ruby** (Flat and OOP, Ruby on Rails)
