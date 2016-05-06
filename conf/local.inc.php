@@ -35,7 +35,7 @@ $VIEW_MODE = null;
 
 // Site descriptive info.
 $SITE_TITLE = 'Preworn';
-$SITE_DESCRIPTION = 'This site is Jack Szwergold’s the technical calling card and portfolio.';
+$SITE_DESCRIPTION = 'This site is Jack Szwergold’s technical portfolio and calling card.';
 $SITE_URL = 'http://www.preworn.com/';
 $SITE_COPYRIGHT = '(c) Copyright ' . date('Y') . ' Jack Szwergold. Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.';
 $SITE_ROBOTS = 'noindex, nofollow';
