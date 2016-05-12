@@ -339,29 +339,29 @@ ul, li
 	flex-basis: auto;
 }
 
-.Nameplate .Left ul li p,
-.Nameplate .Right ul li p
+.Nameplate .Left ul li,
+.Nameplate .Right ul li
 {
 	text-transform: none;
 	color: #fff;
 }
 
-.Nameplate .Left ul li p a, .Nameplate .Left ul li p a:active,
-.Nameplate .Left ul li p a:hover, .Nameplate .Left ul li p a:visited,
-.Nameplate .Right ul li p a, .Nameplate .Right ul li p a:active,
-.Nameplate .Right ul li p a:hover, .Nameplate .Right ul li p a:visited
+.Nameplate .Left ul li a, .Nameplate .Left ul li a:active,
+.Nameplate .Left ul li a:hover, .Nameplate .Left ul li a:visited,
+.Nameplate .Right ul li a, .Nameplate .Right ul li a:active,
+.Nameplate .Right ul li a:hover, .Nameplate .Right ul li a:visited
 {
 	text-decoration: none;
 	color: #fff;
-	background-color: #333;
+	background-color: #555;
 	font-weight: normal;
 	display: block;
 	border-radius: 6px;
 	padding: 5px 50px 5px 20px;
 }
 
-.Nameplate .Left ul li p a:active, .Nameplate .Left ul li p a:hover,
-.Nameplate .Right ul li p a:active, .Nameplate .Right ul li p a:hover
+.Nameplate .Left ul li a:active, .Nameplate .Left ul li a:hover,
+.Nameplate .Right ul li a:active, .Nameplate .Right ul li a:hover
 {
 	color: #333;
 	background-color: #999;

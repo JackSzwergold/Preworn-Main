@@ -520,9 +520,7 @@ class frontendDisplay {
       $markdown_sliced = array_slice(array_values($this->markdown_parts), 0, -1);
       $back_url = BASE_PATH . join('/', $markdown_sliced);
       $li_items_l[] = '<li id="back">'
-                    . '<p>'
                     . sprintf('<a href="%s" title="back">«</a>', $back_url)
-                    . '</p>'
                     . '</li>'
                     ;
     }
@@ -531,9 +529,7 @@ class frontendDisplay {
     if (!empty($this->payment_info)) {
       foreach($this->payment_info as $payment_key => $payment_value) {
         $li_items_r[] = sprintf('<li id="%s">', $payment_key)
-                      . '<p>'
                       . sprintf('<a href="%s" title="%s">%s %s</a>', $payment_value['url'], $payment_value['description'], $payment_value['short_name'], $payment_value['emoji'])
-                      . '</p>'
                       . '</li>'
                       ;
       }
