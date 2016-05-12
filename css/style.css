@@ -342,6 +342,10 @@ ul, li
 .Nameplate .Left ul li,
 .Nameplate .Right ul li
 {
+	font-family: Georgia, "New York", "Times New Roman", Times, serif;
+	font-weight: normal;
+	font-style: italic;
+	font-size: 130%;
 	text-transform: none;
 	color: #fff;
 }
@@ -356,8 +360,8 @@ ul, li
 	background-color: #555;
 	font-weight: normal;
 	display: block;
-	border-radius: 6px;
-	padding: 5px 50px 5px 20px;
+	border-radius: 16px;
+	padding: 8px 70px 8px 20px;
 }
 
 .Nameplate .Left ul li a:active, .Nameplate .Left ul li a:hover,

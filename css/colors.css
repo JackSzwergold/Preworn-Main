@@ -52,6 +52,8 @@ a, a:visited, a:hover, a:active { color: #000; }
 }
 
 /**************************************************************************************************/
+.Nameplate { background-color: #fff; }
+
 .Nameplate .Left ul li a, .Nameplate .Left ul li a:active,
 .Nameplate .Left ul li a:hover, .Nameplate .Left ul li a:visited,
 .Nameplate .Right ul li a, .Nameplate .Right ul li a:active,
