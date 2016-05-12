@@ -52,18 +52,19 @@ a, a:visited, a:hover, a:active { color: #000; }
 }
 
 /**************************************************************************************************/
-/* .Nameplate { background-color: #6D3011; } */
-
-/**************************************************************************************************/
 .Nameplate .Left ul li a, .Nameplate .Left ul li a:active,
 .Nameplate .Left ul li a:hover, .Nameplate .Left ul li a:visited,
 .Nameplate .Right ul li a, .Nameplate .Right ul li a:active,
-.Nameplate .Right ul li a:hover, .Nameplate .Right ul li a:visited { background-color: #933311; }
+.Nameplate .Right ul li a:hover, .Nameplate .Right ul li a:visited
+{
+	color: #333;
+	background-color: #F9E526;
+}
 
 /**************************************************************************************************/
 .Nameplate .Left ul li a:active, .Nameplate .Left ul li a:hover,
 .Nameplate .Right ul li a:active, .Nameplate .Right ul li a:hover
 {
 	color: #333;
-	background-color: #999;
+	background-color: #FCA311;
 }
