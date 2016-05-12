@@ -325,7 +325,7 @@ ul, li
 	/* align-content: space-between; */
 	/* align-content: space-around; */
 	align-content: center;
-	margin: 0px;
+	margin: 6px 0 0 0;
 	padding: 0px;
 	width: 100%;
 }
