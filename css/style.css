@@ -296,12 +296,52 @@ ul, li
 /**************************************************************************************************/
 .Nameplate
 {
+	display: flex;
+	/* flex-direction: column; */
+	/* flex-direction: column-reverse; */
+	/* flex-direction: row; */
+	/* flex-direction: row-reverse; */
+	flex-direction: column;
+	/* flex-wrap: nowrap; */
+	/* flex-wrap: wrap; */
+	/* flex-wrap: wrap-reverse; */
+	flex-wrap: wrap;
+	/* align-items: flex-start; */
+	/* align-items: flex-end; */
+	/* align-items: center; */
+	/* align-items: baseline; */
+	/* align-items: stretch; */
+	align-items: center;
+	/* justify-content: flex-start; */
+	/* justify-content: flex-end; */
+	/* justify-content: center; */
+	/* justify-content: space-between; */
+	/* justify-content: space-around; */
+	justify-content: center;
+	/* align-content: flex-start; */
+	/* align-content: flex-end; */
+	/* align-content: center; */
+	/* align-content: stretch; */
+	/* align-content: space-between; */
+	/* align-content: space-around; */
+	align-content: center;
+	margin: 0px;
+	padding: 0px;
 	width: 100%;
 	min-height: 30px;
-	margin: 0 0 10px 0;
-	padding: 0;
 }
 
+
+/**************************************************************************************************/
+/*.Bleagh
+{
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: auto;
+	text-align: left;
+}*/
+
+/**************************************************************************************************/
 .Nameplate .Left,
 .Nameplate .Right
 {
