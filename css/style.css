@@ -267,7 +267,7 @@ ul, li
 .Content ul li, .Content ol li
 {
 	font-size: 100%;
-	margin: 0 0 0.75em  1.75em;
+	margin: 0 0 0.75em 1.75em;
 	padding: 0;
 	clear: both;
 }
@@ -328,66 +328,45 @@ ul, li
 	margin: 0px;
 	padding: 0px;
 	width: 100%;
-	min-height: 30px;
 }
-
-
-/**************************************************************************************************/
-/*.Bleagh
-{
-	flex-grow: 1;
-	flex-shrink: 0;
-	flex-basis: auto;
-	text-align: left;
-}*/
 
 /**************************************************************************************************/
 .Nameplate .Left,
 .Nameplate .Right
 {
-	min-width: 304px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: auto;
 }
 
-.Nameplate .Left p,
-.Nameplate .Right p
+.Nameplate .Left ul li p,
+.Nameplate .Right ul li p
 {
 	text-transform: none;
 	color: #fff;
 }
 
-.Nameplate .Left p a, .Nameplate .Left p a:active,
-.Nameplate .Left p a:hover, .Nameplate .Left p a:visited,
-.Nameplate .Right p a, .Nameplate .Right p a:active,
-.Nameplate .Right p a:hover, .Nameplate .Right p a:visited
+.Nameplate .Left ul li p a, .Nameplate .Left ul li p a:active,
+.Nameplate .Left ul li p a:hover, .Nameplate .Left ul li p a:visited,
+.Nameplate .Right ul li p a, .Nameplate .Right ul li p a:active,
+.Nameplate .Right ul li p a:hover, .Nameplate .Right ul li p a:visited
 {
 	text-decoration: none;
 	color: #fff;
 	background-color: #333;
 	font-weight: normal;
 	display: block;
-	padding: 5px 30px 5px 20px;
 	border-radius: 6px;
+	padding: 5px 50px 5px 20px;
 }
 
-.Nameplate .Left p a:active, .Nameplate .Left p a:hover,
-.Nameplate .Right p a:active, .Nameplate .Right p a:hover
+.Nameplate .Left ul li p a:active, .Nameplate .Left ul li p a:hover,
+.Nameplate .Right ul li p a:active, .Nameplate .Right ul li p a:hover
 {
 	color: #333;
 	background-color: #999;
 }
 
 /**************************************************************************************************/
-.Nameplate .Left ul li { margin: 0 0 0 3px; }
-.Nameplate .Right ul li { margin: 0 3px 0 0; }
-
-/**************************************************************************************************/
-.Nameplate .Left ul li#amazon p a, .Nameplate .Left ul li#amazon p a:active,
-.Nameplate .Left ul li#amazon p a:hover, .Nameplate .Left ul li#amazon p a:visited,
-.Nameplate .Right ul li#amazon p a, .Nameplate .Right ul li#amazon p a:active,
-.Nameplate .Right ul li#amazon p a:hover, .Nameplate .Right ul li#amazon p a:visited { padding: 5px 40px 5px 20px; }
-
-/**************************************************************************************************/
-.Nameplate .Left ul li#paypal p a, .Nameplate .Left ul li#paypal p a:active,
-.Nameplate .Left ul li#paypal p a:hover, .Nameplate .Left ul li#paypal p a:visited,
-.Nameplate .Right ul li#paypal p a, .Nameplate .Right ul li#paypal p a:active,
-.Nameplate .Right ul li#paypal p a:hover, .Nameplate .Right ul li#paypal p a:visited { padding: 5px 40px 5px 20px; }
+.Nameplate .Left ul li { margin: 3px 0 3px 3px; }
+.Nameplate .Right ul li { margin: 3px 3px 3px 0; }
