@@ -54,6 +54,8 @@ I work primarily on the Ubuntu Linux and Mac OS X platforms but have deep experi
 
 ## Community
 
+Here is a list of some online tech communities—as well as my LinkedIn profile and GitHub repository—you are free to check out if you wish.
+
 * [Stack Overflow][10]
 * [Super User][11]
 * [Server Fault][12]
