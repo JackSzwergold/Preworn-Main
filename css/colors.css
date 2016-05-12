@@ -55,7 +55,12 @@ a, a:visited, a:hover, a:active { color: #000; }
 .Nameplate { background-color: #fff; }
 
 .Nameplate .Left ul li a, .Nameplate .Left ul li a:active,
-.Nameplate .Left ul li a:hover, .Nameplate .Left ul li a:visited,
+.Nameplate .Left ul li a:hover, .Nameplate .Left ul li a:visited
+{
+	color: #333;
+	background-color: #FCA311;
+}
+
 .Nameplate .Right ul li a, .Nameplate .Right ul li a:active,
 .Nameplate .Right ul li a:hover, .Nameplate .Right ul li a:visited
 {
@@ -64,7 +69,12 @@ a, a:visited, a:hover, a:active { color: #000; }
 }
 
 /**************************************************************************************************/
-.Nameplate .Left ul li a:active, .Nameplate .Left ul li a:hover,
+.Nameplate .Left ul li a:active, .Nameplate .Left ul li a:hover
+{
+	color: #333;
+	background-color: #F9E526;
+}
+
 .Nameplate .Right ul li a:active, .Nameplate .Right ul li a:hover
 {
 	color: #333;
