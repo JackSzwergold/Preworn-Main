@@ -524,6 +524,9 @@ class frontendDisplay {
                     . '</li>'
                     ;
     }
+    else {
+      $li_items_l[] = '<li></li>';
+    }
 
     $li_items_r = array();
     if (!empty($this->payment_info)) {
