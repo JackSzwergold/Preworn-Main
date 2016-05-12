@@ -301,7 +301,7 @@ ul, li
 	/* flex-direction: column-reverse; */
 	/* flex-direction: row; */
 	/* flex-direction: row-reverse; */
-	flex-direction: column;
+	flex-direction: row;
 	/* flex-wrap: nowrap; */
 	/* flex-wrap: wrap; */
 	/* flex-wrap: wrap-reverse; */
@@ -317,7 +317,7 @@ ul, li
 	/* justify-content: center; */
 	/* justify-content: space-between; */
 	/* justify-content: space-around; */
-	justify-content: center;
+	justify-content: flex-end;
 	/* align-content: flex-start; */
 	/* align-content: flex-end; */
 	/* align-content: center; */
@@ -345,13 +345,8 @@ ul, li
 .Nameplate .Left,
 .Nameplate .Right
 {
-	position: absolute;
-	top: 3px;
 	min-width: 304px;
 }
-
-.Nameplate .Left { left: 0; }
-.Nameplate .Right { right: 0; }
 
 .Nameplate .Left p,
 .Nameplate .Right p
@@ -370,7 +365,7 @@ ul, li
 	background-color: #333;
 	font-weight: normal;
 	display: block;
-	padding: 5px 30px 5px 30px;
+	padding: 5px 30px 5px 20px;
 	border-radius: 6px;
 }
 
