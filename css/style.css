@@ -373,5 +373,7 @@ ul, li
 }
 
 /**************************************************************************************************/
-.Nameplate .Left ul li { margin: 3px 6px 3px 6px; }
-.Nameplate .Right ul li { margin: 3px 6px 3px 0; }
+.Nameplate .Left ul { margin: 0 0 0 6px; }
+.Nameplate .Left ul li { margin: 3px 3px 3px 3px; }
+.Nameplate .Right ul { margin: 0 6px 0 0; }
+.Nameplate .Right ul li { margin: 3px 3px 3px 3px; }
