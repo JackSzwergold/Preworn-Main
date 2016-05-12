@@ -305,7 +305,7 @@ ul, li
 	/* flex-wrap: nowrap; */
 	/* flex-wrap: wrap; */
 	/* flex-wrap: wrap-reverse; */
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	/* align-items: flex-start; */
 	/* align-items: flex-end; */
 	/* align-items: center; */
@@ -317,7 +317,7 @@ ul, li
 	/* justify-content: center; */
 	/* justify-content: space-between; */
 	/* justify-content: space-around; */
-	justify-content: flex-end;
+	justify-content: space-between;
 	/* align-content: flex-start; */
 	/* align-content: flex-end; */
 	/* align-content: center; */
@@ -373,5 +373,5 @@ ul, li
 }
 
 /**************************************************************************************************/
-.Nameplate .Left ul li { margin: 3px 0 3px 6px; }
+.Nameplate .Left ul li { margin: 3px 6px 3px 6px; }
 .Nameplate .Right ul li { margin: 3px 6px 3px 0; }
