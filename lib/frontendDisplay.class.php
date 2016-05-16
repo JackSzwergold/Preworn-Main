@@ -249,6 +249,20 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
+  // Set the body header.
+  function setBodyHeader($body_header_content = null) {
+    $this->body_header_content = $body_header_content;
+  } // setBodyHeader
+
+
+  //**************************************************************************************//
+  // Set the body footer.
+  function setBodyFooter($body_footer_content = null) {
+    $this->body_footer_content = $body_footer_content;
+  } // setBodyFooter
+
+
+  //**************************************************************************************//
   // Init the content.
   function initContent($response_header = NULL) {
 
@@ -311,12 +325,12 @@ class frontendDisplay {
       //**********************************************************************************//
       // Set the body header.
 
-      $body_header = null;
+      $body_header = $this->body_header_content;
 
       //**********************************************************************************//
       // Set the body footer.
 
-      $body_footer = null;
+      $body_footer = $this->body_footer_content;
 
       //**********************************************************************************//
       // Set the view wrapper.
