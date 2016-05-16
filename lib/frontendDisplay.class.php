@@ -55,6 +55,9 @@ class frontendDisplay {
   private $page_description = NULL;
   private $page_content = NULL;
 
+  private $body_header_content = NULL;
+  private $body_footer_content = NULL;
+
   private $page_div_wrapper_class = NULL;
   private $page_div_wrapper_id = NULL;
   private $page_div_wrappper_array = array();
@@ -306,6 +309,16 @@ class frontendDisplay {
       $css_array = $this->setCSSArray();
 
       //**********************************************************************************//
+      // Set the body header.
+
+      $body_header = null;
+
+      //**********************************************************************************//
+      // Set the body footer.
+
+      $body_footer = null;
+
+      //**********************************************************************************//
       // Set the view wrapper.
 
       if (!empty($this->view_mode)) {
@@ -331,7 +344,9 @@ class frontendDisplay {
            . (!empty($this->base) ? '<base href="' . $this->base . '" />' : '')
            . '</head>'
            . '<body>'
+           . $body_header
            . $body
+           . $body_footer
            . '</body>'
            . '</html>'
            ;
