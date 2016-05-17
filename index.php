@@ -85,8 +85,17 @@ $frontendDisplayClass->setFaviconItems($FAVICONS);
 $frontendDisplayClass->setPageBase($page_base . $page_base_suffix);
 $frontendDisplayClass->setPageURLParts($params);
 $frontendDisplayClass->setPaymentInfo($PAYMENT_INFO);
-// $frontendDisplayClass->setBodyHeader();
+
+//**************************************************************************************//
+// Init header and footer stuff.
+
+$nameplate = $frontendDisplayClass->setNameplate();
+$frontendDisplayClass->setBodyHeader($nameplate);
 // $frontendDisplayClass->setBodyFooter();
+
+//**************************************************************************************//
+// Init the content.
+
 $frontendDisplayClass->initContent();
 
 ?>
