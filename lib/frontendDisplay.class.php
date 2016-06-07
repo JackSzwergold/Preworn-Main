@@ -533,23 +533,24 @@ class frontendDisplay {
       $markdown_file_parts = pathinfo($markdown_file);
       $metadata_file = $markdown_file_parts['dirname'] . "/" . $markdown_file_parts['filename'] . '.yml';
 
-      // If the metadata YML file exists and is not empty, do something.
+      // If the metadata YAML file exists and is not empty, do something.
       if (file_exists($metadata_file) && !empty($metadata_file)) {
         $yaml_data = Spyc::YAMLLoad($metadata_file);
-        if (array_key_exists('title', $yaml_data)) {
-          $this->page_title = $yaml_data['title'];
-        }
-        if (array_key_exists('description', $yaml_data)) {
-          $this->page_description = $yaml_data['description'];
-        }
-        if (array_key_exists('robots', $yaml_data)) {
-          $this->page_robots = $yaml_data['robots'];
+        $metadata_items = array('title', 'description', 'robots');
+        foreach ($metadata_items as $metadata_item) {
+          if (array_key_exists($metadata_item, $yaml_data)) {
+            $page_variable_name = "page_" . $metadata_item;
+            $this->$page_variable_name = $yaml_data[$metadata_item];
+          }
         }
       }
 
+      // Get the markdown file contents.
       $markdown_file_contents = file_get_contents($markdown_file);
-      // TODO: This is where we can do some preprocessing of the markdown file contents.
+
+      // Process the markdown file contents.
       $ret = Parsedown::instance()->parse($markdown_file_contents);
+
     }
 
     return $ret;
