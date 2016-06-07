@@ -526,14 +526,12 @@ class frontendDisplay {
 
     $ret = '';
 
-    // If the markdown file is empty or the file doens’t exist, just bail out of the function.
-    if (empty($markdown_file) || !file_exists($markdown_file)) {
-      return;
+    // If the markdown file exists and is not empty, do something.
+    if (file_exists($markdown_file) && !empty($markdown_file)) {
+      $markdown_file_contents = file_get_contents($markdown_file);
+      // TODO: This is where we can do some preprocessing of the markdown file contents.
+      $ret = Parsedown::instance()->parse($markdown_file_contents);
     }
-
-    $markdown_file_contents = file_get_contents($markdown_file);
-    // TODO: This is where we can do some preprocessing of the markdown file contents.
-    $ret = Parsedown::instance()->parse($markdown_file_contents);
 
     return $ret;
 
