@@ -528,6 +528,15 @@ class frontendDisplay {
 
     // If the markdown file exists and is not empty, do something.
     if (file_exists($markdown_file) && !empty($markdown_file)) {
+    
+      // Define BASE_FILEPATH
+      $markdown_file_parts = pathinfo($_SERVER['SCRIPT_FILENAME']);
+      $metadata_file = $markdown_file_parts['dirname'] . '/' . $markdown_file_parts['filename'] . '.yml';
+
+      // If the metadata YML file exists and is not empty, do something.
+      if (file_exists($metadata_file) && !empty($metadata_file)) {
+      }
+
       $markdown_file_contents = file_get_contents($markdown_file);
       // TODO: This is where we can do some preprocessing of the markdown file contents.
       $ret = Parsedown::instance()->parse($markdown_file_contents);
