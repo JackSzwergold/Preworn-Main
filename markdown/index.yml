@@ -1,3 +1,3 @@
 title: Preworn
 description: This site is Jack Szwergold’s technical portfolio and calling card.
-robots: noindex, nofollow
+robots: index, follow
