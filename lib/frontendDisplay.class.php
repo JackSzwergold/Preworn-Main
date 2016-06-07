@@ -542,6 +542,9 @@ class frontendDisplay {
         if (array_key_exists('description', $yaml_data)) {
           $this->page_description = $yaml_data['description'];
         }
+        if (array_key_exists('robots', $yaml_data)) {
+          $this->page_robots = $yaml_data['robots'];
+        }
       }
 
       $markdown_file_contents = file_get_contents($markdown_file);
