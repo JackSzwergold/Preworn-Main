@@ -524,12 +524,12 @@ class frontendDisplay {
   // Load the markdown file.
   function loadMarkdown($markdown_file = null) {
 
+    $ret = '';
+
     // If the markdown file is empty or the file doens’t exist, just bail out of the function.
     if (empty($markdown_file) || !file_exists($markdown_file)) {
       return;
     }
-
-    $ret = '';
 
     $markdown_file_contents = file_get_contents($markdown_file);
     // TODO: This is where we can do some preprocessing of the markdown file contents.
