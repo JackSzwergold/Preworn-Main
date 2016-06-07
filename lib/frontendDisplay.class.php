@@ -533,19 +533,14 @@ class frontendDisplay {
       $markdown_file_parts = pathinfo($markdown_file);
       $metadata_file = $markdown_file_parts['dirname'] . "/" . $markdown_file_parts['filename'] . '.yml';
 
-      if (FALSE) {
-        echo '<pre>';
-        print_r($markdown_file_parts);
-        echo '</pre>';
-      }
-
       // If the metadata YML file exists and is not empty, do something.
       if (file_exists($metadata_file) && !empty($metadata_file)) {
-        $data = Spyc::YAMLLoad($metadata_file);
-        if (TRUE) {
-          echo '<pre>';
-          print_r($data);
-          echo '</pre>';
+        $yaml_data = Spyc::YAMLLoad($metadata_file);
+        if (array_key_exists('title', $yaml_data)) {
+          $this->page_title = $yaml_data['title'];
+        }
+        if (array_key_exists('description', $yaml_data)) {
+          $this->page_description = $yaml_data['description'];
         }
       }
 
