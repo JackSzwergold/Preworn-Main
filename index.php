@@ -29,6 +29,7 @@ require_once 'conf/conf.inc.php';
 require_once BASE_FILEPATH . '/common/functions.inc.php';
 require_once BASE_FILEPATH . '/lib/frontendDisplay.class.php';
 require_once BASE_FILEPATH . '/lib/contentCreation.class.php';
+require_once BASE_FILEPATH . '/lib/Spyc.php';
 
 //**************************************************************************************//
 // Init the "contentCreation()" class.

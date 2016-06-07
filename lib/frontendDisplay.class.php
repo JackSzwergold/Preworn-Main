@@ -541,7 +541,12 @@ class frontendDisplay {
 
       // If the metadata YML file exists and is not empty, do something.
       if (file_exists($metadata_file) && !empty($metadata_file)) {
-        // echo $metadata_file;
+        $data = Spyc::YAMLLoad($metadata_file);
+        if (TRUE) {
+          echo '<pre>';
+          print_r($data);
+          echo '</pre>';
+        }
       }
 
       $markdown_file_contents = file_get_contents($markdown_file);
