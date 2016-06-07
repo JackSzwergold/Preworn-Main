@@ -530,11 +530,18 @@ class frontendDisplay {
     if (file_exists($markdown_file) && !empty($markdown_file)) {
     
       // Define BASE_FILEPATH
-      $markdown_file_parts = pathinfo($_SERVER['SCRIPT_FILENAME']);
-      $metadata_file = $markdown_file_parts['dirname'] . '/' . $markdown_file_parts['filename'] . '.yml';
+      $markdown_file_parts = pathinfo($markdown_file);
+      $metadata_file = $markdown_file_parts['dirname'] . "/" . $markdown_file_parts['filename'] . '.yml';
+
+      if (FALSE) {
+        echo '<pre>';
+        print_r($markdown_file_parts);
+        echo '</pre>';
+      }
 
       // If the metadata YML file exists and is not empty, do something.
       if (file_exists($metadata_file) && !empty($metadata_file)) {
+        // echo $metadata_file;
       }
 
       $markdown_file_contents = file_get_contents($markdown_file);
