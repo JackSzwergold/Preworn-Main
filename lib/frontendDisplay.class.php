@@ -582,8 +582,8 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
-  // Set the header.
-  function setNameplate() {
+  // Set the navigation stuff.
+  function setNavigation() {
 
     $li_items_l = array();
     if ($this->page_depth > 0) {
@@ -643,7 +643,7 @@ class frontendDisplay {
 
     return $ret;
 
-  } // setNameplate
+  } // setNavigation
 
 
   //**************************************************************************************//
