@@ -634,10 +634,10 @@ class frontendDisplay {
 
     $ret = '';
     if (!empty($content_l) || !empty($content_r)) {
-      $ret = '<div class="Nameplate">'
+      $ret = '<div class="Navigation">'
            . $div_l
            . $div_r
-           . '</div><!-- .Nameplate -->'
+           . '</div><!-- .Navigation -->'
            ;
     }
 

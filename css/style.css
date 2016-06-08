@@ -294,7 +294,7 @@ ul, li
 .Content .Text .Padding { padding: 15px 0 15px 0; }
 
 /**************************************************************************************************/
-.Nameplate
+.Navigation
 {
 	display: flex;
 	/* flex-direction: column; */
@@ -331,16 +331,16 @@ ul, li
 }
 
 /**************************************************************************************************/
-.Nameplate .Left,
-.Nameplate .Right
+.Navigation .Left,
+.Navigation .Right
 {
 	flex-grow: 0;
 	flex-shrink: 0;
 	flex-basis: auto;
 }
 
-.Nameplate .Left ul li,
-.Nameplate .Right ul li
+.Navigation .Left ul li,
+.Navigation .Right ul li
 {
 	font-family: Georgia, "New York", "Times New Roman", Times, serif;
 	font-weight: normal;
@@ -350,10 +350,10 @@ ul, li
 	color: #fff;
 }
 
-.Nameplate .Left ul li a, .Nameplate .Left ul li a:active,
-.Nameplate .Left ul li a:hover, .Nameplate .Left ul li a:visited,
-.Nameplate .Right ul li a, .Nameplate .Right ul li a:active,
-.Nameplate .Right ul li a:hover, .Nameplate .Right ul li a:visited
+.Navigation .Left ul li a, .Navigation .Left ul li a:active,
+.Navigation .Left ul li a:hover, .Navigation .Left ul li a:visited,
+.Navigation .Right ul li a, .Navigation .Right ul li a:active,
+.Navigation .Right ul li a:hover, .Navigation .Right ul li a:visited
 {
 	text-decoration: none;
 	color: #fff;
@@ -365,18 +365,18 @@ ul, li
 	box-shadow: 3px 3px 2px #555;
 }
 
-.Nameplate .Left ul li a:active, .Nameplate .Left ul li a:hover,
-.Nameplate .Right ul li a:active, .Nameplate .Right ul li a:hover
+.Navigation .Left ul li a:active, .Navigation .Left ul li a:hover,
+.Navigation .Right ul li a:active, .Navigation .Right ul li a:hover
 {
 	color: #333;
 	background-color: #999;
 }
 
 /**************************************************************************************************/
-.Nameplate .Left ul { margin: 0 0 0 6px; }
-.Nameplate .Left ul li { margin: 3px 3px 3px 3px; }
-.Nameplate .Right ul { margin: 0 6px 0 0; }
-.Nameplate .Right ul li { margin: 3px 3px 3px 3px; }
+.Navigation .Left ul { margin: 0 0 0 6px; }
+.Navigation .Left ul li { margin: 3px 3px 3px 3px; }
+.Navigation .Right ul { margin: 0 6px 0 0; }
+.Navigation .Right ul li { margin: 3px 3px 3px 3px; }
 
 /**************************************************************************************************/
 .Footer
