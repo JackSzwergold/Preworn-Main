@@ -164,6 +164,13 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
+  // Set the Facebook admin stuff.
+  function setPageFBAdmins($page_fb_admins = null) {
+    $this->page_fb_admins = $page_fb_admins;
+  } // setPageFBAdmins
+
+
+  //**************************************************************************************//
   // Set the page content markdown file.
   function setPageContentMarkdown($md_file = null) {
     $this->page_markdown_file = $md_file;
@@ -491,7 +498,7 @@ class frontendDisplay {
     }
     $meta_names['apple-mobile-web-app-capable'] = 'yes';
 
-    // Set the meta property values.
+    // Set the OpenGraph meta property values.
     $meta_properties = array();
     $meta_properties['og:title'] = $this->page_title;
     if (!empty($description)) {
@@ -507,6 +514,11 @@ class frontendDisplay {
     }
     if (!empty($this->page_image)) {
       $meta_properties['og:image'] = $this->page_image;
+    }
+
+    // Set the Facebook specific meta property values.
+    if (!empty($this->page_fb_admins)) {
+      $meta_properties['fb:admins'] = $this->page_fb_admins;
     }
 
     $ret = array();

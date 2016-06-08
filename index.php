@@ -76,6 +76,7 @@ $frontendDisplayClass->setPageURL($SITE_URL . join('/', $params));
 $frontendDisplayClass->setPageCopyright($SITE_COPYRIGHT);
 $frontendDisplayClass->setPageDescription($SITE_DESCRIPTION);
 $frontendDisplayClass->setPageImage($SITE_URL . $SITE_IMAGE);
+$frontendDisplayClass->setPageFBAdmins($SITE_FB_ADMINS);
 $frontendDisplayClass->setPageContentMarkdown($markdown_file);
 $frontendDisplayClass->setPageDivs($PAGE_DIVS_ARRAY);
 $frontendDisplayClass->setPageDivWrapper();

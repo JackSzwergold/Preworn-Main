@@ -41,6 +41,7 @@ $SITE_COPYRIGHT = '(c) Copyright ' . date('Y') . ' Jack Szwergold. Creative Comm
 $SITE_ROBOTS = 'noindex, nofollow';
 $SITE_VIEWPORT = 'width=device-width, initial-scale=0.4, maximum-scale=2, minimum-scale=0.4, user-scalable=yes';
 $SITE_IMAGE = 'favicons/speeddial-160px.png';
+$SITE_FB_ADMINS = '504768652';
 
 // Favicon info.
 $FAVICONS = array();
