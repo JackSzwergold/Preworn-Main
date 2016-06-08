@@ -52,13 +52,13 @@ a, a:visited, a:hover, a:active { color: #000; }
 }
 
 /**************************************************************************************************/
-.Navigation { background-color: #fff; }
+.Navigation { background-color: transparent; }
 
 .Navigation .Left ul li a, .Navigation .Left ul li a:active,
 .Navigation .Left ul li a:hover, .Navigation .Left ul li a:visited
 {
 	color: #333;
-	background-color: #FCA311;
+	background-color: #F9E526;
 }
 
 .Navigation .Right ul li a, .Navigation .Right ul li a:active,
@@ -72,24 +72,31 @@ a, a:visited, a:hover, a:active { color: #000; }
 .Navigation .Left ul li a:active, .Navigation .Left ul li a:hover
 {
 	color: #333;
-	background-color: #F9E526;
+	background-color: #82C6E2;
 }
 
 .Navigation .Right ul li a:active, .Navigation .Right ul li a:hover
 {
 	color: #333;
-	background-color: #FCA311;
+	background-color: #82C6E2;
 }
 
 /**************************************************************************************************/
 .Navigation .Left ul li a, .Navigation .Left ul li a:active,
-.Navigation .Left ul li a:hover, .Navigation .Left ul li a:visited { box-shadow: 3px 3px 2px rgba(249, 229, 38, 0.65); }
+.Navigation .Left ul li a:hover, .Navigation .Left ul li a:visited { box-shadow: 5px 5px 9px 0px rgba(17, 17, 17, 0.65); }
 .Navigation .Right ul li a, .Navigation .Right ul li a:active,
-.Navigation .Right ul li a:hover, .Navigation .Right ul li a:visited { box-shadow: 3px 3px 2px rgba(252, 163, 17, 0.65); }
+.Navigation .Right ul li a:hover, .Navigation .Right ul li a:visited { box-shadow: 5px 5px 9px 0px rgba(17, 17, 17, 0.65); }
+
+/**************************************************************************************************/
+.Header
+{
+	background-color: #FCA311;
+	box-shadow: inset 0 -14px 9px -7px rgba(17, 17, 17, 0.65);
+}
 
 /**************************************************************************************************/
 .Footer
 {
 	background-color: #FCA311;
-	box-shadow: inset 0 10px 9px rgba(17, 17, 17, 0.65);
+	box-shadow: inset 0 14px 9px -7px rgba(17, 17, 17, 0.65);
 }
