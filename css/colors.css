@@ -95,8 +95,4 @@ a, a:visited, a:hover, a:active { color: #000; }
 }
 
 /**************************************************************************************************/
-.Footer
-{
-	background-color: #FCA311;
-	box-shadow: inset 0 14px 9px -7px rgba(17, 17, 17, 0.65);
-}
+.Footer { box-shadow: inset 0 14px 9px -7px rgba(17, 17, 17, 0.65); }
