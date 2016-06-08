@@ -57,28 +57,28 @@ a, a:visited, a:hover, a:active { color: #000; }
 .Navigation .Left ul li a, .Navigation .Left ul li a:active,
 .Navigation .Left ul li a:hover, .Navigation .Left ul li a:visited
 {
-	color: #333;
+	color: #555;
 	background-color: #F9E526;
 }
 
 .Navigation .Right ul li a, .Navigation .Right ul li a:active,
 .Navigation .Right ul li a:hover, .Navigation .Right ul li a:visited
 {
-	color: #333;
+	color: #555;
 	background-color: #F9E526;
 }
 
 /**************************************************************************************************/
 .Navigation .Left ul li a:active, .Navigation .Left ul li a:hover
 {
-	color: #333;
-	background-color: #82C6E2;
+	color: #fff;
+	background-color: #555;
 }
 
 .Navigation .Right ul li a:active, .Navigation .Right ul li a:hover
 {
-	color: #333;
-	background-color: #82C6E2;
+	color: #fff;
+	background-color: #555;
 }
 
 /**************************************************************************************************/
