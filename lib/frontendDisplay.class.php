@@ -157,6 +157,13 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
+  // Set the page image.
+  function setPageImage($page_image = null) {
+    $this->page_image = $page_image;
+  } // setPageImage
+
+
+  //**************************************************************************************//
   // Set the page content markdown file.
   function setPageContentMarkdown($md_file = null) {
     $this->page_markdown_file = $md_file;
