@@ -54,6 +54,7 @@ class frontendDisplay {
   private $page_title = NULL;
   private $page_description = NULL;
   private $page_content = NULL;
+  private $page_image = NULL;
 
   private $body_header_content = NULL;
   private $body_footer_content = NULL;
@@ -496,6 +497,9 @@ class frontendDisplay {
     }
     if (!empty($this->page_title)) {
       $meta_properties['og:site_name'] = $this->page_title;
+    }
+    if (!empty($this->page_image)) {
+      $meta_properties['og:image'] = $this->page_image;
     }
 
     $ret = array();
