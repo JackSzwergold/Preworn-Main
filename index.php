@@ -93,7 +93,11 @@ $frontendDisplayClass->setPaymentInfo($PAYMENT_INFO);
 $nameplate = $frontendDisplayClass->setNameplate();
 $frontendDisplayClass->setBodyHeader($nameplate);
 $amazon_ad_468x60 = '<iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=13&l=ez&f=ifr&linkID=feede769df2856e2565b6b6685a88b80&t=preworn-20&tracking_id=preworn-20" width="468" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>';
-$frontendDisplayClass->setBodyFooter($amazon_ad_468x60 . '<br /><br />');
+$footer = '<div class="Footer">' 
+        . $amazon_ad_468x60
+        . '</div>'
+        ;
+$frontendDisplayClass->setBodyFooter($footer);
 
 //**************************************************************************************//
 // Init the content.

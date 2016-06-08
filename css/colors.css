@@ -83,13 +83,13 @@ a, a:visited, a:hover, a:active { color: #000; }
 
 /**************************************************************************************************/
 .Nameplate .Left ul li a, .Nameplate .Left ul li a:active,
-.Nameplate .Left ul li a:hover, .Nameplate .Left ul li a:visited
-{
-	box-shadow: 3px 3px 2px rgba(249, 229, 38, 0.65);
-}
-
+.Nameplate .Left ul li a:hover, .Nameplate .Left ul li a:visited { box-shadow: 3px 3px 2px rgba(249, 229, 38, 0.65); }
 .Nameplate .Right ul li a, .Nameplate .Right ul li a:active,
-.Nameplate .Right ul li a:hover, .Nameplate .Right ul li a:visited
+.Nameplate .Right ul li a:hover, .Nameplate .Right ul li a:visited { box-shadow: 3px 3px 2px rgba(252, 163, 17, 0.65); }
+
+/**************************************************************************************************/
+.Footer
 {
-	box-shadow: 3px 3px 2px rgba(252, 163, 17, 0.65);
+	background-color: #FCA311;
+	box-shadow: inset 0 10px 9px rgba(17, 17, 17, 0.65);
 }
