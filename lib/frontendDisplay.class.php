@@ -71,6 +71,8 @@ class frontendDisplay {
   private $payment_info = array();
   private $social_media_info = array();
 
+  private $ad_banner = NULL;
+
   private $page_markdown_file = NULL;
 
   public function __construct() {
@@ -278,6 +280,13 @@ class frontendDisplay {
   function setSocialMediaInfo($social_media_info = null) {
     $this->social_media_info = $social_media_info;
   } // setSocialMediaInfo
+
+
+  //**************************************************************************************//
+  // Set the ad banner stuff.
+  function setAdBanner($ad_banner = null) {
+    $this->ad_banner = $ad_banner;
+  } // setAdBanner
 
 
   //**************************************************************************************//
@@ -570,7 +579,7 @@ class frontendDisplay {
 
     // If the markdown file exists and is not empty, do something.
     if (file_exists($markdown_file) && !empty($markdown_file)) {
-    
+
       // Define BASE_FILEPATH
       $markdown_file_parts = pathinfo($markdown_file);
       $metadata_file = $markdown_file_parts['dirname'] . "/" . $markdown_file_parts['filename'] . '.yml';
@@ -698,6 +707,18 @@ class frontendDisplay {
     return $ret;
 
   } // setNavigation
+
+
+  //**************************************************************************************//
+  // Set the ad banner stuff.
+  function setAdBannerFinal() {
+
+    return '<div class="Ad">'
+         . $this->ad_banner
+         . '</div>'
+         ;
+
+  } // setAdBannerFinal
 
 
   //**************************************************************************************//

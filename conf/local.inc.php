@@ -84,8 +84,8 @@ $SOCIAL_MEDIA_INFO['twitter']['url'] = 'https://twitter.com/jackszwergold/';
 $SOCIAL_MEDIA_INFO['twitter']['description'] = 'Check me out on Twitter.';
 
 // Ad info.
-$AMAZON_AD_468X60 = '<iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=13&l=ez&f=ifr&linkID=1c6a1177fa3fdbc8199838d723f94324&t=preworn-20&tracking_id=preworn-20" width="468" height="60" style="border: none;"></iframe>';
-$AMAZON_AD_728X90 = '<iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=amazonhomepage&f=ifr&linkID=fed6cd5c49cfa40a0d42c588facc1502&t=preworn-20&tracking_id=preworn-20" width="728" height="90" style="border: none;"></iframe>';
+// $AMAZON_AD_468X60 = '<iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=13&l=ez&f=ifr&linkID=1c6a1177fa3fdbc8199838d723f94324&t=preworn-20&tracking_id=preworn-20" width="468" height="60" style="border: none;"></iframe>';
+// $AMAZON_AD_728X90 = '<iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=amazonhomepage&f=ifr&linkID=fed6cd5c49cfa40a0d42c588facc1502&t=preworn-20&tracking_id=preworn-20" width="728" height="90" style="border: none;"></iframe>';
 $AMAZON_RECOMMENDATION = '<script type="text/javascript">
 amzn_assoc_placement = "adunit0";
 amzn_assoc_enable_interest_ads = "true";

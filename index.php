@@ -90,24 +90,24 @@ $frontendDisplayClass->setPageBase($page_base . $page_base_suffix);
 $frontendDisplayClass->setPageURLParts($params);
 // $frontendDisplayClass->setPaymentInfo($PAYMENT_INFO);
 $frontendDisplayClass->setSocialMediaInfo($SOCIAL_MEDIA_INFO);
+$frontendDisplayClass->setAdBanner($AMAZON_RECOMMENDATION);
 
 //**************************************************************************************//
 // Init header and footer stuff.
 
 $navigation = $frontendDisplayClass->setNavigation();
+$ad_banner = $frontendDisplayClass->setAdBannerFinal();
 
 // Set the header.
-$header = '<div class="Header">' 
+$header = '<div class="Header">'
         . $navigation
         . '</div>'
         ;
 $frontendDisplayClass->setBodyHeader($header);
 
 // Set the footer.
-$footer = '<div class="Footer">' 
-        . '<div class="Ad">' 
-        . $AMAZON_RECOMMENDATION
-        . '</div>'
+$footer = '<div class="Footer">'
+        . $ad_banner
         . '</div>'
         ;
 $frontendDisplayClass->setBodyFooter($footer);
