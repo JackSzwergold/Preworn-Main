@@ -62,14 +62,23 @@ $FAVICONS['ipad']['href'] = 'favicons/apple-touch-icon-72x72-precomposed.png';
     
 // Payment info.
 $PAYMENT_INFO = array();
-$PAYMENT_INFO['amazon']['short_name'] = 'Amazon';
-$PAYMENT_INFO['amazon']['emoji'] = '🎥📚📀';
-$PAYMENT_INFO['amazon']['url'] = 'http://www.amazon.com/?tag=preworn-20';
-$PAYMENT_INFO['amazon']['description'] = 'Support me when you buy things on Amazon with this link.';
-$PAYMENT_INFO['paypal']['short_name'] = 'PayPal';
-$PAYMENT_INFO['paypal']['emoji'] = '💰💸💳';
-$PAYMENT_INFO['paypal']['url'] = 'https://www.paypal.me/JackSzwergold';
-$PAYMENT_INFO['paypal']['description'] = 'Support me with a PayPal donation.';
+// $PAYMENT_INFO['amazon']['short_name'] = 'Amazon';
+// $PAYMENT_INFO['amazon']['emoji'] = '🎥📚📀';
+// $PAYMENT_INFO['amazon']['url'] = 'http://www.amazon.com/?tag=preworn-20';
+// $PAYMENT_INFO['amazon']['description'] = 'Support me when you buy things on Amazon with this link.';
+// $PAYMENT_INFO['paypal']['short_name'] = 'PayPal';
+// $PAYMENT_INFO['paypal']['emoji'] = '💰💸💳';
+// $PAYMENT_INFO['paypal']['url'] = 'https://www.paypal.me/JackSzwergold';
+// $PAYMENT_INFO['paypal']['description'] = 'Support me with a PayPal donation.';
+
+// Social media info.
+$SOCIAL_MEDIA_INFO = array();
+$SOCIAL_MEDIA_INFO['instagram']['short_name'] = 'Instagram';
+$SOCIAL_MEDIA_INFO['instagram']['emoji'] = '📸';
+$SOCIAL_MEDIA_INFO['instagram']['url'] = 'https://www.instagram.com/jackszwergold/';
+$SOCIAL_MEDIA_INFO['twitter']['short_name'] = 'Twitter';
+$SOCIAL_MEDIA_INFO['twitter']['emoji'] = '🐦';
+$SOCIAL_MEDIA_INFO['twitter']['url'] = 'https://twitter.com/jackszwergold/';
 
 // Ad info.
 $AMAZON_AD_468X60 = '<iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=13&l=ez&f=ifr&linkID=1c6a1177fa3fdbc8199838d723f94324&t=preworn-20&tracking_id=preworn-20" width="468" height="60" style="border: none;"></iframe>';

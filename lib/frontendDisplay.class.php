@@ -67,6 +67,7 @@ class frontendDisplay {
   private $page_robots = NULL;
 
   private $payment_info = array();
+  private $social_media_info = array();
 
   private $page_markdown_file = NULL;
 
@@ -264,6 +265,13 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
+  // Set the social media info.
+  function setSocialMediaInfo($social_media_info = null) {
+    $this->social_media_info = $social_media_info;
+  } // setSocialMediaInfo
+
+
+  //**************************************************************************************//
   // Set the body header.
   function setBodyHeader($body_header_content = null) {
     $this->body_header_content = $body_header_content;
@@ -418,7 +426,7 @@ class frontendDisplay {
 
     // Roll through the JavaScripts array.
     $ret = array();
-    foreach($this->javascripts as $javascript) {
+    foreach ($this->javascripts as $javascript) {
       $ret[] = sprintf('<script src="' . BASE_URL . '%s" type="%s"></script>', $javascript, 'text/javascript');
     }
 
@@ -433,7 +441,7 @@ class frontendDisplay {
 
     // Roll through the CSS array.
     $ret = array();
-    foreach($this->css as $css) {
+    foreach ($this->css as $css) {
       $ret[] = sprintf('<link rel="stylesheet" href="' . BASE_URL . '%s" type="text/css" />', $css);
     }
 
@@ -524,17 +532,17 @@ class frontendDisplay {
     $ret = array();
 
     // Roll through the '$meta_http_equivs'
-    foreach($meta_http_equivs as $http_equiv_key => $http_equiv_value) {
+    foreach ($meta_http_equivs as $http_equiv_key => $http_equiv_value) {
       $ret[] = sprintf('<meta http-equiv="%s" content="%s" />', $http_equiv_key, $http_equiv_value);
     }
 
     // Roll through the '$meta_names'
-    foreach($meta_names as $name_key => $name_value) {
+    foreach ($meta_names as $name_key => $name_value) {
       $ret[] = sprintf('<meta name="%s" content="%s" />', $name_key, $name_value);
     }
 
     // Roll through the '$meta_properties'
-    foreach($meta_properties as $property_key => $property_value) {
+    foreach ($meta_properties as $property_key => $property_value) {
       $ret[] = sprintf('<meta property="%s" content="%s" />', $property_key, $property_value);
     }
 
@@ -599,10 +607,22 @@ class frontendDisplay {
     }
 
     $li_items_r = array();
+
+    // Set the payment stuff.
     if (!empty($this->payment_info)) {
-      foreach($this->payment_info as $payment_key => $payment_value) {
+      foreach ($this->payment_info as $payment_key => $payment_value) {
         $li_items_r[] = sprintf('<li id="%s">', $payment_key)
                       . sprintf('<a href="%s" title="%s">%s %s</a>', $payment_value['url'], $payment_value['description'], $payment_value['short_name'], $payment_value['emoji'])
+                      . '</li>'
+                      ;
+      }
+    }
+
+    // Set the social media stuff.
+    if (!empty($this->social_media_info)) {
+      foreach ($this->social_media_info as $social_media_key => $social_media_value) {
+        $li_items_r[] = sprintf('<li id="%s">', $social_media_key)
+                      . sprintf('<a href="%s" title="%s">%s %s</a>', $social_media_value['url'], $social_media_value['description'], $social_media_value['short_name'], $social_media_value['emoji'])
                       . '</li>'
                       ;
       }
