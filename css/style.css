@@ -381,6 +381,22 @@ ul, li
 .Navigation .Right ul li { margin: 3px 3px 3px 3px; }
 
 /**************************************************************************************************/
+.Copyright
+{
+	clear: both;
+	font-family: Georgia, "New York", "Times New Roman", Times, serif;
+	font-weight: normal;
+	font-style: italic;
+	font-size: 100%;
+	line-height: 1.4em;
+	text-transform: none;
+	padding: 8px 16px 8px 16px;
+	border-radius: 8px;
+	color: #777;
+	background-color: #eee;
+}
+
+/**************************************************************************************************/
 .Header, .Footer
 {
 	display: flex;

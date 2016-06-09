@@ -51,7 +51,9 @@ class frontendDisplay {
   private $view_mode = NULL;
   private $page_url = NULL;
   private $page_copyright = NULL;
+  private $page_license = NULL;
   private $page_title = NULL;
+  private $page_title_short = NULL;
   private $page_description = NULL;
   private $page_content = NULL;
   private $page_image = NULL;
@@ -137,10 +139,17 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
-  // Set the page Copyright.
+  // Set the page copyright.
   function setPageCopyright($page_copyright = null) {
     $this->page_copyright = $page_copyright;
   } // setPageCopyright
+
+
+  //**************************************************************************************//
+  // Set the page license.
+  function setPageLicense($page_license = null) {
+    $this->page_license = $page_license;
+  } // setPageLicense
 
 
   //**************************************************************************************//
@@ -500,9 +509,11 @@ class frontendDisplay {
     }
     else if ($this->doctype == 'html5') {
       $copyright_key = 'dcterms.rightsHolder';
+      $copyright_date_key = 'dcterms.dateCopyrighted';
     }
     if (!empty($copyright_key) && !empty($this->page_url)) {
-      $meta_names[$copyright_key] = $this->page_copyright;
+      $meta_names[$copyright_key] = $this->page_copyright . '. ' . $this->page_license;
+      $meta_names[$copyright_date_key] = date('Y');
     }
     $meta_names['apple-mobile-web-app-capable'] = 'yes';
 
@@ -567,7 +578,7 @@ class frontendDisplay {
       // If the metadata YAML file exists and is not empty, do something.
       if (file_exists($metadata_file) && !empty($metadata_file)) {
         $yaml_data = Spyc::YAMLLoad($metadata_file);
-        $metadata_items = array('title', 'description', 'robots');
+        $metadata_items = array('title', 'title_short', 'description', 'robots', 'copyright', 'license');
         foreach ($metadata_items as $metadata_item) {
           if (array_key_exists($metadata_item, $yaml_data)) {
             $page_variable_name = "page_" . $metadata_item;
@@ -579,8 +590,31 @@ class frontendDisplay {
       // Get the markdown file contents.
       $markdown_file_contents = file_get_contents($markdown_file);
 
+      // Split and check the markdown contents for the copyright/license line and remove it if it’s there.
+      $split_markdown = explode('***', $markdown_file_contents);
+      $CUSTOM_COPYRIGHT = FALSE;
+      if (count($split_markdown) > 1) {
+        $last_paragraph = $split_markdown[count($split_markdown) - 1];
+        $license_text = 'This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).';
+        if (strpos($last_paragraph, $license_text)) {
+          $CUSTOM_COPYRIGHT = TRUE;
+          array_pop($split_markdown);
+        }
+      }
+
       // Process the markdown file contents.
-      $ret = Parsedown::instance()->parse($markdown_file_contents);
+      $ret = Parsedown::instance()->parse(join('***', $split_markdown));
+
+      // Set a copyright box.
+      if ($CUSTOM_COPYRIGHT) {
+        $ret .= '<div class="Copyright">'
+              . (!empty($this->page_title_short) ? '“' . $this->page_title_short . ',” ' : '')
+              . (!empty($this->page_copyright) ? $this->page_copyright : '')
+              . (!empty($this->page_license) ? '. ' . $this->page_license : '')
+              . '</div>'
+              ;
+      }
+
 
     }
 

@@ -74,6 +74,7 @@ $frontendDisplayClass->setViewMode($VIEW_MODE);
 $frontendDisplayClass->setPageTitle($page_title);
 $frontendDisplayClass->setPageURL($SITE_URL . join('/', $params));
 $frontendDisplayClass->setPageCopyright($SITE_COPYRIGHT);
+$frontendDisplayClass->setPageLicense($SITE_LICENSE);
 $frontendDisplayClass->setPageDescription($SITE_DESCRIPTION);
 $frontendDisplayClass->setPageImage($SITE_URL . $SITE_IMAGE);
 $frontendDisplayClass->setPageFBAdmins($SITE_FB_ADMINS);
