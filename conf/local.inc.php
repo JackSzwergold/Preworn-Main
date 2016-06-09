@@ -100,7 +100,6 @@ amzn_assoc_default_category = "All";
 </script>
 <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>';
 
-
 // Set the page DIVs array.
 $PAGE_DIVS_ARRAY = array();
 $PAGE_DIVS_ARRAY[] = 'Wrapper';
