@@ -71,6 +71,9 @@ $PAYMENT_INFO['paypal']['emoji'] = '💰💸💳';
 $PAYMENT_INFO['paypal']['url'] = 'https://www.paypal.me/JackSzwergold';
 $PAYMENT_INFO['paypal']['description'] = 'Support me with a PayPal donation.';
 
+// Ad info.
+$AMAZON_AD_468X60 = '<iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=13&l=ez&f=ifr&linkID=feede769df2856e2565b6b6685a88b80&t=preworn-20&tracking_id=preworn-20" width="468" height="60" style="border: none;"></iframe>';
+
 // Set the page DIVs array.
 $PAGE_DIVS_ARRAY = array();
 $PAGE_DIVS_ARRAY[] = 'Wrapper';
