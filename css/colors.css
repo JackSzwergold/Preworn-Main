@@ -2,7 +2,7 @@
 html, body
 {
 	color: #000;
-	background-color: #ddd;
+	background-color: #555;
 }
 
 hr { background-color: #000; }
@@ -53,39 +53,6 @@ a, a:visited, a:hover, a:active { color: #000; }
 
 /**************************************************************************************************/
 .Navigation { background-color: transparent; }
-
-.Navigation .Left ul li a, .Navigation .Left ul li a:active,
-.Navigation .Left ul li a:hover, .Navigation .Left ul li a:visited
-{
-	color: #555;
-	background-color: #F9E526;
-}
-
-.Navigation .Right ul li a, .Navigation .Right ul li a:active,
-.Navigation .Right ul li a:hover, .Navigation .Right ul li a:visited
-{
-	color: #555;
-	background-color: #F9E526;
-}
-
-/**************************************************************************************************/
-.Navigation .Left ul li a:active, .Navigation .Left ul li a:hover
-{
-	color: #fff;
-	background-color: #555;
-}
-
-.Navigation .Right ul li a:active, .Navigation .Right ul li a:hover
-{
-	color: #fff;
-	background-color: #555;
-}
-
-/**************************************************************************************************/
-.Navigation .Left ul li a, .Navigation .Left ul li a:active,
-.Navigation .Left ul li a:hover, .Navigation .Left ul li a:visited { box-shadow: 5px 5px 9px 0px rgba(17, 17, 17, 0.65); }
-.Navigation .Right ul li a, .Navigation .Right ul li a:active,
-.Navigation .Right ul li a:hover, .Navigation .Right ul li a:visited { box-shadow: 5px 5px 9px 0px rgba(17, 17, 17, 0.65); }
 
 /**************************************************************************************************/
 .Header
