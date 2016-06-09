@@ -86,6 +86,20 @@ $SOCIAL_MEDIA_INFO['twitter']['description'] = 'Check me out on Twitter.';
 // Ad info.
 $AMAZON_AD_468X60 = '<iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=13&l=ez&f=ifr&linkID=1c6a1177fa3fdbc8199838d723f94324&t=preworn-20&tracking_id=preworn-20" width="468" height="60" style="border: none;"></iframe>';
 $AMAZON_AD_728X90 = '<iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=amazonhomepage&f=ifr&linkID=fed6cd5c49cfa40a0d42c588facc1502&t=preworn-20&tracking_id=preworn-20" width="728" height="90" style="border: none;"></iframe>';
+$AMAZON_RECOMMENDATION = '<script type="text/javascript">
+amzn_assoc_placement = "adunit0";
+amzn_assoc_enable_interest_ads = "true";
+amzn_assoc_tracking_id = "preworn-20";
+amzn_assoc_ad_mode = "auto";
+amzn_assoc_ad_type = "smart";
+amzn_assoc_marketplace = "amazon";
+amzn_assoc_region = "US";
+amzn_assoc_linkid = "8ff3d030cea4c7457d6477d0a395df59";
+amzn_assoc_fallback_mode = {"type":"search","value":"*"};
+amzn_assoc_default_category = "All";
+</script>
+<script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>';
+
 
 // Set the page DIVs array.
 $PAGE_DIVS_ARRAY = array();

@@ -105,7 +105,7 @@ $frontendDisplayClass->setBodyHeader($header);
 
 // Set the footer.
 $footer = '<div class="Footer">' 
-        . $AMAZON_AD_728X90
+        . $AMAZON_RECOMMENDATION
         . '</div>'
         ;
 $frontendDisplayClass->setBodyFooter($footer);
