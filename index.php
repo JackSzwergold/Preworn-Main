@@ -105,7 +105,9 @@ $frontendDisplayClass->setBodyHeader($header);
 
 // Set the footer.
 $footer = '<div class="Footer">' 
+        . '<div class="Ad">' 
         . $AMAZON_RECOMMENDATION
+        . '</div>'
         . '</div>'
         ;
 $frontendDisplayClass->setBodyFooter($footer);

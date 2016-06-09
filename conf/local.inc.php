@@ -95,7 +95,7 @@ amzn_assoc_ad_type = "smart";
 amzn_assoc_marketplace = "amazon";
 amzn_assoc_region = "US";
 amzn_assoc_linkid = "8ff3d030cea4c7457d6477d0a395df59";
-amzn_assoc_fallback_mode = {"type":"search","value":"*"};
+amzn_assoc_fallback_mode = {"type":"search","value":"gold"};
 amzn_assoc_default_category = "All";
 </script>
 <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>';
