@@ -179,6 +179,13 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
+  // Set the page keyword.
+  function setPageKeyword($page_keyword = null) {
+    $this->page_keyword = $page_keyword;
+  } // setPageKeyword
+
+
+  //**************************************************************************************//
   // Set the Facebook admin stuff.
   function setPageFBAdmins($page_fb_admins = null) {
     $this->page_fb_admins = $page_fb_admins;
@@ -737,7 +744,7 @@ class frontendDisplay {
   function setAdBannerFinal() {
 
     return '<div class="Ad">'
-         . $this->ad_banner
+         . sprintf($this->ad_banner, $this->page_keyword)
          . '</div>'
          ;
 

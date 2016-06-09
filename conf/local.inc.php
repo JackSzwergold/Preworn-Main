@@ -43,6 +43,7 @@ $SITE_ROBOTS = 'noindex, nofollow';
 $SITE_VIEWPORT = 'width=device-width, initial-scale=0.4, maximum-scale=2, minimum-scale=0.4, user-scalable=yes';
 $SITE_IMAGE = 'favicons/icon_200x200.png';
 $SITE_FB_ADMINS = '504768652';
+$SITE_KEYWORD = 'gold';
 
 // Favicon info.
 $FAVICONS = array();
@@ -95,7 +96,7 @@ amzn_assoc_ad_type = "smart";
 amzn_assoc_marketplace = "amazon";
 amzn_assoc_region = "US";
 amzn_assoc_linkid = "8ff3d030cea4c7457d6477d0a395df59";
-amzn_assoc_fallback_mode = {"type":"search","value":"gold"};
+amzn_assoc_fallback_mode = {"type":"search","value":"%s"};
 amzn_assoc_default_category = "All";
 </script>
 <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>';
