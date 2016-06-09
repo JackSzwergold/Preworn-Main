@@ -512,7 +512,7 @@ class frontendDisplay {
       // $copyright_date_key = 'dcterms.dateCopyrighted';
     }
     if (!empty($copyright_key) && !empty($this->page_url)) {
-      $meta_names[$copyright_key] = $this->page_copyright . '. ' . $this->page_license;
+      $meta_names[$copyright_key] = $this->page_copyright . '. ' . $this->page_license . '.';
       // $meta_names[$copyright_date_key] = date('Y');
     }
     $meta_names['apple-mobile-web-app-capable'] = 'yes';
@@ -608,7 +608,9 @@ class frontendDisplay {
       // Set a copyright box.
       if ($CUSTOM_COPYRIGHT) {
         $ret .= '<div class="Copyright">'
-              . '“' . $this->page_title_short . ',” ' . $this->page_copyright . '. ' . $this->page_license
+              . (!empty($this->page_title_short) ? '“' . $this->page_title_short . ',” ' : '')
+              . (!empty($this->page_copyright) ? $this->page_copyright . '. ' : '')
+              . (!empty($this->page_license) ? $this->page_license . '.' : '')
               . '</div>'
               ;
       }
