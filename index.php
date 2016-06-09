@@ -103,7 +103,7 @@ $frontendDisplayClass->setBodyHeader($header);
 
 // Set the footer.
 $footer = '<div class="Footer">' 
-        . $AMAZON_AD_468X60
+        . $AMAZON_AD_728X90
         . '</div>'
         ;
 $frontendDisplayClass->setBodyFooter($footer);
