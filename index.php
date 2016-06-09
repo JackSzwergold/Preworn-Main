@@ -93,21 +93,22 @@ $frontendDisplayClass->setSocialMediaInfo($SOCIAL_MEDIA_INFO);
 $frontendDisplayClass->setAdBanner($AMAZON_RECOMMENDATION);
 
 //**************************************************************************************//
-// Init header and footer stuff.
+// Init the core content and set the header and footer items..
 
-$navigation = $frontendDisplayClass->setNavigation();
-$ad_banner = $frontendDisplayClass->setAdBannerFinal();
+// Set the core content.
+$frontendDisplayClass->initCoreContent();
 
 // Set the header.
+$navigation = $frontendDisplayClass->setNavigation();
 $frontendDisplayClass->setBodyHeader($navigation);
 
 // Set the footer.
+$ad_banner = $frontendDisplayClass->setAdBannerFinal();
 $frontendDisplayClass->setBodyFooter($ad_banner);
 
 //**************************************************************************************//
-// Init and display the content.
+// Init and display the final content.
 
-$frontendDisplayClass->initContent();
-$frontendDisplayClass->displayContent();
+$frontendDisplayClass->initFinalContent();
 
 ?>

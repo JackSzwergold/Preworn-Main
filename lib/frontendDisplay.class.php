@@ -20,6 +20,7 @@
  *          2014-02-27, js: adding a page URL
  *          2015-05-10, js: adding DIV wrapper class & id
  *          2015-05-11, js: setting dynamic DIV wrapper creation
+ *          2016-06-09, js: major reshuffling to get footers, headers, content and ads working
  *
  */
 
@@ -31,6 +32,7 @@ class frontendDisplay {
   private $DEBUG_MODE = FALSE;
   private $JSON_MODE = FALSE;
 
+  private $core_content;
   private $html_content;
   private $json_content;
 
@@ -198,7 +200,7 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
-  // Set the page content.
+  // Set the page html content.
   function setPageContent($html_content = null) {
     $this->html_content = $html_content;
   } // setPageContent
@@ -305,45 +307,53 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
+  // Init the core content.
+  function initCoreContent($response_header = NULL) {
+
+    // If we are not in JSON mode, then build the HTML content.
+    if (!$this->JSON_MODE) {
+      $this->buildCoreContent();
+    }
+
+  } // initCoreContent
+
+
+  //**************************************************************************************//
   // Init the content.
-  function initContent($response_header = NULL) {
+  function initFinalContent($response_header = NULL) {
 
     // If we are not in JSON mode, then build the HTML content.
     if (!$this->JSON_MODE) {
       $this->buildHTMLContent();
     }
 
-  } // initContent
+    $this->renderContent($response_header);
+
+ } // initFinalContent
 
 
   //**************************************************************************************//
-  // Display the content.
-  function displayContent($response_header = NULL) {
+  // Build the core content.
+  function buildCoreContent() {
 
-    $this->renderContent($response_header);
+    //**************************************************************************************//
+    // Set the HTML content or load the markdown content as HTML content.
 
-  } // displayContent
+    if (!empty($this->html_content)) {
+      $this->html_content = $this->html_content;
+    }
+    else if (!empty($this->page_markdown_file)) {
+      $this->html_content = $this->loadMarkdown($this->page_markdown_file);
+    }
+
+  } // buildCoreContent
 
 
   //**************************************************************************************//
   // Build the HTML content.
   function buildHTMLContent() {
 
-    //**************************************************************************************//
-    // Set the HTML content or load the markdown content as HTML content.
-
-    $html_content = '';
     if (!empty($this->html_content)) {
-      $html_content = $this->html_content;
-    }
-    else if (!empty($this->page_markdown_file)) {
-      $html_content = $this->loadMarkdown($this->page_markdown_file);
-    }
-
-    //**********************************************************************************//
-    // If the content is not empty, do something with it.
-
-    if (!empty($html_content)) {
 
       //**********************************************************************************//
       // Set the meta tags
@@ -391,12 +401,12 @@ class frontendDisplay {
 
       if (!empty($this->view_mode)) {
         $body = sprintf('<div class="%sView">', $this->view_mode)
-              . $this->setWrapper($html_content)
+              . $this->setWrapper($this->html_content)
               . sprintf('</div><!-- .%sView -->', $this->view_mode)
               ;
       }
       else {
-        $body = $this->setWrapper($html_content);
+        $body = $this->setWrapper($this->html_content);
       }
 
       //**********************************************************************************//
