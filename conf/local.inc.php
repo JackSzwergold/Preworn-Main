@@ -72,8 +72,8 @@ $PAYMENT_INFO['paypal']['url'] = 'https://www.paypal.me/JackSzwergold';
 $PAYMENT_INFO['paypal']['description'] = 'Support me with a PayPal donation.';
 
 // Ad info.
-$AMAZON_AD_468X60 = '<iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=13&l=ez&f=ifr&linkID=feede769df2856e2565b6b6685a88b80&t=preworn-20&tracking_id=preworn-20" width="468" height="60" style="border: none;"></iframe>';
-$AMAZON_AD_728X90 = '<iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=amazonhomepage&f=ifr&linkID=248ba12516df35513887d4c867542d71&t=preworn-20&tracking_id=preworn-20" width="728" height="90" style="border:none;"></iframe>';
+$AMAZON_AD_468X60 = '<iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=13&l=ez&f=ifr&linkID=1c6a1177fa3fdbc8199838d723f94324&t=preworn-20&tracking_id=preworn-20" width="468" height="60" style="border: none;"></iframe>';
+$AMAZON_AD_728X90 = '<iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=amazonhomepage&f=ifr&linkID=fed6cd5c49cfa40a0d42c588facc1502&t=preworn-20&tracking_id=preworn-20" width="728" height="90" style="border: none;"></iframe>';
 
 // Set the page DIVs array.
 $PAGE_DIVS_ARRAY = array();
