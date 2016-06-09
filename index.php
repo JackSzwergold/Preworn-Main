@@ -99,22 +99,15 @@ $navigation = $frontendDisplayClass->setNavigation();
 $ad_banner = $frontendDisplayClass->setAdBannerFinal();
 
 // Set the header.
-$header = '<div class="Header">'
-        . $navigation
-        . '</div>'
-        ;
-$frontendDisplayClass->setBodyHeader($header);
+$frontendDisplayClass->setBodyHeader($navigation);
 
 // Set the footer.
-$footer = '<div class="Footer">'
-        . $ad_banner
-        . '</div>'
-        ;
-$frontendDisplayClass->setBodyFooter($footer);
+$frontendDisplayClass->setBodyFooter($ad_banner);
 
 //**************************************************************************************//
-// Init the content.
+// Init and display the content.
 
 $frontendDisplayClass->initContent();
+$frontendDisplayClass->displayContent();
 
 ?>

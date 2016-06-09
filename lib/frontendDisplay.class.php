@@ -57,9 +57,10 @@ class frontendDisplay {
   private $page_description = NULL;
   private $page_content = NULL;
   private $page_image = NULL;
+  private $page_keyword = NULL;
 
-  private $body_header_content = NULL;
-  private $body_footer_content = NULL;
+  private $header_content = NULL;
+  private $footer_content = NULL;
 
   private $page_div_wrapper_class = NULL;
   private $page_div_wrapper_id = NULL;
@@ -291,15 +292,15 @@ class frontendDisplay {
 
   //**************************************************************************************//
   // Set the body header.
-  function setBodyHeader($body_header_content = null) {
-    $this->body_header_content = $body_header_content;
+  function setBodyHeader($header_content = null) {
+    $this->header_content = $header_content;
   } // setBodyHeader
 
 
   //**************************************************************************************//
   // Set the body footer.
-  function setBodyFooter($body_footer_content = null) {
-    $this->body_footer_content = $body_footer_content;
+  function setBodyFooter($footer_content = null) {
+    $this->footer_content = $footer_content;
   } // setBodyFooter
 
 
@@ -312,10 +313,16 @@ class frontendDisplay {
       $this->buildHTMLContent();
     }
 
-    // If we are not in JSON mode, then build the HTML content.
+  } // initContent
+
+
+  //**************************************************************************************//
+  // Display the content.
+  function displayContent($response_header = NULL) {
+
     $this->renderContent($response_header);
 
-  } // initContent
+  } // displayContent
 
 
   //**************************************************************************************//
@@ -366,12 +373,18 @@ class frontendDisplay {
       //**********************************************************************************//
       // Set the body header.
 
-      $body_header = $this->body_header_content;
+      $header = '<div class="Header">'
+              . $this->header_content
+              . '</div>'
+              ;
 
       //**********************************************************************************//
       // Set the body footer.
 
-      $body_footer = $this->body_footer_content;
+      $footer = '<div class="Footer">'
+              . $this->footer_content
+              . '</div>'
+              ;
 
       //**********************************************************************************//
       // Set the view wrapper.
@@ -399,9 +412,9 @@ class frontendDisplay {
            . (!empty($this->base) ? '<base href="' . $this->base . '" />' : '')
            . '</head>'
            . '<body>'
-           . $body_header
+           . $header
            . $body
-           . $body_footer
+           . $footer
            . '</body>'
            . '</html>'
            ;
@@ -587,7 +600,7 @@ class frontendDisplay {
       // If the metadata YAML file exists and is not empty, do something.
       if (file_exists($metadata_file) && !empty($metadata_file)) {
         $yaml_data = Spyc::YAMLLoad($metadata_file);
-        $metadata_items = array('title', 'title_short', 'description', 'robots', 'copyright', 'license');
+        $metadata_items = array('title', 'title_short', 'description', 'robots', 'copyright', 'license', 'keyword');
         foreach ($metadata_items as $metadata_item) {
           if (array_key_exists($metadata_item, $yaml_data)) {
             $page_variable_name = "page_" . $metadata_item;
