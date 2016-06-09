@@ -4,7 +4,7 @@
 
 This is Jack Szwergold’s technical portfolio and calling card.
 
-* If you are interested check out my development skills—via actual code samples—please head over to ***[my GitHub repository][12]***.
+* If you are interested check out my development skills—via actual code samples—please head over to ***[my GitHub repository][14]***.
 * I’ve also compiled a ***[collection of tutorials and cheat sheets][2]*** over the years; mainly for my own personal reference but for others as well.
 
 If you are interested in my non-technical creative work—writing, visual art and such—please check out my other website, ***[Last Place Champ][1]***.
