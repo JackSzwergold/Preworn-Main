@@ -327,7 +327,7 @@ class frontendDisplay {
 
   //**************************************************************************************//
   // Init the content.
-  function initFinalContent($response_header = NULL) {
+  function initHTMLContent($response_header = NULL) {
 
     // If we are not in JSON mode, then build the HTML content.
     if (!$this->JSON_MODE) {
@@ -336,7 +336,7 @@ class frontendDisplay {
 
     $this->renderContent($response_header);
 
- } // initFinalContent
+ } // initHTMLContent
 
 
   //**************************************************************************************//

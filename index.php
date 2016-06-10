@@ -110,6 +110,6 @@ $frontendDisplayClass->setBodyFooter($ad_banner);
 //**************************************************************************************//
 // Init and display the final content.
 
-$frontendDisplayClass->initFinalContent();
+$frontendDisplayClass->initHTMLContent();
 
 ?>
