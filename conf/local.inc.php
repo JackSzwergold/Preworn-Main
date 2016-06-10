@@ -79,10 +79,10 @@ $SOCIAL_MEDIA_INFO['instagram']['short_name'] = 'Instagram';
 $SOCIAL_MEDIA_INFO['instagram']['emoji'] = '📸';
 $SOCIAL_MEDIA_INFO['instagram']['url'] = 'https://www.instagram.com/jackszwergold/';
 $SOCIAL_MEDIA_INFO['instagram']['description'] = 'Check me out on Instagram.';
-$SOCIAL_MEDIA_INFO['twitter']['short_name'] = 'Twitter';
-$SOCIAL_MEDIA_INFO['twitter']['emoji'] = '🐦';
-$SOCIAL_MEDIA_INFO['twitter']['url'] = 'https://twitter.com/jackszwergold/';
-$SOCIAL_MEDIA_INFO['twitter']['description'] = 'Check me out on Twitter.';
+// $SOCIAL_MEDIA_INFO['twitter']['short_name'] = 'Twitter';
+// $SOCIAL_MEDIA_INFO['twitter']['emoji'] = '🐦';
+// $SOCIAL_MEDIA_INFO['twitter']['url'] = 'https://twitter.com/jackszwergold/';
+// $SOCIAL_MEDIA_INFO['twitter']['description'] = 'Check me out on Twitter.';
 
 // Ad info.
 // $AMAZON_AD_468X60 = '<iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=13&l=ez&f=ifr&linkID=1c6a1177fa3fdbc8199838d723f94324&t=preworn-20&tracking_id=preworn-20" width="468" height="60" style="border: none;"></iframe>';
