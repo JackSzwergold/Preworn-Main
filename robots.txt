@@ -2,4 +2,3 @@ User-agent: *
 Crawl-delay: 10
 Allow: /
 Disallow: /projects/
-Disallow: /tutorials_and_cheat_sheets/
