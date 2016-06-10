@@ -50,7 +50,7 @@ I work primarily on the Ubuntu Linux and Mac OS X platforms but have deep experi
 
 * **Email** • [me@preworn.com](mailto:me@preworn.com?Subject=Preworn%20Website%20Query)
 * **PGP Public Key** • Is available [here][9].
-* **Mail** • P.O. Box 325, 201 Varick Street, Village Station, NY 10014-0325
+* **Mail** • P.O. Box 325, Village Station, NY 10014-0325
 
 ## Community
 
