@@ -52,9 +52,12 @@ $JSON_MODE = array_key_exists('json', $params);
 
 $page_base = BASE_URL;
 $controller = 'small';
-if (array_key_exists('controller', $params) && !empty($params['controller']) && $params['controller'] != 'index') {
-  $controller = $params['controller'];
-  $page_base = BASE_URL . $params['controller'] . '/';
+if (array_key_exists('parent', $params) && !empty($params['parent']) && $params['parent'] != 'index') {
+  $controller = $params['parent'];
+  if (array_key_exists('child', $params) && !empty($params['child']) && $params['child'] != 'index') {
+    $controller = $params['parent'] . '/' . $params['child'];
+  }
+  $page_base = BASE_URL . $controller . '/';
 }
 
 //**************************************************************************************//

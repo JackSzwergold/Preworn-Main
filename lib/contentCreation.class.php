@@ -22,7 +22,6 @@
 // Require the basics.
 
 require_once BASE_FILEPATH . '/lib/Parsedown.php';
-require_once BASE_FILEPATH . '/lib/ParsedownExtra.php';
 
 //**************************************************************************************//
 // The beginnings of a content creation class.
@@ -58,12 +57,12 @@ class contentCreation {
     foreach($VALID_GET_PARAMETERS as $key => $value) {
       if (array_key_exists($value, $_GET)) {
         if (in_array($value, $VALID_GET_PARAMETERS)) {
-		  if ($value == 'controller') {
+		  if ($value == 'parent') {
 		    $params[$value] = preg_replace('/[^A-Za-z-_]/s', '', trim($_GET[$value]));
 		  }
-		  else if ($value == 'id') {
-		    $params[$value] = intval($_GET[$value]);
-		  }
+		  // else if ($value == 'id') {
+		  //   $params[$value] = intval($_GET[$value]);
+		  // }
 		  else if ($value == '_debug') {
 		    $params[$value] = TRUE;
 		  }

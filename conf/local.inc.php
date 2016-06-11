@@ -119,8 +119,8 @@ $CSS_ITEMS[] = 'css/style.css';
 $CSS_ITEMS[] = 'css/colors.css';
 
 // Set the controller and parameter stuff.
-$VALID_CONTROLLERS = array('controller');
-$DISPLAY_CONTROLLERS = array('controller');
-$VALID_GET_PARAMETERS = array('_debug', 'controller', 'page', 'section', 'subsection');
+$VALID_CONTROLLERS = array('parent');
+$DISPLAY_CONTROLLERS = array('parent');
+$VALID_GET_PARAMETERS = array('_debug', 'parent', 'child', 'grandchild', 'greatgrandchild');
 
 ?>
