@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>http://www.preworn.com/</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/pgp_public_key-preworn.asc.txt</loc>
+  <lastmod>2016-06-11T18:16:48+00:00</lastmod>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Amazon%20-%20Amazon%20EBS%20Volume%20Storage</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Amazon%20-%20Amazon%20EC2%20SSH%20Adjustments%20to%20Allow%20Password%20Authentication</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Amazon%20-%20Amazon%20EC2%20Tool%20Installation%20Under%20Ubuntu</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Amazon%20-%20Amazon%20S3%20Bucket%20and%20User%20Policy%20Examples</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Amazon%20-%20Amazon%20S3%20Fuse%20Integration</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Amazon%20-%20Amazon%20Web%20Service%20Command%20Line%20Interface</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Apache%20-%20AWStats%20Installation</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Apache%20-%20Cordova</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Apache%20-%20Expires%20and%20Cache%20Control%20Headers</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Apache%20-%20Load%20Balancer%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Apache%20-%20Mod%20Evasive</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Apache%20-%20Mod%20Security</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Apache%20-%20SSL%20Certificates</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Apache</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Avahi%20Daemon</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Awk</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Bash</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Cron</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/DD</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Diff</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Different%20Ways%20of%20Wiping%20Disk%20Space</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Dig</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Elasticsearch</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/EmberJS%20-%20Installation%20and%20Usage</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/ExifTool</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Fail2Ban</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Find%20-%20Image%20Manipulation%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Find</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/GeoIP</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Git%20-%20Changing%20Text%20Across%20Multiple%20Commit%20Messages</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Git%20-%20Creating%20and%20Managing%20Branches</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Git%20-%20Dealing%20With%20Tags</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Git%20-%20Delete%20All%20Commits%20Prior%20to%20a%20Specific%20Commit</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Git%20-%20Duplicating%20or%20Renaming%20a%20Repository</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Git%20-%20Initing%20a%20Repo%20and%20Pushing%20to%20Origin</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Git%20-%20Merging%20Multiple%20Git%20Repositories%20into%20One%20Parent%20Repository</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Git%20-%20Removing%20a%20File%20from%20all%20Commits%20in%20a%20Branch</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Git%20-%20Removing%20a%20Submodule</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Git%20-%20Restoring%20Lost%20Commits%20from%20Dangling%20Blobs%20and%20Reference%20Logs</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Git%20-%20Restoring%20a%20Deleted%20File%20in%20a%20Git%20Repository</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Git%20-%20Rewinding%20to%20a%20Specific%20Commit</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Git%20-%20Subversion%20Repository%20to%20Git%20Repository%20Conversion</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/IFTop</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/iPerf</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/IPTables%20-%20IPSet</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/IPTables%20-%20Upgrade%20for%20GeoIP%20Support</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/IPTables</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Iconv</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/ImageMagick%20-%20Installing%20ImageMagick%20from%20Source%20via%20a%20Custom%20Debian%20Package%20Build%20on%20Ubuntu</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/ImageMagick</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Java%20-%20Installing%20a%20Web%20Crawler%20based%20on%20Solr%20and%20Nutch</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Java%20-%20Using%20a%20Web%20Crawler%20based%20on%20Solr%20and%20Nutch</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Java</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Joomla%20-%20Getting%20Joomla%201%20to%20Work%20on%20Modern%20PHP</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Joomla</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Kernel%20Networking%20Tweaks</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/LAME%20MP3%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/LS</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Linux-Unix%20-%20Adjusting%20UMASK%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Linux-Unix%20-%20GUID%20Partition%20Table%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Linux-Unix%20-%20HFS%20Volume%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Linux-Unix%20-%20Hostname%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Linux-Unix%20-%20ISO%20and%20UDF%20Disk%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Linux-Unix%20-%20LVM%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Linux-Unix%20-%20MSDOS%20Floppy%20Disk%20Reading,%20Formatting%20and%20Partitioning</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Linux-Unix%20-%20Miscellaneous%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Linux-Unix%20-%20Networking%20Interfaces</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Linux-Unix%20-%20Partitioning</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Linux-Unix%20-%20Startup%20Service%20Init%20Script%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Linux-Unix%20-%20Time%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Linux-Unix%20-%20User%20Account%20Setup</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Linux-Unix%20-%20exFAT%20Partitioning%20and%20Formatting</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Lsyncd</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/MOTD</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20Adjust%20the%20Hibernation%20Mode%20Sleepimage</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20Autoconf,%20Automake%20and%20Libtool</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20Disk%20Utility%20Repairs%20and%20Tricks%20from%20the%20Terminal</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20Enabling%20and%20Disabling%20ARD%20Remote%20Access%20from%20the%20Terminal</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20Figlet</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20HTop</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20iPerf</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20LFT</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20Locations%20of%20Key%20User%20Data</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20MAME%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20MAMP%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20MD5%20Basics</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20MTR</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20MacPorts</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20Making%20a%20Bootable%20Mac%20OS%20X%20USB%20Flash%20Drive</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20Miscellaneous%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20Mounting%20Devices%20and%20Volumes%20from%20the%20Terminal</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20NLOAD</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20RSYNC</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20Recode</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20SMB%20Tweaking</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20SNMP%20Basics</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20SheepShaver%20Emulator%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20Software%20Update%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20Some%20GlobalPreferences%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20Uninstalling%20MySQL%20from%20Mac%20OS%20X</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20Upgrading%20the%20PHP%20Pear%20Library%20in%20MAMP</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20Various%20CUPS%20Server%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20Watchman</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20Wget</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Mac%20OS%20X%20-%20Xcode</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/MailCatcher</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/MongoDB</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Monit</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Munin%20-%20Moving%20and%20Renaming%20Data%20Files</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/MySQL%20-%20Enable%20MySQL%20Logs%20to%20Be%20Group%20Readable</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/MySQL</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Netatalk</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Netcat</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Networking%20Netmasks%20and%20Slash%20Notation</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Nginx</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Nikto</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Nmap</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/NodeJS%20-%20Installing%20NodeJS%20and%20NPM%20via%20a%20PPA%20on%20Ubuntu</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/NodeJS%20-%20Installing%20PhantomJS%20via%20a%20NPM%20on%20Ubuntu</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/NodeJS%20-%20Uninstalling%20NodeJS%20and%20NPM%20in%20Mac%20OS%20X</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/PHP%20-%20Compiling%20and%20Installing%20PHP%20on%20Ubuntu</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/PHP%20-%20Installing%20APC</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/PHP%20-%20Setting%20up%20JSON%20support%20for%20PHP%20on%20Ubuntu</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/PHP%20-%20WordPress%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/PHP%20-%20phpMyAdmin%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/PHP</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Postfix%20-%20Delete%20Specific%20Messages%20from%20the%20Mail%20Queue</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Postfix%20-%20How%20to%20clean%20up%20the%20clientmqueue%20Spool%20Directory</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Postfix%20-%20Setting%20Up%20a%20Postfix%20SASL%20SMTP%20Email%20Relay</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Postfix</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/ProFTPD</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/RNG-Tools</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Rackspace%20-%20Cloudfuse%20Installation%20and%20Usage</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Redis%20-%20Installing%20Redis%20from%20Source%20via%20a%20Custom%20Debian%20Package%20Build%20on%20Ubuntu</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Redis%20-%20Installing%20Redis%20via%20a%20PPA%20on%20Ubuntu</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Redis</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Route</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Rsync</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Ruby%20-%20Apache%20Passenger%20Module%20Installation%20and%20Setup</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Ruby%20-%20Capistrano%20Deployments</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Ruby%20-%20Installing%20Ruby%20on%20Ubuntu</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Ruby%20-%20Installing%20Ruby%20from%20Source%20on%20Ubuntu</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Ruby%20-%20Installing%20Ruby%20via%20RVM</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Ruby%20-%20Installing%20Ruby%20via%20a%20PPA%20on%20Ubuntu</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Ruby%20-%20Sundry%20Ruby%20GEM%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Ruby</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/SMARTMonTools</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/SQLite</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/SSH%20-%20Chroot%20and%20SFTP%20Notes</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/SSH</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/SVN%20-%20Subversion%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Screen</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Sed</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Stat</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Sysstat</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Tar</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Telephony%20-%20Sending%20an%20SMS%20via%20Email</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Telephony%20-%20Telephone%20System%20Test%20Numbers</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Tomcat6</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Ubuntu%20-%20Basic%20System%20Setup</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Ubuntu%20-%20LDAP%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Ubuntu%20-%20Locale%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Ubuntu%20-%20SMB%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Ubuntu%20-%20Sensors</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Ubuntu%20-%20Setting%20Up%20DD_Rescue%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Ubuntu%20-%20Setting%20Up%20and%20Using%20Apple%20Filing%20Protocol%20Utility%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Ubuntu%20-%20Trickle</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Ubuntu%20-%20Updates%20and%20Repository%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/VI</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Vagrant</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/VirtualBox%20-%20SMB%20and%20Netatalk%20Filesharing%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/VirtualBox</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Wget</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/XXD</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Zip</loc>
+</url>
+</urlset>
