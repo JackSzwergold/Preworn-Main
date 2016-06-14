@@ -61,6 +61,7 @@ class frontendDisplay {
   private $page_image = NULL;
   private $page_keyword = NULL;
   private $page_date = NULL;
+  private $page_author = NULL;
 
   private $header_content = NULL;
   private $footer_content = NULL;
@@ -191,6 +192,13 @@ class frontendDisplay {
   function setPageDate($page_date = null) {
     $this->page_date = $page_date;
   } // setPageDate
+
+
+  //**************************************************************************************//
+  // Set the page author.
+  function setPageAuthor($page_author = null) {
+    $this->page_author = $page_author;
+  } // setPageAuthor
 
 
   //**************************************************************************************//
@@ -552,6 +560,11 @@ class frontendDisplay {
       $meta_names['date'] = $this->page_date;
       $meta_names['dc.date'] = $this->page_date;
     }
+    if (!empty($this->page_author)) {
+      $meta_names['author'] = $this->page_author;
+      $meta_names['citation_author'] = $this->page_author;
+      $meta_names['dc.creator'] = $this->page_author;
+    }
 
     // The copyright changes between 'xhtml' & 'html5'
     $copyright_key = '';
@@ -641,7 +654,7 @@ class frontendDisplay {
       // If the metadata YAML file exists and is not empty, do something.
       if (file_exists($metadata_file) && !empty($metadata_file)) {
         $yaml_data = Spyc::YAMLLoad($metadata_file);
-        $metadata_items = array('title', 'title_short', 'description', 'robots', 'copyright', 'license', 'keyword', 'date');
+        $metadata_items = array('title', 'title_short', 'description', 'robots', 'copyright', 'license', 'keyword', 'date', 'author');
         foreach ($metadata_items as $metadata_item) {
           if (array_key_exists($metadata_item, $yaml_data)) {
             $page_variable_name = "page_" . $metadata_item;
