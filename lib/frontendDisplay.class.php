@@ -685,7 +685,8 @@ class frontendDisplay {
       if ($CUSTOM_COPYRIGHT) {
         $ret .= '<div class="Copyright">'
               . (!empty($this->page_title_short) ? '“' . $this->page_title_short . ',” ' : '')
-              . (!empty($this->page_copyright) ? $this->page_copyright . '. ' : '')
+              . (!empty($this->page_copyright) ? $this->page_copyright : '')
+              . (!empty($this->page_date) ? '; written ' . date("F j, Y", strtotime($this->page_date)) . '. ' : '. ')
               . (!empty($this->page_license) ? $this->page_license . '.' : '')
               . '</div>'
               ;
