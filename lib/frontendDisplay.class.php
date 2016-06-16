@@ -697,7 +697,7 @@ class frontendDisplay {
       $header = '';
       $header = ($BYLINE_PRESENT && !empty($title) ? $title : '')
               . ($BYLINE_PRESENT && !empty($this->page_author) ? 'By ' . $this->page_author : '')
-              . (!empty($this->page_date) ? '<br />Written on ' . date("F j, Y", strtotime($this->page_date)) : '')
+              . ($BYLINE_PRESENT && !empty($this->page_date) ? '<br />Written on ' . date("F j, Y", strtotime($this->page_date)) : '')
               ;
       $header = Parsedown::instance()->parse($header);
       if (!empty($header)) {
