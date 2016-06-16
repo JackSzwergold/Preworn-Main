@@ -697,6 +697,7 @@ class frontendDisplay {
       $header = '';
       $header = ($BYLINE_PRESENT && !empty($title) ? $title : '')
               . ($BYLINE_PRESENT && !empty($this->page_author) ? 'By ' . $this->page_author : '')
+              . (!empty($this->page_date) ? '<br />Written on ' . date("F j, Y", strtotime($this->page_date)) : '')
               ;
       $header = Parsedown::instance()->parse($header);
       if (!empty($header)) {
@@ -715,7 +716,7 @@ class frontendDisplay {
         $footer = '<div class="Copyright">'
                 . (!empty($this->page_title_short) ? '“' . $this->page_title_short . ',” ' : '')
                 . (!empty($this->page_copyright) ? $this->page_copyright : '')
-                . (!empty($this->page_date) ? '; written ' . date("F j, Y", strtotime($this->page_date)) . '. ' : '. ')
+                . (!empty($this->page_date) ? '; written on ' . date("F j, Y", strtotime($this->page_date)) . '. ' : '. ')
                 . (!empty($this->page_license) ? $this->page_license . '.' : '')
                 . '</div>'
                 ;
