@@ -694,7 +694,7 @@ class frontendDisplay {
       }
 
       // Build the new, raw body.
-      $raw_body = ($BYLINE_PRESENT ? $header : '')
+      $raw_body = ($BYLINE_PRESENT && !empty($header) ? $header : '')
                 . ($BYLINE_PRESENT && !empty($this->page_author) ? 'By ' . $this->page_author : '')
                 . join('***', $split_core_content)
                 ;
