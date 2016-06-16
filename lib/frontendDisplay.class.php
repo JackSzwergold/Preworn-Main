@@ -32,7 +32,7 @@ class frontendDisplay {
   private $DEBUG_MODE = FALSE;
   private $JSON_MODE = FALSE;
 
-  private $core_content;
+  private $content;
   private $html_content;
   private $json_content;
 
@@ -666,36 +666,57 @@ class frontendDisplay {
       // Get the markdown file contents.
       $markdown_file_contents = file_get_contents($markdown_file);
 
+      // Split the content between the header and body by splitting on the author name.
+      $split_file_contents = explode('By ' . $this->page_author, $markdown_file_contents);
+
+      $header = '';
+      $BYLINE_PRESENT = FALSE;
+      if (count($split_file_contents) == 1) {
+        $content = $split_file_contents[0];
+      }
+      else {
+        $BYLINE_PRESENT = TRUE;
+        $header = $split_file_contents[0];
+        $content = $split_file_contents[1];
+      }
+
       // Split and check the markdown contents for the copyright/license line and remove it if it’s there.
-      $split_markdown = explode('***', $markdown_file_contents);
-      $CUSTOM_COPYRIGHT = FALSE;
-      if (count($split_markdown) > 1) {
-        $last_paragraph = $split_markdown[count($split_markdown) - 1];
-        $license_text = 'This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0).';
-        if (strpos($last_paragraph, $license_text)) {
-          $CUSTOM_COPYRIGHT = TRUE;
-          array_pop($split_markdown);
+      $split_core_content = explode('***', $content);
+      $COPYRIGHT_PRESENT = FALSE;
+      if (count($split_core_content) > 1) {
+        $last_paragraph = $split_core_content[count($split_core_content) - 1];
+        if (!empty($this->page_license)) {
+          if (strpos($last_paragraph, $this->page_license)) {
+            $COPYRIGHT_PRESENT = TRUE;
+            array_pop($split_core_content);
+          }
         }
       }
 
-      // Process the markdown file contents.
-      $ret = Parsedown::instance()->parse(join('***', $split_markdown));
+      // Build the new, raw body.
+      $raw_body = ($BYLINE_PRESENT ? $header : '')
+                . ($BYLINE_PRESENT && !empty($this->page_author) ? 'By ' . $this->page_author : '')
+                . join('***', $split_core_content)
+                ;
 
-      // Set a copyright box.
-      if ($CUSTOM_COPYRIGHT) {
-        $ret .= '<div class="Copyright">'
-              . (!empty($this->page_title_short) ? '“' . $this->page_title_short . ',” ' : '')
-              . (!empty($this->page_copyright) ? $this->page_copyright : '')
-              . (!empty($this->page_date) ? '; written ' . date("F j, Y", strtotime($this->page_date)) . '. ' : '. ')
-              . (!empty($this->page_license) ? $this->page_license . '.' : '')
-              . '</div>'
-              ;
+      // Parse the raw body.
+      $body = Parsedown::instance()->parse($raw_body);
+
+      // Append the copyright box to the bottom of the body.
+      if ($COPYRIGHT_PRESENT) {
+        $body .= '<div class="Copyright">'
+               . (!empty($this->page_title_short) ? '“' . $this->page_title_short . ',” ' : '')
+               . (!empty($this->page_copyright) ? $this->page_copyright : '')
+               . (!empty($this->page_date) ? '; written ' . date("F j, Y", strtotime($this->page_date)) . '. ' : '. ')
+               . (!empty($this->page_license) ? $this->page_license . '.' : '')
+               . '</div>'
+               ;
       }
 
 
     }
 
-    return $ret;
+    return $body;
 
   } // loadMarkdown
 
