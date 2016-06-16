@@ -23,15 +23,15 @@ a, a:visited, a:hover, a:active { color: #000; }
 .Content h3 a:active, .Content h3 a:hover,
 .Content h4 a:active, .Content h4 a:hover,
 .Content h5 a:active, .Content h5 a:hover,
-.Content h6 a:active, .Content h6 a:hover { border-color: #666; }
+.Content h6 a:active, .Content h6 a:hover { color: #FCA311; }
 
 /**************************************************************************************************/
 .Content p a, .Content p a:active, .Content p a:hover, .Content p a:visited { border-color: #000; }
 
 .Content p a:active, .Content p a:hover
 {
-	color: #080;
-	border-color: #080;
+	color: #FCA311;
+	border-color: #FCA311;
 }
 
 .Content pre
@@ -47,8 +47,8 @@ a, a:visited, a:hover, a:active { color: #000; }
 .Content ul li a:active, .Content ul li a:hover,
 .Content ol li a:active, .Content ol li a:hover
 {
-	color: #080;
-	border-color: #080;
+	color: #FCA311;
+	border-color: #FCA311;
 }
 
 /**************************************************************************************************/
