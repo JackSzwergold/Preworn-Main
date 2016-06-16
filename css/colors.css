@@ -31,7 +31,7 @@ a, a:visited, a:hover, a:active { color: #000; }
 .Content p a:active, .Content p a:hover
 {
 	color: #FCA311;
-	border-color: #FCA311;
+	background-image: linear-gradient(#fff 50%, #FCA311 50%);
 }
 
 .Content pre
@@ -48,7 +48,7 @@ a, a:visited, a:hover, a:active { color: #000; }
 .Content ol li a:active, .Content ol li a:hover
 {
 	color: #FCA311;
-	border-color: #FCA311;
+	background-image: linear-gradient(#fff 50%, #FCA311 50%);
 }
 
 /**************************************************************************************************/
