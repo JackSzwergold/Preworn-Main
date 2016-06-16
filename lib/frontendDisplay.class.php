@@ -694,10 +694,17 @@ class frontendDisplay {
       }
 
       // Build the header.
+      $header = '';
       $header = ($BYLINE_PRESENT && !empty($title) ? $title : '')
               . ($BYLINE_PRESENT && !empty($this->page_author) ? 'By ' . $this->page_author : '')
               ;
       $header = Parsedown::instance()->parse($header);
+      if (!empty($header)) {
+        $header = '<header>'
+                . $header
+                . '</header>'
+                ;
+      }
 
       // Process the body
       $body = Parsedown::instance()->parse(join('***', $split_core_content));
@@ -713,18 +720,19 @@ class frontendDisplay {
                 . '</div>'
                 ;
       }
-
+      if (!empty($footer)) {
+        $footer = '<footer>'
+                . $footer
+                . '</footer>'
+                ;
+      }
 
     }
 
     return '<article>'
-         . '<header>'
          . $header
-         . '</header>'
          . $body
-         . '<footer>'
          . $footer
-         . '</footer>'
          . '</article>'
          ;
 
