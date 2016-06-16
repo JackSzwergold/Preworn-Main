@@ -669,14 +669,14 @@ class frontendDisplay {
       // Split the content between the header and body by splitting on the author name.
       $split_file_contents = explode('By ' . $this->page_author, $markdown_file_contents);
 
-      $header = '';
+      $title = '';
       $BYLINE_PRESENT = FALSE;
       if (count($split_file_contents) == 1) {
         $content = $split_file_contents[0];
       }
       else {
         $BYLINE_PRESENT = TRUE;
-        $header = $split_file_contents[0];
+        $title = $split_file_contents[0];
         $content = $split_file_contents[1];
       }
 
@@ -693,30 +693,40 @@ class frontendDisplay {
         }
       }
 
-      // Build the new, raw body.
-      $raw_body = ($BYLINE_PRESENT && !empty($header) ? $header : '')
-                . ($BYLINE_PRESENT && !empty($this->page_author) ? 'By ' . $this->page_author : '')
-                . join('***', $split_core_content)
-                ;
+      // Build the header.
+      $header = ($BYLINE_PRESENT && !empty($title) ? $title : '')
+              . ($BYLINE_PRESENT && !empty($this->page_author) ? 'By ' . $this->page_author : '')
+              ;
+      $header = Parsedown::instance()->parse($header);
 
-      // Parse the raw body.
-      $body = Parsedown::instance()->parse($raw_body);
+      // Process the body
+      $body = Parsedown::instance()->parse(join('***', $split_core_content));
 
       // Append the copyright box to the bottom of the body.
+      $footer = '';
       if ($COPYRIGHT_PRESENT) {
-        $body .= '<div class="Copyright">'
-               . (!empty($this->page_title_short) ? '“' . $this->page_title_short . ',” ' : '')
-               . (!empty($this->page_copyright) ? $this->page_copyright : '')
-               . (!empty($this->page_date) ? '; written ' . date("F j, Y", strtotime($this->page_date)) . '. ' : '. ')
-               . (!empty($this->page_license) ? $this->page_license . '.' : '')
-               . '</div>'
-               ;
+        $footer = '<div class="Copyright">'
+                . (!empty($this->page_title_short) ? '“' . $this->page_title_short . ',” ' : '')
+                . (!empty($this->page_copyright) ? $this->page_copyright : '')
+                . (!empty($this->page_date) ? '; written ' . date("F j, Y", strtotime($this->page_date)) . '. ' : '. ')
+                . (!empty($this->page_license) ? $this->page_license . '.' : '')
+                . '</div>'
+                ;
       }
 
 
     }
 
-    return $body;
+    return '<article>'
+         . '<header>'
+         . $header
+         . '</header>'
+         . $body
+         . '<footer>'
+         . $footer
+         . '</footer>'
+         . '</article>'
+         ;
 
   } // loadMarkdown
 
