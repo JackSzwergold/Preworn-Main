@@ -52,11 +52,15 @@ $JSON_MODE = array_key_exists('json', $params);
 
 $page_base = BASE_URL;
 $controller = 'small';
-if (array_key_exists('parent', $params) && !empty($params['parent']) && $params['parent'] != 'index') {
-  $controller = $params['parent'];
-  if (array_key_exists('child', $params) && !empty($params['child']) && $params['child'] != 'index') {
-    $controller = $params['parent'] . '/' . $params['child'];
+$url_parts = array();
+$controller_parts = array('parent', 'child');
+foreach ($controller_parts as $part) {
+  if (array_key_exists($part, $params) && !empty($params[$part]) && $params[$part] != 'index') {
+    $url_parts[$part] = rawurlencode($params[$part]);
   }
+}
+if (!empty($url_parts)) {
+  $controller = implode($url_parts, '/');
   $page_base = BASE_URL . $controller . '/';
 }
 
