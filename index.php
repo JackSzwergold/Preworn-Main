@@ -53,7 +53,7 @@ $JSON_MODE = array_key_exists('json', $params);
 $page_base = BASE_URL;
 $controller = 'small';
 $url_parts = array();
-$controller_parts = array('parent', 'child');
+$controller_parts = array('parent', 'child', 'grandchild', 'greatgrandchild');
 foreach ($controller_parts as $part) {
   if (array_key_exists($part, $params) && !empty($params[$part]) && $params[$part] != 'index') {
     $url_parts[$part] = rawurlencode($params[$part]);
