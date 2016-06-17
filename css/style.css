@@ -92,6 +92,7 @@ ul, li
 	/* align-content: space-between; */
 	/* align-content: space-around; */
 	align-content: center;
+	min-width: calc(100% - 20px);
 	margin: 0;
 	padding: 10px;
 	background-color: #fff;
@@ -103,15 +104,18 @@ ul, li
 	flex-grow: 1;
 	flex-shrink: 0;
 	flex-basis: auto;
+	width: calc(100% - 20px);
 	text-align: left;
 }
 
 /**************************************************************************************************/
+.Content h1 { line-height: 0.9em; }
+.Content h2, .Content h3, .Content h4, .Content h5, .Content h6 { line-height: 1em; }
+
 .Content h1, .Content h2, .Content h3, .Content h4, .Content h5, .Content h6
 {
 	font-family: ChunkFiveRoman, Georgia, "New York", "Times New Roman", Times, serif;
 	font-weight: normal;
-	line-height: 1.1em;
 	clear: both;
 }
 
@@ -154,14 +158,14 @@ ul, li
 /**************************************************************************************************/
 .Content h1
 {
-	font-size: 650%;
+	font-size: 450%;
 	margin: 0 0 0.1em 0;
 }
 
 /**************************************************************************************************/
 .Content h2
 {
-	font-size: 330%;
+	font-size: 280%;
 	margin: 0.2em 0 0.2em 0;
 }
 
@@ -170,7 +174,7 @@ ul, li
 /**************************************************************************************************/
 .Content h3
 {
-	font-size: 220%;
+	font-size: 210%;
 	margin: 1.5em 0 0.15em 0;
 }
 
@@ -263,55 +267,31 @@ ul, li
 /**************************************************************************************************/
 /* Media queries. */
 
-@media (min-width : 320px)
+@media (min-width: 320px)
 {
-	.Wrapper { min-width: 320px; }
-	.Content { width: 320px; }
-	.Content h1, .Content h2, .Content h3, .Content h4, .Content h5, .Content h6 { line-height: 1em; }
-	.Content h1 { font-size: 500%; }
-	.Content h2 { font-size: 280%; }
-	.Content h3 { font-size: 210%; }
+	.Wrapper { min-width: 335px; }
+	.Content { width: 335px; }
 }
 
-@media (min-width : 375px)
+@media (min-width: 480px)
 {
-	.Wrapper { min-width: 355px; }
-	.Content { width: 355px; }
-	.Content h1, .Content h2, .Content h3, .Content h4, .Content h5, .Content h6 { line-height: 1em; }
-	.Content h1 { font-size: 500%; }
-	.Content h2 { font-size: 280%; }
-	.Content h3 { font-size: 180%; }
-}
-
-@media (min-width : 414px)
-{
-	.Wrapper { min-width: 394px; }
-	.Content { width: 394px; }
-	.Content h1, .Content h2, .Content h3, .Content h4, .Content h5, .Content h6 { line-height: 1.1em; }
-}
-
-@media (min-width : 480px)
-{
+	.Content h1 { font-size: 650%; }
+	.Content h2 { font-size: 330%; }
+	.Content h3 { font-size: 220%; }
 	.Wrapper { min-width: 460px; }
 	.Content { width: 460px; }
 }
 
-@media (min-width : 640px)
-{
-	.Wrapper { min-width: 620px; }
-	.Content { width: 620px; }
-}
-
-@media (min-width : 768px)
+@media (min-width: 768px)
 {
 	.Wrapper { min-width: 748px; }
 	.Content { width: 748px; }
 }
 
-@media (min-width : 1024px)
+@media (min-width: 1024px)
 {
-	.Wrapper { min-width: 768px; }
-	.Content { width: 768px; }
+	.Wrapper { min-width: 748px; }
+	.Content { width: 748px; }
 }
 
 /**************************************************************************************************/
@@ -379,7 +359,7 @@ ul, li
 	text-decoration: none;
 	font-weight: normal;
 	display: block;
-	padding: 8px 70px 8px 20px;
+	padding: 8px 50px 8px 20px;
 	border-radius: 16px;
 	box-shadow: 5px 5px 9px 0px rgba(17, 17, 17, 0.65);
 	color: #fff;
