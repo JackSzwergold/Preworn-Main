@@ -42,7 +42,7 @@ $SITE_LICENSE_CODE = 'CC-BY-NC-SA-4.0';
 $SITE_LICENSE = 'This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0)';
 $SITE_ROBOTS = 'noindex, nofollow';
 // $SITE_VIEWPORT = 'width=device-width, initial-scale=0.4, maximum-scale=2, minimum-scale=0.4, user-scalable=yes';
-$SITE_VIEWPORT = null;
+$SITE_VIEWPORT = 'width=device-width, initial-scale=1.0';
 $SITE_IMAGE = 'favicons/icon_200x200.png';
 $SITE_FB_ADMINS = '504768652';
 $SITE_KEYWORD = 'gold';

@@ -61,57 +61,6 @@ ul, li
 }
 
 /**************************************************************************************************/
-/* Media queries. */
-
-@media (min-width : 320px)
-{
-	.Wrapper { min-width: 320px; }
-	.Content { width: 320px; }
-}
-
-@media (min-width : 375px)
-{
-	.Wrapper { min-width: 375px; }
-	.Content { width: 375px; }
-}
-
-@media (min-width : 414px)
-{
-	.Wrapper { min-width: 414px; }
-	.Content { width: 414px; }
-}
-
-@media (min-width : 480px)
-{
-	.Wrapper { min-width: 480px; }
-	.Content { width: 480px; }
-}
-
-@media (min-width : 640px)
-{
-	.Wrapper { min-width: 640px; }
-	.Content { width: 640px; }
-}
-
-@media (min-width : 768px)
-{
-	.Wrapper { min-width: 768px; }
-	.Content { width: 768px; }
-}
-
-@media (min-width : 1024px)
-{
-	.Wrapper { min-width: 768px; }
-	.Content { width: 768px; }
-}
-
-@media (min-width : 768px)
-{
-	.Wrapper { min-width: 768px; }
-	.Content { width: 768px; }
-}
-
-/**************************************************************************************************/
 .Wrapper
 {
 	display: flex;
@@ -162,7 +111,7 @@ ul, li
 {
 	font-family: ChunkFiveRoman, Georgia, "New York", "Times New Roman", Times, serif;
 	font-weight: normal;
-	line-height: 1.4em;
+	line-height: 1.1em;
 	clear: both;
 }
 
@@ -206,7 +155,6 @@ ul, li
 .Content h1
 {
 	font-size: 650%;
-	line-height: 1.1em;
 	margin: 0 0 0.1em 0;
 }
 
@@ -214,7 +162,6 @@ ul, li
 .Content h2
 {
 	font-size: 330%;
-	line-height: 1.1em;
 	margin: 0.2em 0 0.2em 0;
 }
 
@@ -224,7 +171,6 @@ ul, li
 .Content h3
 {
 	font-size: 220%;
-	line-height: 1.1em;
 	margin: 1.5em 0 0.15em 0;
 }
 
@@ -234,7 +180,6 @@ ul, li
 .Content h4
 {
 	font-size: 190%;
-	line-height: 1.1em;
 	margin: 1.1em 0 0.4em 0;
 }
 
@@ -242,7 +187,6 @@ ul, li
 .Content h5
 {
 	font-size: 170%;
-	line-height: 1.1em;
 	margin: 1.5em 0 0.7em 0;
 }
 
@@ -315,6 +259,60 @@ ul, li
 /**************************************************************************************************/
 /* 2016-04-08: WTF is this for? */
 .Content .Text .Padding { padding: 15px 0 15px 0; }
+
+/**************************************************************************************************/
+/* Media queries. */
+
+@media (min-width : 320px)
+{
+	.Wrapper { min-width: 320px; }
+	.Content { width: 320px; }
+	.Content h1, .Content h2, .Content h3, .Content h4, .Content h5, .Content h6 { line-height: 1em; }
+	.Content h1 { font-size: 500%; }
+	.Content h2 { font-size: 280%; }
+	.Content h3 { font-size: 210%; }
+}
+
+@media (min-width : 375px)
+{
+	.Wrapper { min-width: 355px; }
+	.Content { width: 355px; }
+	.Content h1, .Content h2, .Content h3, .Content h4, .Content h5, .Content h6 { line-height: 1em; }
+	.Content h1 { font-size: 500%; }
+	.Content h2 { font-size: 280%; }
+	.Content h3 { font-size: 180%; }
+}
+
+@media (min-width : 414px)
+{
+	.Wrapper { min-width: 394px; }
+	.Content { width: 394px; }
+	.Content h1, .Content h2, .Content h3, .Content h4, .Content h5, .Content h6 { line-height: 1.1em; }
+}
+
+@media (min-width : 480px)
+{
+	.Wrapper { min-width: 460px; }
+	.Content { width: 460px; }
+}
+
+@media (min-width : 640px)
+{
+	.Wrapper { min-width: 620px; }
+	.Content { width: 620px; }
+}
+
+@media (min-width : 768px)
+{
+	.Wrapper { min-width: 748px; }
+	.Content { width: 748px; }
+}
+
+@media (min-width : 1024px)
+{
+	.Wrapper { min-width: 768px; }
+	.Content { width: 768px; }
+}
 
 /**************************************************************************************************/
 .Navigation
