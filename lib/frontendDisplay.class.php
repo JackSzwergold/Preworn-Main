@@ -681,13 +681,21 @@ class frontendDisplay {
         }
       }
 
-      // Build the header.
-      $header = '';
-      $header = ($BYLINE_PRESENT && !empty($title) ? $title : '')
-              . ($BYLINE_PRESENT && !empty($this->page_author) ? 'By ' . $this->page_author : '')
-              . ($BYLINE_PRESENT && !empty($this->page_date) ? '<br />Written on ' . date("F j, Y", strtotime($this->page_date)) : '')
+      // Build the header values.
+      $title = ($BYLINE_PRESENT && !empty($title) ? $title : '');
+      $author = ($BYLINE_PRESENT && !empty($this->page_author) ? 'By ' . $this->page_author : '');
+      $date = ($BYLINE_PRESENT && !empty($this->page_date) ? date("F j, Y", strtotime($this->page_date)) : '');
+
+      // Set the header values.
+      $header = $title
+              . $author
+              . (!empty($date) ? ' • <span>' . $date . '</span>' : '')
               ;
+ 
+      // Parse the header values.
       $header = Parsedown::instance()->parse($header);
+
+      // Set the header content.
       if (!empty($header)) {
         $header = '<header>'
                 . $header
@@ -695,7 +703,7 @@ class frontendDisplay {
                 ;
       }
 
-      // Process the body
+      // Parse the body content.
       $body = Parsedown::instance()->parse(join('***', $split_core_content));
 
       // Append the copyright box to the bottom of the body.
