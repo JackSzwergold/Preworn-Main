@@ -26,23 +26,13 @@ I’m a highly skilled software developer, Unix systems administrator and overal
 
 Excellent set of skills for DevOps as well as Level 2/3 support and related software development. Very comfortable working in the terminal console on Mac OS X, Ubuntu, Debian, RedHat, CentOS and Solaris environments. Can install/configure software packages from core repositories as well as compile binaries from source on most any platform. Adept at Unix/Linux shell scripting and other sundry programming languages, protocols and frameworks such as:
 
-* **HTML5**
-* **CSS3**
-* **XHTML**
-* **JSON**
-* **XML**
-* **YAML**
+* **HTML5**, **CSS3**, **XHTML**, **JSON**,  **XML**, **YAML**
 * **JavaScript** (jQuery, AngularJS, NodeJS, EmberJS, Scriptaculous and Prototype)
 * **PHP** (Flat and OOP, Zend, Codeigniter, Symfony and Laravel)
 * **Ruby** (Flat and OOP, Ruby on Rails)
 * **Apache Cordova** (Flat and Ionic Framework)
-* **Java**
-* **MySQL**
-* **MongoDB**
-* **Elasticsearch**
-* **Solr**
-* **Nutch**
-* **Hadoop**
+* **MySQL**, **MariaDB**, **MongoDB** and other relational and non-relational database systems.
+* **Java**, **Elasticsearch**, **Solr**, **Nutch**, **Hadoop**, etc…
 
 I work primarily on the Ubuntu Linux and Mac OS X platforms but have deep experience with many different flavors of Unix/Linux spanning back to the early 1990s. So I can jump onto the terminal console and maneuvering around to get the job done regardless of OS.
 
