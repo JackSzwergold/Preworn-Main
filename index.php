@@ -88,7 +88,7 @@ $frontendDisplayClass->setPageDivWrapper();
 $frontendDisplayClass->setPageViewport($SITE_VIEWPORT);
 $frontendDisplayClass->setPageRobots($SITE_ROBOTS);
 $frontendDisplayClass->setJavaScriptItems($JAVASCRIPTS_ITEMS);
-$frontendDisplayClass->setCSSItems($CSS_ITEMS);
+$frontendDisplayClass->setLinkItems($LINK_ITEMS);
 $frontendDisplayClass->setFaviconItems($FAVICONS);
 $frontendDisplayClass->setPageBase($page_base . $page_base_suffix);
 $frontendDisplayClass->setPageURLParts($params);

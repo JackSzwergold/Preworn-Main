@@ -44,7 +44,7 @@ class frontendDisplay {
   private $json_via_header = FALSE;
 
   private $javascripts = array();
-  private $css = array();
+  private $link_items = array();
 
   private $base = NULL;
   private $page_depth = 0;
@@ -266,10 +266,10 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
-  // Set the CSS stuff.
-  function setCSSItems($css = array()) {
-    $this->css = $css;
-  } // setCSSItems
+  // Set the link items stuff.
+  function setLinkItems($link_items = array()) {
+    $this->link_items = $link_items;
+  } // setLinkItems
 
 
   //**************************************************************************************//
@@ -386,7 +386,7 @@ class frontendDisplay {
       //**********************************************************************************//
       // Set the favicons.
 
-      $favicon_array = $this->setFaviconArray();
+      $favicon_array = $this->setHeaderLinkArray($this->favicons);
 
       //**********************************************************************************//
       // Set the HTML/XHTML doctype.
@@ -401,7 +401,7 @@ class frontendDisplay {
       //**********************************************************************************//
       // Set the CSS.
 
-      $css_array = $this->setCSSArray();
+      $css_array = $this->setHeaderLinkArray($this->link_items);
 
       //**********************************************************************************//
       // Set the body header.
@@ -500,40 +500,28 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
-  // Set the CSS stuff.
-  function setCSSArray() {
+  // Set the header link stuff.
+  function setHeaderLinkArray($array = array()) {
 
-    // Roll through the CSS array.
+    // Roll through the generic 'link' stuffarray.
     $ret = array();
-    foreach ($this->css as $css) {
-      $ret[] = sprintf('<link rel="stylesheet" href="' . BASE_URL . '%s" type="text/css" />', $css);
-    }
-
-    return $ret;
-
-  } // setCSSArray
-
-
-  //**************************************************************************************//
-  // Set the favicons.
-  function setFaviconArray() {
-
-    // Roll through the favicon array.
-    $ret = array();
-    foreach ($this->favicons as $favicon_type => $favicon_parts) {
+    foreach ($array as $array_type => $array_parts) {
       $parts = array();
-      foreach ($favicon_parts as $favicon_key => $favicon_value) {
-        $favicon_value = $favicon_key == 'href' ? BASE_URL . $favicon_value : $favicon_value;
-        $parts[] = $favicon_key . '="' . $favicon_value . '"';
+      foreach ($array_parts as $key => $value) {
+        if ($key == 'href') {
+          if (!filter_var($value, FILTER_VALIDATE_URL)) {
+            $value = BASE_URL . $value;
+          }
+        }
+        $parts[] = $key . '="' . $value . '"';
       }
-      $ret[$favicon_type] = sprintf('<!-- %s favicon -->', $favicon_type);
-      $ret[$favicon_type] .= sprintf('<link %s />', join(' ', $parts));
+      // $ret[$array_type] = sprintf('<!-- %s link_items -->', $type);
+      $ret[$array_type] = sprintf('<link %s />', join(' ', $parts));
     }
 
     return $ret;
 
-  } // setFaviconArray
-
+  } // setHeaderLinkArray
 
   //**************************************************************************************//
   // Set the meta content.

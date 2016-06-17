@@ -123,8 +123,6 @@ $SOCIAL_MEDIA_INFO['instagram']['description'] = 'Check me out on Instagram.';
 // $SOCIAL_MEDIA_INFO['twitter']['description'] = 'Check me out on Twitter.';
 
 // Ad info.
-// $AMAZON_AD_468X60 = '<iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=13&l=ez&f=ifr&linkID=1c6a1177fa3fdbc8199838d723f94324&t=preworn-20&tracking_id=preworn-20" width="468" height="60" style="border: none;"></iframe>';
-// $AMAZON_AD_728X90 = '<iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=amazonhomepage&f=ifr&linkID=fed6cd5c49cfa40a0d42c588facc1502&t=preworn-20&tracking_id=preworn-20" width="728" height="90" style="border: none;"></iframe>';
 $AMAZON_RECOMMENDATION = '<script type="text/javascript">
 amzn_assoc_placement = "adunit0";
 amzn_assoc_enable_interest_ads = "true";
@@ -151,10 +149,16 @@ $JAVASCRIPTS_ITEMS = array();
 // $JAVASCRIPTS_ITEMS[] = 'script/jquery/jquery-1.11.3.min.map';
 // $JAVASCRIPTS_ITEMS[] = 'script/jquery/jquery.noconflict.js';
 
-// Set the CSS array.
-$CSS_ITEMS = array();
-$CSS_ITEMS[] = 'css/style.css';
-$CSS_ITEMS[] = 'css/colors.css';
+// Set the link items array.
+$LINK_ITEMS = array();
+$LINK_ITEMS['style_css']['rel'] = 'stylesheet';
+$LINK_ITEMS['style_css']['type'] = 'text/css';
+$LINK_ITEMS['style_css']['href'] = 'css/style.css';
+$LINK_ITEMS['colors_css']['rel'] = 'stylesheet';
+$LINK_ITEMS['colors_css']['type'] = 'text/css';
+$LINK_ITEMS['colors_css']['href'] = 'css/colors.css';
+$LINK_ITEMS['author']['rel'] = 'author';
+$LINK_ITEMS['author']['href'] = 'https://plus.google.com/+JackSzwergold';
 
 // Set the controller and parameter stuff.
 $VALID_CONTROLLERS = array('parent');
