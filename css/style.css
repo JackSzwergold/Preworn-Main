@@ -261,33 +261,10 @@ ul, li
 .Navigation
 {
 	display: flex;
-	/* flex-direction: column; */
-	/* flex-direction: column-reverse; */
-	/* flex-direction: row; */
-	/* flex-direction: row-reverse; */
 	flex-direction: row;
-	/* flex-wrap: nowrap; */
-	/* flex-wrap: wrap; */
-	/* flex-wrap: wrap-reverse; */
 	flex-wrap: nowrap;
-	/* align-items: flex-start; */
-	/* align-items: flex-end; */
-	/* align-items: center; */
-	/* align-items: baseline; */
-	/* align-items: stretch; */
 	align-items: center;
-	/* justify-content: flex-start; */
-	/* justify-content: flex-end; */
-	/* justify-content: center; */
-	/* justify-content: space-between; */
-	/* justify-content: space-around; */
 	justify-content: space-between;
-	/* align-content: flex-start; */
-	/* align-content: flex-end; */
-	/* align-content: center; */
-	/* align-content: stretch; */
-	/* align-content: space-between; */
-	/* align-content: space-around; */
 	align-content: center;
 	margin: 6px 0 0 0;
 	padding: 0px;
