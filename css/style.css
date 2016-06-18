@@ -72,33 +72,10 @@ ul, li
 .Wrapper
 {
 	display: flex;
-	/* flex-direction: column; */
-	/* flex-direction: column-reverse; */
-	/* flex-direction: row; */
-	/* flex-direction: row-reverse; */
 	flex-direction: column;
-	/* flex-wrap: nowrap; */
-	/* flex-wrap: wrap; */
-	/* flex-wrap: wrap-reverse; */
 	flex-wrap: wrap;
-	/* align-items: flex-start; */
-	/* align-items: flex-end; */
-	/* align-items: center; */
-	/* align-items: baseline; */
-	/* align-items: stretch; */
 	align-items: center;
-	/* justify-content: flex-start; */
-	/* justify-content: flex-end; */
-	/* justify-content: center; */
-	/* justify-content: space-between; */
-	/* justify-content: space-around; */
 	justify-content: center;
-	/* align-content: flex-start; */
-	/* align-content: flex-end; */
-	/* align-content: center; */
-	/* align-content: stretch; */
-	/* align-content: space-between; */
-	/* align-content: space-around; */
 	align-content: center;
 	min-width: calc(100% - 20px);
 	margin: 0;
