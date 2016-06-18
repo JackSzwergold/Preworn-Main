@@ -21,10 +21,17 @@ html, body
 {
 	width: 100%;
 	height: 100%;
+	color: #000;
+	background-color: #fff;
 }
 
 /**************************************************************************************************/
-a, a:visited, a:hover, a:active { text-decoration: none; }
+a, a:visited, a:hover, a:active
+{
+	text-decoration: none;
+	color: #000;
+}
+
 ul, li { list-style: none; }
 :focus { -moz-outline-style: none; }
 a { outline: none; }
@@ -34,6 +41,7 @@ hr
 	border: 0;
 	height: 1px;
 	margin: 0.75em 0 1.5em 0;
+	background-color: #000;
 	clear: both;
 }
 
@@ -99,7 +107,7 @@ ul, li
 }
 
 /**************************************************************************************************/
-.Content
+.Core
 {
 	flex-grow: 1;
 	flex-shrink: 0;
@@ -109,93 +117,59 @@ ul, li
 }
 
 /**************************************************************************************************/
-.Content h1 { line-height: 0.9em; }
-.Content h2, .Content h3, .Content h4, .Content h5, .Content h6 { line-height: 1em; }
+.Core h1 { line-height: 0.9em; }
+.Core h2, .Core h3, .Core h4, .Core h5, .Core h6 { line-height: 1em; }
 
-.Content h1, .Content h2, .Content h3, .Content h4, .Content h5, .Content h6
+.Core h1, .Core h2, .Core h3, .Core h4, .Core h5, .Core h6
 {
 	font-family: ChunkFiveRoman, Georgia, "New York", "Times New Roman", Times, serif;
 	font-weight: normal;
 	clear: both;
 }
 
-.Content p
-{
-	font-family: Georgia, "New York", "Times New Roman", Times, serif;
-	font-weight: normal;
-	font-size: 160%;
-	line-height: 1.4em;
-	margin: 0 0 1.25em 0;
-	padding: 0;
-	clear: both;
-}
-
-.Content h1 a, .Content h1 a:active, .Content h1 a:hover, .Content h1 a:visited,
-.Content h2 a, .Content h2 a:active, .Content h2 a:hover, .Content h2 a:visited,
-.Content h3 a, .Content h3 a:active, .Content h3 a:hover, .Content h3 a:visited,
-.Content h4 a, .Content h4 a:active, .Content h4 a:hover, .Content h4 a:visited,
-.Content h5 a, .Content h5 a:active, .Content h5 a:hover, .Content h5 a:visited,
-.Content h6 a, .Content h6 a:active, .Content h6 a:hover, .Content h6 a:visited
+.Core h1 a, .Core h1 a:active, .Core h1 a:hover, .Core h1 a:visited,
+.Core h2 a, .Core h2 a:active, .Core h2 a:hover, .Core h2 a:visited,
+.Core h3 a, .Core h3 a:active, .Core h3 a:hover, .Core h3 a:visited,
+.Core h4 a, .Core h4 a:active, .Core h4 a:hover, .Core h4 a:visited,
+.Core h5 a, .Core h5 a:active, .Core h5 a:hover, .Core h5 a:visited,
+.Core h6 a, .Core h6 a:active, .Core h6 a:hover, .Core h6 a:visited
 {
 	text-decoration: none;
 	font-weight: normal;
+	color: #000;
 }
 
-.Content p a, .Content p a:active, .Content p a:hover, .Content p a:visited
-{
-	background-image: linear-gradient(#fff 50%, #777 50%);
-	background-repeat: repeat-x;
-	background-position: 0 90%;
-	background-size: 1px 2px;
-}
-
-.Content header p span
-{
-	font-size: 75%;
-	margin: 0;
-}
-
-/**************************************************************************************************/
-.Content h1
+.Core h1
 {
 	font-size: 450%;
 	margin: 0 0 0.1em 0;
 }
 
-/**************************************************************************************************/
-.Content h2
+.Core h2
 {
 	font-size: 280%;
 	margin: 0.2em 0 0.2em 0;
 }
 
-.Content header h2 { margin: 0.2em 0 0.1em 0; }
-
-/**************************************************************************************************/
-.Content h3
+.Core h3
 {
 	font-size: 210%;
 	margin: 1.5em 0 0.15em 0;
 }
 
-.Content header h3 { margin: 0 0 0.30em 0; }
-
-/**************************************************************************************************/
-.Content h4
+.Core h4
 {
 	font-size: 190%;
 	margin: 1.1em 0 0.4em 0;
 }
 
-/**************************************************************************************************/
-.Content h5
+.Core h5
 {
 	font-size: 170%;
 	margin: 1.5em 0 0.7em 0;
 }
 
-/**************************************************************************************************/
-.Content h6
+.Core h6
 {
 	font-size: 160%;
 	line-height: 1.1em;
@@ -203,7 +177,71 @@ ul, li
 }
 
 /**************************************************************************************************/
-.Content pre
+.Core p,
+.Core ul, .Core ol
+{
+	font-family: Georgia, "New York", "Times New Roman", Times, serif;
+	font-weight: normal;
+	font-size: 160%;
+	line-height: 1.4em;
+	clear: both;
+}
+
+.Core p { margin: 0 0 1.25em 0; }
+
+.Core p a, .Core p a:active, .Core p a:hover, .Core p a:visited,
+.Core ul li a, .Core ul li a:active, .Core ul li a:hover, .Core ul li a:visited,
+.Core ol li a, .Core ol li a:active, .Core ol li a:hover, .Core ol li a:visited
+{
+	background-image: linear-gradient(#fff 50%, #777 50%);
+	background-repeat: repeat-x;
+	background-position: 0 90%;
+	background-size: 1px 2px;
+}
+
+/**************************************************************************************************/
+.Core ul, .Core ol
+{
+	margin: 0;
+	padding: 0 0 1.25em 0;
+	clear: both;
+}
+
+.Core ul li, .Core ol li
+{
+	font-size: 100%;
+	margin: 0 0 0.75em 1.75em;
+	padding: 0;
+	clear: both;
+}
+
+.Core ul li, .Core ol li
+{
+	list-style-position: outside;
+	display: list-item;
+}
+
+.Core ul li { list-style-type: disc; }
+.Core ol li { list-style-type: decimal; }
+
+/**************************************************************************************************/
+.Core header h2 { margin: 0.2em 0 0.1em 0; }
+.Core header h3 { margin: 0 0 0.30em 0; }
+
+.Core header p
+{
+	font-style: italic;
+	font-size: 135%;
+}
+
+.Core header p span
+{
+	font-size: 75%;
+	margin: 0;
+}
+
+/**************************************************************************************************/
+.Core pre
 {
 	white-space: pre-wrap;
 	font-size: 110%;
@@ -212,87 +250,12 @@ ul, li
 	border-radius: 5px;
 	padding: 20px 20px 20px 30px;
 	margin: 0 0 10px 0;
+	color: #0d0;
+	background-color: #333;
 }
 
-.Content p code { font-weight: bold; }
-.Content pre code { font-weight: normal; }
-
-/**************************************************************************************************/
-.Content ul, .Content ol
-{
-	font-family: Georgia, "New York", "Times New Roman", Times, serif;
-	font-weight: normal;
-	font-size: 160%;
-	line-height: 1.4em;
-	margin: 0;
-	padding: 0 0 1.25em 0;
-	clear: both;
-}
-
-.Content ul li, .Content ol li
-{
-	font-size: 100%;
-	margin: 0 0 0.75em 1.75em;
-	padding: 0;
-	clear: both;
-}
-
-.Content ul li
-{
-	list-style-type: disc;
-	list-style-position: outside;
-	display: list-item;
-}
-
-.Content ol li
-{
-	list-style-type: decimal;
-	list-style-position: outside;
-	display: list-item;
-}
-
-.Content ul li a, .Content ul li a:active, .Content ul li a:hover, .Content ul li a:visited,
-.Content ol li a, .Content ol li a:active, .Content ol li a:hover, .Content ol li a:visited
-{
-	background-image: linear-gradient(#fff 50%, #777 50%);
-	background-repeat: repeat-x;
-	background-position: 0 90%;
-	background-size: 1px 2px;
-}
-
-/**************************************************************************************************/
-/* 2016-04-08: WTF is this for? */
-.Content .Text .Padding { padding: 15px 0 15px 0; }
-
-/**************************************************************************************************/
-/* Media queries. */
-
-@media (min-width: 320px)
-{
-	.Wrapper { min-width: 335px; }
-	.Content { width: 335px; }
-}
-
-@media (min-width: 480px)
-{
-	.Content h1 { font-size: 650%; }
-	.Content h2 { font-size: 330%; }
-	.Content h3 { font-size: 220%; }
-	.Wrapper { min-width: 460px; }
-	.Content { width: 460px; }
-}
-
-@media (min-width: 768px)
-{
-	.Wrapper { min-width: 748px; }
-	.Content { width: 748px; }
-}
-
-@media (min-width: 1024px)
-{
-	.Wrapper { min-width: 748px; }
-	.Content { width: 748px; }
-}
+.Core p code { font-weight: bold; }
+.Core pre code { font-weight: normal; }
 
 /**************************************************************************************************/
 .Navigation
@@ -329,6 +292,7 @@ ul, li
 	margin: 6px 0 0 0;
 	padding: 0px;
 	width: 100%;
+	background-color: transparent;
 }
 
 /**************************************************************************************************/
@@ -375,32 +339,25 @@ ul, li
 }
 
 /**************************************************************************************************/
+.Navigation ul li { margin: 3px 3px 3px 3px; }
 .Navigation .Left ul { margin: 0 0 0 6px; }
-.Navigation .Left ul li { margin: 3px 3px 3px 3px; }
 .Navigation .Right ul { margin: 0 6px 0 0; }
-.Navigation .Right ul li { margin: 3px 3px 3px 3px; }
 
 /**************************************************************************************************/
-.Content header p
+article footer .Copyright
 {
-	font-style: italic;
-	font-size: 135%;
-}
-
-/**************************************************************************************************/
-.Copyright
-{
-	clear: both;
-	font-family: Georgia, "New York", "Times New Roman", Times, serif;
-	font-weight: normal;
-	font-style: italic;
-	font-size: 100%;
-	line-height: 1.4em;
-	text-transform: none;
 	padding: 8px 16px 8px 16px;
 	border-radius: 8px;
-	color: #777;
 	background-color: #eee;
+	clear: both;
+}
+
+article footer .Copyright p
+{
+	font-style: italic;
+	font-size: 100%;
+	color: #777;
+	margin: 0;
 }
 
 /**************************************************************************************************/
@@ -414,6 +371,7 @@ ul, li
 	align-content: center;
 	margin: 0;
 	width: 100%;
+	clear: both;
 }
 
 /**************************************************************************************************/
@@ -434,4 +392,34 @@ ul, li
 {
 	padding: 0 10px 0 10px;
 	height: 330px;
+}
+
+/**************************************************************************************************/
+/* Media queries. */
+
+@media (min-width: 320px)
+{
+	.Wrapper { min-width: 335px; }
+	.Core { width: 335px; }
+}
+
+@media (min-width: 480px)
+{
+	.Core h1 { font-size: 650%; }
+	.Core h2 { font-size: 330%; }
+	.Core h3 { font-size: 220%; }
+	.Wrapper { min-width: 460px; }
+	.Core { width: 460px; }
+}
+
+@media (min-width: 768px)
+{
+	.Wrapper { min-width: 748px; }
+	.Core { width: 748px; }
+}
+
+@media (min-width: 1024px)
+{
+	.Wrapper { min-width: 748px; }
+	.Core { width: 748px; }
 }

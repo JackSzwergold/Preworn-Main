@@ -140,7 +140,7 @@ amzn_assoc_default_category = "All";
 // Set the page DIVs array.
 $PAGE_DIVS_ARRAY = array();
 $PAGE_DIVS_ARRAY[] = 'Wrapper';
-$PAGE_DIVS_ARRAY[] = 'Content';
+$PAGE_DIVS_ARRAY[] = 'Core';
 
 // Set the JavaScript array.
 $JAVASCRIPTS_ITEMS = array();
