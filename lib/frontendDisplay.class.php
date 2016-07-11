@@ -406,18 +406,24 @@ class frontendDisplay {
       //**********************************************************************************//
       // Set the body header.
 
-      $header = '<div class="Header">'
-              . $this->header_content
-              . '</div>'
-              ;
+      $header = '';
+      if (!empty($this->header_content)) {
+		  $header = '<div class="Header">'
+				  . $this->header_content
+				  . '</div>'
+				  ;
+      }
 
       //**********************************************************************************//
       // Set the body footer.
 
-      $footer = '<div class="Footer">'
-              . $this->footer_content
-              . '</div>'
-              ;
+      $footer = '';
+      if (!empty($this->footer_content)) {
+		  $footer = '<div class="Footer">'
+				  . $this->footer_content
+				  . '</div>'
+				  ;
+      }
 
       //**********************************************************************************//
       // Set the view wrapper.
@@ -710,10 +716,12 @@ class frontendDisplay {
       $footer = '';
       if ($COPYRIGHT_PRESENT) {
         $footer = '<div class="Copyright">'
+                . '<p>'
                 . (!empty($this->page_title_short) ? '“' . $this->page_title_short . ',” ' : '')
                 . (!empty($this->page_copyright) ? $this->page_copyright : '')
                 . (!empty($this->page_date) ? '; written on ' . date("F j, Y", strtotime($this->page_date)) . '. ' : '. ')
                 . (!empty($this->page_license) ? $this->page_license . '.' : '')
+                . '</p>'
                 . '</div>'
                 ;
       }
