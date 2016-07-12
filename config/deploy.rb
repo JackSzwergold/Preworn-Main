@@ -94,6 +94,9 @@ namespace :deploy do
       # info "Link the nine dots stuff to 'ninedots_js'."
       execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/ninedots_js_dist/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/ninedots_js"
 
+      # info "Link the nine dots stuff to 'words'."
+      execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/words/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/words"
+
       # info "Link the cheat sheet stuff to 'tutorials_and_cheat_sheets'."
       execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/tutorials_and_cheat_sheets/#{fetch(:deployment_type)}/current #{fetch(:markdown_path)}/tutorials_and_cheat_sheets"
 
