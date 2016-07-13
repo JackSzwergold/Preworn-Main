@@ -352,7 +352,7 @@ class frontendDisplay {
 
     $this->renderContent($response_header);
 
- } // initHTMLContent
+  } // initHTMLContent
 
 
   //**************************************************************************************//
