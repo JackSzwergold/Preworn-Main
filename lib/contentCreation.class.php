@@ -60,9 +60,6 @@ class contentCreation {
 		  if ($value == 'parent') {
 		    $params[$value] = preg_replace('/[^A-Za-z-_]/s', '', trim($_GET[$value]));
 		  }
-		  // else if ($value == 'id') {
-		  //   $params[$value] = intval($_GET[$value]);
-		  // }
 		  else if ($value == '_debug') {
 		    $params[$value] = TRUE;
 		  }
