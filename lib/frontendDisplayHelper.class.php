@@ -25,8 +25,7 @@
 
 class frontendDisplayHelper {
 
-  private $controller_default = '';
-  private $controller_select = '';
+  private $controller = '';
   private $page_base = '';
   private $page_base_suffix = '';
   private $page_title = '';
@@ -40,25 +39,14 @@ class frontendDisplayHelper {
 
 
   //**************************************************************************************//
-  // Set the default controller.
-  public function setDefaultController ($value) {
-
-    if (!empty($value)) {
-      $this->controller_default = $value;
-    }
-
-  } // setDefaultController
-
-
-  //**************************************************************************************//
   // Set the selected controller.
-  public function setSelectedController ($value) {
+  public function setController ($value) {
 
     if (!empty($value)) {
-      $this->controller_select = $value;
+      $this->controller = $value;
     }
 
-  } // setSelectedController
+  } // setController
 
 
   //**************************************************************************************//
@@ -73,7 +61,7 @@ class frontendDisplayHelper {
 
 
   //**************************************************************************************//
-  // Set the page base.
+  // Set the page base suffix.
   public function setPageBaseSuffix ($value) {
 
     if (!empty($value)) {
@@ -145,7 +133,8 @@ class frontendDisplayHelper {
   //**************************************************************************************//
   //**************************************************************************************//
   // Filter the view mode.
-  public function filterViewMode ($mode = null, $mode_options) {
+  private function filterViewMode ($mode = null, $mode_options) {
+    global $SITE_DEFAULT_CONTROLLER;
 
     if (!empty($mode) && $mode == 'random') {
       $mode_keys = array_keys($mode_options);
@@ -153,7 +142,7 @@ class frontendDisplayHelper {
       $mode = $mode_keys[0];
     }
     else if (!empty($mode) && !array_key_exists($mode, $mode_options)) {
-      $mode = $this->controller_default;
+      $mode = $SITE_DEFAULT_CONTROLLER;
     }
 
     return $mode;
