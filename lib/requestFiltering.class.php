@@ -107,9 +107,7 @@ class requestFiltering {
     $controller = $SITE_DEFAULT_CONTROLLER;
 
     if (!empty($url_parts)) {
-	  if (array_key_exists('parent', $url_parts) && !empty($url_parts['parent'])) {
-	    $controller = $url_parts['parent'];
-      }
+	  $controller = implode($url_parts, '/');
     }
 
     return $controller;
