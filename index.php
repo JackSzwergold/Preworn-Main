@@ -30,10 +30,11 @@ require_once BASE_FILEPATH . '/common/functions.inc.php';
 require_once BASE_FILEPATH . '/lib/frontendDisplay.class.php';
 require_once BASE_FILEPATH . '/lib/frontendDisplayHelper.class.php';
 require_once BASE_FILEPATH . '/lib/requestFiltering.class.php';
+require_once BASE_FILEPATH . '/lib/markdownHelper.class.php';
 require_once BASE_FILEPATH . '/lib/Spyc.php';
 
 //**************************************************************************************//
-// Init the "requestFiltering()" class.
+// Manage the request filering stuff.
 
 $requestFilteringClass = new requestFiltering();
 $params = $requestFilteringClass->process_parameters();
@@ -41,12 +42,16 @@ $DEBUG_MODE = $requestFilteringClass->process_debug_mode($params);
 $JSON_MODE = $requestFilteringClass->process_json_mode($params);
 $page_base_suffix = $requestFilteringClass->process_page_base_suffix($JSON_MODE);
 
-$markdown_file = $requestFilteringClass->process_markdown_file($params);
-$page_title = $requestFilteringClass->process_page_title($params);
-
 $url_parts = $requestFilteringClass->process_url_parts($params);
 $controller = $requestFilteringClass->process_controllers($url_parts);
 $page_base = $requestFilteringClass->process_page_base($controller);
+
+//**************************************************************************************//
+// Now move onto the markdown helper stuff.
+
+$markdownHelperClass = new markdownHelper();
+$markdown_file = $markdownHelperClass->process_markdown_file($params);
+$page_title = $markdownHelperClass->process_page_title($params);
 
 //**************************************************************************************//
 // Now deal with the front end display helper class related stuff.
