@@ -106,7 +106,7 @@ $SOCIAL_MEDIA_INFO['instagram']['emoji'] = '📸';
 $SOCIAL_MEDIA_INFO['instagram']['url'] = 'https://www.instagram.com/jackszwergold/';
 $SOCIAL_MEDIA_INFO['instagram']['description'] = 'Check me out on Instagram.';
 
-// Ad info.
+// Amazon recommendation banner.
 $AMAZON_RECOMMENDATION = '<script type="text/javascript">
 amzn_assoc_placement = "adunit0";
 amzn_assoc_enable_interest_ads = "true";
