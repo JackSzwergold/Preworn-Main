@@ -33,24 +33,24 @@ class requestFiltering {
     foreach($VALID_GET_PARAMETERS as $key => $value) {
       if (array_key_exists($value, $_GET)) {
         if (in_array($value, $VALID_GET_PARAMETERS)) {
-		  if ($value == 'parent') {
-		    $params[$value] = preg_replace('/[^A-Za-z-_]/s', '', trim($_GET[$value]));
-		  }
-		  else if ($value == '_debug') {
-		    $params[$value] = TRUE;
-		  }
-		  else if ($value == 'json') {
-		    $params[$value] = TRUE;
-		  }
-		  else if ($value == 'offset') {
-		    $params[$value] = intval($_GET[$value]);
-		  }
-		  else if ($value == 'count') {
-		    $params[$value] = intval($_GET[$value]);
-		  }
-		  else {
-		    $params[$value] = trim($_GET[$value]);
-		  }
+          if ($value == 'parent') {
+            $params[$value] = preg_replace('/[^A-Za-z-_]/s', '', trim($_GET[$value]));
+          }
+          else if ($value == '_debug') {
+            $params[$value] = TRUE;
+          }
+          else if ($value == 'json') {
+            $params[$value] = TRUE;
+          }
+          else if ($value == 'offset') {
+            $params[$value] = intval($_GET[$value]);
+          }
+          else if ($value == 'count') {
+            $params[$value] = intval($_GET[$value]);
+          }
+          else {
+            $params[$value] = trim($_GET[$value]);
+          }
         }
       }
     }
@@ -65,7 +65,7 @@ class requestFiltering {
 
     return array_key_exists('_debug', $params);
 
-  } // process_debug_mode
+ } // process_debug_mode
 
   //**************************************************************************************//
   // Process the JSON mode.
@@ -76,12 +76,19 @@ class requestFiltering {
   } // process_json_mode
 
   //**************************************************************************************//
-  // Process the page base suffix.
-  function process_page_base_suffix ($JSON_MODE = false) {
+  // Process the query string append.
+  function process_query_string_append ($modes = array()) {
 
-    return $JSON_MODE ? '?json' : '';
+    $ret = array();
+    foreach ($modes as $mode_key => $mode_value) {
+      if ($mode_key && $mode_value) {
+        $ret[$mode_key] = TRUE;
+      }
+    }
 
-  } // process_page_base_suffix
+    return !empty($ret) ? '?' . implode('&', array_keys($ret)) : null;
+
+  } // process_query_string_append
 
   //**************************************************************************************//
   // Process the URL parts.

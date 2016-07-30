@@ -38,9 +38,10 @@ require_once BASE_FILEPATH . '/lib/Spyc.php';
 
 $requestFilteringClass = new requestFiltering();
 $params = $requestFilteringClass->process_parameters();
-$DEBUG_MODE = $requestFilteringClass->process_debug_mode($params);
+
 $JSON_MODE = $requestFilteringClass->process_json_mode($params);
-$page_base_suffix = $requestFilteringClass->process_page_base_suffix($JSON_MODE);
+$DEBUG_MODE = $requestFilteringClass->process_debug_mode($params);
+$page_query_string_append = $requestFilteringClass->process_query_string_append(array('json' => $JSON_MODE, '_debug' => $DEBUG_MODE));
 
 $url_parts = $requestFilteringClass->process_url_parts($params);
 $controller = $requestFilteringClass->process_controllers($url_parts);
@@ -59,7 +60,7 @@ $page_title = $markdownHelperClass->process_page_title($params);
 $frontendDisplayHelperClass = new frontendDisplayHelper();
 $frontendDisplayHelperClass->setController($controller);
 $frontendDisplayHelperClass->setPageBase($page_base);
-$frontendDisplayHelperClass->setPageBaseSuffix($page_base_suffix);
+$frontendDisplayHelperClass->setPageBaseSuffix($page_query_string_append);
 $frontendDisplayHelperClass->setCount(array_key_exists('count', $params) ? $params['count'] : 1);
 $frontendDisplayHelperClass->initContent($DEBUG_MODE);
 
@@ -94,7 +95,7 @@ $frontendDisplayClass->setPageRobots($SITE_ROBOTS);
 $frontendDisplayClass->setJavaScriptItems($JAVASCRIPTS_ITEMS);
 $frontendDisplayClass->setLinkItems($LINK_ITEMS);
 $frontendDisplayClass->setFaviconItems($FAVICONS);
-$frontendDisplayClass->setPageBase($page_base . $page_base_suffix);
+$frontendDisplayClass->setPageBase($page_base . $page_query_string_append);
 $frontendDisplayClass->setPageURLParts($params);
 // $frontendDisplayClass->setPaymentInfo($PAYMENT_INFO);
 $frontendDisplayClass->setSocialMediaInfo($SOCIAL_MEDIA_INFO);
