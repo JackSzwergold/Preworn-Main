@@ -40,7 +40,6 @@ $SITE_COPYRIGHT = '(c) Copyright ' . date('Y') . ' Jack Szwergold';
 $SITE_LICENSE_CODE = 'CC-BY-NC-SA-4.0';
 $SITE_LICENSE = 'This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0)';
 $SITE_ROBOTS = 'noindex, nofollow';
-// $SITE_VIEWPORT = 'width=device-width, initial-scale=0.4, maximum-scale=2, minimum-scale=0.4, user-scalable=yes';
 $SITE_VIEWPORT = 'width=device-width, initial-scale=1.0';
 $SITE_IMAGE = 'favicons/icon_200x200.png';
 $SITE_FB_ADMINS = '504768652';
@@ -102,14 +101,6 @@ $FAVICONS['96x96']['href'] = 'favicons/favicon-96x96.png';
 
 // Payment info.
 $PAYMENT_INFO = array();
-// $PAYMENT_INFO['amazon']['short_name'] = 'Amazon';
-// $PAYMENT_INFO['amazon']['emoji'] = '🎥📚📀';
-// $PAYMENT_INFO['amazon']['url'] = 'http://www.amazon.com/?tag=preworn-20';
-// $PAYMENT_INFO['amazon']['description'] = 'Support me when you buy things on Amazon with this link.';
-// $PAYMENT_INFO['paypal']['short_name'] = 'PayPal';
-// $PAYMENT_INFO['paypal']['emoji'] = '💰💸💳';
-// $PAYMENT_INFO['paypal']['url'] = 'https://www.paypal.me/JackSzwergold';
-// $PAYMENT_INFO['paypal']['description'] = 'Support me with a PayPal donation.';
 
 // Social media info.
 $SOCIAL_MEDIA_INFO = array();
@@ -117,10 +108,6 @@ $SOCIAL_MEDIA_INFO['instagram']['short_name'] = 'Instagram';
 $SOCIAL_MEDIA_INFO['instagram']['emoji'] = '📸';
 $SOCIAL_MEDIA_INFO['instagram']['url'] = 'https://www.instagram.com/jackszwergold/';
 $SOCIAL_MEDIA_INFO['instagram']['description'] = 'Check me out on Instagram.';
-// $SOCIAL_MEDIA_INFO['twitter']['short_name'] = 'Twitter';
-// $SOCIAL_MEDIA_INFO['twitter']['emoji'] = '🐦';
-// $SOCIAL_MEDIA_INFO['twitter']['url'] = 'https://twitter.com/jackszwergold/';
-// $SOCIAL_MEDIA_INFO['twitter']['description'] = 'Check me out on Twitter.';
 
 // Ad info.
 $AMAZON_RECOMMENDATION = '<script type="text/javascript">
@@ -142,12 +129,11 @@ $PAGE_DIVS_ARRAY = array();
 $PAGE_DIVS_ARRAY[] = 'Wrapper';
 $PAGE_DIVS_ARRAY[] = 'Core';
 
+// Set the page DIV wrapper.
+$PAGE_DIV_WRAPPER = '';
+
 // Set the JavaScript array.
 $JAVASCRIPTS_ITEMS = array();
-// $JAVASCRIPTS_ITEMS[] = 'script/json2.js';
-// $JAVASCRIPTS_ITEMS[] = 'script/jquery/jquery-1.11.3.min.js';
-// $JAVASCRIPTS_ITEMS[] = 'script/jquery/jquery-1.11.3.min.map';
-// $JAVASCRIPTS_ITEMS[] = 'script/jquery/jquery.noconflict.js';
 
 // Set the link items array.
 $LINK_ITEMS = array();

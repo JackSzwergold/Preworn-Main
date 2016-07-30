@@ -89,7 +89,7 @@ $frontendDisplayClass->setPageImage($SITE_URL . $SITE_IMAGE);
 $frontendDisplayClass->setPageFBAdmins($SITE_FB_ADMINS);
 $frontendDisplayClass->setPageContentMarkdown($markdown_file);
 $frontendDisplayClass->setPageDivs($PAGE_DIVS_ARRAY);
-$frontendDisplayClass->setPageDivWrapper();
+$frontendDisplayClass->setPageDivWrapper($PAGE_DIV_WRAPPER);
 $frontendDisplayClass->setPageViewport($SITE_VIEWPORT);
 $frontendDisplayClass->setPageRobots($SITE_ROBOTS);
 $frontendDisplayClass->setJavaScriptItems($JAVASCRIPTS_ITEMS);
@@ -97,12 +97,11 @@ $frontendDisplayClass->setLinkItems($LINK_ITEMS);
 $frontendDisplayClass->setFaviconItems($FAVICONS);
 $frontendDisplayClass->setPageBase($page_base . $page_query_string_append);
 $frontendDisplayClass->setPageURLParts($params);
-// $frontendDisplayClass->setPaymentInfo($PAYMENT_INFO);
 $frontendDisplayClass->setSocialMediaInfo($SOCIAL_MEDIA_INFO);
 $frontendDisplayClass->setAdBanner($AMAZON_RECOMMENDATION);
 
 //**************************************************************************************//
-// Init the core content and set the header and footer items..
+// Init the core content and set the header and footer items.
 
 $frontendDisplayClass->initCoreContent();
 
