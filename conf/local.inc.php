@@ -99,9 +99,6 @@ $FAVICONS['96x96']['rel'] = 'icon';
 $FAVICONS['96x96']['sizes'] = '96x96';
 $FAVICONS['96x96']['href'] = 'favicons/favicon-96x96.png';
 
-// Payment info.
-$PAYMENT_INFO = array();
-
 // Social media info.
 $SOCIAL_MEDIA_INFO = array();
 $SOCIAL_MEDIA_INFO['instagram']['short_name'] = 'Instagram';
