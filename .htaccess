@@ -1,12 +1,15 @@
+# Set the default character set.
 AddDefaultCharset UTF-8
 
-# Header set Access-Control-Allow-Origin "*"
-# Header add Access-Control-Allow-Headers "Content-Type, Cache-Control"
-# Header add Access-Control-Allow-Methods "GET"
-
+# Set the options.
 Options +FollowSymlinks
 
+# Enable the rewrite engine.
 RewriteEngine on
+
+# Only rewrite if the directory or file doesn’t exist on the system.
+RewriteCond   %{REQUEST_FILENAME} !-d [NC]
+RewriteCond   %{REQUEST_FILENAME} !-f [NC]
 
 # Ignore these base directories.
 RewriteRule   ^(clients|art|projects|css|favicons|script)($|/) - [L]
@@ -18,8 +21,3 @@ RewriteRule    ^([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/([A-
 RewriteRule    ^([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/?$    index.php?parent=$1&child=$2&grandchild=$3 [L,QSA]
 RewriteRule    ^([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/?$    index.php?parent=$1&child=$2 [L,QSA]
 RewriteRule    ^([A-Za-z0-9-_,\s]+)/?$    index.php?parent=$1 [QSA]
-
-# This setup allows us to have files or directoires on the root of the site without conflicting with rewrite rules.
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule    ^([A-Za-z0-9-_,\s]+)/?$    index.php?parent=$1 [L]
