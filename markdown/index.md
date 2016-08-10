@@ -19,6 +19,7 @@ Here are some simple projects I’ve done to stretch my skills and show off my f
 * **[Slider][6]:** This simple slider—which works well on desktop as well as mobile browsers—is something I created using jQuery and CSS3 WebKit extensions.
 * **[Floating Cube (JavaScript)][7]:** The core HTML, CSS and JavaScript coding for a floating cube concept developed for an Apache Cordova app.
 * **[Nine Dots (JavaScript)][8]:** The core HTML, CSS and JavaScript coding for a nine dots concept developed for an Apache Cordova app.
+* **[Lexicon][9]:** A simple program that picks and displays random words and pseudo-words I find interesting. Has JSON API capability so this is the first step (proof of concept?) working towards a JavaScript-based application. 
 
 ## Skills
 
@@ -39,18 +40,18 @@ I work primarily on the Ubuntu Linux and Mac OS X platforms but have deep experi
 ## Contact
 
 * **Email** • [me@preworn.com](mailto:me@preworn.com?Subject=Preworn%20Website%20Query)
-* **PGP Public Key** • Is available [here][9].
+* **PGP Public Key** • Is available [here][10].
 * **Mail** • P.O. Box 325, Village Station, NY 10014-0325
 
 ## Community
 
 Here is a list of some online tech communities—as well as my LinkedIn profile and GitHub repository—you are free to check out if you wish.
 
-* [Stack Overflow][10]
-* [Super User][11]
-* [Server Fault][12]
-* [LinkedIn][13]
-* [GitHub][14]
+* [Stack Overflow][11]
+* [Super User][12]
+* [Server Fault][13]
+* [LinkedIn][14]
+* [GitHub][15]
 
   [1]: http://www.lastplacechamp.com/ "last Place Champ"
   [2]: tutorials_and_cheat_sheets/ "Tutorials and Cheat Sheets"
@@ -60,9 +61,10 @@ Here is a list of some online tech communities—as well as my LinkedIn profile 
   [6]: projects/slider/ "Slider"
   [7]: projects/floatingcube_js/ "Floating Cube (JavaScript)"
   [8]: projects/ninedots_js/ "Nine Dots (JavaScript)"
-  [9]: pgp_public_key-preworn.asc.txt
-  [10]: http://stackoverflow.com/users/117259/jakegould "Stack Overflow"
-  [11]: http://superuser.com/users/167207/jakegould "Super User"
-  [12]: http://serverfault.com/users/100013/jakegould "Server Fault"
-  [13]: http://www.linkedin.com/in/jackszwergold "Linked In"
-  [14]: https://github.com/JackSzwergold
+  [9]: projects/lexicon/ "Lexicon"
+  [10]: pgp_public_key-preworn.asc.txt
+  [11]: http://stackoverflow.com/users/117259/jakegould "Stack Overflow"
+  [12]: http://superuser.com/users/167207/jakegould "Super User"
+  [13]: http://serverfault.com/users/100013/jakegould "Server Fault"
+  [14]: http://www.linkedin.com/in/jackszwergold "Linked In"
+  [15]: https://github.com/JackSzwergold
