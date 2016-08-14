@@ -63,7 +63,7 @@ Here is a list of some online tech communities—as well as my LinkedIn profile 
   [7]: projects/floatingcube_js/ "Floating Cube (JavaScript)"
   [8]: projects/ninedots_js/ "Nine Dots (JavaScript)"
   [9]: projects/lexicon/ "Lexicon"
-  [10]: projects/lexicon/ "Lexicon"  
+  [10]: projects/lexicon_js/ "Lexicon (JavaScript)"  
   [11]: pgp_public_key-preworn.asc.txt
   [12]: http://stackoverflow.com/users/117259/jakegould "Stack Overflow"
   [13]: http://superuser.com/users/167207/jakegould "Super User"
