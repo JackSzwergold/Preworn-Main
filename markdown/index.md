@@ -19,7 +19,8 @@ Here are some simple projects I’ve done to stretch my skills and show off my f
 * **[Slider][6]:** This simple slider—which works well on desktop as well as mobile browsers—is something I created using jQuery and CSS3 WebKit extensions.
 * **[Floating Cube (JavaScript)][7]:** The core HTML, CSS and JavaScript coding for a floating cube concept developed for an Apache Cordova app.
 * **[Nine Dots (JavaScript)][8]:** The core HTML, CSS and JavaScript coding for a nine dots concept developed for an Apache Cordova app.
-* **[Lexicon][9]:** A simple program that picks and displays random words and pseudo-words I find interesting. Has JSON API capability so this is the first step (proof of concept?) working towards a JavaScript-based application. 
+* **[Lexicon][9]:** *Work in Progress* A simple program that picks and displays random words and pseudo-words I find interesting.
+* **[Lexicon (JavaScript)][10]:** *Work in Progress* This is an EmberJS (JavaScript) version of the [Lexicon][9] project that uses an EmberJS front-end to pull data in from the PHP backend of [Lexicon][9]. The benefit of this method is the page does not have to be reloaded for new data to be pulled in; client side JavaScript handles it all.
 
 ## Skills
 
@@ -40,18 +41,18 @@ I work primarily on the Ubuntu Linux and Mac OS X platforms but have deep experi
 ## Contact
 
 * **Email** • [me@preworn.com](mailto:me@preworn.com?Subject=Preworn%20Website%20Query)
-* **PGP Public Key** • Is available [here][10].
+* **PGP Public Key** • Is available [here][11].
 * **Mail** • P.O. Box 325, Village Station, NY 10014-0325
 
 ## Community
 
 Here is a list of some online tech communities—as well as my LinkedIn profile and GitHub repository—you are free to check out if you wish.
 
-* [Stack Overflow][11]
-* [Super User][12]
-* [Server Fault][13]
-* [LinkedIn][14]
-* [GitHub][15]
+* [Stack Overflow][12]
+* [Super User][13]
+* [Server Fault][14]
+* [LinkedIn][15]
+* [GitHub][16]
 
   [1]: http://www.lastplacechamp.com/ "last Place Champ"
   [2]: tutorials_and_cheat_sheets/ "Tutorials and Cheat Sheets"
@@ -62,9 +63,10 @@ Here is a list of some online tech communities—as well as my LinkedIn profile 
   [7]: projects/floatingcube_js/ "Floating Cube (JavaScript)"
   [8]: projects/ninedots_js/ "Nine Dots (JavaScript)"
   [9]: projects/lexicon/ "Lexicon"
-  [10]: pgp_public_key-preworn.asc.txt
-  [11]: http://stackoverflow.com/users/117259/jakegould "Stack Overflow"
-  [12]: http://superuser.com/users/167207/jakegould "Super User"
-  [13]: http://serverfault.com/users/100013/jakegould "Server Fault"
-  [14]: http://www.linkedin.com/in/jackszwergold "Linked In"
-  [15]: https://github.com/JackSzwergold
+  [10]: projects/lexicon/ "Lexicon"  
+  [11]: pgp_public_key-preworn.asc.txt
+  [12]: http://stackoverflow.com/users/117259/jakegould "Stack Overflow"
+  [13]: http://superuser.com/users/167207/jakegould "Super User"
+  [14]: http://serverfault.com/users/100013/jakegould "Server Fault"
+  [15]: http://www.linkedin.com/in/jackszwergold "Linked In"
+  [16]: https://github.com/JackSzwergold

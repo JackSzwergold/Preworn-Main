@@ -97,6 +97,9 @@ namespace :deploy do
       # info "Link the lexicon stuff to 'lexicon'."
       execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/lexicon/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/lexicon"
 
+      # info "Link the lexicon stuff to 'lexicon_js'."
+      execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/lexicon_js/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/lexicon_js"
+
       # info "Link the cheat sheet stuff to 'tutorials_and_cheat_sheets'."
       execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/tutorials_and_cheat_sheets/#{fetch(:deployment_type)}/current #{fetch(:markdown_path)}/tutorials_and_cheat_sheets"
 
