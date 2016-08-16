@@ -19,8 +19,8 @@ Here are some simple projects I’ve done to stretch my skills and show off my f
 * **[Slider][6]:** This simple slider—which works well on desktop as well as mobile browsers—is something I created using jQuery and CSS3 WebKit extensions.
 * **[Floating Cube (JavaScript)][7]:** The core HTML, CSS and JavaScript coding for a floating cube concept developed for an Apache Cordova app.
 * **[Nine Dots (JavaScript)][8]:** The core HTML, CSS and JavaScript coding for a nine dots concept developed for an Apache Cordova app.
-* **[Lexicon][9]:** *Work in Progress* A simple program that picks and displays random words and pseudo-words I find interesting.
-* **[Lexicon (JavaScript)][10]:** *Work in Progress* This is an EmberJS (JavaScript) version of the [Lexicon][9] project that uses an EmberJS front-end to pull data in from the PHP backend of [Lexicon][9]. The benefit of this method is the page does not have to be reloaded for new data to be pulled in; client side JavaScript handles it all.
+* **[Lexicon][9]:** A simple program that picks and displays random words and pseudo-words I find interesting.
+* **[Lexicon (JavaScript)][10]:** This is an EmberJS (JavaScript) version of the [Lexicon][9] project that uses an EmberJS front-end to pull data in from the PHP backend of [Lexicon][9]. The benefit of this method is the page does not have to be reloaded for new data to be pulled in; client side JavaScript handles it all.
 
 ## Skills
 
