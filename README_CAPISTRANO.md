@@ -4,7 +4,15 @@
 
     sudo gem install capistrano:3.4.0
 
-And then deployment would be handled as follows:
+Then install Highline to make sure SSH passwords are not echoed in the clear when deploying:
+
+    sudo gem install highline
+
+And force a clean reinstall of Nokogiri—a Ruby XML and HTML library—like this:
+
+    sudo gem pristine nokogiri --version 1.6.8
+
+With that done, deployment would be handled as follows:
 
     cap production deploy
 
