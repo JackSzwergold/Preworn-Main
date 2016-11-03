@@ -107,19 +107,20 @@ $SOCIAL_MEDIA_INFO['instagram']['url'] = 'https://www.instagram.com/jackszwergol
 $SOCIAL_MEDIA_INFO['instagram']['description'] = 'Check me out on Instagram.';
 
 // Amazon recommendation banner.
-$AMAZON_RECOMMENDATION = '<script type="text/javascript">
-amzn_assoc_placement = "adunit0";
-amzn_assoc_enable_interest_ads = "true";
-amzn_assoc_tracking_id = "preworn-20";
-amzn_assoc_ad_mode = "auto";
-amzn_assoc_ad_type = "smart";
-amzn_assoc_marketplace = "amazon";
-amzn_assoc_region = "US";
-amzn_assoc_linkid = "8ff3d030cea4c7457d6477d0a395df59";
-amzn_assoc_fallback_mode = {"type":"search","value":"%s"};
-amzn_assoc_default_category = "All";
-</script>
-<script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>';
+// $AMAZON_RECOMMENDATION = '<script type="text/javascript">
+// amzn_assoc_placement = "adunit0";
+// amzn_assoc_enable_interest_ads = "true";
+// amzn_assoc_tracking_id = "preworn-20";
+// amzn_assoc_ad_mode = "auto";
+// amzn_assoc_ad_type = "smart";
+// amzn_assoc_marketplace = "amazon";
+// amzn_assoc_region = "US";
+// amzn_assoc_linkid = "8ff3d030cea4c7457d6477d0a395df59";
+// amzn_assoc_fallback_mode = {"type":"search","value":"%s"};
+// amzn_assoc_default_category = "All";
+// </script>
+// <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>';
+$AMAZON_RECOMMENDATION = '';
 
 // Set the page DIVs array.
 $PAGE_DIVS_ARRAY = array();
