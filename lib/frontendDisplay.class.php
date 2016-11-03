@@ -692,7 +692,7 @@ class frontendDisplay {
               . $author
               . (!empty($date) ? ' • <span>' . $date . '</span>' : '')
               ;
- 
+
       // Parse the header values.
       $header = Parsedown::instance()->parse($header);
 
@@ -810,10 +810,15 @@ class frontendDisplay {
   // Set the ad banner stuff.
   function setAdBannerFinal() {
 
-    return '<div class="Ad">'
-         . sprintf($this->ad_banner, $this->page_keyword)
-         . '</div>'
-         ;
+    if ($this->ad_banner) {
+      return '<div class="Ad">'
+           . sprintf($this->ad_banner, $this->page_keyword)
+           . '</div>'
+           ;
+    }
+    else {
+      return null;
+    }
 
   } // setAdBannerFinal
 
