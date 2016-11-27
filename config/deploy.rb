@@ -100,6 +100,9 @@ namespace :deploy do
       # info "Link the lexicon stuff to 'lexicon_js'."
       execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/lexicon_js_dist/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/lexicon_js"
 
+      # info "Link the instagram stuff to 'instagram'."
+      execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/instagram/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/instagram"
+
       # info "Link the cheat sheet stuff to 'tutorials_and_cheat_sheets'."
       execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/tutorials_and_cheat_sheets/#{fetch(:deployment_type)}/current #{fetch(:markdown_path)}/tutorials_and_cheat_sheets"
 
