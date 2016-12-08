@@ -1,18 +1,24 @@
 # Capistrano Related Items
 
-**NOTE:** As of May 15, 2015 this document is for reference only since much of the advice has been obsoleted by a recent upgrade of the deployment scripts to use Capistrano 3; specifically version 3.4.0. Installing Capistrano like this should suffice to get the code deployed:
+The purpose of this document is to explain the basics of getting Capistrano installed on Mac OS X.
 
-    sudo gem install capistrano:3.4.0
+Capistrano is a Ruby GEM that is used to deploy code from a code repository—such as GitHub, GitLab, BitBuckete, etc…—to a destination server. Run this command to install Capistrano on Mac OS X:
+
+    sudo gem install capistrano:3.6.1
+
+With that done, you should be all set to deploy code. But if you are deploying and get a message like this:
+
+> Text will be echoed in the clear. Please install the HighLine or Termios libraries to suppress echoed text.
 
 Then install Highline to make sure SSH passwords are not echoed in the clear when deploying:
 
-    sudo gem install highline
+    sudo gem install highline:1.7.8
 
-And force a clean reinstall of Nokogiri—a Ruby XML and HTML library—like this:
+And some default installs of Nokogiri—a Ruby XML and HTML library—on Mac OS X are out of date which will much things up. So you might have to force install an update of Nokogiri like this:
 
-    sudo gem pristine nokogiri --version 1.6.8
+    sudo gem install nokogiri:1.6.8.1
 
-With that done, deployment would be handled as follows:
+With that done, deployment would be handled as follows; in this case `staging` is being deployed:
 
     cap production deploy
 
@@ -22,7 +28,9 @@ Or if you want to deploy as a different user, just set the `CAP_USER` environmen
 
 ***
 
-The purpose of this document is to explain how to setup `capistrano` on your local system to allow for clean & easy deployment of code from GitHub to a destination server.
+***NOTE:** As of May 15, 2015 the details below are for reference only since much of the advice has been obsoleted by a recent upgrade of the deployment scripts to use Capistrano 3; specifically version 3.4.0 and above.*
+
+The purpose of this document is to explain how to setup `capistrano` on your local system to allow for clean and easy deployment of code from GitHub to a destination server.
 
 ### Installing Capistrano
 
@@ -71,7 +79,7 @@ Another potential fix that might allow one to use versions of `net-ssh` higher t
 
     ssh_options[:config] = false
 
-But this fix for one issue might open up the script the new errors stemming from newer versions of `net-ssh`. So best play it safe & just be sure `net-ssh` is the one being used.
+But this fix for one issue might open up the script the new errors stemming from newer versions of `net-ssh`. So best play it safe and just be sure `net-ssh` is the one being used.
 
 ### Understanding Capistrano
 
@@ -80,21 +88,21 @@ First, not all repositories use `capistrano` for deployment. But more of them do
 - **Capfile:** The main `capistrano` file. No need to touch this.
 - **config:** The directory that contains the actual `capistrano` deployment scripts.
 
-And if you look in the `config` directory you will find the following files & directories:
+And if you look in the `config` directory you will find the following files and directories:
 
 - **deploy/production.rb:** The `production` specific deployment script.
 - **deploy/staging.rb:** The `staging` specific deployment script.
 - **deploy.rb:** The main deployment script.
 
-While those files are all set to do what they have to do to get code deployed properly, feel free to look inside to get a better idea of what they are & how they work. It’s basically a pile of Ruby script code as well as `bash` directives that work together to deploy code. At it’s heart, `capistrano` basically creates a high level method of creating `bash` procedures that effect a deployment.
+While those files are all set to do what they have to do to get code deployed properly, feel free to look inside to get a better idea of what they are and how they work. It’s basically a pile of Ruby script code as well as `bash` directives that work together to deploy code. At it’s heart, `capistrano` basically creates a high level method of creating `bash` procedures that effect a deployment.
 
-The code can be confusing at first, but when you look at the code & understand this “recipe” takes over the headache one often faces when manually SSHing or FTPing into a server, the value becomes clear: It helps you smooth over the ugliest, most error prone part of a deployment so deployments can proceed as smoothly as possible.
+The code can be confusing at first, but when you look at the code and understand this “recipe” takes over the headache one often faces when manually SSHing or FTPing into a server, the value becomes clear: It helps you smooth over the ugliest, most error prone part of a deployment so deployments can proceed as smoothly as possible.
 
 ### Using Capistrano
 
 To use `capistrano` one must already have access to a repository on GitHub as well as have basic SSH access to the destination server. This document won’t go into the detail of how either things are setup, but if you don’t have access to those things you simply cannot deploy code. But if you do have access to GitHub as well as basic SSH access to the destination server, then you simply need to do the following.
 
-First, open up the terminal & go into the locally copied repository. Once in there, you can issue a command as follows to deploy a `staging` branch:
+First, open up the terminal and go into the locally copied repository. Once in there, you can issue a command as follows to deploy a `staging` branch:
 
     cap staging deploy
 
@@ -102,10 +110,10 @@ That will allow you to deploy the `staging` branch to the destination server as 
 
     cap -s user=sysop staging deploy
 
-Just enter your SSH password for the remote server & you are off.
+Just enter your SSH password for the remote server and you are off.
 
-As for what a successful deployment looks like, it’s actually easier to explain that when things go correctly the text on the screen—mainly green & tan in color—will simply reflect the stages of the deployment as they are done. If an error occurs, red text explicitly indicating there was an error will pop up.
+As for what a successful deployment looks like, it’s actually easier to explain that when things go correctly the text on the screen—mainly green and tan in color—will simply reflect the stages of the deployment as they are done. If an error occurs, red text explicitly indicating there was an error will pop up.
 
-Now errors are not good, but you shouldn’t worry too much. The reality is `capistrano` is very error resilient and at no point will it deploy a “half baked” deployment. Meaning, the deployment won’t be finalized until all steps are clean & error free.
+Now errors are not good, but you shouldn’t worry too much. The reality is `capistrano` is very error resilient and at no point will it deploy a “half baked” deployment. Meaning, the deployment won’t be finalized until all steps are clean and error free.
 
-So let’s say your Internet connection is bad & drops out during a deployment. No need to worry about your codebase on the destination server going bad. The old deployment—whenever that was made—will always be in place until a newer deployment is successfully completely.
+So let’s say your Internet connection is bad and drops out during a deployment. No need to worry about your codebase on the destination server going bad. The old deployment—whenever that was made—will always be in place until a newer deployment is successfully completely.
