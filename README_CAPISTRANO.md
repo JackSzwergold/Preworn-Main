@@ -1,4 +1,4 @@
-# Capistrano Related Items
+# Capistrano
 
 The purpose of this document is to explain the basics of getting Capistrano installed on Mac OS X.
 
@@ -26,9 +26,53 @@ Or if you want to deploy as a different user, just set the `CAP_USER` environmen
 
     export CAP_USER=username && cap production deploy
 
+### Installing SSHPASS on Mac OS X if necessary.
+
+If somehow the deployment process still fails, you might need to install SSHPASS on Mac OS X.
+
+Installing SSHPASS will require you to install the full version of Xcode or Xcode Command Line Tools to compile the source code. So be sure to have either “Xcode” or “Xcode Command Line Tools” installed before proceeding.
+
+First, grab a copy of the SSHPASS source code like this:
+
+	curl -O http://heanet.dl.sourceforge.net/project/sshpass/sshpass/1.06/sshpass-1.06.tar.gz
+
+Decompress the archive like this:
+
+    tar -xf sshpass-1.06.tar.gz
+    
+Then go into the newly decompressed directory:
+
+    cd sshpass-1.06
+
+Configure the source code:
+
+    ./configure
+
+Run `make` to compile the source code:
+
+	make
+
+And finally install SSHPASS like this:
+
+	sudo make install
+
+You can check if it was installed properly by checking the version number like this:
+
+	sshpass -V
+
+The output would look something like this:
+
+	sshpass 1.06
+	(C) 2006-2011 Lingnu Open Source Consulting Ltd.
+	(C) 2015-2016 Shachar Shemesh
+	This program is free software, and can be distributed under the terms of the GPL
+	See the COPYING file for more information.
+
 ***
 
-***NOTE:** As of May 15, 2015 the details below are for reference only since much of the advice has been obsoleted by a recent upgrade of the deployment scripts to use Capistrano 3; specifically version 3.4.0 and above.*
+## For Reference Only
+
+**NOTE:** *As of May 15, 2015 the details below are for reference only since much of the advice has been obsoleted by a recent upgrade of the deployment scripts to use Capistrano 3; specifically version 3.4.0 and above.*
 
 The purpose of this document is to explain how to setup `capistrano` on your local system to allow for clean and easy deployment of code from GitHub to a destination server.
 
