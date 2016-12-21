@@ -20,7 +20,7 @@ Here are some simple projects I’ve done to stretch my skills and show off my f
 * **[Lexicon][lexicon]:** A simple program that picks and displays random words and pseudo-words I find interesting.
 * **[Lexicon (JavaScript)][lexicon_js]:** This is an EmberJS (JavaScript) version of the [Lexicon][lexicon] project that uses an EmberJS front-end to pull data in from the PHP backend of [Lexicon][lexicon]. The benefit of this method is the page does not have to be reloaded for new data to be pulled in; client side JavaScript handles it all.
 * **[Instagram][instagram]:** Some experiments and explorations into the basic, “sandbox”-level of Instagram API access. 
-* **[Holiday Card 2016][holiday_card_2016]:** Work in progress for a 2016 digital holiday card that uses WebKit animations. 
+* **[Holiday Card 2016][holiday_card_2016]:** My 2016 digital holiday card that uses WebKit animations. 
 
 ## Skills
 
