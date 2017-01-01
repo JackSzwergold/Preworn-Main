@@ -93,7 +93,13 @@
   <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Fail2Ban</loc>
 </url>
 <url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Find%20-%20Audio%20Processing%20Items</loc>
+</url>
+<url>
   <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Find%20-%20Image%20Manipulation%20Related%20Items</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/Find%20-%20Find%20-%20User%20and%20Permissons%20Related%20Items</loc>
 </url>
 <url>
   <loc>http://www.preworn.com/tutorials_and_cheat_sheets</loc>
@@ -255,6 +261,9 @@
   <loc>http://www.preworn.com/tutorials_and_cheat_sheets/macOS%20%20-%20Figlet</loc>
 </url>
 <url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/macOS%20%20-%20Homebrew</loc>
+</url>
+<url>
   <loc>http://www.preworn.com/tutorials_and_cheat_sheets/macOS%20%20-%20HTop</loc>
 </url>
 <url>
@@ -378,7 +387,16 @@
   <loc>http://www.preworn.com/tutorials_and_cheat_sheets/NodeJS%20-%20Installing%20PhantomJS%20via%20a%20NPM%20on%20Ubuntu</loc>
 </url>
 <url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/NodeJS%20-%20Keystone</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/NodeJS%20-%20Meteor</loc>
+</url>
+<url>
   <loc>http://www.preworn.com/tutorials_and_cheat_sheets/NodeJS%20-%20Uninstalling%20NodeJS%20and%20NPM%20in%20macOS%20</loc>
+</url>
+<url>
+  <loc>http://www.preworn.com/tutorials_and_cheat_sheets/PHP%20-%20Acquia%20Dev%20Desktop</loc>
 </url>
 <url>
   <loc>http://www.preworn.com/tutorials_and_cheat_sheets/PHP%20-%20Compiling%20and%20Installing%20PHP%20on%20Ubuntu</loc>
