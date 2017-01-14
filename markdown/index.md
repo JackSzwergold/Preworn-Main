@@ -1,6 +1,6 @@
 # Preworn
 
-## Skilled Tech, Developer, Administrator and Security Analyst
+## DevOps-Ready Skilled Tech, Developer, Administrator and Security Analyst
 
 This is Jack Szwergold’s technical portfolio and calling card.
 
