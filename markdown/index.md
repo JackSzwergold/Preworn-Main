@@ -24,7 +24,7 @@ Here are some simple projects I’ve done to stretch my skills and show off my f
 
 ## Skills
 
-I’m a highly skilled software developer, Unix systems administrator and overall systems engineer with 20+ years of experience which includes a strong professional history in the art, publishing and non-profit world.
+Skilled full-stack developer, systems admin and engineer with years of experience which includes experience in the art, publishing and non-profit worlds.
 
 Excellent set of skills for DevOps as well as Level 2/3 support and related software development. Very comfortable working in the terminal console on Mac OS X, Ubuntu, Debian, RedHat, CentOS and Solaris environments. Can install/configure software packages from core repositories as well as compile binaries from source on most any platform. Adept at Unix/Linux shell scripting and other sundry programming languages, protocols and frameworks such as:
 
