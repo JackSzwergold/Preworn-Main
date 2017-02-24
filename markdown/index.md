@@ -1,11 +1,20 @@
 # Preworn
 
-## DevOps-Ready Skilled Tech, Developer, Administrator and Security Analyst
+## Full-Stack Web Developer with DevOps-Ready SysAdmin and Security Consultant Skills
 
-This is Jack Szwergold’s technical portfolio and calling card.
+Welcome to Jack Szwergold’s technical portfolio and calling card. Here is my ***[collection of tutorials and cheat sheets][tutorials]*** and check out my ***[my GitHub repository][github]***
 
-* If you are interested check out my development skills—via actual code samples—please head over to ***[my GitHub repository][github]***.
-* I’ve also compiled a ***[collection of tutorials and cheat sheets][tutorials]*** over the years; mainly for my own personal reference but for others as well.
+### Excellent Web Developer
+
+I am a full-stack web developer who can develop code from scratch as well as develop within CMS systems such as WordPress, Drupal and the like. Front-end, back-end, all sides of the web stack are good with me. HTML5, CSS3, JavaScript, PHP, Ruby and related languages are fine with me.
+
+### Skilled Backend Tech
+
+I am a real-world proven overall systems tech. DevOps-skilled, Linux systems experienced, adept at command line and related backend skills. Shell scripting, Python, Apache, Nginx, Docker, and the like are the tools I know I how to use.
+
+### Great Web Hosting Consultant
+
+I have deep and proven skills dealing the infrastructural “plumbing” of  web servers and related systems. Domain names, DNS setup, site hosting and miscellaneous website hosting items are just some of the things I can deal with. DIY services like Squarespace, Wix and related shared hosting services are no problem for me.
 
 ## Projects
 
@@ -24,11 +33,9 @@ Here are some simple projects I’ve done to stretch my skills and show off my f
 
 ## Skills
 
-Skilled full-stack developer, systems admin and engineer with years of experience which includes experience in the art, publishing and non-profit worlds.
+I am a skilled full-stack web developer, systems admin and software engineer with years of experience which includes career experience within the art, publishing and non-profit worlds.
 
-I use both sides of my brain: Front-end and back-end development are no problem for me!
-
-Excellent set of skills for DevOps as well as Level 2/3 support and related software development. Very comfortable working in the terminal console on Mac OS X, Ubuntu, Debian, RedHat, CentOS and Solaris environments. Can install/configure software packages from core repositories as well as compile binaries from source on most any platform. Adept at Unix/Linux shell scripting and other sundry programming languages, protocols and frameworks such as:
+My skillset is an excellent match for web development, DevOps, level 2/3 support and related software development. Very comfortable working in the terminal console on Mac OS X, Ubuntu, Debian, RedHat, CentOS and Solaris environments:
 
 * **HTML5**, **CSS3**, **XHTML**, **JSON**,  **XML**, **YAML**
 * **JavaScript** (jQuery, AngularJS, NodeJS, EmberJS, Scriptaculous and Prototype)
@@ -38,7 +45,7 @@ Excellent set of skills for DevOps as well as Level 2/3 support and related soft
 * **MySQL**, **MariaDB**, **MongoDB** and other relational and non-relational database systems.
 * **Java**, **Elasticsearch**, **Solr**, **Nutch**, **Hadoop**, etc…
 
-I work primarily on the Ubuntu Linux and Mac OS X platforms but have deep experience with many different flavors of Unix/Linux spanning back to the early 1990s. So I can jump onto the terminal console and maneuvering around to get the job done regardless of OS.
+I work primarily on macOS and sundry Linux platforms (Ubuntu, CentOS, etc…) but have deep experience with many different flavors of Unix/Linux spanning back to the early 1990s. I easilly can jump onto the terminal console and maneuvering around to get the job done regardless of OS.
 
 ## Contact
 
