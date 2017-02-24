@@ -62,16 +62,6 @@ I work primarily on macOS and sundry Linux platforms (Ubuntu, CentOS, etc…) bu
 * **PGP Public Key** • Is available [here][pgp_key].
 * **Mail** • P.O. Box 325, Village Station, NY 10014-0325
 
-## Community
-
-Here is a list of some online tech communities—as well as my LinkedIn profile and GitHub repository—you are free to check out if you wish.
-
-* [Stack Overflow][stackoverflow]
-* [Super User][superuser]
-* [Server Fault][serverfault]
-* [LinkedIn][linkedin]
-* [GitHub][github]
-
   [tutorials]: tutorials_and_cheat_sheets/ "Tutorials and Cheat Sheets"
   [mosaic]: projects/mosaic/ "Mosaic"
   [mosaic_js]: projects/mosaic_js/ "Mosaic (JavaScript)"
