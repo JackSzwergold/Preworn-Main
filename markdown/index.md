@@ -1,6 +1,6 @@
 # Preworn
 
-## Welcome to Jack Szwergold’s technical portfolio and calling card.
+## Welcome to Jack Szwergold’s computer tech portfolio and calling card.
 
 ***
 
@@ -15,7 +15,7 @@ I am a skilled full-stack web developer, back-end tech, systems admin and softwa
 
 ## Great Full-Stack Web Developer
 
-I am a full-stack web developer who knows all sides of the tech equation—front-end, back-end, server-side, etc…—who can develop code from scratch as well as develop within CMS systems such as WordPress, Drupal and the like. HTML5, CSS3, JavaScript, PHP, Ruby and related languages—as well as frameworks—are all fine with me.
+I am a full-stack web developer who knows all sides of the web tech equation—front-end, back-end, server-side, etc…—who can develop code from scratch as well as develop within CMS systems such as WordPress, Drupal and the like. HTML5, CSS3, JavaScript, PHP, Ruby and related languages—as well as frameworks—are all fine with me.
 
 ## Skilled Back-End Tech
 
