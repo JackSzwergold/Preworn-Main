@@ -4,7 +4,7 @@
 
 ***
 
-I’m a skilled full-stack web developer, systems admin and software engineer with years of experience which includes a career history within the art, publishing and non-profit worlds.
+I’m a skilled full-stack web developer, back-end tech, systems admin and software engineer with years of experience which includes a career history within the art, publishing and non-profit worlds.
 
 * Here is my ***[collection of tech cheat sheets and tutorials][tutorials]***.
 * Check out my ***[my GitHub repository][github]*** if you care about such things.
