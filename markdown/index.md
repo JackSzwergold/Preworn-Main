@@ -15,7 +15,7 @@ I’m a skilled full-stack web developer, back-end tech, systems admin and softw
 
 ## Great Full-Stack Web Developer
 
-I am a full-stack web developer who can develop code from scratch as well as develop within CMS systems such as WordPress, Drupal and the like. Front-end, back-end, all sides of the web stack are good with me. HTML5, CSS3, JavaScript, PHP, Ruby and related languages are fine with me.
+I am a full-stack web developer who knows all sides of the tech equation—front-end, back-end, server-side, etc…—who can develop code from scratch as well as develop within CMS systems such as WordPress, Drupal and the like. HTML5, CSS3, JavaScript, PHP, Ruby and related languages as well as frameworkds are all fine with me.
 
 ## Skilled Back-End Tech
 
