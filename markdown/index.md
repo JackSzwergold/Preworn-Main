@@ -6,7 +6,7 @@
 
 I’m a skilled full-stack web developer, back-end tech, systems admin and software engineer with years of experience which includes a career history within the art, publishing and non-profit worlds.
 
-* Here is my ***[collection of tech cheat sheets and tutorials][tutorials]***.
+* Here is a ***[collection of tech cheat sheets][cheat_sheets]*** I’ve compiled over the years.
 * Check out my ***[my GitHub repository][github]*** if you care about such things.
 * I’m an active contributor to ***[Stack Overflow][stackoverflow]***, ***[Super User][superuser]*** and ***[Server Fault][serverfault]***.
 * And much like 99.9% of people out there doing this kind of work, I have a ***[LinkedIn][linkedin]*** profile.
@@ -48,7 +48,7 @@ Here are some simple projects I’ve done to stretch my skills and show off my f
 * **PGP Public Key** • Is available [here][pgp_key].
 * **Mail** • P.O. Box 325, Village Station, NY 10014-0325
 
-  [tutorials]: tutorials_and_cheat_sheets/ "Tutorials and Cheat Sheets"
+  [cheat_sheets]: tutorials_and_cheat_sheets/ "Tutorials and Cheat Sheets"
   [mosaic]: projects/mosaic/ "Mosaic"
   [mosaic_js]: projects/mosaic_js/ "Mosaic (JavaScript)"
   [ascii]: projects/ascii/ "ASCII"
