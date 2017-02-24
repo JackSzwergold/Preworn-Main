@@ -1,12 +1,10 @@
 # Preworn
 
-## Full-Stack Web Developer with DevOps-Ready SysAdmin and Security Consultant Skills
+## Welcome to Jack Szwergold’s technical portfolio and calling card.
 
 ***
 
-Welcome to Jack Szwergold’s technical portfolio and calling card.
-
-I am a skilled full-stack web developer, systems admin and software engineer with years of experience which includes career experience within the art, publishing and non-profit worlds.
+I’m a skilled full-stack web developer, systems admin and software engineer with years of experience which includes career experience within the art, publishing and non-profit worlds.
 
 * Here is my ***[collection of tech cheat sheets and tutorials][tutorials]***.
 * Check out my ***[my GitHub repository][github]*** if you care about such things.
@@ -15,7 +13,7 @@ I am a skilled full-stack web developer, systems admin and software engineer wit
 
 ***
 
-## Experienced Web Developer
+## Great Full-Stack Web Developer
 
 I am a full-stack web developer who can develop code from scratch as well as develop within CMS systems such as WordPress, Drupal and the like. Front-end, back-end, all sides of the web stack are good with me. HTML5, CSS3, JavaScript, PHP, Ruby and related languages are fine with me.
 
@@ -23,7 +21,7 @@ I am a full-stack web developer who can develop code from scratch as well as dev
 
 I am a real-world proven overall systems tech. DevOps-skilled, macOS/Linux systems experienced, adept at command line and related back-end skills. Shell scripting, Python, Apache, Nginx, Docker, MySQL, MariaDB, MongoDB, Java, Elasticsearch, Solr, Nutch, Hadoop and the like are the tools I know I how to use.
 
-## Great Web Hosting Consultant
+## Experienced Web Server Consultant
 
 I have deep and proven skills dealing the infrastructural “plumbing” of  web servers and related systems. Domain names, DNS setup, site hosting and miscellaneous website hosting items are just some of the things I can deal with. DIY services like Squarespace, Wix and related shared hosting services are no problem for me.
 
