@@ -35,7 +35,7 @@ Here are some simple projects I’ve done to stretch my skills and show off my f
 
 I am a skilled full-stack web developer, systems admin and software engineer with years of experience which includes career experience within the art, publishing and non-profit worlds.
 
-My skillset is an excellent match for web development, DevOps, level 2/3 support and related software development. Very comfortable working in the terminal console on Mac OS X, Ubuntu, Debian, RedHat, CentOS and Solaris environments:
+My skillset is an excellent match for web development, DevOps, level 2/3 support and related software development. Very comfortable working in the terminal console on macOS, Ubuntu, Debian, RedHat, CentOS and Solaris environments:
 
 * **HTML5**, **CSS3**, **XHTML**, **JSON**,  **XML**, **YAML**
 * **JavaScript** (jQuery, AngularJS, NodeJS, EmberJS, Scriptaculous and Prototype)
