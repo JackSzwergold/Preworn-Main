@@ -9,7 +9,7 @@ I’m a skilled full-stack web developer, systems admin and software engineer wi
 * Here is my ***[collection of tech cheat sheets and tutorials][tutorials]***.
 * Check out my ***[my GitHub repository][github]*** if you care about such things.
 * I’m an active contributor to ***[Stack Overflow][stackoverflow]***, ***[Super User][superuser]*** and ***[Server Fault][serverfault]***.
-* And last—but not least—I also have a ***[LinkedIn][linkedin]*** profile like 99.9% of people out there.
+* And much like 99.9% of people out there doing this kind of work, I have a ***[LinkedIn][linkedin]*** profile.
 
 ***
 
