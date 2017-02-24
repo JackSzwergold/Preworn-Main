@@ -2,7 +2,11 @@
 
 ## Full-Stack Web Developer with DevOps-Ready SysAdmin and Security Consultant Skills
 
+***
+
 Welcome to Jack Szwergold’s technical portfolio and calling card.
+
+I am a skilled full-stack web developer, systems admin and software engineer with years of experience which includes career experience within the art, publishing and non-profit worlds.
 
 * Here is my ***[collection of tech cheat sheets and tutorials][tutorials]***.
 * Check out my ***[my GitHub repository][github]*** if you care about such things.
@@ -17,7 +21,7 @@ I am a full-stack web developer who can develop code from scratch as well as dev
 
 ## Skilled Back-End Tech
 
-I am a real-world proven overall systems tech. DevOps-skilled, Linux systems experienced, adept at command line and related back-end skills. Shell scripting, Python, Apache, Nginx, Docker and the like are the tools I know I how to use.
+I am a real-world proven overall systems tech. DevOps-skilled, macOS/Linux systems experienced, adept at command line and related back-end skills. Shell scripting, Python, Apache, Nginx, Docker, MySQL, MariaDB, MongoDB, Java, Elasticsearch, Solr, Nutch, Hadoop and the like are the tools I know I how to use.
 
 ## Great Web Hosting Consultant
 
@@ -39,22 +43,6 @@ Here are some simple projects I’ve done to stretch my skills and show off my f
 * **[Lexicon (JavaScript)][lexicon_js]:** This is an EmberJS (JavaScript) version of the [Lexicon][lexicon] project that uses an EmberJS front-end to pull data in from the PHP back-end of [Lexicon][lexicon]. The benefit of this method is the page does not have to be reloaded for new data to be pulled in; client side JavaScript handles it all.
 * **[Instagram][instagram]:** Some experiments and explorations into the basic, “sandbox”-level of Instagram API access. 
 * **[Holiday Card 2016][holiday_card_2016]:** My 2016 digital holiday card that uses WebKit animations. 
-
-## Skills
-
-I am a skilled full-stack web developer, systems admin and software engineer with years of experience which includes career experience within the art, publishing and non-profit worlds.
-
-My skillset is an excellent match for web development, DevOps, level 2/3 support and related software development. Very comfortable working in the terminal console on macOS, Ubuntu, Debian, RedHat, CentOS and Solaris environments:
-
-* **HTML5**, **CSS3**, **XHTML**, **JSON**,  **XML**, **YAML**
-* **JavaScript** (jQuery, AngularJS, NodeJS, EmberJS, Scriptaculous and Prototype)
-* **PHP** (Flat and OOP, Zend, Codeigniter, Symfony and Laravel)
-* **Ruby** (Flat and OOP, Ruby on Rails)
-* **Apache Cordova** (Flat and Ionic Framework)
-* **MySQL**, **MariaDB**, **MongoDB** and other relational and non-relational database systems.
-* **Java**, **Elasticsearch**, **Solr**, **Nutch**, **Hadoop**, etc…
-
-I work primarily on macOS and sundry Linux platforms (Ubuntu, CentOS, etc…) but have deep experience with many different flavors of Unix/Linux spanning back to the early 1990s. I easilly can jump onto the terminal console and maneuvering around to get the job done regardless of OS.
 
 ## Contact
 
