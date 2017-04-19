@@ -401,7 +401,7 @@ class frontendDisplay {
       //**********************************************************************************//
       // Set the body header.
 
-      $header = '';
+      $header = null;
       if (!empty($this->header_content)) {
   		  $header = '<div class="Header">'
   				  . $this->header_content
@@ -412,7 +412,7 @@ class frontendDisplay {
       //**********************************************************************************//
       // Set the body footer.
 
-      $footer = '';
+      $footer = null;
       if (!empty($this->footer_content)) {
   		  $footer = '<div class="Footer">'
   				  . $this->footer_content
@@ -467,7 +467,7 @@ class frontendDisplay {
   // Set the doctype.
   function setDoctype() {
 
-    $ret = '';
+    $ret = null;
 
     if ($this->doctype == 'xhtml') {
       $ret = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">'
@@ -556,7 +556,7 @@ class frontendDisplay {
     }
 
     // The copyright changes between 'xhtml' & 'html5'
-    $copyright_key = '';
+    $copyright_key = null;
     if ($this->doctype == 'xhtml') {
       $copyright_key = 'copyright';
     }
@@ -631,7 +631,7 @@ class frontendDisplay {
   // Load the markdown file.
   function loadMarkdown($markdown_file = null) {
 
-    $ret = '';
+    $ret = null;
 
     // If the markdown file exists and is not empty, do something.
     if (file_exists($markdown_file) && !empty($markdown_file)) {
@@ -658,7 +658,7 @@ class frontendDisplay {
       // Split the content between the header and body by splitting on the author name.
       $split_file_contents = explode('By ' . $this->page_author, $markdown_file_contents);
 
-      $title = '';
+      $title = null;
       $BYLINE_PRESENT = FALSE;
       if (count($split_file_contents) == 1) {
         $content = $split_file_contents[0];
@@ -708,7 +708,7 @@ class frontendDisplay {
       $body = Parsedown::instance()->parse(join('***', $split_core_content));
 
       // Append the copyright box to the bottom of the body.
-      $footer = '';
+      $footer = null;
       if ($COPYRIGHT_PRESENT) {
         $footer = '<div class="Copyright">'
                 . '<p>'
@@ -776,7 +776,7 @@ class frontendDisplay {
       $content_r = sprintf('<ul>%s</ul>', implode('', $li_items_r));
     }
 
-    $div_l = '';
+    $div_l = null;
     if (!empty($content_l)) {
       $div_l = '<div class="Left">'
              . $content_l
@@ -784,7 +784,7 @@ class frontendDisplay {
              ;
     }
 
-    $div_r = '';
+    $div_r = null;
     if (!empty($content_r)) {
       $div_r = '<div class="Right">'
              . $content_r
@@ -792,7 +792,7 @@ class frontendDisplay {
              ;
     }
 
-    $ret = '';
+    $ret = null;
     if (!empty($content_l) || !empty($content_r)) {
       $ret = '<div class="Navigation">'
            . $div_l
@@ -847,7 +847,7 @@ class frontendDisplay {
     }
 
     // Set the wrapper divs.
-    $div_opening = $div_closing = '';
+    $div_opening = $div_closing = null;
     if (!empty($this->page_div_wrappper_array)) {
       $div_opening = '<div class="' . implode($this->page_div_wrappper_array, '">' . "\n" . '<div class="') . '">';
       $div_closing = '</div><!-- .' . implode(array_reverse($this->page_div_wrappper_array), '-->' . "\n" . '</div><!-- .') . ' -->';
