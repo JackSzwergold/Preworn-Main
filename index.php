@@ -110,8 +110,9 @@ $navigation = $frontendDisplayClass->setNavigation();
 $frontendDisplayClass->setBodyHeader($navigation);
 
 // Set the footer.
-$ad_banner = $frontendDisplayClass->setAdBannerFinal();
-$frontendDisplayClass->setBodyFooter($ad_banner);
+// $ad_banner = $frontendDisplayClass->setAdBannerFinal();
+$footer_content = '&nbsp;';
+$frontendDisplayClass->setBodyFooter($footer_content);
 
 //**************************************************************************************//
 // Init and display the final content.

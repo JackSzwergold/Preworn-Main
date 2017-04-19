@@ -403,10 +403,10 @@ class frontendDisplay {
 
       $header = '';
       if (!empty($this->header_content)) {
-		  $header = '<div class="Header">'
-				  . $this->header_content
-				  . '</div>'
-				  ;
+  		  $header = '<div class="Header">'
+  				  . $this->header_content
+  				  . '</div>'
+  				  ;
       }
 
       //**********************************************************************************//
@@ -414,10 +414,10 @@ class frontendDisplay {
 
       $footer = '';
       if (!empty($this->footer_content)) {
-		  $footer = '<div class="Footer">'
-				  . $this->footer_content
-				  . '</div>'
-				  ;
+  		  $footer = '<div class="Footer">'
+  				  . $this->footer_content
+  				  . '</div>'
+  				  ;
       }
 
       //**********************************************************************************//
