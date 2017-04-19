@@ -1,7 +1,12 @@
 /**************************************************************************************************/
-html, body { background-color: #555; }
+
+html, body {
+  background-color: #333333;
+}
+
 
 /**************************************************************************************************/
+
 .Core h1 a:active, .Core h1 a:hover,
 .Core h2 a:active, .Core h2 a:hover,
 .Core h3 a:active, .Core h3 a:hover,
@@ -10,12 +15,29 @@ html, body { background-color: #555; }
 .Core h6 a:active, .Core h6 a:hover,
 .Core p a:active, .Core p a:hover,
 .Core ul li a:active, .Core ul li a:hover,
-.Core ol li a:active, .Core ol li a:hover { color: #FCA311; }
+.Core ol li a:active, .Core ol li a:hover {
+  color: #FCA311;
+}
+
 
 /**************************************************************************************************/
-.Core p a:active, .Core p a:hover,
-.Core ul li a:active, .Core ul li a:hover,
-.Core ol li a:active, .Core ol li a:hover { background-image: linear-gradient(#fff 50%, #FCA311 50%); }
+
+/*.Core p a:active,
+.Core p a:hover,
+.Core ul li a:active,
+.Core ul li a:hover,
+.Core ol li a:active,
+.Core ol li a:hover {
+  background-image: linear-gradient(#fff 50%, #FCA311 50%);
+}*/
+
 
 /**************************************************************************************************/
-.Header { background-color: #FCA311; }
+
+.Header {
+  /*background-color: #F74902;*/
+  background-color: #00A3DD;
+}
+
+.Footer {
+}

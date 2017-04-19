@@ -20,8 +20,8 @@ body {
 html, body {
   width: 100%;
   height: 100%;
-  color: #000;
-  background-color: #fff;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 
@@ -29,7 +29,8 @@ html, body {
 
 a, a:visited, a:hover, a:active {
   text-decoration: none;
-  color: #000;
+  color: #000000;
+  transition: all 600ms ease;
 }
 
 ul, li {
@@ -48,7 +49,7 @@ hr {
   border: 0;
   height: 1px;
   margin: 0.75em 0 1.5em 0;
-  background-color: #000;
+  background-color: #000000;
   clear: both;
 }
 
@@ -88,7 +89,7 @@ ul, li {
   min-width: calc(100% - 20px);
   margin: 0;
   padding: 10px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 
@@ -127,7 +128,7 @@ ul, li {
 .Core h6 a, .Core h6 a:active, .Core h6 a:hover, .Core h6 a:visited {
   text-decoration: none;
   font-weight: normal;
-  color: #000;
+  color: #000000;
 }
 
 .Core h1 {
@@ -182,7 +183,7 @@ ul, li {
   background-image: linear-gradient(#fff 50%, #777 50%);
   background-repeat: repeat-x;
   background-position: 0 90%;
-  background-size: 1px 2px;
+  background-size: 1px 1px;
 }
 
 
@@ -277,37 +278,39 @@ ul, li {
 
 /**************************************************************************************************/
 
-.Navigation .Left, .Navigation .Right {
+.Navigation .Left,
+.Navigation .Right {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
 }
 
-.Navigation .Left ul li, .Navigation .Right ul li {
+.Navigation .Left ul li,
+.Navigation .Right ul li {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
   font-style: italic;
   font-size: 130%;
   text-transform: none;
-  color: #fff;
+  color: #ffffff;
 }
 
 .Navigation .Left ul li a
+.Navigation .Left ul li a:visited,
 .Navigation .Left ul li a:active,
 .Navigation .Left ul li a:hover,
-.Navigation .Left ul li a:visited,
 .Navigation .Right ul li a,
+.Navigation .Right ul li a:visited,
 .Navigation .Right ul li a:active,
-.Navigation .Right ul li a:hover,
-.Navigation .Right ul li a:visited {
+.Navigation .Right ul li a:hover {
   text-decoration: none;
   font-weight: normal;
   display: block;
   padding: 8px 50px 8px 20px;
   border-radius: 16px;
   box-shadow: 5px 5px 9px 0px rgba(17, 17, 17, 0.65);
-  color: #fff;
-  background-color: #555;
+  color: #ffffff;
+  background-color: #333333;
 }
 
 
@@ -317,8 +320,8 @@ ul, li {
 .Navigation .Left ul li a:hover,
 .Navigation .Right ul li a:active,
 .Navigation .Right ul li a:hover {
-  color: #fff;
-  background-color: #777;
+  color: #333333;
+  background-color: #ffffff;
 }
 
 
@@ -349,7 +352,7 @@ article footer .Copyright {
 article footer .Copyright p {
   font-style: italic;
   font-size: 100%;
-  color: #777;
+  color: #777777;
   margin: 0;
 }
 
@@ -407,7 +410,7 @@ article footer .Copyright p {
 	background-image: linear-gradient(#333 50%, #777 50%);
 	background-repeat: repeat-x;
 	background-position: 0 100%;
-	background-size: 1px 2px;
+	background-size: 1px 1px;
 }
 
 .Footer .Left p a:active,
