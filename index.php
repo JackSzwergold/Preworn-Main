@@ -111,7 +111,9 @@ $frontendDisplayClass->setBodyHeader($navigation);
 
 // Set the footer.
 // $ad_banner = $frontendDisplayClass->setAdBannerFinal();
-$footer_content = '&nbsp;';
+$content_l = 'All contents of this site are © copyright ' . date('Y') . ' Jack Szwergold. This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0)</a>.';
+$content_l = "<p>" . $content_l . "</p>";
+$footer_content = $frontendDisplayClass->setFooterContent($content_l);
 $frontendDisplayClass->setBodyFooter($footer_content);
 
 //**************************************************************************************//

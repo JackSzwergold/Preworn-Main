@@ -709,7 +709,7 @@ class frontendDisplay {
 
       // Append the copyright box to the bottom of the body.
       $footer = null;
-      if ($COPYRIGHT_PRESENT) {
+      if (FALSE && $COPYRIGHT_PRESENT) {
         $footer = '<div class="Copyright">'
                 . '<p>'
                 . (!empty($this->page_title_short) ? '“' . $this->page_title_short . ',” ' : '')
@@ -804,6 +804,40 @@ class frontendDisplay {
     return $ret;
 
   } // setNavigation
+
+
+  //**************************************************************************************//
+  // Set the footer content stuff.
+  function setFooterContent($content_l = null, $content_r = null) {
+
+    $div_l = null;
+    if (!empty($content_l)) {
+      $div_l = '<div class="Left">'
+             . $content_l
+             . '</div><!-- .Left -->'
+             ;
+    }
+
+    $div_r = null;
+    if (!empty($content_r)) {
+      $div_r = '<div class="Right">'
+             . $content_r
+             . '</div><!-- .Right -->'
+             ;
+    }
+
+    $ret = null;
+    if (!empty($content_l) || !empty($content_r)) {
+      $ret = '<div class="Navigation">'
+           . $div_l
+           . $div_r
+           . '</div><!-- .Navigation -->'
+           ;
+    }
+
+    return $ret;
+
+  } // setFooterContent
 
 
   //**************************************************************************************//
