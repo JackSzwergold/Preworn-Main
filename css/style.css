@@ -24,7 +24,6 @@ html, body {
   background-color: #ffffff;
 }
 
-
 /**************************************************************************************************/
 
 a, a:visited, a:hover, a:active {
@@ -53,6 +52,31 @@ hr {
   clear: both;
 }
 
+/**************************************************************************************************/
+
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+li::selection,
+a::selection {
+  background: #ffc;
+}
+
+p::-moz-selection,
+h1::-moz-selection,
+h2::-moz-selection,
+h3::-moz-selection,
+h4::-moz-selection,
+h5::-moz-selection,
+h6::-moz-selection,
+li::-moz-selection,
+a::-moz-selection {
+  background: #ffc;
+}
 
 /**************************************************************************************************/
 
@@ -367,6 +391,15 @@ article footer .Copyright p {
   margin: 0;
   width: 100%;
   clear: both;
+  word-wrap: normal;
+  word-break: normal;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
 }
 
 
