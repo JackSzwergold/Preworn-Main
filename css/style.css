@@ -295,7 +295,7 @@ ul, li {
   color: #ffffff;
 }
 
-.Navigation .Left ul li a
+.Navigation .Left ul li a,
 .Navigation .Left ul li a:visited,
 .Navigation .Left ul li a:active,
 .Navigation .Left ul li a:hover,
@@ -310,9 +310,8 @@ ul, li {
   border-radius: 16px;
   box-shadow: 5px 5px 9px 0px rgba(17, 17, 17, 0.65);
   color: #ffffff;
-  background-color: #333333;
+  background-color: #000000;
 }
-
 
 /**************************************************************************************************/
 
@@ -320,10 +319,9 @@ ul, li {
 .Navigation .Left ul li a:hover,
 .Navigation .Right ul li a:active,
 .Navigation .Right ul li a:hover {
-  color: #333333;
+  color: #000000;
   background-color: #ffffff;
 }
-
 
 /**************************************************************************************************/
 
