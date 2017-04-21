@@ -101,10 +101,10 @@ $FAVICONS['96x96']['href'] = 'favicons/favicon-96x96.png';
 
 // Social media info.
 $SOCIAL_MEDIA_INFO = array();
-$SOCIAL_MEDIA_INFO['instagram']['short_name'] = 'Instagram';
-$SOCIAL_MEDIA_INFO['instagram']['emoji'] = '📸';
-$SOCIAL_MEDIA_INFO['instagram']['url'] = 'https://www.instagram.com/jackszwergold/';
-$SOCIAL_MEDIA_INFO['instagram']['description'] = 'Check me out on Instagram.';
+// $SOCIAL_MEDIA_INFO['instagram']['short_name'] = 'Instagram';
+// $SOCIAL_MEDIA_INFO['instagram']['emoji'] = '📸';
+// $SOCIAL_MEDIA_INFO['instagram']['url'] = 'https://www.instagram.com/jackszwergold/';
+// $SOCIAL_MEDIA_INFO['instagram']['description'] = 'Check me out on Instagram.';
 
 // Amazon recommendation banner.
 // $AMAZON_RECOMMENDATION = '<script type="text/javascript">
