@@ -5,9 +5,6 @@ set :application, 'preworn_www'
 set :short_name, 'site'
 set :repo_url, 'git@github.com:JackSzwergold/Preworn-Main.git'
 
-# Set the 'deploy_to' directory.
-set :deploy_to, '/var/www'
-
 # Default value for :scm is :git
 set :scm, :git
 
@@ -36,10 +33,10 @@ set :keep_releases, 3
 set :normalize_asset_timestamps, false
 
 # The directory on the server into which the actual source code will deployed.
-set :web_builds, "#{deploy_to}/builds"
+set :web_builds, "/var/www/builds"
 
 # The directory on the server that stores content related data.
-set :content_data_path, "#{deploy_to}/content"
+set :content_data_path, "/var/www/content"
 
 # The path where projects get deployed.
 set :projects_path, "projects"
@@ -110,16 +107,16 @@ namespace :deploy do
       execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/tutorials_and_cheat_sheets/#{fetch(:deployment_type)}/current #{fetch(:markdown_path)}/tutorials_and_cheat_sheets"
 
       # info "If there is no directory & no symbolic link to '#{fetch(:short_name)}' then create a directory named '#{fetch(:short_name)}'."
-      # execute "cd #{fetch(:live_root)} && if [ ! -d #{fetch(:short_name)} ]; then if [ ! -h #{fetch(:short_name)} ]; then mkdir -p ./#{fetch(:short_name)}; fi; fi"
+      # execute "cd /var/www/{fetch(:live_path)} && if [ ! -d #{fetch(:short_name)} ]; then if [ ! -h #{fetch(:short_name)} ]; then mkdir -p ./#{fetch(:short_name)}; fi; fi"
 
       # info "If there is no symbolic link called #{fetch(:short_name)}' and '#{fetch(:short_name)}' is a directory, delete that directory."
-      execute "cd #{fetch(:live_root)} && if [ ! -h #{fetch(:short_name)} ]; then if [ -d #{fetch(:short_name)} ]; then rm -rf ./#{fetch(:short_name)}; fi; fi"
+      execute "cd /var/www/#{fetch(:live_path)} && if [ ! -h #{fetch(:short_name)} ]; then if [ -d #{fetch(:short_name)} ]; then rm -rf ./#{fetch(:short_name)}; fi; fi"
 
       # info "If there is a symbolic link called '#{fetch(:short_name)}', delete that directory."
-      execute "cd #{fetch(:live_root)} && if [ -h #{fetch(:short_name)} ]; then rm ./#{fetch(:short_name)}; fi"
+      execute "cd /var/www/#{fetch(:live_path)} && if [ -h #{fetch(:short_name)} ]; then rm ./#{fetch(:short_name)}; fi"
 
       # info "If there is a symbolic link to '#{fetch(:short_name)}' then create a symbolic link called '#{fetch(:short_name)}'."
-      execute "cd #{fetch(:live_root)} && if [ ! -h #{fetch(:short_name)} ]; then if [ ! -d #{fetch(:short_name)} ]; then ln -sf #{current_path} ./#{fetch(:short_name)}; fi; fi"
+      execute "cd /var/www/#{fetch(:live_path)} && if [ ! -h #{fetch(:short_name)} ]; then if [ ! -d #{fetch(:short_name)} ]; then ln -sf #{current_path} ./#{fetch(:short_name)}; fi; fi"
 
     end
   end
@@ -129,17 +126,8 @@ namespace :deploy do
   task :remove_cruft do
     on roles(:app) do
 
-        # Remove any README file that ends in '.md' or '.txt'.
-        execute "cd #{current_path} && rm -f README*.{md,txt}"
-
-        # Remove the Capisrano related files and directories.
-        execute "cd #{current_path} && rm -rf config && rm -f Capfile"
-
-        # Remove the 'htaccess.txt' file.
-        execute "cd #{current_path} && rm -f htaccess.txt"
-
-        # Remove the 'LICENSE.txt' file.
-        execute "cd #{current_path} && rm -f LICENSE.txt"
+      # Remove files and directories that aren’t needed on a deployed install.
+      execute "cd #{current_path} && mv -f robots.txt robots.temp 2>/dev/null && rm -rf {config,Capfile,*.txt,*.md,.gitignore} && mv -f robots.temp robots.txt 2>/dev/null"
 
     end
   end
