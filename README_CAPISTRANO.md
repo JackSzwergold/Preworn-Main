@@ -4,7 +4,7 @@ The purpose of this document is to explain the basics of getting Capistrano inst
 
 Capistrano is a Ruby GEM that is used to deploy code from a code repository—such as GitHub, GitLab, BitBuckete, etc…—to a destination server. Run this command to install Capistrano on Mac OS X:
 
-    sudo gem install capistrano:3.6.1
+    sudo gem install capistrano:3.8.1
 
 With that done, you should be all set to deploy code. But if you are deploying and get a message like this:
 
