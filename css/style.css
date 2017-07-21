@@ -127,10 +127,11 @@ body > nav {
   position: fixed;
   top: 0;
   left: 0;
-  margin: 0.625rem 0 0 -1.25rem;
+  margin: 1.25rem 0 0 1.25rem;
   padding: 0;
   transform: rotate(-2deg);
-  background-color: #000000;
+  /*background-color: #000000;*/
+  background-color: transparent;
   box-shadow: 0.625rem 0.625rem 0px 0px rgba(18, 18, 18, 0.25);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -139,16 +140,15 @@ body > nav {
   -ms-user-select: none;
   user-select: none;
   z-index: 10;
+  border-radius: 50%;
 }
 
 /**************************************************************************************************/
 
 body > nav ul li {
-  font-family: Georgia, "New York", "Times New Roman", Times, serif;
+  font-family: ChunkFiveRoman, Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
-  font-size: 1.25rem;
-  line-height: 0.75em;
-  letter-spacing: 0.025em;
+  font-size: 1rem;
   color: #ffffff;
 }
 
@@ -157,11 +157,15 @@ body > nav ul li a:visited,
 body > nav ul li a:active,
 body > nav ul li a:hover {
   display: inline-block;
-  padding: 0.5rem 4rem 0.75rem 1.5rem;
+  padding: 1.25rem;
+  width: 1rem;
+  height: 1rem;
   color: #ffffff;
   /*background-color: #b42121;*/
   /*background-color: #002e4b;*/
-  background-color: #21b44b;
+  /*background-color: #21b44b;*/
+  background-color: #000;
+  border-radius: 50%;
 }
 
 /**************************************************************************************************/
@@ -174,9 +178,9 @@ body > nav ul li a:hover {
 
 /**************************************************************************************************/
 
-body > nav ul {
+/*body > nav ul {
   margin: 0 0 0 0.625rem;
-}
+}*/
 
 /**************************************************************************************************/
 
