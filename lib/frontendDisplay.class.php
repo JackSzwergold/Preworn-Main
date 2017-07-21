@@ -76,8 +76,6 @@ class frontendDisplay {
   private $page_viewport = NULL;
   private $page_robots = NULL;
 
-  private $social_media_info = array();
-
   private $ad_banner = NULL;
 
   private $page_markdown_file = NULL;
@@ -295,13 +293,6 @@ class frontendDisplay {
     $this->page_depth = count($markdown_parts);
     $this->markdown_parts = $markdown_parts;
   } // setPageURLParts
-
-
-  //**************************************************************************************//
-  // Set the social media info.
-  function setSocialMediaInfo($social_media_info = null) {
-    $this->social_media_info = $social_media_info;
-  } // setSocialMediaInfo
 
 
   //**************************************************************************************//
@@ -775,56 +766,19 @@ class frontendDisplay {
   // Set the navigation stuff.
   function setNavigation() {
 
-    $li_items_l = array();
+    $li_items = array();
     if ($this->page_depth > 0) {
       $markdown_sliced = array_slice(array_values($this->markdown_parts), 0, -1);
       $back_url = BASE_PATH . join('/', $markdown_sliced);
-      $li_items_l[] = '<li id="back">'
-                    . sprintf('<a href="%s" title="back">• • •</a>', $back_url)
-                    . '</li>'
-                    ;
-    }
-    // else {
-    //   $li_items_l[] = '<li></li>';
-    // }
-
-    $li_items_r = array();
-
-    // Set the social media stuff.
-    if (!empty($this->social_media_info)) {
-      foreach ($this->social_media_info as $social_media_key => $social_media_value) {
-        $li_items_r[] = sprintf('<li id="%s">', $social_media_key)
-                      . sprintf('<a href="%s" title="%s">%s %s</a>', $social_media_value['url'], $social_media_value['description'], $social_media_value['short_name'], $social_media_value['emoji'])
-                      . '</li>'
-                      ;
-      }
-    }
-
-    if (!empty($li_items_l)) {
-      $content_l = sprintf('<ul>%s</ul>', implode('', $li_items_l));
-    }
-
-    if (!empty($li_items_r)) {
-      $content_r = sprintf('<ul>%s</ul>', implode('', $li_items_r));
-    }
-
-    $div_l = null;
-    if (!empty($content_l)) {
-      $div_l = '<div class="Left">' . $content_l . '</div><!-- .Left -->';
-      // $div_l = $content_l;
-    }
-
-    $div_r = null;
-    if (!empty($content_r)) {
-      $div_r = '<div class="Right">' . $content_r . '</div><!-- .Right -->';
-      // $div_r = $content_r;
+      $li_items[] = '<li id="back">'
+                  . sprintf('<a href="%s" title="back">• • •</a>', $back_url)
+                  . '</li>'
+                  ;
     }
 
     $ret = null;
-    if (!empty($content_l) || !empty($content_r)) {
-      $ret = $div_l
-           . $div_r
-           ;
+    if (!empty($li_items)) {
+      $ret .= sprintf('<ul>%s</ul>', implode('', $li_items));
     }
 
     return $ret;
@@ -836,30 +790,8 @@ class frontendDisplay {
   // Set the footer content stuff.
   function setFooterContent($content_l = null, $content_r = null) {
 
-    $div_l = null;
-    if (!empty($content_l)) {
-      $div_l = '<div class="Left">'
-             . $content_l
-             . '</div><!-- .Left -->'
-             ;
-    }
-
-    $div_r = null;
-    if (!empty($content_r)) {
-      $div_r = '<div class="Right">'
-             . $content_r
-             . '</div><!-- .Right -->'
-             ;
-    }
-
-    $ret = null;
-    if (!empty($content_l) || !empty($content_r)) {
-      $ret = '<div class="Navigation">'
-           . $div_l
-           . $div_r
-           . '</div><!-- .Navigation -->'
-           ;
-    }
+    $ret = !empty($content_l) ? $content_l : null;
+    $ret .= !empty($content_r) ? $content_r : null;
 
     return $ret;
 

@@ -99,29 +99,6 @@ $FAVICONS['96x96']['rel'] = 'icon';
 $FAVICONS['96x96']['sizes'] = '96x96';
 $FAVICONS['96x96']['href'] = 'favicons/favicon-96x96.png';
 
-// Social media info.
-$SOCIAL_MEDIA_INFO = array();
-// $SOCIAL_MEDIA_INFO['instagram']['short_name'] = 'Instagram';
-// $SOCIAL_MEDIA_INFO['instagram']['emoji'] = '📸';
-// $SOCIAL_MEDIA_INFO['instagram']['url'] = 'https://www.instagram.com/jackszwergold/';
-// $SOCIAL_MEDIA_INFO['instagram']['description'] = 'Check me out on Instagram.';
-
-// Amazon recommendation banner.
-// $AMAZON_RECOMMENDATION = '<script type="text/javascript">
-// amzn_assoc_placement = "adunit0";
-// amzn_assoc_enable_interest_ads = "true";
-// amzn_assoc_tracking_id = "preworn-20";
-// amzn_assoc_ad_mode = "auto";
-// amzn_assoc_ad_type = "smart";
-// amzn_assoc_marketplace = "amazon";
-// amzn_assoc_region = "US";
-// amzn_assoc_linkid = "8ff3d030cea4c7457d6477d0a395df59";
-// amzn_assoc_fallback_mode = {"type":"search","value":"%s"};
-// amzn_assoc_default_category = "All";
-// </script>
-// <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>';
-$AMAZON_RECOMMENDATION = '';
-
 // Set the page DIVs array.
 $PAGE_DIVS_ARRAY = array();
 $PAGE_DIVS_ARRAY[] = 'Wrapper';
