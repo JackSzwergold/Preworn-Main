@@ -403,9 +403,9 @@ class frontendDisplay {
 
       $header = null;
       if (!empty($this->header_content)) {
-  		  $header = '<div class="Header">'
+  		  $header = '<header>'
   				  . $this->header_content
-  				  . '</div>'
+  				  . '</header>'
   				  ;
       }
 
@@ -414,9 +414,9 @@ class frontendDisplay {
 
       $footer = null;
       if (!empty($this->footer_content)) {
-  		  $footer = '<div class="Footer">'
+  		  $footer = '<footer>'
   				  . $this->footer_content
-  				  . '</div>'
+  				  . '</footer>'
   				  ;
       }
 
@@ -729,11 +729,13 @@ class frontendDisplay {
 
     }
 
-    return '<article>'
+    return '<main>'
+         . '<article>'
          . $header
          . $body
          . $footer
          . '</article>'
+         . '</main>'
          ;
 
   } // loadMarkdown
@@ -880,9 +882,9 @@ class frontendDisplay {
             ;
     }
 
-    // Set the wrapper divs.
+    // 2017-07-20: Obsoleted. Set the wrapper DIVs.
     $div_opening = $div_closing = null;
-    if (!empty($this->page_div_wrappper_array)) {
+    if (FALSE && !empty($this->page_div_wrappper_array)) {
       $div_opening = '<div class="' . implode($this->page_div_wrappper_array, '">' . "\n" . '<div class="') . '">';
       $div_closing = '</div><!-- .' . implode(array_reverse($this->page_div_wrappper_array), '-->' . "\n" . '</div><!-- .') . ' -->';
     }
