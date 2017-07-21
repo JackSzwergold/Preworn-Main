@@ -89,8 +89,8 @@ ul, li {
 
 body > header {
   position: fixed;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   margin: 20px -20px 0 0;
   padding: 15px 60px 15px 40px;
   transform: rotate(1deg);
@@ -125,8 +125,8 @@ body > header h1 a:hover {
 
 body > nav {
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   margin: 0.625rem 0 0 -1.25rem;
   padding: 0;
   transform: rotate(-2deg);
@@ -182,8 +182,8 @@ body > nav ul {
 
 main + footer {
   position: fixed;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0;
+  left: 0;
   margin: 0 0 20px -20px;
   padding: 15px 30px 15px 50px;
   width: 75%;
