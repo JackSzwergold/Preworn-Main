@@ -21,8 +21,6 @@ body {
   line-height: 1em;
   text-align: center;
   -webkit-text-size-adjust: 100%;
-  /*background-color: #006600;*/
-  /*background-color: #660000;*/
 }
 
 html, body {
@@ -104,6 +102,7 @@ body > header {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  z-index: 10;
 }
 
 body > header h1 {
@@ -112,6 +111,13 @@ body > header h1 {
   font-size: 2.25rem;
   line-height: 0.75em;
   letter-spacing: 0.025em;
+  color: #ffffff;
+}
+
+body > header h1 a,
+body > header h1 a:visited,
+body > header h1 a:active,
+body > header h1 a:hover {
   color: #ffffff;
 }
 
@@ -188,7 +194,7 @@ main {
 	align-content: center;
   width: calc(100% - 120px);
   margin: 40px;
-	padding: 20px;
+	padding: 20px 20px 60px 20px;
   background-color: #ffffff;
   /*border-radius: 1.25rem;*/
   box-shadow: -0.625rem 0.625rem 0 #000000;

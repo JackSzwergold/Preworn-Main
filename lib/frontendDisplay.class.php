@@ -729,7 +729,17 @@ class frontendDisplay {
 
     }
 
-    return '<main>'
+    $logo = '<header>'
+          . '<h1>'
+          . sprintf('<a href="%s">', BASE_URL)
+          . 'Preworn'
+          . '</a>'
+          . '</h1>'
+          . '</header>'
+          ;
+
+    return $logo
+         . '<main>'
          . '<article>'
          . $header
          . $body

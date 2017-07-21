@@ -38,7 +38,7 @@ $SITE_DESCRIPTION = 'This site is Jack Szwergold’s technical portfolio and cal
 $SITE_URL = 'http://www.preworn.com/';
 $SITE_COPYRIGHT = '(c) Copyright ' . date('Y') . ' Jack Szwergold';
 $SITE_LICENSE_CODE = 'CC-BY-NC-SA-4.0';
-$SITE_LICENSE = 'This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0)';
+$SITE_LICENSE = 'This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0)';
 $SITE_ROBOTS = 'noindex, nofollow';
 $SITE_VIEWPORT = 'width=device-width, initial-scale=1.0';
 $SITE_IMAGE = 'favicons/icon_200x200.png';
