@@ -254,6 +254,7 @@ main {
   /*transform: rotate(0.3deg);*/
   background-color: #ffffff;
   box-shadow: 0.625rem 0.625rem 0px 0px rgba(18, 18, 18, 0.25);
+  transition: margin 600ms ease;
 }
 
 /**************************************************************************************************/
@@ -469,14 +470,15 @@ article ol li {
 
 article pre {
   white-space: pre-wrap;
+  word-break: break-all;
   font-size: 0.8rem;
   line-height: 1.4em;
   font-weight: normal;
   border-radius: 0.5rem;
   padding: 20px 20px 20px 30px;
   margin: 0 0 10px 0;
-  color: #0d0;
-  background-color: #333;
+  color: #00dd00;
+  background-color: #333333;
 }
 
 article p code {
@@ -486,22 +488,14 @@ article p code {
   font-weight: normal;
   padding: 0 0.5rem 0 0.5rem;
   border-radius: 0.25rem;
-  /*color: #333;*/
   background-color: #ddd;
-  /*-webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;*/
-  /*cursor: default;*/
   transition: all 600ms ease;
 }
 
 article p code:active,
 article p code:hover {
-  color: #0d0;
-  background-color: #333;
+  color: #00dd00;
+  background-color: #333333;
 }
 
 /**************************************************************************************************/
