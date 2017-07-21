@@ -107,7 +107,8 @@ $frontendDisplayClass->initCoreContent();
 
 // Set the header.
 $navigation = $frontendDisplayClass->setNavigation();
-$frontendDisplayClass->setBodyHeader($navigation);
+// $frontendDisplayClass->setBodyHeader($navigation);
+$frontendDisplayClass->setBodyNav($navigation);
 
 // Set the footer.
 // $ad_banner = $frontendDisplayClass->setAdBannerFinal();

@@ -66,6 +66,7 @@ class frontendDisplay {
   private $page_author = NULL;
 
   private $header_content = NULL;
+  private $nav_content = NULL;
   private $footer_content = NULL;
 
   private $page_div_wrapper_class = NULL;
@@ -318,6 +319,13 @@ class frontendDisplay {
 
 
   //**************************************************************************************//
+  // Set the body nav.
+  function setBodyNav($nav_content = null) {
+    $this->nav_content = $nav_content;
+  } // setBodyNav
+
+
+  //**************************************************************************************//
   // Set the body footer.
   function setBodyFooter($footer_content = null) {
     $this->footer_content = $footer_content;
@@ -404,9 +412,20 @@ class frontendDisplay {
       $header = null;
       if (!empty($this->header_content)) {
   		  $header = '<header>'
-  				  . $this->header_content
-  				  . '</header>'
-  				  ;
+      				  . $this->header_content
+      				  . '</header>'
+      				  ;
+      }
+
+      //**********************************************************************************//
+      // Set the body nav.
+
+      $nav = null;
+      if (!empty($this->nav_content)) {
+  		  $nav = '<nav>'
+    				 . $this->nav_content
+    				 . '</nav>'
+    				 ;
       }
 
       //**********************************************************************************//
@@ -415,9 +434,9 @@ class frontendDisplay {
       $footer = null;
       if (!empty($this->footer_content)) {
   		  $footer = '<footer>'
-  				  . $this->footer_content
-  				  . '</footer>'
-  				  ;
+      				  . $this->footer_content
+      				  . '</footer>'
+      				  ;
       }
 
       //**********************************************************************************//
@@ -447,6 +466,7 @@ class frontendDisplay {
            . '</head>'
            . '<body>'
            . $header
+           . $nav
            . $body
            . $footer
            . '</body>'
@@ -764,9 +784,9 @@ class frontendDisplay {
                     . '</li>'
                     ;
     }
-    else {
-      $li_items_l[] = '<li></li>';
-    }
+    // else {
+    //   $li_items_l[] = '<li></li>';
+    // }
 
     $li_items_r = array();
 
@@ -802,10 +822,8 @@ class frontendDisplay {
 
     $ret = null;
     if (!empty($content_l) || !empty($content_r)) {
-      $ret = '<nav>'
-           . $div_l
+      $ret = $div_l
            . $div_r
-           . '</nav>'
            ;
     }
 
