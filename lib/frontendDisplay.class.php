@@ -780,7 +780,7 @@ class frontendDisplay {
       $markdown_sliced = array_slice(array_values($this->markdown_parts), 0, -1);
       $back_url = BASE_PATH . join('/', $markdown_sliced);
       $li_items_l[] = '<li id="back">'
-                    . sprintf('<a href="%s" title="back">«</a>', $back_url)
+                    . sprintf('<a href="%s" title="back">• • •</a>', $back_url)
                     . '</li>'
                     ;
     }
@@ -810,14 +810,14 @@ class frontendDisplay {
 
     $div_l = null;
     if (!empty($content_l)) {
-      // $div_l = '<div class="Left">' . $content_l . '</div><!-- .Left -->';
-      $div_l = $content_l;
+      $div_l = '<div class="Left">' . $content_l . '</div><!-- .Left -->';
+      // $div_l = $content_l;
     }
 
     $div_r = null;
     if (!empty($content_r)) {
-      // $div_r = '<div class="Right">' . $content_r . '</div><!-- .Right -->';
-      $div_r = $content_r;
+      $div_r = '<div class="Right">' . $content_r . '</div><!-- .Right -->';
+      // $div_r = $content_r;
     }
 
     $ret = null;

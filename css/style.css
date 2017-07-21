@@ -127,8 +127,8 @@ body > nav {
   position: fixed;
   top: 0px;
   left: 0px;
-  margin: 10px -20px 0 0;
-  padding: 15px 60px 15px 40px;
+  margin: 10px 0 0 -20px;
+  padding: 0;
   background-color: #000000;
   transform: rotate(-1deg);
   -webkit-touch-callout: none;
@@ -145,6 +145,66 @@ body > nav a:visited,
 body > nav a:active,
 body > nav a:hover {
   color: #ffffff;
+}
+
+/**************************************************************************************************/
+
+/**************************************************************************************************/
+
+body > nav .Left,
+body > nav .Right {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  /*min-height: 2rem;*/
+}
+
+body > nav .Left ul li,
+body > nav .Right ul li {
+  font-family: Georgia, "New York", "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 0.75em;
+  letter-spacing: 0.025em;
+  color: #ffffff;
+}
+
+body > nav .Left ul li a,
+body > nav .Left ul li a:visited,
+body > nav .Left ul li a:active,
+body > nav .Left ul li a:hover,
+body > nav .Right ul li a,
+body > nav .Right ul li a:visited,
+body > nav .Right ul li a:active,
+body > nav .Right ul li a:hover {
+  display: inline-block;
+  /*line-height: 1rem;*/
+  padding: 0.5rem 4rem 0.75rem 1.5rem;
+  /*border-radius: 0.5rem;*/
+  /*box-shadow: 5px 5px 0px 0px rgba(18, 18, 18, 0.25);*/
+  color: #ffffff;
+  background-color: #000000;
+}
+
+/**************************************************************************************************/
+
+body > nav .Left ul li a:active,
+body > nav .Left ul li a:hover,
+body > nav .Right ul li a:active,
+body > nav .Right ul li a:hover {
+  color: #000000;
+  background-color: #ffffff;
+  /*box-shadow: 5px 5px 0px 0px rgba(237, 237, 237, 0.25);*/
+}
+
+/**************************************************************************************************/
+
+body > nav .Left ul {
+  margin: 0 0 0 0.5rem;
+}
+
+body > nav .Right ul {
+  margin: 0 0.5rem 0 0;
 }
 
 /**************************************************************************************************/
