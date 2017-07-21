@@ -22,7 +22,7 @@
 // Define localized defaults.
 
 // Set the base URL path.
-if ($_SERVER['SERVER_NAME'] == 'localhost') {
+if ($_SERVER['SERVER_NAME'] == 'localhost' || substr($_SERVER['SERVER_NAME'], -6) == '.local') {
   define('BASE_PATH', '/Preworn-Main/');
 }
 else {
