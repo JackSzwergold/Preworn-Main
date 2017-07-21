@@ -48,17 +48,17 @@ Here are some simple projects I’ve done to stretch my skills and show off my f
 * **PGP Public Key** • Is available [here][pgp_key].
 * **Mail** • P.O. Box 325, Village Station, NY 10014-0325
 
-  [cheat_sheets]: tutorials_and_cheat_sheets/ "Tutorials and Cheat Sheets"
-  [mosaic]: projects/mosaic/ "Mosaic"
-  [mosaic_js]: projects/mosaic_js/ "Mosaic (JavaScript)"
-  [ascii]: projects/ascii/ "ASCII"
-  [slider]: projects/slider/ "Slider"
-  [floatingcube_js]: projects/floatingcube_js/ "Floating Cube (JavaScript)"
+  [cheat_sheets]: tutorials_and_cheat_sheets "Tutorials and Cheat Sheets"
+  [mosaic]: projects/mosaic "Mosaic"
+  [mosaic_js]: projects/mosaic_js "Mosaic (JavaScript)"
+  [ascii]: projects/ascii "ASCII"
+  [slider]: projects/slider "Slider"
+  [floatingcube_js]: projects/floatingcube_js "Floating Cube (JavaScript)"
   [ninedots_js]: projects/ninedots_js/ "Nine Dots (JavaScript)"
-  [lexicon]: projects/lexicon/ "Lexicon"
-  [lexicon_js]: projects/lexicon_js/ "Lexicon (JavaScript)"  
-  [instagram]: projects/instagram/ "Instagram"  
-  [holiday_card_2016]: projects/holiday_card_2016/ "Holiday Card 2016"  
+  [lexicon]: projects/lexicon "Lexicon"
+  [lexicon_js]: projects/lexicon_js "Lexicon (JavaScript)"  
+  [instagram]: projects/instagram "Instagram"  
+  [holiday_card_2016]: projects/holiday_card_2016 "Holiday Card 2016"  
   [pgp_key]: pgp_public_key-preworn.asc.txt
   [stackoverflow]: http://stackoverflow.com/users/117259/jakegould "Stack Overflow"
   [superuser]: http://superuser.com/users/167207/jakegould "Super User"
