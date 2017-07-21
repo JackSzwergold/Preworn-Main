@@ -4,10 +4,10 @@
  * Local Config File (local.inc.php) (c) by Jack Szwergold
  *
  * Local Config File is licensed under a
- * Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+ * Creative Commons Attribution-NonCommercial 4.0 International License.
  *
  * You should have received a copy of the license along with this
- * work. If not, see <http://creativecommons.org/licenses/by-nc-sa/4.0/>.
+ * work. If not, see <http://creativecommons.org/licenses/by-nc/4.0/>.
  *
  * w: http://www.preworn.com
  * e: me@preworn.com
@@ -37,7 +37,7 @@ $SITE_TITLE = 'Preworn';
 $SITE_DESCRIPTION = 'This site is Jack Szwergold’s technical portfolio and calling card.';
 $SITE_URL = 'http://www.preworn.com/';
 $SITE_COPYRIGHT = '(c) Copyright ' . date('Y') . ' Jack Szwergold';
-$SITE_LICENSE_CODE = 'CC-BY-NC-SA-4.0';
+$SITE_LICENSE_CODE = 'CC-BY-NC-4.0';
 $SITE_LICENSE = 'This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0)';
 $SITE_ROBOTS = 'noindex, nofollow';
 $SITE_VIEWPORT = 'width=device-width, initial-scale=1.0';

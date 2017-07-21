@@ -4,10 +4,10 @@
  * Index Controller (index.php) (c) by Jack Szwergold
  *
  * Index Controller is licensed under a
- * Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+ * Creative Commons Attribution-NonCommercial 4.0 International License.
  *
  * You should have received a copy of the license along with this
- * work. If not, see <http://creativecommons.org/licenses/by-nc-sa/4.0/>.
+ * work. If not, see <http://creativecommons.org/licenses/by-nc/4.0/>.
  *
  * w: http://www.preworn.com
  * e: me@preworn.com
@@ -111,7 +111,7 @@ $frontendDisplayClass->setBodyHeader($navigation);
 
 // Set the footer.
 // $ad_banner = $frontendDisplayClass->setAdBannerFinal();
-$content_l = 'All contents of this site are © copyright ' . date('Y') . ' Jack Szwergold. This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-NC-SA-4.0)</a>.';
+$content_l = 'All contents of this site are © copyright ' . date('Y') . ' Jack Szwergold. This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0)</a>.';
 $content_l = "<p>" . $content_l . "</p>";
 $footer_content = $frontendDisplayClass->setFooterContent($content_l);
 $frontendDisplayClass->setBodyFooter($footer_content);
