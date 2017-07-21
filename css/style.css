@@ -7,10 +7,10 @@ html {
   font-size: 16px;
   background-color: #660000;
   background: #ff7f04; /* Old browsers */
-  background: -moz-linear-gradient(30deg, #ff7f04 0%, #ff7f04 25%, #002e4b 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(30deg, #ff7f04 0%, #ff7f04 25%, #002e4b 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(30deg, #ff7f04 0%, #ff7f04 25%, #002e4b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7f04', endColorstr='#002e4b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: -moz-linear-gradient(30deg, #b42121 0%, #b42121 25%, #002e4b 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(30deg, #b42121 0%, #b42121 25%, #002e4b 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(30deg, #b42121 0%, #b42121 25%, #002e4b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b42121', endColorstr='#002e4b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 body {
@@ -25,7 +25,6 @@ body {
 
 html, body {
   width: 100%;
-  /*height: 100%;*/
   color: #000000;
 }
 
@@ -94,8 +93,9 @@ body > header {
   right: 0px;
   margin: 20px -20px 0 0;
   padding: 15px 60px 15px 40px;
-  background-color: #000000;
   transform: rotate(1deg);
+  background-color: #000000;
+  box-shadow: 0.625rem 0.625rem 0px 0px rgba(18, 18, 18, 0.25);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -129,8 +129,9 @@ body > nav {
   left: 0px;
   margin: 10px 0 0 -20px;
   padding: 0;
+  transform: rotate(-2deg);
   background-color: #000000;
-  transform: rotate(-1deg);
+  box-shadow: 0.625rem 0.625rem 0px 0px rgba(18, 18, 18, 0.25);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -140,27 +141,9 @@ body > nav {
   z-index: 10;
 }
 
-body > nav a,
-body > nav a:visited,
-body > nav a:active,
-body > nav a:hover {
-  color: #ffffff;
-}
-
 /**************************************************************************************************/
 
-/**************************************************************************************************/
-
-body > nav .Left,
-body > nav .Right {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  /*min-height: 2rem;*/
-}
-
-body > nav .Left ul li,
-body > nav .Right ul li {
+body > nav ul li {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
   font-size: 1.25rem;
@@ -169,42 +152,28 @@ body > nav .Right ul li {
   color: #ffffff;
 }
 
-body > nav .Left ul li a,
-body > nav .Left ul li a:visited,
-body > nav .Left ul li a:active,
-body > nav .Left ul li a:hover,
-body > nav .Right ul li a,
-body > nav .Right ul li a:visited,
-body > nav .Right ul li a:active,
-body > nav .Right ul li a:hover {
+body > nav ul li a,
+body > nav ul li a:visited,
+body > nav ul li a:active,
+body > nav ul li a:hover {
   display: inline-block;
-  /*line-height: 1rem;*/
   padding: 0.5rem 4rem 0.75rem 1.5rem;
-  /*border-radius: 0.5rem;*/
-  /*box-shadow: 5px 5px 0px 0px rgba(18, 18, 18, 0.25);*/
   color: #ffffff;
   background-color: #000000;
 }
 
 /**************************************************************************************************/
 
-body > nav .Left ul li a:active,
-body > nav .Left ul li a:hover,
-body > nav .Right ul li a:active,
-body > nav .Right ul li a:hover {
+body > nav ul li a:active,
+body > nav ul li a:hover {
   color: #000000;
   background-color: #ffffff;
-  /*box-shadow: 5px 5px 0px 0px rgba(237, 237, 237, 0.25);*/
 }
 
 /**************************************************************************************************/
 
-body > nav .Left ul {
-  margin: 0 0 0 0.5rem;
-}
-
-body > nav .Right ul {
-  margin: 0 0.5rem 0 0;
+body > nav ul {
+  margin: 0 0 0 0.625rem;
 }
 
 /**************************************************************************************************/
@@ -216,8 +185,9 @@ main + footer {
   margin: 0 0 20px -20px;
   padding: 15px 30px 15px 50px;
   width: 75%;
-  background-color: #000000;
   transform: rotate(-0.75deg);
+  background-color: #000000;
+  box-shadow: 0.625rem 0.625rem 0px 0px rgba(18, 18, 18, 0.25);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -281,9 +251,9 @@ main {
   width: calc(100% - 120px);
   margin: 40px;
 	padding: 20px 20px 60px 20px;
+  /*transform: rotate(0.3deg);*/
   background-color: #ffffff;
-  /*border-radius: 1.25rem;*/
-  box-shadow: -0.625rem 0.625rem 0 #000000;
+  box-shadow: 0.625rem 0.625rem 0px 0px rgba(18, 18, 18, 0.25);
 }
 
 /**************************************************************************************************/
@@ -305,8 +275,6 @@ main > footer {
   flex-shrink: 1;
   flex-basis: auto;
   width: calc(100% - 40px);
-  /*padding: 10px;*/
-  /*background-color: #888888;*/
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
