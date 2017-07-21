@@ -440,7 +440,7 @@ class frontendDisplay {
       }
 
       //**********************************************************************************//
-      // Set the view wrapper.
+      // TODO: Check if this is still useful. Maybe set the 'body' tag? Set the view wrapper.
 
       if (!empty($this->view_mode) && $this->view_div) {
         $body = sprintf('<div class="%sView">', $this->view_mode)
