@@ -123,6 +123,32 @@ body > header h1 a:hover {
 
 /**************************************************************************************************/
 
+body > header > nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  margin: 120px -20px 0 0;
+  padding: 15px 60px 15px 40px;
+  background-color: #000000;
+  transform: rotate(1deg);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 10;
+}
+
+body > header > nav a,
+body > header > nav a:visited,
+body > header > nav a:active,
+body > header > nav a:hover {
+  color: #ffffff;
+}
+
+/**************************************************************************************************/
+
 main + footer {
   position: fixed;
   bottom: 0px;

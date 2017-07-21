@@ -790,26 +790,22 @@ class frontendDisplay {
 
     $div_l = null;
     if (!empty($content_l)) {
-      $div_l = '<div class="Left">'
-             . $content_l
-             . '</div><!-- .Left -->'
-             ;
+      // $div_l = '<div class="Left">' . $content_l . '</div><!-- .Left -->';
+      $div_l = $content_l;
     }
 
     $div_r = null;
     if (!empty($content_r)) {
-      $div_r = '<div class="Right">'
-             . $content_r
-             . '</div><!-- .Right -->'
-             ;
+      // $div_r = '<div class="Right">' . $content_r . '</div><!-- .Right -->';
+      $div_r = $content_r;
     }
 
     $ret = null;
     if (!empty($content_l) || !empty($content_r)) {
-      $ret = '<div class="Navigation">'
+      $ret = '<nav>'
            . $div_l
            . $div_r
-           . '</div><!-- .Navigation -->'
+           . '</nav>'
            ;
     }
 
