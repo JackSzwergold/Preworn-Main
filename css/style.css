@@ -6,7 +6,7 @@
 html {
   font-size: 16px;
   background-color: #660000;
-  background: #ff7f04; /* Old browsers */
+  background: #b42121; /* Old browsers */
   background: -moz-linear-gradient(30deg, #b42121 0%, #b42121 25%, #002e4b 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(30deg, #b42121 0%, #b42121 25%, #002e4b 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(30deg, #b42121 0%, #b42121 25%, #002e4b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -248,7 +248,7 @@ main {
 	/* align-content: space-between; */
 	/* align-content: space-around; */
 	align-content: center;
-  width: calc(100% - 120px);
+  /*min-width: calc(100% - 120px);*/
   margin: 40px;
 	padding: 20px 20px 60px 20px;
   /*transform: rotate(0.3deg);*/
@@ -507,50 +507,65 @@ article p code:hover {
 /**************************************************************************************************/
 /* Media queries. */
 
-/*@media (min-width: 320px) {
+@media (min-width: 320px) {
 
   main {
-    min-width: 335px;
+    min-width: 290px;
+    margin: 10px 10px 10px 10px;
   }
 
   article {
-    width: 335px;
+    width: calc(100% - 20px);
   }
 
-}*/
+}
 
-/*@media (min-width: 480px) {
+@media (min-width: 410px) {
+
+  main {
+    min-width: 380px;
+    margin: 10px 10px 10px 10px;
+  }
+
+  article {
+    width: calc(100% - 20px);
+  }
+
+}
+
+@media (min-width: 480px) {
 
   main {
     min-width: 460px;
+    margin: 40px 40px 40px 40px;
   }
 
   article {
-    width: 460px;
+    width: calc(100% - 40px);
   }
 
-}*/
+}
 
-/*@media (min-width: 768px) {
+@media (min-width: 768px) {
 
   main {
     min-width: 748px;
+    margin: 40px 40px 40px 40px;
   }
 
   article {
-    width: 748px;
+    width: calc(100% - 40px);
   }
 
-}*/
+}
 
-/*@media (min-width: 1024px) {
+@media (min-width: 1024px) {
 
   main {
     min-width: 748px;
+    margin: 40px 160px 40px 160px;
   }
 
-  article {
-    width: 748px;
-  }
 
-}*/
+
+}
