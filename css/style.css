@@ -512,6 +512,7 @@ article p code:hover {
 
   main {
     min-width: 290px;
+    padding: 80px 20px 120px 20px;
     margin: 10px 10px 10px 10px;
   }
 
@@ -525,6 +526,7 @@ article p code:hover {
 
   main {
     min-width: 380px;
+    padding: 80px 20px 120px 20px;
     margin: 10px 10px 60px 10px;
   }
 
@@ -538,6 +540,7 @@ article p code:hover {
 
   main {
     min-width: 460px;
+    padding: 20px 20px 60px 20px;
     margin: 40px 40px 60px 40px;
   }
 
@@ -551,6 +554,7 @@ article p code:hover {
 
   main {
     min-width: 748px;
+    padding: 20px 20px 60px 20px;
     margin: 40px 40px 60px 40px;
   }
 
@@ -564,6 +568,7 @@ article p code:hover {
 
   main {
     min-width: 748px;
+    padding: 20px 20px 60px 20px;
     margin: 40px 160px 60px 160px;
   }
 
