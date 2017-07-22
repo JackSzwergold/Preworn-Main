@@ -127,7 +127,7 @@ body > nav {
   position: fixed;
   top: 0;
   left: 0;
-  margin: 1.25rem 0 0 1.25rem;
+  margin: 1rem 0 0 1rem;
   padding: 0;
   transform: rotate(-2deg);
   /*background-color: #000000;*/
@@ -147,7 +147,6 @@ body > nav {
 body > nav ul li {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
-  font-size: 4rem;
 }
 
 body > nav ul li a,
@@ -170,6 +169,7 @@ body > nav ul li a,
 body > nav ul li a:visited,
 body > nav ul li a:active,
 body > nav ul li a:hover {
+    font-size: 4rem;
   line-height: 3.25rem;
   width: 4rem;
   height: 4rem;
