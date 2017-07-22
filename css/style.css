@@ -132,7 +132,6 @@ body > nav {
   transform: rotate(-2deg);
   /*background-color: #000000;*/
   background-color: transparent;
-  box-shadow: 0.625rem 0.625rem 0px 0px rgba(18, 18, 18, 0.25);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -148,8 +147,7 @@ body > nav {
 body > nav ul li {
   font-family: ChunkFiveRoman, Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
-  font-size: 1rem;
-  color: #ffffff;
+  font-size: 2rem;
 }
 
 body > nav ul li a,
@@ -157,30 +155,32 @@ body > nav ul li a:visited,
 body > nav ul li a:active,
 body > nav ul li a:hover {
   display: inline-block;
-  padding: 1.25rem;
-  width: 1rem;
-  height: 1rem;
-  color: #ffffff;
+  padding: 0;
+  color: #000000;
+  background-color: #f6d155;
   /*background-color: #b42121;*/
   /*background-color: #002e4b;*/
-  /*background-color: #21b44b;*/
-  background-color: #000;
   border-radius: 50%;
+  box-shadow: 0.625rem 0.625rem 0px 0px rgba(18, 18, 18, 0.25);
+}
+
+body > nav ul li,
+body > nav ul li a,
+body > nav ul li a:visited,
+body > nav ul li a:active,
+body > nav ul li a:hover {
+  line-height: 4rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 /**************************************************************************************************/
 
 body > nav ul li a:active,
 body > nav ul li a:hover {
-  color: #000000;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #b42121;
 }
-
-/**************************************************************************************************/
-
-/*body > nav ul {
-  margin: 0 0 0 0.625rem;
-}*/
 
 /**************************************************************************************************/
 
