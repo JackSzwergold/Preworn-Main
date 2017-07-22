@@ -145,9 +145,9 @@ body > nav {
 /**************************************************************************************************/
 
 body > nav ul li {
-  font-family: ChunkFiveRoman, Georgia, "New York", "Times New Roman", Times, serif;
+  font-family: Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 body > nav ul li a,
@@ -156,8 +156,9 @@ body > nav ul li a:active,
 body > nav ul li a:hover {
   display: inline-block;
   padding: 0;
-  color: #000000;
-  background-color: #f6d155;
+  color: #ffffff;
+  background-color: #000000;
+  /*background-color: #f6d155;*/
   /*background-color: #b42121;*/
   /*background-color: #002e4b;*/
   border-radius: 50%;
@@ -169,7 +170,7 @@ body > nav ul li a,
 body > nav ul li a:visited,
 body > nav ul li a:active,
 body > nav ul li a:hover {
-  line-height: 4rem;
+  line-height: 3.25rem;
   width: 4rem;
   height: 4rem;
 }
@@ -178,8 +179,8 @@ body > nav ul li a:hover {
 
 body > nav ul li a:active,
 body > nav ul li a:hover {
-  color: #ffffff;
-  background-color: #b42121;
+  color: #000000;
+  background-color: #f6d155;
 }
 
 /**************************************************************************************************/
