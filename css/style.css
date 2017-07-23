@@ -131,8 +131,6 @@ body > nav {
   padding: 0;
 }
 
-/**************************************************************************************************/
-
 body > nav ul li {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
@@ -155,16 +153,12 @@ body > nav ul li a:hover {
 
 body > nav ul li,
 body > nav ul li a,
-body > nav ul li a:visited,
-body > nav ul li a:active,
-body > nav ul li a:hover {
+body > nav ul li a:visited {
   font-size: 4rem;
-  line-height: 3.25rem;
+  line-height: 80%;
   width: 4rem;
   height: 4rem;
 }
-
-/**************************************************************************************************/
 
 body > nav ul li a:active,
 body > nav ul li a:hover {
