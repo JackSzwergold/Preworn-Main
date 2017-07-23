@@ -127,19 +127,8 @@ body > nav {
   position: fixed;
   top: 0;
   left: 0;
-  margin: 1rem 0 0 1rem;
+  margin: 0.5rem 0 0 0.5rem;
   padding: 0;
-  transform: rotate(-2deg);
-  /*background-color: #000000;*/
-  background-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  z-index: 10;
-  border-radius: 50%;
 }
 
 /**************************************************************************************************/
@@ -169,7 +158,7 @@ body > nav ul li a,
 body > nav ul li a:visited,
 body > nav ul li a:active,
 body > nav ul li a:hover {
-    font-size: 4rem;
+  font-size: 4rem;
   line-height: 3.25rem;
   width: 4rem;
   height: 4rem;
