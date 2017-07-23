@@ -154,19 +154,21 @@ body > nav ul li a:hover {
 
 body > nav ul li a,
 body > nav ul li a:visited {
-  font-size: 1rem;
+  font-size: 2rem;
   line-height: 4rem;
   width: 4rem;
   height: 4rem;
-  background: -moz-linear-gradient(-45deg, #b42121 0%, #002e4b 100%);
-  background: -webkit-linear-gradient(-45deg, #b42121 0%, #002e4b 100%);
+  /*background: -moz-linear-gradient(135deg, #b42121 0%, #002e4b 100%);
+  background: -webkit-linear-gradient(135deg, #b42121 0%, #002e4b 100%);*/
   background: linear-gradient(135deg, #b42121 0%, #002e4b 100%);
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#b42121', endColorstr='#002e4b', GradientType=1);
 }
 
 body > nav ul li a:active,
 body > nav ul li a:hover {
-  color: #000000;
+  /*color: #000000;*/
+  background: linear-gradient(135deg, #b42121 0%, #f6d155 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#b42121', endColorstr='#002e4b', GradientType=1);
 }
 
 /*body > nav ul li a::after {

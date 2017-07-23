@@ -772,7 +772,7 @@ class frontendDisplay {
       $back_url = BASE_PATH . join('/', $markdown_sliced);
       $li_items[] = '<li id="back">'
                   . sprintf('<a href="%s" title="back">', $back_url)
-                  . 'back'
+                  . '⬅'
                   . '</a>'
                   . '</li>'
                   ;
