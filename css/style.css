@@ -154,8 +154,8 @@ body > nav ul li a:hover {
 
 body > nav ul li a,
 body > nav ul li a:visited {
-  font-size: 4rem;
-  line-height: 80%;
+  font-size: 1rem;
+  line-height: 4rem;
   width: 4rem;
   height: 4rem;
   background: -moz-linear-gradient(-45deg, #b42121 0%, #002e4b 100%);
