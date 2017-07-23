@@ -146,7 +146,7 @@ body > nav ul li a:hover {
   display: inline-block;
   padding: 0;
   color: #ffffff;
-  background-color: #000000;
+  background-color: #444444;
   /*background-color: #f6d155;*/
   /*background-color: #b42121;*/
   /*background-color: #002e4b;*/
@@ -157,8 +157,6 @@ body > nav ul li a:hover {
 
 body > nav ul li a,
 body > nav ul li a:visited {
-  font-size: 4rem;
-  line-height: 80%;
   width: 4rem;
   height: 4rem;
 }
@@ -169,19 +167,12 @@ body > nav ul li a:hover {
   transform: rotate(5deg);
 }
 
-/*body > nav ul li a::after {
-  content: "\00a0";
+body > nav ul li a::after {
+  font-family: FontAwesome;
+  content: "\f190";
   display: inline-block;
-  font-size: 1rem;
-  line-height: 2.75em;
-  width: 1rem;
-  height: 1rem;
-  transform: rotate(45deg);
-  background-color: #ffffff;
-  border-left: 0.5rem solid transparent;
-  border-bottom: 0.5rem solid transparent;
-  border-radius: 0.25rem;
-}*/
+  font-size: 2.75rem;
+}
 
 /**************************************************************************************************/
 

@@ -115,9 +115,9 @@ $LINK_ITEMS = array();
 $LINK_ITEMS['style_css']['rel'] = 'stylesheet';
 $LINK_ITEMS['style_css']['type'] = 'text/css';
 $LINK_ITEMS['style_css']['href'] = 'css/style.css';
-// $LINK_ITEMS['colors_css']['rel'] = 'stylesheet';
-// $LINK_ITEMS['colors_css']['type'] = 'text/css';
-// $LINK_ITEMS['colors_css']['href'] = 'css/colors.css';
+$LINK_ITEMS['fontawesome_css']['rel'] = 'stylesheet';
+$LINK_ITEMS['fontawesome_css']['type'] = 'text/css';
+$LINK_ITEMS['fontawesome_css']['href'] = 'css/font-awesome-4.7.0/css/font-awesome.min.css';
 $LINK_ITEMS['author']['rel'] = 'author';
 $LINK_ITEMS['author']['href'] = 'https://plus.google.com/+JackSzwergold';
 
