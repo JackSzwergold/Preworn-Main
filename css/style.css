@@ -133,8 +133,6 @@ body > nav {
 }
 
 body > nav ul li {
-  font-family: Georgia, "New York", "Times New Roman", Times, serif;
-  font-weight: normal;
   border-radius: 50%;
   box-shadow: 0.625rem 0.625rem 0px 0px rgba(18, 18, 18, 0.25);
 }
@@ -159,24 +157,22 @@ body > nav ul li a,
 body > nav ul li a:visited {
   color: #ffffff;
   background-color: #444444;
-  /*background-color: #f6d155;*/
-  /*background-color: #b42121;*/
-  /*background-color: #002e4b;*/
   width: 4rem;
   height: 4rem;
 }
 
 body > nav ul li a:active,
 body > nav ul li a:hover {
+  color: #ffffff;
   background-color: #b42121;
   transform: rotate(5deg);
 }
 
 body > nav ul li a::after {
   font-family: FontAwesome;
-  content: "\f060";
+  content: "\f137";
   display: inline-block;
-  font-size: 2.75rem;
+  font-size: 3.5rem;
 }
 
 /**************************************************************************************************/
