@@ -162,7 +162,8 @@ body > nav ul li a:visited {
 }
 
 body > nav ul li a:active,
-body > nav ul li a:hover {
+body > nav ul li a:hover,
+body > nav ul li a:focus {
   color: #ffffff;
   background-color: #b42121;
   transform: rotate(5deg);
