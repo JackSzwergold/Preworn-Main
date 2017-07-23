@@ -143,13 +143,13 @@ body > nav ul li a,
 body > nav ul li a:visited,
 body > nav ul li a:active,
 body > nav ul li a:hover {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
   padding: 0;
-  color: #ffffff;
-  background-color: #444444;
-  /*background-color: #f6d155;*/
-  /*background-color: #b42121;*/
-  /*background-color: #002e4b;*/
   transform: rotate(-5deg);
   border-radius: 50%;
   box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.6);
@@ -157,6 +157,11 @@ body > nav ul li a:hover {
 
 body > nav ul li a,
 body > nav ul li a:visited {
+  color: #ffffff;
+  background-color: #444444;
+  /*background-color: #f6d155;*/
+  /*background-color: #b42121;*/
+  /*background-color: #002e4b;*/
   width: 4rem;
   height: 4rem;
 }
@@ -169,7 +174,7 @@ body > nav ul li a:hover {
 
 body > nav ul li a::after {
   font-family: FontAwesome;
-  content: "\f190";
+  content: "\f060";
   display: inline-block;
   font-size: 2.75rem;
 }
