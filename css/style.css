@@ -157,8 +157,8 @@ body > nav ul li a:hover {
 
 body > nav ul li a,
 body > nav ul li a:visited {
-  font-size: 2rem;
-  line-height: 4rem;
+  font-size: 4rem;
+  line-height: 80%;
   width: 4rem;
   height: 4rem;
 }
