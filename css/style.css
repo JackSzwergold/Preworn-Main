@@ -135,6 +135,8 @@ body > nav {
 body > nav ul li {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
+  border-radius: 50%;
+  box-shadow: 0.625rem 0.625rem 0px 0px rgba(18, 18, 18, 0.25);
 }
 
 body > nav ul li a,
@@ -148,8 +150,9 @@ body > nav ul li a:hover {
   /*background-color: #f6d155;*/
   /*background-color: #b42121;*/
   /*background-color: #002e4b;*/
+  transform: rotate(-5deg);
   border-radius: 50%;
-  box-shadow: inset -5px -5px 5px rgba(0, 0, 0, .6), 0.625rem 0.625rem 0px 0px rgba(18, 18, 18, 0.25);
+  box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.6);
 }
 
 body > nav ul li a,
@@ -163,6 +166,7 @@ body > nav ul li a:visited {
 body > nav ul li a:active,
 body > nav ul li a:hover {
   background-color: #b42121;
+  transform: rotate(5deg);
 }
 
 /*body > nav ul li a::after {
