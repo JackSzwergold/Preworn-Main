@@ -174,14 +174,14 @@ body > nav ul li a:active {
   padding: 0;
   transform: rotate(-5deg);
   border-radius: 50%;
-  box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.6);
+  /*box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.6);*/
 }
 
 body > nav ul li a,
 body > nav ul li a:link,
 body > nav ul li a:visited {
   color: #ffffff;
-  background-color: #444444;
+  background-color: #b42121;
   width: 4rem;
   height: 4rem;
 }
@@ -189,11 +189,11 @@ body > nav ul li a:visited {
 body > nav ul li a:hover,
 body > nav ul li a:active {
   color: #ffffff;
-  background-color: #b42121;
-  transform: rotate(5deg);
+  background-color: #19993b;
+  transform: rotate(355deg);
 }
 
-body > nav ul li a::after {
+body > nav ul li a::before {
   font-family: "FontAwesome";
   content: "\f137";
   display: inline-block;
@@ -216,9 +216,11 @@ main + footer {
   margin: 0 0 0.625rem -75%;
   padding: 0.9375rem 6.25rem 0.9375rem 3.125rem;
   width: 70%;
+  min-height: 3rem;
   transform: rotate(-0.75deg);
   background-color: #000000;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
+  border-radius: 0 6rem 6rem 0;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -226,7 +228,6 @@ main + footer {
   -ms-user-select: none;
   user-select: none;
   transition: all 600ms ease;
-  min-height: 3rem;
 }
 
 main + footer::before {
@@ -236,11 +237,35 @@ main + footer::before {
   left: 0;
   width: calc(100% - 2.5rem);
   height: 100%;
-  padding: 1.25rem 0 1.25rem 0;
-  /*background-color: #0f0;*/
-  /*opacity: 0.25;*/
+  padding: 1.625rem 0 1.625rem 0;
   z-index: -10;
 }
+
+main + footer span {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5rem;
+  height: 100%;
+}
+
+main + footer span::after {
+  font-family: "FontAwesome";
+  content: "\f059";
+  font-size: 3.25rem;
+  padding: 0;
+  transform: rotate(0.75deg);
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+/******************************************************************************/
 
 main + footer p {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
@@ -265,8 +290,13 @@ main + footer p a:active {
 
 main + footer:hover,
 main + footer:active {
-  margin: 0 0 2.5rem -0.125rem;
-  padding: 0.9375rem 3.125rem 0.9375rem 3.125rem;
+  margin-bottom: 2.5rem;
+  margin-left: -0.125rem;
+}
+
+main + footer:hover span::after,
+main + footer:active span::after {
+  content: "\f0a8";
 }
 
 main + footer:hover p,
