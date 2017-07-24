@@ -28,7 +28,7 @@ html, body {
   color: #000000;
 }
 
-/**************************************************************************************************/
+/******************************************************************************/
 
 a, a:visited, a:hover, a:active {
   text-decoration: none;
@@ -56,7 +56,7 @@ hr {
   clear: both;
 }
 
-/**************************************************************************************************/
+/******************************************************************************/
 
 *::selection {
   background: #888888;
@@ -66,7 +66,7 @@ hr {
   background: #888888;
 }
 
-/**************************************************************************************************/
+/******************************************************************************/
 
 ul, li {
   position: relative;
@@ -74,8 +74,15 @@ ul, li {
   display: inline;
 }
 
-/**************************************************************************************************/
-/* Font faces. */
+/******************************************************************************/
+/*
+/*  _____           _
+/* |  ___|__  _ __ | |_ ___
+/* | |_ / _ \| '_ \| __/ __|
+/* |  _| (_) | | | | |_\__ \
+/* |_|  \___/|_| |_|\__|___/
+/*
+/******************************************************************************/
 
 @font-face {
   font-family: 'ChunkFiveRoman';
@@ -85,7 +92,14 @@ ul, li {
   font-style: normal;
 }
 
-/**************************************************************************************************/
+/******************************************************************************/
+/*  _   _                _
+/* | | | | ___  __ _  __| | ___ _ __
+/* | |_| |/ _ \/ _` |/ _` |/ _ \ '__|
+/* |  _  |  __/ (_| | (_| |  __/ |
+/* |_| |_|\___|\__,_|\__,_|\___|_|
+/*
+/******************************************************************************/
 
 body > header {
   position: fixed;
@@ -95,7 +109,7 @@ body > header {
   padding: 15px 60px 15px 40px;
   transform: rotate(1deg);
   background-color: #000000;
-  box-shadow: 0.625rem 0.625rem 0px 0px rgba(18, 18, 18, 0.25);
+  box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -121,7 +135,14 @@ body > header h1 a:hover {
   color: #ffffff;
 }
 
-/**************************************************************************************************/
+/******************************************************************************/
+/*  _   _               ____             _      ____        _   _
+/* | \ | | __ ___   __ | __ )  __ _  ___| | __ | __ ) _   _| |_| |_ ___  _ __
+/* |  \| |/ _` \ \ / / |  _ \ / _` |/ __| |/ / |  _ \| | | | __| __/ _ \| '_ \
+/* | |\  | (_| |\ V /  | |_) | (_| | (__|   <  | |_) | |_| | |_| || (_) | | | |
+/* |_| \_|\__,_| \_/   |____/ \__,_|\___|_|\_\ |____/ \__,_|\__|\__\___/|_| |_|
+/*
+/******************************************************************************/
 
 body > nav {
   position: fixed;
@@ -134,7 +155,7 @@ body > nav {
 
 body > nav ul li {
   border-radius: 50%;
-  box-shadow: 0.625rem 0.625rem 0px 0px rgba(18, 18, 18, 0.25);
+  box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
 }
 
 body > nav ul li a,
@@ -170,30 +191,52 @@ body > nav ul li a:focus {
 }
 
 body > nav ul li a::after {
-  font-family: FontAwesome;
+  font-family: "FontAwesome";
   content: "\f137";
   display: inline-block;
   font-size: 3.5rem;
 }
 
-/**************************************************************************************************/
+/******************************************************************************/
+/*  _____           _
+/* |  ___|__   ___ | |_ ___ _ __
+/* | |_ / _ \ / _ \| __/ _ \ '__|
+/* |  _| (_) | (_) | ||  __/ |
+/* |_|  \___/ \___/ \__\___|_|
+/*
+/******************************************************************************/
 
 main + footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  margin: 0 0 20px -20px;
-  padding: 15px 30px 15px 50px;
-  width: 75%;
+  margin: 0 0 0.625rem -75%;
+  padding: 0.9375rem 6.25rem 0.9375rem 3.125rem;
+  width: 70%;
   transform: rotate(-0.75deg);
   background-color: #000000;
-  box-shadow: 0.625rem 0.625rem 0px 0px rgba(18, 18, 18, 0.25);
+  box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  transition: all 600ms ease;
+  min-height: 3rem;
+}
+
+main + footer::before {
+  content: "\00a0";
+  position: fixed;
+  top: -1.25rem;
+  left: 0;
+  width: calc(100% - 2.5rem);
+  height: 100%;
+  padding: 1.25rem 0 1.25rem 0;
+  /*background-color: #0f0;*/
+  /*opacity: 0.25;*/
+  z-index: -10;
 }
 
 main + footer p {
@@ -204,7 +247,7 @@ main + footer p {
   letter-spacing: 0.025em;
   clear: both;
   text-align: left;
-  color: #ffffff;
+  color: #000;
 }
 
 main + footer p a,
@@ -212,10 +255,33 @@ main + footer p a:active,
 main + footer p a:hover,
 main + footer p a:visited {
  font-weight: bold;
- color: #ffffff;
 }
 
-/**************************************************************************************************/
+/******************************************************************************/
+
+main + footer:active,
+main + footer:hover,
+main + footer:focus {
+  margin: 0 0 2.5rem -0.125rem;
+  padding: 0.9375rem 3.125rem 0.9375rem 3.125rem;
+}
+
+main + footer:hover p,
+main + footer:hover p a,
+main + footer:hover p a:active,
+main + footer:hover p a:hover,
+main + footer:hover p a:visited {
+  color: #ffffff;
+}
+
+/******************************************************************************/
+/*  __  __       _
+/* |  \/  | __ _(_)_ __
+/* | |\/| |/ _` | | '_ \
+/* | |  | | (_| | | | | |
+/* |_|  |_|\__,_|_|_| |_|
+/*
+/******************************************************************************/
 
 main {
   display: flex;
@@ -253,12 +319,20 @@ main {
 	padding: 20px 20px 60px 20px;
   /*transform: rotate(0.3deg);*/
   background-color: #ffffff;
-  box-shadow: 0.625rem 0.625rem 0px 0px rgba(18, 18, 18, 0.25);
+  box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
   transition: margin 600ms ease;
   transition: padding 600ms ease;
 }
 
-/**************************************************************************************************/
+/******************************************************************************/
+/*
+/*     _         _   _      _
+/*    / \   _ __| |_(_) ___| | ___
+/*   / _ \ | '__| __| |/ __| |/ _ \
+/*  / ___ \| |  | |_| | (__| |  __/
+/* /_/   \_\_|   \__|_|\___|_|\___|
+/*
+/******************************************************************************/
 
 article {
   flex-grow: 1;
@@ -268,75 +342,7 @@ article {
   text-align: left;
 }
 
-/**************************************************************************************************/
-
-main > header,
-main > footer {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
-  width: calc(100% - 40px);
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-main > header {
-  padding: 10px 10px 20px 10px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #000000;
-}
-
-main > footer {
-  padding: 20px 10px 10px 10px;
-  margin-top: 20px;
-  border-top: 1px solid #000000;
-}
-
-main > header p,
-main > footer p {
-  font-family: Georgia, "New York", "Times New Roman", Times, serif;
-  font-weight: normal;
-  font-size: 0.95rem;
-  line-height: 1.25rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  word-break: break-all;
-  white-space: normal;
-}
-
-/**************************************************************************************************/
-
-main > header p:before,
-main > header p:after,
-main > footer p:before,
-main > footer p:after {
-  content: '❖';
-  font-size: 0.6em;
-}
-
-main > header p:after {
-  margin: 0 0 0 2rem;
-}
-
-main > header p:before {
-  margin: 0 2rem 0 0;
-}
-
-main > footer p:after {
-  margin: 0 0 0 2rem;
-}
-
-main > footer p:before {
-  margin: 0 2rem 0 0;
-}
-
-/**************************************************************************************************/
+/******************************************************************************/
 
 article h1 {
   line-height: 0.9em;
@@ -352,7 +358,6 @@ article h1, article h2, article h3, article h4, article h5, article h6 {
   clear: both;
   word-break: break-all;
   white-space: normal;
-  /*hyphens: auto;*/
 }
 
 article h1 a, article h1 a:active, article h1 a:hover, article h1 a:visited,
@@ -396,7 +401,7 @@ article h6 {
   margin: 1.5em 0 0.8em 0;
 }
 
-/**************************************************************************************************/
+/******************************************************************************/
 
 article p,
 article ul li,
@@ -434,7 +439,7 @@ article ol li a:visited {
   background-size: 1px 1px;
 }
 
-/**************************************************************************************************/
+/******************************************************************************/
 
 article ul,
 article ol {
@@ -464,7 +469,7 @@ article ol li {
   list-style-type: decimal;
 }
 
-/**************************************************************************************************/
+/******************************************************************************/
 
 article pre {
   white-space: pre-wrap;
@@ -496,8 +501,15 @@ article p code:hover {
   background-color: #333333;
 }
 
-/**************************************************************************************************/
-/* Media queries. */
+/******************************************************************************/
+/*
+/*  __  __          _ _          ___                  _
+/* |  \/  | ___  __| (_) __ _   / _ \ _   _  ___ _ __(_) ___  ___
+/* | |\/| |/ _ \/ _` | |/ _` | | | | | | | |/ _ \ '__| |/ _ \/ __|
+/* | |  | |  __/ (_| | | (_| | | |_| | |_| |  __/ |  | |  __/\__ \
+/* |_|  |_|\___|\__,_|_|\__,_|  \__\_\\__,_|\___|_|  |_|\___||___/
+/*
+/******************************************************************************/
 
 @media (min-width: 320px) {
 
