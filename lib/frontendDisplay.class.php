@@ -455,7 +455,7 @@ class frontendDisplay {
            . join('', $javascript_array)
            . (!empty($this->base) ? '<base href="' . $this->base . '" />' : '')
            . '</head>'
-           . '<body>'
+           . '<body ontouchstart>'
            . $header
            . $nav
            . $body
