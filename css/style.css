@@ -519,6 +519,10 @@ article p code:hover {
 
 @media (min-width: 320px) {
 
+  main + footer {
+    margin: 0 0 0.625rem -95%;
+  }
+
   main {
     min-width: 290px;
     padding: 80px 20px 120px 20px;
@@ -532,6 +536,10 @@ article p code:hover {
 }
 
 @media (min-width: 410px) {
+
+  main + footer {
+    margin: 0 0 0.625rem -95%;
+  }
 
   main {
     min-width: 380px;
@@ -547,6 +555,10 @@ article p code:hover {
 
 @media (min-width: 480px) {
 
+  main + footer {
+    margin: 0 0 0.625rem -75%;
+  }
+
   main {
     min-width: 460px;
     padding: 20px 20px 60px 20px;
@@ -561,6 +573,10 @@ article p code:hover {
 
 @media (min-width: 768px) {
 
+  main + footer {
+    margin: 0 0 0.625rem -75%;
+  }
+
   main {
     min-width: 748px;
     padding: 20px 20px 60px 20px;
@@ -574,6 +590,10 @@ article p code:hover {
 }
 
 @media (min-width: 1024px) {
+
+  main + footer {
+    margin: 0 0 0.625rem -75%;
+  }
 
   main {
     min-width: 748px;
