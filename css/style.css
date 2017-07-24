@@ -30,7 +30,7 @@ html, body {
 
 /******************************************************************************/
 
-a, a:visited, a:hover, a:active {
+a, a:link, a:visited, a:hover, a:active  {
   text-decoration: none;
   color: #000000;
   transition: all 600ms ease;
@@ -129,9 +129,10 @@ body > header h1 {
 }
 
 body > header h1 a,
+body > header h1 a:link,
 body > header h1 a:visited,
-body > header h1 a:active,
-body > header h1 a:hover {
+body > header h1 a:hover,
+body > header h1 a:active {
   color: #ffffff;
 }
 
@@ -159,9 +160,10 @@ body > nav ul li {
 }
 
 body > nav ul li a,
+body > nav ul li a:link,
 body > nav ul li a:visited,
-body > nav ul li a:active,
-body > nav ul li a:hover {
+body > nav ul li a:hover,
+body > nav ul li a:active {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -175,6 +177,7 @@ body > nav ul li a:hover {
 }
 
 body > nav ul li a,
+body > nav ul li a:link,
 body > nav ul li a:visited {
   color: #ffffff;
   background-color: #444444;
@@ -182,9 +185,8 @@ body > nav ul li a:visited {
   height: 4rem;
 }
 
-body > nav ul li a:active,
 body > nav ul li a:hover,
-body > nav ul li a:focus {
+body > nav ul li a:active {
   color: #ffffff;
   background-color: #b42121;
   transform: rotate(5deg);
@@ -251,26 +253,27 @@ main + footer p {
 }
 
 main + footer p a,
-main + footer p a:active,
+main + footer p a:link,
+main + footer p a:visited,
 main + footer p a:hover,
-main + footer p a:visited {
+main + footer p a:active {
  font-weight: bold;
 }
 
 /******************************************************************************/
 
-main + footer:active,
 main + footer:hover,
-main + footer:focus {
+main + footer:active {
   margin: 0 0 2.5rem -0.125rem;
   padding: 0.9375rem 3.125rem 0.9375rem 3.125rem;
 }
 
 main + footer:hover p,
 main + footer:hover p a,
-main + footer:hover p a:active,
+main + footer:hover p a:link,
+main + footer:hover p a:visited,
 main + footer:hover p a:hover,
-main + footer:hover p a:visited {
+main + footer:hover p a:active {
   color: #ffffff;
 }
 
@@ -360,12 +363,12 @@ article h1, article h2, article h3, article h4, article h5, article h6 {
   white-space: normal;
 }
 
-article h1 a, article h1 a:active, article h1 a:hover, article h1 a:visited,
-article h2 a, article h2 a:active, article h2 a:hover, article h2 a:visited,
-article h3 a, article h3 a:active, article h3 a:hover, article h3 a:visited,
-article h4 a, article h4 a:active, article h4 a:hover, article h4 a:visited,
-article h5 a, article h5 a:active, article h5 a:hover, article h5 a:visited,
-article h6 a, article h6 a:active, article h6 a:hover, article h6 a:visited {
+article h1 a, article h1 a:link, article h1 a:visited, article h1 a:hover, article h1 a:active,
+article h2 a, article h2 a:link, article h2 a:visited, article h2 a:hover, article h2 a:active,
+article h3 a, article h3 a:link, article h3 a:visited, article h3 a:hover, article h3 a:active,
+article h4 a, article h4 a:link, article h4 a:visited, article h4 a:hover, article h4 a:active,
+article h5 a, article h5 a:link, article h5 a:visited, article h5 a:hover, article h5 a:active,
+article h6 a, article h6 a:link, article h6 a:visited, article h6 a:hover, article h6 a:active {
   text-decoration: none;
   font-weight: normal;
   color: #000000;
@@ -422,17 +425,20 @@ article p:last-child {
 }
 
 article p a,
-article p a:active,
-article p a:hover,
+article p a:link,
 article p a:visited,
+article p a:hover,
+article p a:active,
 article ul li a,
-article ul li a:active,
-article ul li a:hover,
+article ul li a:link,
 article ul li a:visited,
+article ul li a:hover,
+article ul li a:active,
 article ol li a,
-article ol li a:active,
+article ol li a:link,
+article ol li a:visited,
 article ol li a:hover,
-article ol li a:visited {
+article ol li a:active {
   background-image: linear-gradient(#ffffff 50%, #777777 50%);
   background-repeat: repeat-x;
   background-position: 0 90%;
