@@ -291,7 +291,7 @@ main + footer p a:active {
 main + footer:hover,
 main + footer:active {
   margin-bottom: 2.5rem;
-  margin-left: -0.125rem;
+  margin-left: -1.25rem;
 }
 
 main + footer:hover span::after,
