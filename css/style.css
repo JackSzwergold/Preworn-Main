@@ -174,23 +174,25 @@ body > nav ul li a:active {
   padding: 0;
   transform: rotate(-5deg);
   border-radius: 50%;
+  color: #ffffff;
+  background-color: #000000;
   /*box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.6);*/
 }
 
 body > nav ul li a,
 body > nav ul li a:link,
 body > nav ul li a:visited {
-  color: #ffffff;
-  background-color: #b42121;
   width: 4rem;
   height: 4rem;
+  /*color: #ffffff;
+  background-color: #b42121;*/
 }
 
 body > nav ul li a:hover,
 body > nav ul li a:active {
-  color: #ffffff;
-  background-color: #19993b;
   transform: rotate(355deg);
+  /*color: #ffffff;
+  background-color: #19993b;*/
 }
 
 body > nav ul li a::before {
@@ -258,7 +260,7 @@ main + footer span {
 main + footer span::after {
   font-family: "FontAwesome";
   content: "\f059";
-  font-size: 3.25rem;
+  font-size: 4.5rem;
   padding: 0;
   transform: rotate(0.75deg);
   border-radius: 50%;
