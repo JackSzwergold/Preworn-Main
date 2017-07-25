@@ -5,7 +5,6 @@
 
 html {
   font-size: 16px;
-  background-color: #660000;
   background: #b42121; /* Old browsers */
   background: -moz-linear-gradient(30deg, #b42121 0%, #b42121 25%, #002e4b 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(30deg, #b42121 0%, #b42121 25%, #002e4b 100%); /* Chrome10-25,Safari5.1-6 */
@@ -31,7 +30,11 @@ html, body {
 
 /******************************************************************************/
 
-a, a:link, a:visited, a:hover, a:active  {
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
   text-decoration: none;
   color: #000000;
   transition: all 600ms ease;
@@ -39,6 +42,9 @@ a, a:link, a:visited, a:hover, a:active  {
 
 ul, li {
   list-style: none;
+  position: relative;
+  float: left;
+  display: inline;
 }
 
 :focus {
@@ -65,14 +71,6 @@ hr {
 
 *::-moz-selection {
   background: #888888;
-}
-
-/******************************************************************************/
-
-ul, li {
-  position: relative;
-  float: left;
-  display: inline;
 }
 
 /******************************************************************************/
