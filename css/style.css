@@ -5,11 +5,11 @@
 
 html {
   font-size: 16px;
-  background: #b42121; /* Old browsers */
-  background: -moz-linear-gradient(30deg, #b42121 0%, #b42121 25%, #002e4b 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(30deg, #b42121 0%, #b42121 25%, #002e4b 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(30deg, #b42121 0%, #b42121 25%, #002e4b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b42121', endColorstr='#002e4b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: #2880bf; /* Old browsers */
+  background: -moz-linear-gradient(30deg, #ffdd35 0%, #ffdd35 25%, #2880bf 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(30deg, #ffdd35 0%, #ffdd35 25%, #2880bf 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(30deg, #ffdd35 0%, #ffdd35 25%, #2880bf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffdd35', endColorstr='#2880bf',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
