@@ -12,7 +12,7 @@ RewriteCond   %{REQUEST_FILENAME} !-d [NC]
 RewriteCond   %{REQUEST_FILENAME} !-f [NC]
 
 # Ignore these base directories.
-RewriteRule   ^(clients|art|projects|css|favicons|script)($|/) - [L]
+RewriteRule   ^(about|portfolio|distractions|clients|art|projects|css|favicons|script)($|/) - [L]
 # RewriteCond %{REQUEST_URI} !^(clients/.*)$ [NC]
 
 # This redirects any call to this directory to an index file with $_GET parameters.
