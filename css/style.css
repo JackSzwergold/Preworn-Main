@@ -24,8 +24,8 @@ body {
   line-height: 1em;
   text-align: center;
   /*background-color: #bdd6d9;*/
-  /*background-color: #ede3d2;*/
-  background-color: #fca311;
+  background-color: #ede3d2;
+  /*background-color: #fca311;*/
   /*background: linear-gradient(25deg, #ede3d2 0%, #ede3d2 25%, #ffdd35 100%);*/
   -webkit-text-size-adjust: 100%;
 }
@@ -564,8 +564,8 @@ article.home {
   width: 30rem;
   height: 30rem;
   border-radius: 50%;
-  background-color: #ffffff;
-  background: linear-gradient(135deg, transparent 0%, #fca311 100%);
+  background-color: #9ecbc8;
+  background: linear-gradient(135deg, transparent 0%, #9ecbc8 100%);
   box-shadow: inset -40px -40px 40px rgba(0, 0, 0, 0.4), 25px 25px 8px rgba(0, 0, 0, 0.04);
   transition: all 600ms ease;
 }
