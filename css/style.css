@@ -3,13 +3,14 @@
   padding: 0;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+  color: #000000;
+}
+
 html {
   font-size: 16px;
-  background: #2880bf; /* Old browsers */
-  background: -moz-linear-gradient(30deg, #ffdd35 0%, #ffdd35 25%, #2880bf 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(30deg, #ffdd35 0%, #ffdd35 25%, #2880bf 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(30deg, #ffdd35 0%, #ffdd35 25%, #2880bf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffdd35', endColorstr='#2880bf',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
@@ -20,12 +21,9 @@ body {
   font-size: 1rem;
   line-height: 1em;
   text-align: center;
+  background: #BDD6D9;
+  /*background: linear-gradient(25deg, #ede3d2 0%, #ede3d2 25%, #ffdd35 100%);*/
   -webkit-text-size-adjust: 100%;
-}
-
-html, body {
-  width: 100%;
-  color: #000000;
 }
 
 /******************************************************************************/
@@ -84,11 +82,35 @@ hr {
 /******************************************************************************/
 
 @font-face {
-  font-family: 'ChunkFiveRoman';
-  src: url('../fonts/chunkfive-webfont.eot');
-  src: url('../fonts/chunkfive-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/chunkfive-webfont.woff2') format('woff2'), url('../fonts/chunkfive-webfont.woff') format('woff'), url('../fonts/chunkfive-webfont.ttf') format('truetype'), url('../fonts/chunkfive-webfont.svg#ChunkFiveRoman') format('svg');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'Arvo';
+	src: url('../fonts/Arvo/Arvo-Bold.eot');
+	src: url('../fonts/Arvo/Arvo-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Arvo/Arvo-Bold.woff2') format('woff2'), url('../fonts/Arvo/Arvo-Bold.woff') format('woff'), url('../fonts/Arvo/Arvo-Bold.ttf') format('truetype'), url('../fonts/Arvo/Arvo-Bold.svg#Arvo-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Arvo';
+	src: url('../fonts/Arvo/Arvo-BoldItalic.eot');
+	src: url('../fonts/Arvo/Arvo-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Arvo/Arvo-BoldItalic.woff2') format('woff2'), url('../fonts/Arvo/Arvo-BoldItalic.woff') format('woff'), url('../fonts/Arvo/Arvo-BoldItalic.ttf') format('truetype'), url('../fonts/Arvo/Arvo-BoldItalic.svg#Arvo-BoldItalic') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Arvo';
+	src: url('../fonts/Arvo/Arvo-Italic.eot');
+	src: url('../fonts/Arvo/Arvo-Italic.eot?#iefix') format('embedded-opentype'), url('../fonts/Arvo/Arvo-Italic.woff2') format('woff2'), url('../fonts/Arvo/Arvo-Italic.woff') format('woff'), url('../fonts/Arvo/Arvo-Italic.ttf') format('truetype'), url('../fonts/Arvo/Arvo-Italic.svg#Arvo-Italic') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Arvo';
+	src: url('../fonts/Arvo/Arvo.eot');
+	src: url('../fonts/Arvo/Arvo.eot?#iefix') format('embedded-opentype'), url('../fonts/Arvo/Arvo.woff2') format('woff2'), url('../fonts/Arvo/Arvo.woff') format('woff'), url('../fonts/Arvo/Arvo.ttf') format('truetype'), url('../fonts/Arvo/Arvo.svg#Arvo') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 /******************************************************************************/
@@ -119,8 +141,10 @@ body > header {
 }
 
 body > header h1 {
-  font-family: ChunkFiveRoman, Georgia, "New York", "Times New Roman", Times, serif;
-  font-weight: normal;
+  font-family: 'Arvo', Georgia, "New York", "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: normal;
   font-size: 2.25rem;
   line-height: 0.75em;
   letter-spacing: 0.025em;
@@ -136,11 +160,11 @@ body > header h1 a:active {
 }
 
 /******************************************************************************/
-/*  _   _               ____             _      ____        _   _
-/* | \ | | __ ___   __ | __ )  __ _  ___| | __ | __ ) _   _| |_| |_ ___  _ __
-/* |  \| |/ _` \ \ / / |  _ \ / _` |/ __| |/ / |  _ \| | | | __| __/ _ \| '_ \
-/* | |\  | (_| |\ V /  | |_) | (_| | (__|   <  | |_) | |_| | |_| || (_) | | | |
-/* |_| \_|\__,_| \_/   |____/ \__,_|\___|_|\_\ |____/ \__,_|\__|\__\___/|_| |_|
+/*  _   _
+/* | \ | | __ ___   __
+/* |  \| |/ _` \ \ / /
+/* | |\  | (_| |\ V /
+/* |_| \_|\__,_| \_/
 /*
 /******************************************************************************/
 
@@ -150,54 +174,48 @@ body > nav {
   left: 0;
   margin: 0.75rem 0 0 0.75rem;
   padding: 0;
+  transform: rotate(-1deg);
+  background-color: #000000;
+  box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
   z-index: 20;
 }
 
-body > nav ul li {
-  border-radius: 50%;
-  box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
-}
-
-body > nav ul li a,
+body > nav ul,
 body > nav ul li a:link,
 body > nav ul li a:visited,
 body > nav ul li a:hover,
 body > nav ul li a:active {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-wrap: nowrap;
+  align-items: flex-start;
   justify-content: center;
   align-content: center;
-  padding: 0;
-  transform: rotate(-5deg);
-  border-radius: 50%;
+}
+
+
+body > nav ul li a:link,
+body > nav ul li a:visited,
+body > nav ul li a:hover,
+body > nav ul li a:active {
+  font-family: 'Arvo', Georgia, "New York", "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1em;
   color: #ffffff;
-  background-color: #000000;
-  /*box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.6);*/
 }
 
 body > nav ul li a,
 body > nav ul li a:link,
 body > nav ul li a:visited {
-  width: 4rem;
-  height: 4rem;
-  /*color: #ffffff;
-  background-color: #b42121;*/
+  min-width: 4rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  margin: 0 0 0.25rem 0;
 }
 
-body > nav ul li a:hover,
-body > nav ul li a:active {
-  transform: rotate(355deg);
-  /*color: #ffffff;
-  background-color: #19993b;*/
-}
-
-body > nav ul li a::before {
-  font-family: "FontAwesome";
-  content: "\f137";
-  display: inline-block;
-  font-size: 3.5rem;
+body > nav ul li:last-child a {
+  margin: 0;
 }
 
 /******************************************************************************/
@@ -348,14 +366,11 @@ main {
 	/* align-content: space-between; */
 	/* align-content: space-around; */
 	align-content: center;
-  /*min-width: calc(100% - 120px);*/
-  margin: 40px;
-	padding: 20px 20px 60px 20px;
-  /*transform: rotate(0.3deg);*/
-  background-color: #ffffff;
-  box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
-  transition: margin 600ms ease;
-  transition: padding 600ms ease;
+  min-width: calc(100% - 120px);
+  min-height: calc(100% - 120px);
+  /*transition: margin 600ms ease;*/
+  /*transition: padding 600ms ease;*/
+  transition: all 600ms ease;
 }
 
 /******************************************************************************/
@@ -369,26 +384,43 @@ main {
 /******************************************************************************/
 
 article {
-  flex-grow: 1;
+  display: flex;
+  overflow: auto;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: flex-start;
+	align-content: center;
+  /*flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: auto;
+  flex-basis: auto;*/
   width: calc(100% - 40px);
   text-align: left;
+  margin: 40px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
 }
 
 /******************************************************************************/
 
 article h1 {
-  line-height: 0.9em;
+  line-height: 0.5em;
 }
 
 article h2, article h3, article h4, article h5, article h6 {
-  line-height: 1.1125em;
+  line-height: 1.125em;
 }
 
-article h1, article h2, article h3, article h4, article h5, article h6 {
-  font-family: ChunkFiveRoman, Georgia, "New York", "Times New Roman", Times, serif;
-  font-weight: normal;
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  font-family: 'Arvo', Georgia, "New York", "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-style: normal;
   clear: both;
   word-break: break-all;
   white-space: normal;
@@ -401,7 +433,8 @@ article h4 a, article h4 a:link, article h4 a:visited, article h4 a:hover, artic
 article h5 a, article h5 a:link, article h5 a:visited, article h5 a:hover, article h5 a:active,
 article h6 a, article h6 a:link, article h6 a:visited, article h6 a:hover, article h6 a:active {
   text-decoration: none;
-  font-weight: normal;
+  font-weight: bold;
+  font-style: normal;
   color: #000000;
 }
 
@@ -440,11 +473,13 @@ article h6 {
 article p,
 article ul li,
 article ol li {
-  font-family: Georgia, "New York", "Times New Roman", Times, serif;
+  font-family: 'Arvo', Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
-  font-size: 1.125rem;
-  line-height: 1.35em;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.25rem;
   clear: both;
+
 }
 
 article p {
@@ -557,7 +592,7 @@ article p code:hover {
   main {
     min-width: 290px;
     padding: 80px 20px 120px 20px;
-    margin: 10px 10px 10px 10px;
+    margin: 0 10px 0 10px;
   }
 
   article {
@@ -575,7 +610,7 @@ article p code:hover {
   main {
     min-width: 380px;
     padding: 80px 20px 120px 20px;
-    margin: 10px 10px 60px 10px;
+    margin: 0 10px 0 10px;
   }
 
   article {
@@ -593,7 +628,7 @@ article p code:hover {
   main {
     min-width: 460px;
     padding: 20px 20px 60px 20px;
-    margin: 40px 40px 60px 40px;
+    margin: 0 40px 0 40px;
   }
 
   article {
@@ -611,7 +646,7 @@ article p code:hover {
   main {
     min-width: 748px;
     padding: 20px 20px 60px 20px;
-    margin: 40px 40px 60px 40px;
+    margin: 0 40px 0 40px;
   }
 
   article {
@@ -629,7 +664,7 @@ article p code:hover {
   main {
     min-width: 748px;
     padding: 20px 20px 60px 20px;
-    margin: 40px 160px 60px 160px;
+    margin: 0 160px 0 160px;
   }
 
   article {
