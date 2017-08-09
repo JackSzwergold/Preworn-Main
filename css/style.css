@@ -11,6 +11,8 @@ html, body {
 
 html {
   font-size: 16px;
+  /*background-color: #2880bf;*/
+  /*background: linear-gradient(30deg, #ffdd35 0%, #ffdd35 25%, #2880bf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */*/
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
@@ -21,7 +23,8 @@ body {
   font-size: 1rem;
   line-height: 1em;
   text-align: center;
-  background: #BDD6D9;
+  /*background-color: #bdd6d9;*/
+  background-color: #ede3d2;
   /*background: linear-gradient(25deg, #ede3d2 0%, #ede3d2 25%, #ffdd35 100%);*/
   -webkit-text-size-adjust: 100%;
 }
