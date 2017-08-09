@@ -381,7 +381,7 @@ article h6 a, article h6 a:link, article h6 a:visited, article h6 a:hover, artic
 
 article h1 {
   font-size: 4.125rem;
-  line-height: 0.5em;
+  line-height: 0.75em;
   margin: 0.25em 0 0.25em 0;
 }
 
@@ -517,6 +517,37 @@ article p code:active,
 article p code:hover {
   color: #00dd00;
   background-color: #333333;
+}
+
+/******************************************************************************/
+
+article section {
+  padding: 0 0 1rem 0;
+}
+
+article section:last-child {
+  padding: 0;
+}
+
+/******************************************************************************/
+
+article section h4 {
+  font-size: 1.625rem;
+  margin: 0 0 0.25em 0;
+}
+
+article section h5 {
+  font-size: 1.125rem;
+  margin: 0 0 0.5em 0;
+}
+
+article section h6 {
+  font-size: 1.125rem;
+  margin: 0 0 0.5em 0;
+}
+
+article section p {
+  padding: 0 0 1rem 0;
 }
 
 /******************************************************************************/
