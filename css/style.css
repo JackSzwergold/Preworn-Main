@@ -24,7 +24,8 @@ body {
   line-height: 1em;
   text-align: center;
   /*background-color: #bdd6d9;*/
-  background-color: #ede3d2;
+  /*background-color: #ede3d2;*/
+  background-color: #fca311;
   /*background: linear-gradient(25deg, #ede3d2 0%, #ede3d2 25%, #ffdd35 100%);*/
   -webkit-text-size-adjust: 100%;
 }
@@ -566,6 +567,25 @@ article p code:active,
 article p code:hover {
   color: #00dd00;
   background-color: #333333;
+}
+
+/******************************************************************************/
+/*     _         _   _      _        _   _
+/*    / \   _ __| |_(_) ___| | ___  | | | | ___  _ __ ___   ___
+/*   / _ \ | '__| __| |/ __| |/ _ \ | |_| |/ _ \| '_ ` _ \ / _ \
+/*  / ___ \| |  | |_| | (__| |  __/ |  _  | (_) | | | | | |  __/
+/* /_/   \_\_|   \__|_|\___|_|\___| |_| |_|\___/|_| |_| |_|\___|
+/*
+/******************************************************************************/
+
+article.home {
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  background: linear-gradient(135deg, transparent 0%, #fca311 100%);
+  box-shadow: inset -40px -40px 40px rgba(0, 0, 0, 0.4), 25px 25px 8px rgba(0, 0, 0, 0.04);
+  transition: all 600ms ease;
 }
 
 /******************************************************************************/
