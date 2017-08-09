@@ -234,15 +234,14 @@ body > nav ul li:last-child a {
 main + footer {
   position: fixed;
   bottom: 0;
-  left: 0;
-  margin: 0 0 0.625rem -75%;
-  padding: 0.9375rem 6.25rem 0.9375rem 3.125rem;
-  width: 70%;
+  right: 0;
+  margin-top: -2.5rem;
+  padding: 0.9375rem 3.125rem 0.9375rem 3.125rem;
+  width: calc(100% - 6.25rem);
   min-height: 3rem;
-  transform: rotate(-0.75deg);
+  transform: rotate(-0.05deg);
   background-color: #000000;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
-  border-radius: 0 6rem 6rem 0;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -252,40 +251,6 @@ main + footer {
   transition: all 600ms ease;
 }
 
-main + footer::before {
-  content: "\00a0";
-  position: fixed;
-  top: -1.25rem;
-  left: 0;
-  width: calc(100% - 2.5rem);
-  height: 100%;
-  padding: 1.625rem 0 1.625rem 0;
-  z-index: -10;
-}
-
-main + footer span {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 5rem;
-  height: 100%;
-}
-
-main + footer span::after {
-  font-family: "FontAwesome";
-  content: "\f059";
-  font-size: 4.5rem;
-  padding: 0;
-  transform: rotate(0.75deg);
-  border-radius: 50%;
-  color: #ffffff;
-}
 
 /******************************************************************************/
 
@@ -297,7 +262,7 @@ main + footer p {
   letter-spacing: 0.025em;
   clear: both;
   text-align: left;
-  color: #000;
+  color: #ffffff;
 }
 
 main + footer p a,
@@ -306,28 +271,14 @@ main + footer p a:visited,
 main + footer p a:hover,
 main + footer p a:active {
  font-weight: bold;
+ color: #ffffff;
 }
 
 /******************************************************************************/
 
 main + footer:hover,
 main + footer:active {
-  margin-bottom: 2.5rem;
-  margin-left: -1.25rem;
-}
-
-main + footer:hover span::after,
-main + footer:active span::after {
-  content: "\f0a8";
-}
-
-main + footer:hover p,
-main + footer:hover p a,
-main + footer:hover p a:link,
-main + footer:hover p a:visited,
-main + footer:hover p a:hover,
-main + footer:hover p a:active {
-  color: #ffffff;
+  margin-top: 2.5rem;
 }
 
 /******************************************************************************/
