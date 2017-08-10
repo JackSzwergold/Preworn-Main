@@ -354,6 +354,7 @@ article {
   /*flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;*/
+  /*transform: rotate(-0.25deg);*/
   width: calc(100% - 40px);
   text-align: left;
   margin: 40px;
@@ -426,7 +427,7 @@ article h6 {
 article p,
 article ul li,
 article ol li {
-  font-family: 'Arvo', Georgia, "New York", "Times New Roman", Times, serif;
+  font-family: Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
   font-style: normal;
   font-size: 1rem;
