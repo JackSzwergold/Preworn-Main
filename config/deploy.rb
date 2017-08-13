@@ -104,7 +104,7 @@ namespace :deploy do
       execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/holiday_card_2016/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/holiday_card_2016"
 
       # info "Link the cheat sheet stuff to 'tutorials_and_cheat_sheets'."
-      execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/tutorials_and_cheat_sheets/#{fetch(:deployment_type)}/current #{fetch(:markdown_path)}/tutorials_and_cheat_sheets"
+      # execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/tutorials_and_cheat_sheets/#{fetch(:deployment_type)}/current #{fetch(:markdown_path)}/tutorials_and_cheat_sheets"
 
       # info "If there is no directory & no symbolic link to '#{fetch(:short_name)}' then create a directory named '#{fetch(:short_name)}'."
       # execute "cd /var/www/{fetch(:live_path)} && if [ ! -d #{fetch(:short_name)} ]; then if [ ! -h #{fetch(:short_name)} ]; then mkdir -p ./#{fetch(:short_name)}; fi; fi"
