@@ -85,18 +85,6 @@ namespace :deploy do
       # info "Link the colorspace conversions stuff to 'colorspace'."
       execute "cd #{current_path} && ln -sf #{fetch(:web_builds)}/colorspace_conversions/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/colorspace"
 
-      # info "Link the floating cube stuff to 'floatingcube_js'."
-      execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/floatingcube_js_dist/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/floatingcube_js"
-
-      # info "Link the nine dots stuff to 'ninedots_js'."
-      execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/ninedots_js_dist/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/ninedots_js"
-
-      # info "Link the lexicon stuff to 'lexicon'."
-      execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/lexicon/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/lexicon"
-
-      # info "Link the lexicon stuff to 'lexicon_js'."
-      execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/lexicon_js_dist/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/lexicon_js"
-
       # info "Link the instagram stuff to 'instagram'."
       execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/instagram/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/instagram"
 
