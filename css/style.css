@@ -23,10 +23,7 @@ body {
   font-size: 1rem;
   line-height: 1em;
   text-align: center;
-  /*background-color: #bdd6d9;*/
-  background-color: #ede3d2;
-  /*background-color: #fca311;*/
-  /*background: linear-gradient(25deg, #ede3d2 0%, #ede3d2 25%, #ffdd35 100%);*/
+  background-color: #ffffff;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -86,7 +83,7 @@ hr {
 /******************************************************************************/
 
 @font-face {
-	font-family: 'Arvo';
+	font-family: "Arvo";
 	src: url('../fonts/Arvo/Arvo-Bold.eot');
 	src: url('../fonts/Arvo/Arvo-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Arvo/Arvo-Bold.woff2') format('woff2'), url('../fonts/Arvo/Arvo-Bold.woff') format('woff'), url('../fonts/Arvo/Arvo-Bold.ttf') format('truetype'), url('../fonts/Arvo/Arvo-Bold.svg#Arvo-Bold') format('svg');
 	font-weight: bold;
@@ -94,7 +91,7 @@ hr {
 }
 
 @font-face {
-	font-family: 'Arvo';
+	font-family: "Arvo";
 	src: url('../fonts/Arvo/Arvo-BoldItalic.eot');
 	src: url('../fonts/Arvo/Arvo-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Arvo/Arvo-BoldItalic.woff2') format('woff2'), url('../fonts/Arvo/Arvo-BoldItalic.woff') format('woff'), url('../fonts/Arvo/Arvo-BoldItalic.ttf') format('truetype'), url('../fonts/Arvo/Arvo-BoldItalic.svg#Arvo-BoldItalic') format('svg');
 	font-weight: bold;
@@ -102,7 +99,7 @@ hr {
 }
 
 @font-face {
-	font-family: 'Arvo';
+	font-family: "Arvo";
 	src: url('../fonts/Arvo/Arvo-Italic.eot');
 	src: url('../fonts/Arvo/Arvo-Italic.eot?#iefix') format('embedded-opentype'), url('../fonts/Arvo/Arvo-Italic.woff2') format('woff2'), url('../fonts/Arvo/Arvo-Italic.woff') format('woff'), url('../fonts/Arvo/Arvo-Italic.ttf') format('truetype'), url('../fonts/Arvo/Arvo-Italic.svg#Arvo-Italic') format('svg');
 	font-weight: normal;
@@ -110,7 +107,7 @@ hr {
 }
 
 @font-face {
-	font-family: 'Arvo';
+	font-family: "Arvo";
 	src: url('../fonts/Arvo/Arvo.eot');
 	src: url('../fonts/Arvo/Arvo.eot?#iefix') format('embedded-opentype'), url('../fonts/Arvo/Arvo.woff2') format('woff2'), url('../fonts/Arvo/Arvo.woff') format('woff'), url('../fonts/Arvo/Arvo.ttf') format('truetype'), url('../fonts/Arvo/Arvo.svg#Arvo') format('svg');
 	font-weight: normal;
@@ -130,7 +127,7 @@ body > header {
   position: fixed;
   top: 0;
   right: 0;
-  margin: 20px -20px 0 0;
+  margin: 1.250rem -1.250rem 0 0;
   padding: 15px 60px 15px 40px;
   transform: rotate(1deg);
   background-color: #000000;
@@ -145,7 +142,7 @@ body > header {
 }
 
 body > header h1 {
-  font-family: 'Arvo', Georgia, "New York", "Times New Roman", Times, serif;
+  font-family: "Arvo", Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: bold;
   font-style: normal;
   text-transform: normal;
@@ -191,10 +188,7 @@ body > nav {
 }
 
 body > nav ul,
-body > nav ul li a:link,
-body > nav ul li a:visited,
-body > nav ul li a:hover,
-body > nav ul li a:active {
+body > nav ul li label {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -204,28 +198,20 @@ body > nav ul li a:active {
 }
 
 
-body > nav ul li a:link,
-body > nav ul li a:visited,
-body > nav ul li a:hover,
-body > nav ul li a:active {
-  font-family: 'Arvo', Georgia, "New York", "Times New Roman", Times, serif;
+body > nav ul li label {
+  font-family: "Arvo", Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
   font-style: normal;
   font-size: 1rem;
   line-height: 1em;
-  color: #ffffff;
-}
-
-body > nav ul li a,
-body > nav ul li a:link,
-body > nav ul li a:visited {
   min-width: 4rem;
   padding: 0.25rem 0.5rem 0.25rem 0.5rem;
-  margin: 0 0 0.25rem 0;
+  color: #ffffff;
+  cursor: pointer;
 }
 
-body > nav ul li:last-child a {
-  margin: 0;
+body > nav ul li:last-child label {
+  padding-bottom: 0;
 }
 
 /******************************************************************************/
@@ -255,7 +241,6 @@ main + footer {
   user-select: none;
   transition: all 600ms ease;
 }
-
 
 /******************************************************************************/
 
@@ -297,40 +282,74 @@ main + footer:active {
 
 main {
   display: flex;
-  overflow: auto;
-  /* flex-direction: column; */
-	/* flex-direction: column-reverse; */
-	/* flex-direction: row; */
-	/* flex-direction: row-reverse; */
-	flex-direction: column;
-	/* flex-wrap: nowrap; */
-	/* flex-wrap: wrap; */
-	/* flex-wrap: wrap-reverse; */
-	flex-wrap: wrap;
-	/* align-items: flex-start; */
-	/* align-items: flex-end; */
-	/* align-items: center; */
-	/* align-items: baseline; */
-	/* align-items: stretch; */
-	align-items: center;
-	/* justify-content: flex-start; */
-	/* justify-content: flex-end; */
-	/* justify-content: center; */
-	/* justify-content: space-between; */
-	/* justify-content: space-around; */
-	justify-content: center;
-	/* align-content: flex-start; */
-	/* align-content: flex-end; */
-	/* align-content: center; */
-	/* align-content: stretch; */
-	/* align-content: space-between; */
-	/* align-content: space-around; */
-	align-content: center;
-  min-width: calc(100% - 120px);
-  min-height: calc(100% - 120px);
-  /*transition: margin 600ms ease;*/
-  /*transition: padding 600ms ease;*/
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: flex-start;
+  overflow-x: hidden;
+  width: calc(100% - 1.250rem);
+  height: calc(100% - 1.250rem);
+  margin: 0;
+  padding: 0.625rem;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  perspective: 1800px;
+  perspective-origin: 50% 50%;
+  background: linear-gradient(-45deg, #687A8f 0%, #f7882f 50%, #f7c331 100%);
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/******************************************************************************/
+
+div.container {
+  width: 46rem;
+  transform-style: preserve-3d;
   transition: all 600ms ease;
+}
+
+/******************************************************************************/
+
+div.panel {
+  position: absolute;
+}
+
+/******************************************************************************/
+
+div.panel:nth-child(1) {
+  transform: translateX(0rem);
+}
+
+div.panel:nth-child(2) {
+  transform: translateX(180rem);
+}
+
+div.panel:nth-child(3) {
+  transform: translateX(360rem);
+}
+
+/******************************************************************************/
+
+main input[type="radio"] {
+  display: none;
+}
+
+/******************************************************************************/
+
+input[type="radio"].panel_1:checked ~ div.container {
+  transform: translateX(0rem);
+}
+
+input[type="radio"].panel_2:checked ~ div.container {
+  transform: translateX(-180rem);
+}
+
+input[type="radio"].panel_3:checked ~ div.container {
+  transform: translateX(-360rem);
 }
 
 /******************************************************************************/
@@ -344,29 +363,19 @@ main {
 /******************************************************************************/
 
 article {
-  display: flex;
-  overflow: auto;
-	flex-direction: column;
-	flex-wrap: wrap;
-	align-items: stretch;
-	justify-content: flex-start;
-	align-content: center;
-  /*flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;*/
-  /*transform: rotate(-0.25deg);*/
-  width: calc(100% - 40px);
+  position: relative;
+  float: left;
+  display: block;
   text-align: left;
-  margin: 40px;
-  padding: 20px;
+  margin: 2.5rem;
+  padding: 1.25rem;
   background-color: #ffffff;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
 }
-
 /******************************************************************************/
 
 article h1, article h2, article h3, article h4, article h5, article h6 {
-  font-family: 'Arvo', Georgia, "New York", "Times New Roman", Times, serif;
+  font-family: "Arvo", Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: bold;
   font-style: normal;
   clear: both;
@@ -504,7 +513,7 @@ article pre {
   line-height: 1.4em;
   font-weight: normal;
   border-radius: 0.5rem;
-  padding: 20px 20px 20px 30px;
+  padding: 1.250rem 1.250rem 1.250rem 30px;
   margin: 0 0 10px 0;
   color: #00dd00;
   background-color: #333333;
@@ -530,11 +539,11 @@ article p code:hover {
 /******************************************************************************/
 
 article section {
-  padding: 0 0 1rem 0;
+  padding-bottom: 1rem;
 }
 
 article section:last-child {
-  padding: 0;
+  padding-bottom: 0;
 }
 
 /******************************************************************************/
@@ -567,7 +576,7 @@ article section p {
 /*
 /******************************************************************************/
 
-article.home {
+/*article.home {
   width: 30rem;
   height: 30rem;
   border-radius: 50%;
@@ -575,7 +584,7 @@ article.home {
   background: linear-gradient(135deg, transparent 0%, #9ecbc8 100%);
   box-shadow: inset -40px -40px 40px rgba(0, 0, 0, 0.4), 25px 25px 8px rgba(0, 0, 0, 0.04);
   transition: all 600ms ease;
-}
+}*/
 
 /******************************************************************************/
 /*
@@ -593,19 +602,8 @@ article.home {
     margin: 0 0 0.625rem -95%;
   }
 
-  main {
-    min-width: 290px;
-    padding: 80px 20px 120px 20px;
-    margin: 0 10px 0 10px;
-  }
-
-  article {
-    width: calc(100% - 20px);
-  }
-
-  article.home {
-    width: 15rem;
-    height: 15rem;
+  div.container {
+    width: 26rem;
   }
 
   article h1 {
@@ -628,19 +626,8 @@ article.home {
     margin: 0 0 0.625rem -95%;
   }
 
-  main {
-    min-width: 380px;
-    padding: 80px 20px 120px 20px;
-    margin: 0 10px 0 10px;
-  }
-
-  article {
-    width: calc(100% - 20px);
-  }
-
-  article.home {
-    width: 15rem;
-    height: 15rem;
+  div.container {
+    width: 28rem;
   }
 
   article h1 {
@@ -663,19 +650,8 @@ article.home {
     margin: 0 0 0.625rem -75%;
   }
 
-  main {
-    min-width: 460px;
-    padding: 20px 20px 60px 20px;
-    margin: 0 40px 0 40px;
-  }
-
-  article {
-    width: calc(100% - 40px);
-  }
-
-  article.home {
-    width: 20rem;
-    height: 20rem;
+  div.container {
+    width: 42rem;
   }
 
   article h1 {
@@ -698,19 +674,8 @@ article.home {
     margin: 0 0 0.625rem -75%;
   }
 
-  main {
-    min-width: 748px;
-    padding: 20px 20px 60px 20px;
-    margin: 0 40px 0 40px;
-  }
-
-  article {
-    width: calc(100% - 40px);
-  }
-
-  article.home {
-    width: 30rem;
-    height: 30rem;
+  div.container {
+    width: 46rem;
   }
 
   article h1 {
@@ -733,19 +698,8 @@ article.home {
     margin: 0 0 0.625rem -75%;
   }
 
-  main {
-    min-width: 748px;
-    padding: 20px 20px 60px 20px;
-    margin: 0 160px 0 160px;
-  }
-
-  article {
-    width: calc(100% - 40px);
-  }
-
-  article.home {
-    width: 30rem;
-    height: 30rem;
+  div.container {
+    width: 66rem;
   }
 
   article h1 {
