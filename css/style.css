@@ -375,6 +375,7 @@ article {
   float: left;
   display: block;
   text-align: left;
+  width: 100%;
   margin: 2.5rem;
   padding: 1.25rem;
   background-color: #ffffff;
