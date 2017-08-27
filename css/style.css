@@ -209,9 +209,9 @@ body > nav ul li label {
   cursor: pointer;
 }
 
-body > nav ul li:last-child label {
+/*body > nav ul li:last-child label {
   padding-bottom: 0;
-}
+}*/
 
 /******************************************************************************/
 /*  _____           _
@@ -332,6 +332,10 @@ div.panel:nth-child(3) {
   transform: translateX(360rem);
 }
 
+div.panel:nth-child(4) {
+  transform: translateX(540rem);
+}
+
 /******************************************************************************/
 
 main input[type="radio"] {
@@ -350,6 +354,10 @@ input[type="radio"].panel_2:checked ~ div.container {
 
 input[type="radio"].panel_3:checked ~ div.container {
   transform: translateX(-360rem);
+}
+
+input[type="radio"].panel_4:checked ~ div.container {
+  transform: translateX(-540rem);
 }
 
 /******************************************************************************/
