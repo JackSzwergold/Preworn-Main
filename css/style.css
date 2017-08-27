@@ -318,6 +318,7 @@ div.container {
 
 div.panel {
   position: absolute;
+  transition: all 600ms ease;
 }
 
 /******************************************************************************/
@@ -326,16 +327,38 @@ div.panel:nth-child(1) {
   transform: translateX(0rem);
 }
 
+div.panel:nth-child(1) article {
+  transform: rotate(0deg);
+}
+
+/******************************************************************************/
+
 div.panel:nth-child(2) {
   transform: translateX(180rem);
 }
+
+div.panel:nth-child(2) article {
+  transform: rotate(0deg);
+}
+
+/******************************************************************************/
 
 div.panel:nth-child(3) {
   transform: translateX(360rem);
 }
 
+div.panel:nth-child(3) article {
+  transform: rotate(0deg);
+}
+
+/******************************************************************************/
+
 div.panel:nth-child(4) {
   transform: translateX(540rem);
+}
+
+div.panel:nth-child(4) article {
+  transform: rotate(0deg);
 }
 
 /******************************************************************************/
@@ -350,16 +373,38 @@ input[type="radio"].panel_1:checked ~ div.container {
   transform: translateX(0rem);
 }
 
+input[type="radio"].panel_1:checked ~ div.container > div.panel:nth-child(1) article {
+  transform: rotate(-360deg);
+}
+
+/******************************************************************************/
+
 input[type="radio"].panel_2:checked ~ div.container {
   transform: translateX(-180rem);
 }
+
+input[type="radio"].panel_2:checked ~ div.container > div.panel:nth-child(2) article {
+  transform: rotate(-360deg);
+}
+
+/******************************************************************************/
 
 input[type="radio"].panel_3:checked ~ div.container {
   transform: translateX(-360rem);
 }
 
+input[type="radio"].panel_3:checked ~ div.container > div.panel:nth-child(3) article {
+  transform: rotate(-360deg);
+}
+
+/******************************************************************************/
+
 input[type="radio"].panel_4:checked ~ div.container {
   transform: translateX(-540rem);
+}
+
+input[type="radio"].panel_4:checked ~ div.container > div.panel:nth-child(4) article {
+  transform: rotate(-360deg);
 }
 
 /******************************************************************************/
@@ -381,7 +426,9 @@ article {
   padding: 1.25rem;
   background-color: #ffffff;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
+  transition: all 600ms ease;
 }
+
 /******************************************************************************/
 
 article h1, article h2, article h3, article h4, article h5, article h6 {
