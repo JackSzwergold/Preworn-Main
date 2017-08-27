@@ -286,7 +286,6 @@ main {
   align-items: center;
   justify-content: flex-start;
   align-content: flex-start;
-  overflow-x: hidden;
   width: calc(100% - 1.250rem);
   height: calc(100% - 1.250rem);
   margin: 0;
@@ -302,6 +301,9 @@ main {
   /*background: #f7882f;
   background: linear-gradient(-45deg, #687A8f 0%, #f7882f 50%, #f7c331 100%);*/
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch
 }
 
 /******************************************************************************/
