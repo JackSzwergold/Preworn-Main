@@ -54,10 +54,11 @@
 
   <nav>
     <ul>
-      <li><label for="panel_1">About</label></li>
-      <li><label for="panel_2">Resume</label></li>
-      <li><label for="panel_3">Distractions</label></li>
-      <li><label for="panel_4">Contact</label></li>
+      <li><label for="panel_1"><em class="fa fa-home">&nbsp;</em></label></li>
+      <li><label for="panel_2">About</label></li>
+      <li><label for="panel_3">Resume</label></li>
+      <li><label for="panel_4">Distractions</label></li>
+      <li><label for="panel_5">Contact</label></li>
     </ul>
   </nav>
 
@@ -71,9 +72,14 @@
     <input id="panel_2" class="panel_2" type="radio" name="panel_selector" />
     <input id="panel_3" class="panel_3" type="radio" name="panel_selector" />
     <input id="panel_4" class="panel_4" type="radio" name="panel_selector" />
-
+    <input id="panel_5" class="panel_5" type="radio" name="panel_selector" />
 
     <div class="container">
+
+      <div class="panel home">
+        <article>
+        </article>
+      </div>
 
       <div class="panel">
         <article>
@@ -167,15 +173,18 @@
           <h1>Distractions</h1>
           <h2>Distractions and Projects</h2>
           <hr />
-          <ul>
-            <li><strong><a href="projects/mosaic" title="Mosaic">Mosaic</a>:</strong> Dynamically generated image mosaics using record album artwork as the basis. Reload the page to view another random image.</li>
-            <li><strong><a href="projects/mosaic_js" title="Mosaic (JavaScript)">Mosaic (JavaScript)</a></strong>: This is an EmberJS (JavaScript) version of the <a href="projects/mosaic" title="Mosaic">Mosaic</a> project that uses an EmberJS front-end
-              to pull data in from the PHP back-end of <a href="projects/mosaic" title="Mosaic">Mosaic</a>. The benefit of this method is the page does not have to be reloaded for new data to be pulled in; client side JavaScript handles it all.</li>
-            <li><strong><a href="projects/ascii" title="ASCII">ASCII</a>:</strong> Dynamically generated ASCII art images which were created using PHP, the GD graphics library, HTML and CSS. Reload the page to view another random image.</li>
-            <li><strong><a href="projects/slider" title="Slider">Slider</a>:</strong> This simple slider—which works well on desktop as well as mobile browsers—is something I created using jQuery and CSS3 WebKit extensions.</li>
-            <li><strong><a href="projects/instagram" title="Instagram">Instagram</a>:</strong> Some experiments and explorations into the basic, “sandbox”-level of Instagram API access. </li>
-            <li><strong><a href="projects/holiday_card_2016" title="Holiday Card 2016">Holiday Card 2016</a>:</strong> My 2016 digital holiday card that uses WebKit animations. </li>
-          </ul>
+
+          <section>
+            <ul>
+              <li><strong><a href="projects/mosaic" title="Mosaic">Mosaic</a>:</strong> Dynamically generated image mosaics using record album artwork as the basis. Reload the page to view another random image.</li>
+              <li><strong><a href="projects/mosaic_js" title="Mosaic (JavaScript)">Mosaic (JavaScript)</a></strong>: This is an EmberJS (JavaScript) version of the <a href="projects/mosaic" title="Mosaic">Mosaic</a> project that uses an EmberJS front-end
+                to pull data in from the PHP back-end of <a href="projects/mosaic" title="Mosaic">Mosaic</a>. The benefit of this method is the page does not have to be reloaded for new data to be pulled in; client side JavaScript handles it all.</li>
+              <li><strong><a href="projects/ascii" title="ASCII">ASCII</a>:</strong> Dynamically generated ASCII art images which were created using PHP, the GD graphics library, HTML and CSS. Reload the page to view another random image.</li>
+              <li><strong><a href="projects/slider" title="Slider">Slider</a>:</strong> This simple slider—which works well on desktop as well as mobile browsers—is something I created using jQuery and CSS3 WebKit extensions.</li>
+              <li><strong><a href="projects/instagram" title="Instagram">Instagram</a>:</strong> Some experiments and explorations into the basic, “sandbox”-level of Instagram API access. </li>
+              <li><strong><a href="projects/holiday_card_2016" title="Holiday Card 2016">Holiday Card 2016</a>:</strong> My 2016 digital holiday card that uses WebKit animations. </li>
+            </ul>
+          </section>
 
         </article>
       </div>
@@ -184,11 +193,14 @@
         <article>
 
           <h2>Contact</h2>
-          <ul>
-            <li><strong>Email</strong> • <a href="mailto:me@preworn.com?Subject=Preworn%20Website%20Query">me@preworn.com</a></li>
-            <li><strong>PGP Public Key</strong> • Is available <a href="../pgp_public_key-preworn.asc.txt">here</a>.</li>
-            <li><strong>Mail</strong> • P.O. Box 325, Village Station, NY 10014-0325</li>
-          </ul>
+
+          <section>
+            <ul>
+              <li><strong>Email</strong> • <a href="mailto:me@preworn.com?Subject=Preworn%20Website%20Query">me@preworn.com</a></li>
+              <li><strong>PGP Public Key</strong> • Is available <a href="../pgp_public_key-preworn.asc.txt">here</a>.</li>
+              <li><strong>Mail</strong> • P.O. Box 325, Village Station, NY 10014-0325</li>
+            </ul>
+          </section>
 
         </article>
       </div>
@@ -197,9 +209,6 @@
 
   </main>
 
-  <!-- <footer>
-    <p>All contents of this site are © copyright 2017 Jack Szwergold. This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC-4.0)</a>.</p><span></span>
-  </footer> -->
 </body>
 
 </html>
