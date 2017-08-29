@@ -497,8 +497,8 @@ article section:last-child {
   height: 36rem;
   border-radius: 50%;
   background-color: #f7882f;
-  background: linear-gradient(135deg, transparent 0%, #f7882f 50%, #f7c331 100%);
-  box-shadow: inset -40px -40px 40px 0 rgba(0, 0, 0, 0.04), 25px 25px 8px 0 rgba(0, 0, 0, 0.04);
+  background: linear-gradient(-45deg, transparent 0%, #f7882f 50%, #f7c331 100%);
+  box-shadow: inset -40px -40px 40px 0 rgba(0, 0, 0, 0.25), 25px 25px 8px 0 rgba(0, 0, 0, 0.125);
   transition: all 600ms ease;
 }
 
