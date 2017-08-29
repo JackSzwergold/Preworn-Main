@@ -406,21 +406,9 @@ article p:last-child {
   margin: 0;
 }
 
-article p a,
-article p a:link,
-article p a:visited,
-article p a:hover,
-article p a:active,
-article ul li a,
-article ul li a:link,
-article ul li a:visited,
-article ul li a:hover,
-article ul li a:active,
-article ol li a,
-article ol li a:link,
-article ol li a:visited,
-article ol li a:hover,
-article ol li a:active {
+article p a, article p a:link, article p a:visited, article p a:hover, article p a:active,
+article ul li a, article ul li a:link, article ul li a:visited, article ul li a:hover, article ul li a:active,
+article ol li a, article ol li a:link, article ol li a:visited, article ol li a:hover, article ol li a:active {
   background-image: linear-gradient(#ffffff 50%, #777777 50%);
   background-repeat: repeat-x;
   background-position: 0 90%;
