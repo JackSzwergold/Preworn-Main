@@ -6,7 +6,6 @@
 html, body {
   width: 100%;
   height: 100%;
-  color: #000000;
 }
 
 html {
@@ -126,7 +125,7 @@ body > header {
   position: fixed;
   top: 0;
   right: 0;
-  margin: 1.250rem -1.250rem 0 0;
+  margin: 1.75rem -1.25rem 0 0;
   padding: 15px 60px 15px 40px;
   transform: rotate(1deg);
   background-color: #000000;
@@ -172,9 +171,9 @@ body > nav {
   position: fixed;
   top: 0;
   left: 0;
-  margin: 0.75rem 0 0 0.75rem;
+  margin: 0.75rem 0 0 0.5rem;
   padding: 0;
-  transform: rotate(-1deg);
+  transform: rotate(-0.75deg);
   background-color: #000000;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
   -webkit-touch-callout: none;
@@ -189,7 +188,7 @@ body > nav {
 body > nav ul,
 body > nav ul li label {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
   align-items: flex-start;
   justify-content: center;
@@ -201,19 +200,12 @@ body > nav ul li label {
   font-family: "Arvo", Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.80rem;
   line-height: 1em;
-  min-width: 4rem;
-  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  min-width: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   color: #ffffff;
   cursor: pointer;
-}
-
-/******************************************************************************/
-
-main + footer:hover,
-main + footer:active {
-  bottom: 1rem;
 }
 
 /******************************************************************************/
@@ -246,8 +238,8 @@ main {
   perspective-origin: 50% 50%;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   overflow-x: hidden;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch
+  /*overflow-y: auto;*/
+  -webkit-overflow-scrolling: touch;
 }
 
 /******************************************************************************/
