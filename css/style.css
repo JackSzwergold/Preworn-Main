@@ -20,8 +20,8 @@ body {
   font-size: 1rem;
   line-height: 1em;
   text-align: center;
-  background: #f7882f;
-  background: linear-gradient(-45deg, #687A8f 0%, #f7882f 50%, #f7c331 100%);
+  background: #efe0cd;
+  /*background: linear-gradient(-45deg, #687A8f 0%, #f7882f 50%, #f7c331 100%);*/
   -webkit-text-size-adjust: 100%;
 }
 
@@ -56,7 +56,7 @@ hr {
   border: 0;
   height: 1px;
   margin: 1.25em 0 1.25em 0;
-  background-color: #000000;
+  background: #333333;
   clear: both;
 }
 
@@ -112,6 +112,18 @@ hr {
 	font-style: normal;
 }
 
+@font-face {
+  font-family: 'SinaNovaReg';
+  src: url('../fonts/SinaNova/SinaNovaReg-webfont.eot');
+  src: url('../fonts/SinaNova/SinaNovaReg-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/SinaNova/SinaNovaReg-webfont.woff2') format('woff2'),
+       url('../fonts/SinaNova/SinaNovaReg-webfont.woff') format('woff'),
+       url('../fonts/SinaNova/SinaNovaReg-webfont.ttf') format('truetype'),
+       url('../fonts/SinaNova/SinaNovaReg-webfont.svg#sinanova-regularregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /******************************************************************************/
 /*  _   _                _
 /* | | | | ___  __ _  __| | ___ _ __
@@ -128,8 +140,8 @@ body > header {
   margin: 1.75rem -1.25rem 0 0;
   padding: 15px 60px 15px 40px;
   transform: rotate(1deg);
-  background-color: #000000;
-  box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
+  background: #913832;
+  box-shadow: 0.5rem 0.5rem 0 0 rgba(0, 0, 0, 0.25);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -140,16 +152,18 @@ body > header {
 }
 
 body > header h1 {
-  font-family: "Arvo", Georgia, "New York", "Times New Roman", Times, serif;
+  /*font-family: "Arvo", Arial, "Arial Unicode MS", Helvetica, Verdana, sans-serif;*/
+  font-family: "SinaNovaReg", Georgia, "New York", "Times New Roman", Times, serif;
+  /*font-family: Helvetica, Arial, "Arial Unicode MS", Verdana, sans-serif;*/
   font-weight: bold;
   font-style: normal;
   text-transform: normal;
-  font-size: 2.25rem;
+  font-size: 2.75rem;
   line-height: 0.75em;
   letter-spacing: 0.025em;
-  color: #ffffff;
 }
 
+body > header h1,
 body > header h1 a,
 body > header h1 a:link,
 body > header h1 a:visited,
@@ -173,9 +187,9 @@ body > nav {
   left: 0;
   margin: 0.75rem 0 0 0.5rem;
   padding: 0;
-  transform: rotate(-0.75deg);
-  background-color: #000000;
-  box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
+  /*transform: rotate(-0.75deg);*/
+  /*background: #000000;*/
+  /*box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);*/
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -197,14 +211,15 @@ body > nav ul li label {
 
 
 body > nav ul li label {
-  font-family: "Arvo", Georgia, "New York", "Times New Roman", Times, serif;
+  /*font-family: "Arvo", Arial, "Arial Unicode MS", Helvetica, Verdana, sans-serif;*/
+  font-family: "SinaNovaReg", Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 0.80rem;
+  font-size: 1rem;
   line-height: 1em;
   min-width: 1rem;
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-  color: #ffffff;
+  color: #333333;
   cursor: pointer;
 }
 
@@ -254,23 +269,29 @@ main {
 
 .panel {
   width: 100%;
+  height: 100vh;
   position: absolute;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   align-content: center;
   transition: all 600ms ease;
 }
 
+.panel.home {
+  justify-content: center;
+}
+
+
 .panel.home article {
   width: 36rem;
   height: 36rem;
-  border-radius: 50%;
-  background-color: #f7882f;
+  /*border-radius: 50%;*/
+  background: #f7882f;
   background: linear-gradient(-45deg, transparent 0%, #f7882f 50%, #f7c331 100%);
-  box-shadow: inset -40px -40px 40px 0 rgba(0, 0, 0, 0.25), 25px 25px 8px 0 rgba(0, 0, 0, 0.125);
+  box-shadow: inset -2.5rem -2.5rem 2.5rem 0 rgba(0, 0, 0, 0.25), 1.25rem 1.25rem 0.625rem 0 rgba(0, 0, 0, 0.125);
   transition: all 600ms ease;
 }
 
@@ -339,20 +360,21 @@ article {
   text-align: left;
   margin: 0 2.5rem 2.5rem 2.5rem;
   padding: 1.25rem;
-  background-color: #ffffff;
-  box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
+  background: #efe0cd;
   transition: all 600ms ease;
 }
 
 /******************************************************************************/
 
 article h1, article h2, article h3, article h4, article h5, article h6 {
-  font-family: "Arvo", Georgia, "New York", "Times New Roman", Times, serif;
+  /*font-family: "Arvo", Arial, "Arial Unicode MS", Helvetica, Verdana, sans-serif;*/
+  font-family: "SinaNovaReg", Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: bold;
   font-style: normal;
   clear: both;
   word-break: break-all;
   white-space: normal;
+  color: #333333;
 }
 
 article h1 a, article h1 a:link, article h1 a:visited, article h1 a:hover, article h1 a:active,
@@ -364,7 +386,7 @@ article h6 a, article h6 a:link, article h6 a:visited, article h6 a:hover, artic
   text-decoration: none;
   font-weight: bold;
   font-style: normal;
-  color: #000000;
+  color: #333333;
 }
 
 article h1 {
@@ -406,12 +428,13 @@ article h6 {
 /******************************************************************************/
 
 article p {
-  font-family: Georgia, "New York", "Times New Roman", Times, serif;
+  font-family: "SinaNovaReg", Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
   font-style: normal;
   font-size: 1rem;
   line-height: 1.25rem;
   padding: 0.25em 0 1.125em 0;
+  color: #333333;
   clear: both;
 }
 
@@ -420,7 +443,7 @@ article p:last-child {
 }
 
 article p a, article p a:link, article p a:visited, article p a:hover, article p a:active {
-  background-image: linear-gradient(#ffffff 50%, #777777 50%);
+  background-image: linear-gradient(#333333 50%, #777777 50%);
   background-repeat: repeat-x;
   background-position: 0 90%;
   background-size: 1px 1px;
@@ -505,8 +528,8 @@ article section:last-child {
   }
 
   .panel.home article {
-    width: 16rem;
-    height: 16rem;
+    width: 56vw;
+    height: 56vh;
   }
 
 }
@@ -514,8 +537,8 @@ article section:last-child {
 @media (min-width: 479px) {
 
   .panel.home article {
-    width: 26rem;
-    height: 26rem;
+    width: 56vw;
+    height: 56vh;
   }
 
 }
@@ -531,8 +554,8 @@ article section:last-child {
   }
 
   .panel.home article {
-    width: 36rem;
-    height: 36rem;
+    width: 56vw;
+    height: 56vh;
   }
 
 }
@@ -552,8 +575,8 @@ article section:last-child {
 @media (min-width: 959px) {
 
   .panel.home article {
-    width: 40rem;
-    height: 40rem;
+    width: 56vw;
+    height: 56vh;
   }
 
 }
