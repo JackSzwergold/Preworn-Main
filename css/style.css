@@ -137,11 +137,9 @@ body > header {
   position: fixed;
   top: 0;
   right: 0;
-  margin: 1.75rem -1.25rem 0 0;
-  padding: 15px 60px 15px 40px;
-  transform: rotate(1deg);
-  background: #913832;
-  box-shadow: 0.5rem 0.5rem 0 0 rgba(0, 0, 0, 0.25);
+  margin: 0.75rem 1.75rem 0 0.5rem;
+  padding: 0.5rem 1.25rem 0.625rem 1.25rem;
+  background: #333333;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -155,7 +153,7 @@ body > header h1 {
   /*font-family: "Arvo", Arial, "Arial Unicode MS", Helvetica, Verdana, sans-serif;*/
   font-family: "SinaNovaReg", Georgia, "New York", "Times New Roman", Times, serif;
   /*font-family: Helvetica, Arial, "Arial Unicode MS", Verdana, sans-serif;*/
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
   text-transform: normal;
   font-size: 2.75rem;
@@ -218,7 +216,7 @@ body > nav ul li label {
   font-size: 1rem;
   line-height: 1em;
   min-width: 1rem;
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 0 0.5rem 0 0.5rem;
   color: #333333;
   cursor: pointer;
 }
@@ -369,7 +367,7 @@ article {
 article h1, article h2, article h3, article h4, article h5, article h6 {
   /*font-family: "Arvo", Arial, "Arial Unicode MS", Helvetica, Verdana, sans-serif;*/
   font-family: "SinaNovaReg", Georgia, "New York", "Times New Roman", Times, serif;
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
   clear: both;
   word-break: break-all;
@@ -384,7 +382,7 @@ article h4 a, article h4 a:link, article h4 a:visited, article h4 a:hover, artic
 article h5 a, article h5 a:link, article h5 a:visited, article h5 a:hover, article h5 a:active,
 article h6 a, article h6 a:link, article h6 a:visited, article h6 a:hover, article h6 a:active {
   text-decoration: none;
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
   color: #333333;
 }
