@@ -347,8 +347,8 @@ article {
 /******************************************************************************/
 
 article h1, article h2, article h3, article h4, article h5, article h6 {
-  font-family: "Arvo", Georgia, "New York", "Times New Roman", Times, serif;
-  font-weight: bold;
+  font-family: Georgia, "New York", "Times New Roman", Times, serif;
+  font-weight: normal;
   font-style: normal;
   clear: both;
   word-break: break-all;
@@ -362,72 +362,64 @@ article h4 a, article h4 a:link, article h4 a:visited, article h4 a:hover, artic
 article h5 a, article h5 a:link, article h5 a:visited, article h5 a:hover, article h5 a:active,
 article h6 a, article h6 a:link, article h6 a:visited, article h6 a:hover, article h6 a:active {
   text-decoration: none;
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
   color: #000000;
 }
 
 article h1 {
-  font-size: 4.125rem;
-  line-height: 0.75em;
+  font-size: 2.25rem;
+  line-height: 1em;
   margin: 0.25em 0 0.25em 0;
 }
 
 article h2 {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   line-height: 1em;
-  margin: 0.2em 0 0.2em 0;
+  margin: 0.25em 0 0.25em 0;
 }
 
 article h3 {
-  font-size: 1.75rem;
+  font-size: 1.625rem;
   line-height: 1em;
-  margin: 1.5em 0 0.15em 0;
+  margin: 0.25em 0 0.25em 0;
 }
 
 article h4 {
-  font-size: 1.625rem;
+  font-size: 1.5rem;
   line-height: 1em;
-  margin: 0 0 0.25em 0;
+  margin: 0.25em 0 0.25em 0;
 }
 
 article h5 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1em;
-  margin: 0 0 0.5em 0;
+  margin: 0.25em 0 0.25em 0;
 }
 
 article h6 {
   font-size: 1.125rem;
   line-height: 1em;
-  margin: 0 0 0.5em 0;
+  margin: 0.25em 0 0.25em 0;
 }
 
 /******************************************************************************/
 
-article p,
-article ul li,
-article ol li {
+article p {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
   font-style: normal;
   font-size: 1rem;
   line-height: 1.25rem;
+  padding: 0.625em 0 1.125em 0;
   clear: both;
-
-}
-
-article p {
-  margin: 0 0 1.25em 0;
 }
 
 article p:last-child {
   margin: 0;
 }
 
-article p a, article p a:link, article p a:visited, article p a:hover, article p a:active,
-article ul li a, article ul li a:link, article ul li a:visited, article ul li a:hover, article ul li a:active,
-article ol li a, article ol li a:link, article ol li a:visited, article ol li a:hover, article ol li a:active {
+article p a, article p a:link, article p a:visited, article p a:hover, article p a:active {
   background-image: linear-gradient(#ffffff 50%, #777777 50%);
   background-repeat: repeat-x;
   background-position: 0 90%;
@@ -439,7 +431,7 @@ article ol li a, article ol li a:link, article ol li a:visited, article ol li a:
 article ul,
 article ol {
   margin: 0;
-  padding: 0 0 1.25em 0;
+  margin: 0;
   clear: both;
 }
 
@@ -450,6 +442,11 @@ article ol:last-child {
 
 article ul li,
 article ol li {
+  font-family: Georgia, "New York", "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.25rem;
   margin: 0 0 0.75em 1.75em;
   padding: 0;
   clear: both;
@@ -467,6 +464,14 @@ article ul li {
 
 article ol li {
   list-style-type: decimal;
+}
+
+article ul li a, article ul li a:link, article ul li a:visited, article ul li a:hover, article ul li a:active,
+article ol li a, article ol li a:link, article ol li a:visited, article ol li a:hover, article ol li a:active {
+  background-image: linear-gradient(#ffffff 50%, #777777 50%);
+  background-repeat: repeat-x;
+  background-position: 0 90%;
+  background-size: 1px 1px;
 }
 
 /******************************************************************************/
