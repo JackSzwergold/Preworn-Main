@@ -314,10 +314,11 @@ article {
   position: relative;
   float: left;
   display: block;
+  width: 100%;
   text-align: left;
   margin: 5.625rem 2.5rem 2.5rem 2.5rem;
   padding: 0;
-  background: #efe0cd;
+  /*background: #00f;*/
   transition: all 600ms ease;
 }
 
@@ -330,6 +331,13 @@ article h1, article h2, article h3, article h4, article h5, article h6 {
   clear: both;
   /*word-break: break-all;*/
   white-space: normal;
+  color: #333333;
+}
+
+article h1 a, article h1 a:link, article h1 a:visited, article h1 a:hover, article h1 a:active,
+article h2 a, article h2 a:link, article h2 a:visited, article h2 a:hover, article h2 a:active,
+article h3 a, article h3 a:link, article h3 a:visited, article h3 a:hover, article h3 a:active,
+article h4 a, article h4 a:link, article h4 a:visited, article h4 a:hover, article h4 a:active {
   color: #333333;
 }
 
@@ -391,6 +399,7 @@ article p:last-child {
 }
 
 article p a, article p a:link, article p a:visited, article p a:hover, article p a:active {
+  color: #333333;
   background-image: linear-gradient(#333333 50%, #777777 50%);
   background-repeat: repeat-x;
   background-position: 0 90%;
@@ -465,7 +474,7 @@ article section:last-child {
 /*
 /******************************************************************************/
 
-@media (min-width: 320px) {
+/*@media (min-width: 320px) {
 
   .container {
     width: 25rem;
@@ -495,4 +504,4 @@ article section:last-child {
     width: 46rem;
   }
 
-}
+}*/
