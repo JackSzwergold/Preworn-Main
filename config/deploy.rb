@@ -80,7 +80,7 @@ namespace :deploy do
       execute "cd #{current_path} && ln -sf #{fetch(:web_builds)}/ascii/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/ascii"
 
       # info "Link the preworn slider stuff to 'slider'."
-      execute "cd #{current_path} && ln -sf #{fetch(:web_builds)}/slider/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/slider"
+      # execute "cd #{current_path} && ln -sf #{fetch(:web_builds)}/slider/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/slider"
 
       # info "Link the colorspace conversions stuff to 'colorspace'."
       execute "cd #{current_path} && ln -sf #{fetch(:web_builds)}/colorspace_conversions/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/colorspace"
