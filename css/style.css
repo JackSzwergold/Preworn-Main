@@ -474,7 +474,7 @@ article section:last-child {
 /*
 /******************************************************************************/
 
-/*@media (min-width: 320px) {
+@media (min-width: 320px) {
 
   .container {
     width: 25rem;
@@ -504,4 +504,4 @@ article section:last-child {
     width: 46rem;
   }
 
-}*/
+}
