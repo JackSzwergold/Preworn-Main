@@ -262,8 +262,8 @@ div.container > div.panel.home {
 }
 
 div.container > div.panel.home > div.shape {
-  width: 72vw;
-  height: 72vh;
+  width: 63vw;
+  height: 63vh;
   background: #f7882f;
   background: linear-gradient(-45deg, transparent 0%, #f7882f 50%, #f7c331 100%);
   box-shadow: inset -2.5rem -2.5rem 2.5rem 0 rgba(0, 0, 0, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(0, 0, 0, 0.125);
