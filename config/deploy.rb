@@ -86,7 +86,7 @@ namespace :deploy do
       execute "cd #{current_path} && ln -sf #{fetch(:web_builds)}/colorspace_conversions/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/colorspace"
 
       # info "Link the instagram stuff to 'instagram'."
-      execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/instagram/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/instagram"
+      # execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/instagram/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/instagram"
 
       # info "Link the holiday_card_2016 stuff to 'holiday_card_2016'."
       execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/holiday_card_2016/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/holiday_card_2016"
