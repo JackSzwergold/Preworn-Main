@@ -478,7 +478,7 @@ article section:last-child {
 @media (min-width: 320px) {
 
   .container {
-    width: 16rem;
+    width: 17.25rem;
   }
 
 }
@@ -486,7 +486,7 @@ article section:last-child {
 @media (min-width: 640px) {
 
   .container {
-    width: 32rem;
+    width: 34.5rem;
   }
 
 }
