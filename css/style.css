@@ -264,14 +264,19 @@ div.container > div.panel.home {
 }
 
 div.container > div.panel.home > div.shape {
-  width: 63vw;
-  height: 63%;
-  height: 63vh;
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  height: 60%;
   background: #f7882f;
   background: linear-gradient(-45deg, transparent 0%, #f7882f 50%, #f7c331 100%);
-  box-shadow: inset -2.5rem -2.5rem 2.5rem 0 rgba(0, 0, 0, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(0, 0, 0, 0.125);
+  box-shadow: inset -2.5rem -2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
+  margin: 0;
+  padding: 0;
   transition: all 600ms ease;
-  animation: shapeBackgroundColorShift 18s ease-in-out 0s infinite alternate;
+  animation: shapeBackgroundColorShift 9s ease-in-out 0s infinite alternate;
+  border-radius: 1rem;
 }
 
 /**************************************************************************************************/
@@ -279,9 +284,11 @@ div.container > div.panel.home > div.shape {
 @keyframes shapeBackgroundColorShift {
   from {
     background-color: transparent;
+    box-shadow: inset -2.5rem -2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
   }
   to {
-    background-color: #f7882f;
+    background-color: #c8102e;
+    box-shadow: inset 2.5rem 2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
   }
 }
 
@@ -296,9 +303,9 @@ div.container > div.panel.home > div.shape {
 /******************************************************************************/
 
 div.container > div.panel article {
-  /*position: relative;
+  position: relative;
   float: left;
-  display: block;*/
+  display: block;
   width: 100%;
   text-align: left;
   margin: 5.625rem 2.5rem 2.5rem 2.5rem;
@@ -409,7 +416,7 @@ div.container > div.panel article p a:visited,
 div.container > div.panel article p a:hover,
 div.container > div.panel article p a:active {
   color: #333333;
-  background-image: linear-gradient(#333333 50%, #777777 50%);
+  background-image: linear-gradient(#333333 50%, #333333 50%);
   background-repeat: repeat-x;
   background-position: 0 90%;
   background-size: 1px 1px;
