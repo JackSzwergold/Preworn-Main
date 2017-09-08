@@ -270,8 +270,8 @@ div.container > div.panel.home > div.shape {
   width: 100%;
   height: 60%;
   background: #f7882f;
-  /*background: linear-gradient(-45deg, transparent 0%, #f7882f 50%, #f7c331 100%);*/
-  background: radial-gradient(circle farthest-corner at right bottom, transparent 0%, #f7882f 50%, #f7c331 100%);
+  /*background: linear-gradient(-45deg, transparent 0%, #f7882f 60%, #f7c331 100%);*/
+  background: radial-gradient(circle farthest-corner at right bottom, transparent 0%, #f7882f 60%, #f7c331 100%);
   box-shadow: inset -2.5rem -2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
   margin: 0;
   padding: 0;
@@ -348,26 +348,26 @@ div.container > div.panel.home > div.shape > nav > label:hover {
 /**************************************************************************************************/
 
 div.container > div.panel.home input[type="radio"].shape_1:checked ~ div.shape {
-  /*background: linear-gradient(135deg, #d01c1f 0%, #f7882f 50%, #f7c331 100%);*/
-  background: radial-gradient(circle farthest-corner at left top, #d01c1f 0%, #f7882f 50%, #f7c331 100%);
+  /*background: linear-gradient(135deg, #d01c1f 0%, #f7882f 60%, #f7c331 100%);*/
+  background: radial-gradient(circle farthest-corner at left top, #d01c1f 0%, #f7882f 60%, #f7c331 100%);
   box-shadow: inset 2.5rem 2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
 }
 
 div.container > div.panel.home input[type="radio"].shape_2:checked ~ div.shape {
-  /*background: linear-gradient(-135deg, #314F40 0%, #f7882f 50%, #f7c331 100%);*/
-  background: radial-gradient(circle farthest-corner at right top, #314F40 0%, #f7882f 50%, #f7c331 100%);
+  /*background: linear-gradient(-135deg, #314F40 0%, #f7882f 60%, #f7c331 100%);*/
+  background: radial-gradient(circle farthest-corner at right top, #314F40 0%, #f7882f 60%, #f7c331 100%);
   box-shadow: inset -2.5rem 2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
 }
 
 div.container > div.panel.home input[type="radio"].shape_3:checked ~ div.shape {
-  /*background: linear-gradient(45deg, #2f408e 0%, #f7882f 50%, #f7c331 100%);*/
-  background: radial-gradient(circle farthest-corner at left bottom, #2f408e 0%, #f7882f 50%, #f7c331 100%);
+  /*background: linear-gradient(45deg, #2f408e 0%, #f7882f 60%, #f7c331 100%);*/
+  background: radial-gradient(circle farthest-corner at left bottom, #2f408e 0%, #f7882f 60%, #f7c331 100%);
   box-shadow: inset 2.5rem -2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
 }
 
 div.container > div.panel.home input[type="radio"].shape_4:checked ~ div.shape {
-  /*background: linear-gradient(-45deg, transparent 0%, #f7882f 50%, #f7c331 100%);*/
-  background: radial-gradient(circle farthest-corner at right bottom, transparent 0%, #f7882f 50%, #f7c331 100%);
+  /*background: linear-gradient(-45deg, transparent 0%, #f7882f 60%, #f7c331 100%);*/
+  background: radial-gradient(circle farthest-corner at right bottom, transparent 0%, #f7882f 60%, #f7c331 100%);
   box-shadow: inset -2.5rem -2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
 }
 
