@@ -348,7 +348,7 @@ div.container > div.panel.home > div.shape > nav > label:hover {
 
 div.container > div.panel.home input[type="radio"].shape_1:checked ~ div.shape {
   background-color: #f00;
-  background: linear-gradient(135deg, #913832 0%, #f7882f 50%, #f7c331 100%);
+  background: linear-gradient(135deg, #d01c1f 0%, #f7882f 50%, #f7c331 100%);
   box-shadow: inset 2.5rem 2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
 }
 
