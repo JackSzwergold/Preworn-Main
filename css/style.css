@@ -192,7 +192,7 @@ body > nav ul li label {
 /*
 /******************************************************************************/
 
-main {
+div.wrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -214,7 +214,7 @@ main {
 
 /******************************************************************************/
 
-main input[type="radio"] {
+div.wrapper input[type="radio"] {
   display: none;
 }
 
@@ -234,7 +234,7 @@ div.container {
 
 /******************************************************************************/
 
-div.container > div.panel {
+div.container > div.element {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -259,11 +259,11 @@ div.container > div.panel {
 /*
 /******************************************************************************/
 
-div.container > div.panel.home {
+div.container > div.element.home {
   justify-content: center;
 }
 
-div.container > div.panel.home > div.shape {
+div.container > div.element.home > div.shape {
   position: relative;
   float: left;
   display: block;
@@ -298,7 +298,7 @@ div.container > div.panel.home > div.shape {
   }
 }*/
 
-div.container > div.panel.home > div.shape > nav {
+div.container > div.element.home > div.shape > nav {
   display: flex;
   /* flex-direction: column; */
 	/* flex-direction: column-reverse; */
@@ -332,7 +332,7 @@ div.container > div.panel.home > div.shape > nav {
   height: 100%;
 }
 
-div.container > div.panel.home > div.shape > nav > label {
+div.container > div.element.home > div.shape > nav > label {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 40%;
@@ -340,38 +340,38 @@ div.container > div.panel.home > div.shape > nav > label {
   height: 33.33%;
 }
 
-div.container > div.panel.home > div.shape > nav > label:hover {
+div.container > div.element.home > div.shape > nav > label:hover {
   cursor: pointer;
 }
 
 /**************************************************************************************************/
 
-div.container > div.panel.home input[type="radio"].shape_1:checked ~ div.shape {
+div.container > div.element.home input[type="radio"].shape_1:checked ~ div.shape {
   background: radial-gradient(circle farthest-corner at left top, #d01c1f 0%, #f7882f 60%, #f7c331 100%);
   box-shadow: inset 2.5rem 2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
 }
 
-div.container > div.panel.home input[type="radio"].shape_2:checked ~ div.shape {
+div.container > div.element.home input[type="radio"].shape_2:checked ~ div.shape {
   background: radial-gradient(circle farthest-corner at right top, #d01c1f 0%, #f7882f 60%, #f7c331 100%);
   box-shadow: inset -2.5rem 2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
 }
 
-div.container > div.panel.home input[type="radio"].shape_3:checked ~ div.shape {
+div.container > div.element.home input[type="radio"].shape_3:checked ~ div.shape {
   background: linear-gradient(90deg, #d01c1f 0%, #f7882f 60%, #f7c331 100%);
   box-shadow: inset 2.5rem 0 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
 }
 
-div.container > div.panel.home input[type="radio"].shape_4:checked ~ div.shape {
+div.container > div.element.home input[type="radio"].shape_4:checked ~ div.shape {
   background: linear-gradient(-90deg, #d01c1f 0%, #f7882f 60%, #f7c331 100%);
   box-shadow: inset -2.5rem 0 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
 }
 
-div.container > div.panel.home input[type="radio"].shape_5:checked ~ div.shape {
+div.container > div.element.home input[type="radio"].shape_5:checked ~ div.shape {
   background: radial-gradient(circle farthest-corner at left bottom, #d01c1f 0%, #f7882f 60%, #f7c331 100%);
   box-shadow: inset 2.5rem -2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
 }
 
-div.container > div.panel.home input[type="radio"].shape_6:checked ~ div.shape {
+div.container > div.element.home input[type="radio"].shape_6:checked ~ div.shape {
   background: radial-gradient(circle farthest-corner at right bottom, #d01c1f 0%, #f7882f 60%, #f7c331 100%);
   box-shadow: inset -2.5rem -2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
 }
@@ -386,7 +386,7 @@ div.container > div.panel.home input[type="radio"].shape_6:checked ~ div.shape {
 /*
 /******************************************************************************/
 
-div.container > div.panel article {
+div.container > div.element article {
   position: relative;
   float: left;
   display: block;
@@ -399,12 +399,12 @@ div.container > div.panel article {
 
 /******************************************************************************/
 
-div.container > div.panel article h1,
-div.container > div.panel article h2,
-div.container > div.panel article h3,
-div.container > div.panel article h4,
-div.container > div.panel article h5,
-div.container > div.panel article h6 {
+div.container > div.element article h1,
+div.container > div.element article h2,
+div.container > div.element article h3,
+div.container > div.element article h4,
+div.container > div.element article h5,
+div.container > div.element article h6 {
   font-family: "SinaNovaReg", Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
   font-style: normal;
@@ -414,64 +414,64 @@ div.container > div.panel article h6 {
   color: #333333;
 }
 
-div.container > div.panel article h1 a,
-div.container > div.panel article h1 a:link,
-div.container > div.panel article h1 a:visited,
-div.container > div.panel article h1 a:hover,
-div.container > div.panel article h1 a:active,
-div.container > div.panel article h2 a,
-div.container > div.panel article h2 a:link,
-div.container > div.panel article h2 a:visited,
-div.container > div.panel article h2 a:hover,
-div.container > div.panel article h2 a:active,
-div.container > div.panel article h3 a,
-div.container > div.panel article h3 a:link,
-div.container > div.panel article h3 a:visited,
-div.container > div.panel article h3 a:hover,
-div.container > div.panel article h3 a:active,
-div.container > div.panel article h4 a,
-div.container > div.panel article h4 a:link,
-div.container > div.panel article h4 a:visited,
-div.container > div.panel article h4 a:hover,
-div.container > div.panel article h4 a:active {
+div.container > div.element article h1 a,
+div.container > div.element article h1 a:link,
+div.container > div.element article h1 a:visited,
+div.container > div.element article h1 a:hover,
+div.container > div.element article h1 a:active,
+div.container > div.element article h2 a,
+div.container > div.element article h2 a:link,
+div.container > div.element article h2 a:visited,
+div.container > div.element article h2 a:hover,
+div.container > div.element article h2 a:active,
+div.container > div.element article h3 a,
+div.container > div.element article h3 a:link,
+div.container > div.element article h3 a:visited,
+div.container > div.element article h3 a:hover,
+div.container > div.element article h3 a:active,
+div.container > div.element article h4 a,
+div.container > div.element article h4 a:link,
+div.container > div.element article h4 a:visited,
+div.container > div.element article h4 a:hover,
+div.container > div.element article h4 a:active {
   color: #333333;
 }
 
-div.container > div.panel article h1 {
+div.container > div.element article h1 {
   font-size: 2.625rem;
   line-height: 1em;
   margin: 0.25em 0 0.25em 0;
 }
 
-div.container > div.panel article h1:first-child {
+div.container > div.element article h1:first-child {
   margin: 0 0 0.25em 0;
 }
 
-div.container > div.panel article h2 {
+div.container > div.element article h2 {
   font-size: 1.75rem;
   line-height: 1em;
   margin: 0.25em 0 0.25em 0;
 }
 
-div.container > div.panel article h3 {
+div.container > div.element article h3 {
   font-size: 1.625rem;
   line-height: 1em;
   margin: 0.25em 0 0.25em 0;
 }
 
-div.container > div.panel article h4 {
+div.container > div.element article h4 {
   font-size: 1.5rem;
   line-height: 1em;
   margin: 0.25em 0 0.25em 0;
 }
 
-div.container > div.panel article h5 {
+div.container > div.element article h5 {
   font-size: 1.25rem;
   line-height: 1em;
   margin: 0.25em 0 0.25em 0;
 }
 
-div.container > div.panel article h6 {
+div.container > div.element article h6 {
   font-size: 1.125rem;
   line-height: 1em;
   margin: 0.25em 0 0.25em 0;
@@ -479,7 +479,7 @@ div.container > div.panel article h6 {
 
 /******************************************************************************/
 
-div.container > div.panel article p {
+div.container > div.element article p {
   font-family: "SinaNovaReg", Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
   font-style: normal;
@@ -490,15 +490,15 @@ div.container > div.panel article p {
   clear: both;
 }
 
-div.container > div.panel article p:last-child {
+div.container > div.element article p:last-child {
   margin: 0;
 }
 
-div.container > div.panel article p a,
-div.container > div.panel article p a:link,
-div.container > div.panel article p a:visited,
-div.container > div.panel article p a:hover,
-div.container > div.panel article p a:active {
+div.container > div.element article p a,
+div.container > div.element article p a:link,
+div.container > div.element article p a:visited,
+div.container > div.element article p a:hover,
+div.container > div.element article p a:active {
   color: #333333;
   background-image: linear-gradient(#333333 50%, #333333 50%);
   background-repeat: repeat-x;
@@ -508,20 +508,20 @@ div.container > div.panel article p a:active {
 
 /******************************************************************************/
 
-div.container > div.panel article ul,
-div.container > div.panel article ol {
+div.container > div.element article ul,
+div.container > div.element article ol {
   margin: 0;
   margin: 0;
   clear: both;
 }
 
-div.container > div.panel article ul:last-child,
-div.container > div.panel article ol:last-child {
+div.container > div.element article ul:last-child,
+div.container > div.element article ol:last-child {
   padding: 0;
 }
 
-div.container > div.panel article ul li,
-div.container > div.panel article ol li {
+div.container > div.element article ul li,
+div.container > div.element article ol li {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
   font-style: normal;
@@ -532,30 +532,30 @@ div.container > div.panel article ol li {
   clear: both;
 }
 
-div.container > div.panel article ul li,
-div.container > div.panel article ol li {
+div.container > div.element article ul li,
+div.container > div.element article ol li {
   list-style-position: outside;
   display: list-item;
 }
 
-div.container > div.panel article ul li {
+div.container > div.element article ul li {
   list-style-type: disc;
 }
 
-div.container > div.panel article ol li {
+div.container > div.element article ol li {
   list-style-type: decimal;
 }
 
-div.container > div.panel article ul li a,
-div.container > div.panel article ul li a:link,
-div.container > div.panel article ul li a:visited,
-div.container > div.panel article ul li a:hover,
-div.container > div.panel article ul li a:active,
-div.container > div.panel article ol li a,
-div.container > div.panel article ol li a:link,
-div.container > div.panel article ol li a:visited,
-div.container > div.panel article ol li a:hover,
-div.container > div.panel article ol li a:active {
+div.container > div.element article ul li a,
+div.container > div.element article ul li a:link,
+div.container > div.element article ul li a:visited,
+div.container > div.element article ul li a:hover,
+div.container > div.element article ul li a:active,
+div.container > div.element article ol li a,
+div.container > div.element article ol li a:link,
+div.container > div.element article ol li a:visited,
+div.container > div.element article ol li a:hover,
+div.container > div.element article ol li a:active {
   background-image: linear-gradient(#ffffff 50%, #777777 50%);
   background-repeat: repeat-x;
   background-position: 0 90%;
@@ -564,11 +564,11 @@ div.container > div.panel article ol li a:active {
 
 /******************************************************************************/
 
-div.container > div.panel article section {
+div.container > div.element article section {
   padding: 0 0 0.5rem 0;
 }
 
-div.container > div.panel article section:last-child {
+div.container > div.element article section:last-child {
   padding: 0;
 }
 
@@ -583,45 +583,45 @@ div.container > div.panel article section:last-child {
 /*
 /******************************************************************************/
 
-div.container > div.panel:nth-child(1) {
+div.container > div.element:nth-child(1) {
   transform: translateX(0rem);
 }
 
-div.container > div.panel:nth-child(2) {
+div.container > div.element:nth-child(2) {
   transform: translateX(180rem);
 }
 
-div.container > div.panel:nth-child(3) {
+div.container > div.element:nth-child(3) {
   transform: translateX(360rem);
 }
 
-div.container > div.panel:nth-child(4) {
+div.container > div.element:nth-child(4) {
   transform: translateX(540rem);
 }
 
-div.container > div.panel:nth-child(5) {
+div.container > div.element:nth-child(5) {
   transform: translateX(720rem);
 }
 
 /******************************************************************************/
 
-main input[type="radio"].panel_1:checked ~ div.container {
+div.wrapper input[type="radio"].element_1:checked ~ div.container {
   transform: translateX(0rem);
 }
 
-main input[type="radio"].panel_2:checked ~ div.container {
+div.wrapper input[type="radio"].element_2:checked ~ div.container {
   transform: translateX(-180rem);
 }
 
-main input[type="radio"].panel_3:checked ~ div.container {
+div.wrapper input[type="radio"].element_3:checked ~ div.container {
   transform: translateX(-360rem);
 }
 
-main input[type="radio"].panel_4:checked ~ div.container {
+div.wrapper input[type="radio"].element_4:checked ~ div.container {
   transform: translateX(-540rem);
 }
 
-main input[type="radio"].panel_5:checked ~ div.container {
+div.wrapper input[type="radio"].element_5:checked ~ div.container {
   transform: translateX(-720rem);
 }
 

@@ -48,6 +48,8 @@
   <link rel="icon" sizes="32x32" href="favicons/favicon-32x32.png" />
   <link rel="icon" sizes="96x96" href="favicons/favicon-96x96.png" />
   <script type="text/javascript" src="script/jquery/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="script/hammer.min.js"></script>
+  <script type="text/javascript" src="script/hammer-time.min.js"></script>
   <script type="text/javascript" src="script/javascript.js"></script>
   <base href="" />
 </head>
@@ -56,11 +58,11 @@
 
   <nav>
     <ul>
-      <li><label for="panel_1"><em class="fa fa-home">&nbsp;</em></label></li>
-      <li><label for="panel_2">About</label></li>
-      <li><label for="panel_3">Résumé</label></li>
-      <li><label for="panel_4">Projects</label></li>
-      <li><label for="panel_5">Contact</label></li>
+      <li><label for="element_1"><em class="fa fa-home">&nbsp;</em></label></li>
+      <li><label for="element_2">About</label></li>
+      <li><label for="element_3">Résumé</label></li>
+      <li><label for="element_4">Projects</label></li>
+      <li><label for="element_5">Contact</label></li>
     </ul>
   </nav>
 
@@ -68,17 +70,17 @@
     <h1><a href="">Preworn</a></h1>
   </header>
 
-  <main>
+  <div class="wrapper">
 
-    <input id="panel_1" class="panel_1" type="radio" name="panel_selector" />
-    <input id="panel_2" class="panel_2" type="radio" name="panel_selector" />
-    <input id="panel_3" class="panel_3" type="radio" name="panel_selector" />
-    <input id="panel_4" class="panel_4" type="radio" name="panel_selector" />
-    <input id="panel_5" class="panel_5" type="radio" name="panel_selector" />
+    <input id="element_1" class="element_1" type="radio" name="element_selector" />
+    <input id="element_2" class="element_2" type="radio" name="element_selector" />
+    <input id="element_3" class="element_3" type="radio" name="element_selector" />
+    <input id="element_4" class="element_4" type="radio" name="element_selector" />
+    <input id="element_5" class="element_5" type="radio" name="element_selector" />
 
     <div class="container">
 
-      <div class="panel home">
+      <div class="element home">
 
         <input id="shape_1" class="shape_1" type="radio" name="shape_selector" />
         <input id="shape_2" class="shape_2" type="radio" name="shape_selector" />
@@ -99,7 +101,7 @@
         </div>
       </div>
 
-      <div class="panel">
+      <div class="element">
         <article>
 
           <h1>About</h1>
@@ -128,7 +130,7 @@
         </article>
       </div>
 
-      <div class="panel">
+      <div class="element">
         <article>
 
           <h1>Résumé</h1>
@@ -185,7 +187,7 @@
         </article>
       </div>
 
-      <div class="panel">
+      <div class="element">
         <article>
 
           <h1>Projects</h1>
@@ -216,7 +218,7 @@
         </article>
       </div>
 
-      <div class="panel">
+      <div class="element">
         <article>
 
           <h1>Contact</h1>
@@ -245,7 +247,7 @@
 
     </div>
 
-  </main>
+  </div>
 
 </body>
 
