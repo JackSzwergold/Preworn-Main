@@ -1,5 +1,16 @@
 $(document).ready(function() {
 
+  // Logic to get content to scroll to the top after an item is selected.
+  $("input").change(function(){
+    $(this).delay(300).queue(function() {
+      $("div.container")[0].scrollIntoView({
+        behavior: "instant",
+        block: "start",
+        inline: "start"
+      });
+    });
+  });
+
   // This de-selects a checked element after a predetermined period of time.
   function deselectElement(element_selector, delay) {
     var delay = ((typeof delay !== 'undefined') ? delay : 1800);
