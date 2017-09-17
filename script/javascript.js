@@ -120,7 +120,7 @@ $(document).ready(function() {
     control_element.prop('checked', true);
 
     // Log stuff for debugging.
-    console.log(event.type + ' | index_value: ' + index_value + ' | limit: ' + limit);
+    // console.log(event.type + ' | index_value: ' + index_value + ' | limit: ' + limit);
 
   });
 
