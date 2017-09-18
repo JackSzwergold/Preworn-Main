@@ -1,15 +1,18 @@
 $(document).ready(function() {
 
   // Logic to get content to scroll to the top after an item is selected.
-  $("input").change(function(){
-    $(this).delay(300).queue(function() {
-      $("div.container")[0].scrollIntoView({
-        behavior: "instant",
-        block: "start",
-        inline: "start"
+  function backToTheTop(delay) {
+    var delay = ((typeof delay !== 'undefined') ? delay : 300);
+    $("input").change(function(){
+      $(this).delay(300).queue(function() {
+        $("div.container")[0].scrollIntoView({
+          behavior: "instant",
+          block: "start",
+          inline: "start"
+        });
       });
     });
-  });
+  }
 
   // This de-selects a checked element after a predetermined period of time.
   function deselectElement(element_selector, delay) {
@@ -94,38 +97,57 @@ $(document).ready(function() {
   }
 
   //////////////////////////////////////////////////////////////////////////////
-  // Hammer specific stuff.
+  // Touch action specific stuff.
 
+  //////////////////////////////////////////////////////////////////////////////
+  // Initialize the HammerJS instance.
+  delete Hammer.defaults.cssProps.userSelect;
   var hammer_instance = new Hammer($('div.wrapper div.container')[0]);
+  hammer_instance.get('swipe').set({ threshold: 10, velocity: 0.7 });
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Now do something with the HammerJS instance.
   hammer_instance.on('swipeleft swiperight', function(event) {
 
-    // Set some variables.
+    ////////////////////////////////////////////////////////////////////////////
+    // Deselect all text selection if we are doing this stuff.
+    document.getSelection().removeAllRanges();
+
+    ////////////////////////////////////////////////////////////////////////////
+    // Get the index of the event.
     event_index = $(event.target).closest('div.element').index();
+
+    ////////////////////////////////////////////////////////////////////////////
+    // Set the initial index value.
     if (event_index >= 0) {
       index_value = event_index + 1;
     }
     if (typeof index_value == 'undefined') {
       index_value = 0;
     }
-    // element_index = ((typeof element_index !== 'undefined') ? element_index : 1);
+
+    ////////////////////////////////////////////////////////////////////////////
+    // Set the limit.
     var limit = $('div.wrapper div.container > div.element').length;
 
-    // Stuff to do depending on interaction type.
+    ////////////////////////////////////////////////////////////////////////////
+    // Set the new index value based on the event type.
     if (event.type == 'swipeleft') {
       index_value = directionalIndexValue(true, index_value, limit, false);
     }
     if (event.type == 'swiperight') {
       index_value = directionalIndexValue(false, index_value, limit, false);
     }
+
     // if (event.type == 'press') {
-    //   var element_index = $(event.target).closest('div.element').index();
-    //   index_value = Math.abs(element_index + 1);
+    //   index_value = Math.abs($(event.target).closest('div.element').index() + 2);
     // }
     // if (event.type == 'tap') {
     //   var clicked_side = clickedSide(event, $(event.target).closest('div.element'));
     //   index_value = directionalIndexValue(clicked_side, index_value, limit, true);
     // }
 
+    ////////////////////////////////////////////////////////////////////////////
     // Determine the control elemement and toggle the 'checked' value of the control element.
     var control_element = $('div.wrapper input[type=radio][id="element_' + index_value + '"]');
     control_element.prop('checked', true);
@@ -135,7 +157,8 @@ $(document).ready(function() {
 
   });
 
-  // Different ways to call the functions.
+  // Different functions to call.
+  backToTheTop();
   // deselectElement('div.wrapper [id*="element_"]', 600);
   // iterateElements('div.wrapper input[type=checkbox][id*="element_"]', 600);
   // iterateElements('div.wrapper input[type=radio][id*="element_"]', 600);
