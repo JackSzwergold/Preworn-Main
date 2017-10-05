@@ -115,7 +115,8 @@ namespace :deploy do
     on roles(:app) do
 
       # Remove files and directories that aren’t needed on a deployed install.
-      execute "cd #{current_path} && mv -f robots.txt robots.temp 2>/dev/null && rm -rf {config,Capfile,*.txt,*.md,.gitignore} && mv -f robots.temp robots.txt 2>/dev/null"
+      # execute "cd #{current_path} && if [ -f robots.txt ]; then mv -f robots.txt robots.temp; fi && rm -rf {config,Capfile,*.html,*.txt,*.md,*.sql,.gitignore} && if [ -f 'robots.temp' ]; then mv -f robots.temp robots.txt; fi"
+      execute "cd #{current_path} && if [ -f robots.txt ]; then mv -f robots.txt robots.temp; fi && rm -rf {config,Capfile,*.txt,*.md,.gitignore} && if [ -f 'robots.temp' ]; then mv -f robots.temp robots.txt; fi"
 
     end
   end
