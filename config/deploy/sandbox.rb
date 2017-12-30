@@ -16,7 +16,7 @@ deploy_hosts.each { |deploy_host|
 set :deployment_type, "production"
 
 # The live directory path which the current version will be linked to.
-set :live_path, "html/sandbox.local"
+set :live_path, "html/sandbox-lamp-1404.local"
 
 # Set the 'deploy_to' directory for this task.
 set :deploy_to, "/var/www/builds/#{fetch(:application)}/#{fetch(:deployment_type)}"
