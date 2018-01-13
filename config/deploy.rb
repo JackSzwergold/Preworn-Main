@@ -89,7 +89,7 @@ namespace :deploy do
       # execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/instagram/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/instagram"
 
       # info "Link the holiday_card_2016 stuff to 'holiday_card_2016'."
-      execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/holiday_card_2016/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/holiday_card_2016"
+      # execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/holiday_card_2016/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/holiday_card_2016"
 
       # info "Link the cheat sheet stuff to 'tutorials_and_cheat_sheets'."
       # execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/tutorials_and_cheat_sheets/#{fetch(:deployment_type)}/current #{fetch(:markdown_path)}/tutorials_and_cheat_sheets"
