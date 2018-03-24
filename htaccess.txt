@@ -4,6 +4,44 @@ AddDefaultCharset UTF-8
 # Set the options.
 Options +FollowSymlinks
 
+# 2018-03-23: Enable GZIP
+<ifmodule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</ifmodule>
+
+# 2018-03-23: Setting cache control headers.
+# VERY IMPORTANT: Do not use 'mod_expires' for any reason on a CDN origin.
+# MORE IMPORTANT: Always use 'Cache-control' headers with 's-maxage' for a CDN origin.
+<IfModule mod_headers.c>
+
+  # The default cache control setting is 3 minutes (3 * 60 = 180 seconds).
+  Header set Cache-control "s-maxage=7, max-age=180, public, must-revalidate, proxy-revalidate"
+
+  # 1 year (2592000 seconds in a month * 12 = 31104000 seconds in a year).
+  <FilesMatch "\.(pdf|flv|swf|mp4|mp3|f4v|mov)$">
+    Header set Cache-Control "s-maxage=7, max-age=31104000, public, must-revalidate, proxy-revalidate"
+  </FilesMatch>
+
+  # 1 month (86400 seconds in a day * 30 = 2592000 seconds in a month).
+  <FilesMatch "\.(xml|txt|css|js)$">
+    Header set Cache-Control "s-maxage=7, max-age=2592000, public, must-revalidate, proxy-revalidate"
+  </FilesMatch>
+
+  # 1 week (86400 seconds in a day * 7 = 604800 seconds in a year).
+  <FilesMatch "\.(ico|jpg|jpeg|png|gif)$">
+    Header set Cache-Control "s-maxage=7, max-age=604800, public, must-revalidate, proxy-revalidate"
+  </FilesMatch>
+
+  # 5 minutes (5 * 60 seconds = 600 seconds).
+  <FilesMatch "\.(html|htm|php)$">
+    Header set Cache-Control "s-maxage=7, max-age=600, public, must-revalidate, proxy-revalidate"
+  </FilesMatch>
+
+</IfModule>
+
 # Enable the rewrite engine.
 RewriteEngine on
 
