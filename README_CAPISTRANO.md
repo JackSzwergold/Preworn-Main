@@ -4,7 +4,7 @@ The purpose of this document is to explain the basics of getting Capistrano inst
 
 Capistrano is a Ruby GEM that is used to deploy code from a code repository—such as GitHub, GitLab, BitBuckete, etc…—to a destination server. Run this command to install Capistrano on Mac OS X:
 
-    sudo gem install capistrano:3.8.2
+    sudo gem install capistrano:3.11.0
 
 With that done, you should be all set to deploy code. But if you are deploying and get a message like this:
 
@@ -16,7 +16,7 @@ Then install Highline to make sure SSH passwords are not echoed in the clear whe
 
 And some default installs of Nokogiri—a Ruby XML and HTML library—on Mac OS X are out of date which will much things up. So you might have to force install an update of Nokogiri like this:
 
-    sudo gem install nokogiri:1.6.8.1
+    sudo gem pristine nokogiri --version 1.8.4
 
 With that done, deployment would be handled as follows; in this case `staging` is being deployed:
 
