@@ -603,6 +603,10 @@ div.container > div.element:nth-child(5) {
   transform: translateX(720rem);
 }
 
+div.container > div.element:nth-child(6) {
+  transform: translateX(900rem);
+}
+
 /******************************************************************************/
 
 div.wrapper input[type="radio"].element_1:checked ~ div.container {
@@ -623,6 +627,10 @@ div.wrapper input[type="radio"].element_4:checked ~ div.container {
 
 div.wrapper input[type="radio"].element_5:checked ~ div.container {
   transform: translateX(-720rem);
+}
+
+div.wrapper input[type="radio"].element_6:checked ~ div.container {
+  transform: translateX(-900rem);
 }
 
 /******************************************************************************/
