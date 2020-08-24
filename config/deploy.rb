@@ -79,23 +79,8 @@ namespace :deploy do
       # info "Link the preworn ascii art stuff to 'ascii'."
       execute "cd #{current_path} && ln -sf #{fetch(:web_builds)}/ascii/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/ascii"
 
-      # info "Link the preworn slider stuff to 'slider'."
-      # execute "cd #{current_path} && ln -sf #{fetch(:web_builds)}/slider/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/slider"
-
       # info "Link the colorspace conversions stuff to 'colorspace'."
       execute "cd #{current_path} && ln -sf #{fetch(:web_builds)}/colorspace_conversions/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/colorspace"
-
-      # info "Link the instagram stuff to 'instagram'."
-      # execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/instagram/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/instagram"
-
-      # info "Link the holiday_card_2016 stuff to 'holiday_card_2016'."
-      # execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/holiday_card_2016/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/holiday_card_2016"
-
-      # info "Link the cheat sheet stuff to 'tutorials_and_cheat_sheets'."
-      # execute "cd #{current_path} && ln -s #{fetch(:web_builds)}/tutorials_and_cheat_sheets/#{fetch(:deployment_type)}/current #{fetch(:markdown_path)}/tutorials_and_cheat_sheets"
-
-      # info "If there is no directory & no symbolic link to '#{fetch(:short_name)}' then create a directory named '#{fetch(:short_name)}'."
-      # execute "cd /var/www/{fetch(:live_path)} && if [ ! -d #{fetch(:short_name)} ]; then if [ ! -h #{fetch(:short_name)} ]; then mkdir -p ./#{fetch(:short_name)}; fi; fi"
 
       # info "If there is no symbolic link called #{fetch(:short_name)}' and '#{fetch(:short_name)}' is a directory, delete that directory."
       execute "cd /var/www/#{fetch(:live_path)} && if [ ! -h #{fetch(:short_name)} ]; then if [ -d #{fetch(:short_name)} ]; then rm -rf ./#{fetch(:short_name)}; fi; fi"
