@@ -73,9 +73,6 @@ namespace :deploy do
       # info "Link the image mosaic stuff to 'mosaic'."
       execute "cd #{current_path} && ln -sf #{fetch(:web_builds)}/mosaic/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/mosaic"
 
-      # info "Link the mosaic javascript stuff to 'mosaic_js'."
-      execute "cd #{current_path} && ln -sf #{fetch(:web_builds)}/mosaic_js_dist/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/mosaic_js"
-
       # info "Link the preworn ascii art stuff to 'ascii'."
       execute "cd #{current_path} && ln -sf #{fetch(:web_builds)}/ascii/#{fetch(:deployment_type)}/current #{fetch(:projects_path)}/ascii"
 
