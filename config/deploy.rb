@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '3.13.0'
+lock '3.17.0'
 
 set :application, 'preworn_www'
 set :short_name, 'site'
