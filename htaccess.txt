@@ -1,9 +1,18 @@
 # Set the default character set.
 AddDefaultCharset UTF-8
 
-# 2022-10-18: Setting the X-Frame-Options "SAMEORIGIN" header to prevent iframe embeds.
+# 2022-10-18: Setting various headers.
 <IfModule mod_headers.c>
+
+  # 2022-10-18: Setting the X-Frame-Options "SAMEORIGIN" header to prevent iframe embeds.
   Header always set X-Frame-Options "SAMEORIGIN"
+
+  # 2022-11-07: Setting the Content-Security-Policy header.
+  Header always set Content-Security-Policy "frame-ancestors 'self';"
+
+  # 2022-11-08: Setting the X-Content-Type-Options header.
+  Header always set X-Content-Type-Options "nosniff"
+
 </IfModule>
 
 # Set the options.
