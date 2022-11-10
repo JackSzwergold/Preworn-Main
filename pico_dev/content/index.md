@@ -47,7 +47,7 @@ problem for me.
 
 ### The New School
 #### Web Developer
-##### (September 2016 – Present)<
+##### (September 2016 – Present)
 Web developer for the New York City based university. Develop, debug, assess and
 maintain all current Linux-based systems as well as actively participate in the
 development and structuring of new systems. Consult with other departments
@@ -84,7 +84,7 @@ Publications and Records Commission (NHPRC).
 
 ### e-flux
 #### Linux/Unix Systems Administrator
-##### (January 2011 – February 2012)<
+##### (January 2011 – February 2012)
 Contract Linux systems administrator for the web-based, global online arts
 newsletter/publication. Managed all servers in e-flux’s Linux-based cluster to
 ensure 24/7 operation and availability. Monitored and debugged e-flux’s
