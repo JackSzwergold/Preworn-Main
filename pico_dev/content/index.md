@@ -92,12 +92,12 @@ stability and availability.
 #### Web Developer
 ##### (February 2007 – November 2011)
 Lead web developer tech for the New York City based art publication. Developed,
-produced and maintained all front-end and back-end aspects of <a
-href="https://www.artforum.com/"><em>Artforum’s main website</em></a> and sister
-sites: <a href="https://www.bookforum.com/"><em>Bookforum</em></a> and <a
-href="https://artforum.com.cn/"><em>Artforum China</em></a>. Worked closely with
-existing tech team to conceive, develop, modernize, and re-platform pre-existing
-PHP and MySQL based CMS to a more object oriented and flexible system.
+produced and maintained all front-end and back-end aspects of [*Artforum’s main
+website*](https://www.artforum.com/) and sister sites:
+[*Bookforum*](https://www.bookforum.com/) and [*Artforum
+China*](https://artforum.com.cn/). Worked closely with existing tech team to
+conceive, develop, modernize, and re-platform pre-existing PHP and MySQL based
+CMS to a more object oriented and flexible system.
 
 ### Metropolis Magazine
 #### Web Developer
