@@ -91,30 +91,31 @@ ensure 24/7 operation and availability. Monitored and debugged e-flux’s
 high-volume mail server (450,000 to 200,000 mails per day) to ensure overall
 stability and availability.
 
-<section>
-  <h3>Artforum International</h3>
-  <h4>Web Developer</h4>
-  <h5>(February 2007 – November 2011)</h5>
-  <p>Lead web developer tech for the New York City based art publication. Developed, produced and maintained all front-end and back-end aspects of <a href="https://www.artforum.com/"><em>Artforum’s main website</em></a> and sister sites:
-    <a href="https://www.bookforum.com/"><em>Bookforum</em></a> and <a href="https://artforum.com.cn/"><em>Artforum China</em></a>. Worked
-    closely with existing tech team to conceive, develop, modernize, and re-platform pre-existing PHP and MySQL based CMS to a more object oriented and flexible system.</p>
-</section>
+### Artforum International
+#### Web Developer
+##### (February 2007 – November 2011)
+Lead web developer tech for the New York City based art publication. Developed,
+produced and maintained all front-end and back-end aspects of <a
+href="https://www.artforum.com/"><em>Artforum’s main website</em></a> and sister
+sites: <a href="https://www.bookforum.com/"><em>Bookforum</em></a> and <a
+href="https://artforum.com.cn/"><em>Artforum China</em></a>. Worked closely with
+existing tech team to conceive, develop, modernize, and re-platform pre-existing
+PHP and MySQL based CMS to a more object oriented and flexible system.
 
-<section>
-  <h3>Metropolis Magazine</h3>
-  <h4>Web Developer</h4>
-  <h5>(April 2001 – April 2007)</h5>
-  <p>Web developer for the New York City based architecture and design publication. Developed, produced, managed and maintained all front-end and back-end aspects of the <em>Metropolis Magazine</em> website.</p>
-</section>
+### Metropolis Magazine
+#### Web Developer
+##### (April 2001 – April 2007)
+Web developer for the New York City based architecture and design publication.
+Developed, produced, managed and maintained all front-end and back-end aspects
+of the <em>Metropolis Magazine</em> website.
 
-<section>
-  <h3>The Onion</h3>
-  <h4>Pioneering Web Developer</h4>
-  <h5>(September 1995 – January 2001)</h5>
-  <p>Pioneering web systems developer, administrator, content editor, ad manager, etc… for the multi award winning humor publication. Helped guide and shape the publication’s online voice during their seminal transition from small
-    circulation campus
-    weekly to an internationally renowned web presence.</p>
-</section>
+### The Onion
+#### Pioneering Web Developer
+##### (September 1995 – January 2001)
+Pioneering web systems developer, administrator, content editor, ad manager,
+etc… for the multi award winning humor publication. Helped guide and shape the
+publication’s online voice during their seminal transition from small
+circulation campus weekly to an internationally renowned web presence.
 
 ***
 
