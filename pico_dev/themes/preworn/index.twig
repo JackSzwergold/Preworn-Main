@@ -30,9 +30,14 @@
     <!-- <span class="text-sinanova-light{% if current_page.id == 'resume' %} active{% endif %}">
       <a href="{{ base_url }}" class="p-0 m-0 text-light font-weight-light text-decoration-none"><em class="fa fa-home mr-2"></em> Home</a>
     </span> -->
-    <span class="badge badge-pill badge-primary"><a href="{{ base_url }}" class="p-0 m-0 text-light font-weight-light text-decoration-none"><em class="fa fa-home"></em></a></span>
+    <!-- <span class="badge badge-pill badge-primary"><a href="{{ base_url }}" class="p-0 m-0 text-light font-weight-light text-decoration-none"><em class="fa fa-home"></em></a></span> -->
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav m-0 p-0">
+        <li class="nav-item m-0 p-0">
+          <span class="text-sinanova-light{% if current_page.id == 'index' %} active{% endif %}">
+            <a class="nav-link" href="{{ base_url }}"><em class="fa fa-home"></em></a>
+          </span>
+        </li>
         <li class="nav-item m-0 p-0">
           <span class="text-sinanova-light{% if current_page.id == 'about' %} active{% endif %}">
             <a class="nav-link" href="about">About</a>
@@ -61,7 +66,7 @@
       </ul>
       <span class="h2 p-0 m-0 ml-auto navbar-text text-sinanova-black text-white">
         <div class="bg-code m-0 p-0 px-5 py-1">
-          <a href="{{ config.parent_site_url }}" class="text-decoration-none">
+          <a href="{{ base_url }}" class="text-decoration-none">
             Preworn
           </a>
         </div>
