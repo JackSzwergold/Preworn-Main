@@ -1,16 +1,11 @@
 ---
-Title: Preworn
-Description: This site is Jack Szwergold’s personal portfolio and professional calling card.
+Title: Projects
+Description: Some projects and distractions.
 Author: Jack Szwergold
 Date: 2016-06-13
 Robots: noindex,nofollow
 Template: index
 ---
-
-# Projects
-## Projects and Distractions
-
-***
 
 ### [Mosaic](projects/mosaic)
 Dynamically generated image mosaics using record album artwork as the basis. Reload the page to view another random image.

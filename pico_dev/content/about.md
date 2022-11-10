@@ -1,6 +1,6 @@
 ---
 Title: About
-Description: All About Jack Szwergold
+Description: All about Jack Szwergold.
 Author: Jack Szwergold
 Date: 2016-06-13
 Robots: noindex,nofollow

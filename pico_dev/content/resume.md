@@ -1,16 +1,11 @@
 ---
-Title: Preworn
-Description: This site is Jack Szwergold’s personal portfolio and professional calling card.
+Title: Résumé
+Description: All of the places I have worked and the work I have done.
 Author: Jack Szwergold
 Date: 2016-06-13
 Robots: noindex,nofollow
 Template: index
 ---
-
-# Résumé
-## The Places I Have Worked and the Work I Have Done.
-
-***
 
 ### The New School
 #### Web Developer

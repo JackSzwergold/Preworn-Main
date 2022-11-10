@@ -1,16 +1,11 @@
 ---
-Title: Preworn
-Description: This site is Jack Szwergold’s personal portfolio and professional calling card.
+Title: Contact
+Description: All the different ways you can contact me.
 Author: Jack Szwergold
 Date: 2016-06-13
 Robots: noindex,nofollow
 Template: index
 ---
-
-# Contact
-## All the Ways You Can Reach Me
-
-***
 
 ### Actual Mail
 Jack Szwergold<br />

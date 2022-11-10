@@ -1,14 +1,11 @@
 ---
-Title: Preworn
-Description: This site is Jack Szwergold’s personal portfolio and professional calling card.
+Title: Bookmarks
+Description: A list of links I find useful.
 Author: Jack Szwergold
 Date: 2016-06-13
 Robots: noindex,nofollow
 Template: index
 ---
-
-# Bookmarks
-## Links I Find Useful
 
 Other than Emojipedia, this stuff is pretty boring and dry… Even to me! But this is stuff I find useful in my day job and general tech life.
 
