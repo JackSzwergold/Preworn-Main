@@ -10,6 +10,8 @@ a:visited,
 a:hover,
 a:active {
   text-decoration: none;
+  color: #000000;
+  transition: all 600ms ease;
 }
 
 /******************************************************************************/
@@ -121,6 +123,55 @@ main > article div.list_style_none ol {
   margin: 0;
   padding: 0 1rem 0 1rem;
   list-style: none;
+}
+
+/******************************************************************************/
+
+main article h1,
+main article h2,
+main article h3,
+main article h4,
+main article h5,
+main article h6 {
+  font-family: "SinaNovaReg", Georgia, "New York", "Times New Roman", Times, serif;
+  color: #333333;
+}
+
+main article h1 a,
+main article h1 a:link,
+main article h1 a:visited,
+main article h1 a:hover,
+main article h1 a:active,
+main article h2 a,
+main article h2 a:link,
+main article h2 a:visited,
+main article h2 a:hover,
+main article h2 a:active,
+main article h3 a,
+main article h3 a:link,
+main article h3 a:visited,
+main article h3 a:hover,
+main article h3 a:active,
+main article h4 a,
+main article h4 a:link,
+main article h4 a:visited,
+main article h4 a:hover,
+main article h4 a:active {
+  color: #333333;
+}
+
+/******************************************************************************/
+
+main article a,
+main article a:link,
+main article a:visited,
+main article a:hover,
+main article a:active {
+  color: #333333;
+  background-image: linear-gradient(#333333 50%, #333333 50%);
+  background-repeat: repeat-x;
+  background-position: 0 90%;
+  background-size: 1px 1px;
 }
 
 /******************************************************************************/
