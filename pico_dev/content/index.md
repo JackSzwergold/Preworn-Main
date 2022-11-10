@@ -137,16 +137,16 @@ graphics library, HTML and CSS. Reload the page to view another random image.
 Other than Emojipedia, this stuff is pretty boring and dry… Even to me! But this is stuff I find useful in my day job and general tech life.
 
 
- - <a href="https://asciiart.website/">Christopher Johnson’s ASCII Art Collection</a></strong>: A cool ASCII art collection.
- - <a href="https://emojipedia.org/">Emojipedia</a></strong>: Emoji reference site.
- - <a href="https://fsymbols.com/">Fsymbols</a></strong>: Font/text symbols generator and reference.
- - <a href="https://www.unicode.org/Public/emoji/">Unicode Emoji</a></strong>: Official Unicode emoji standards and mapping.
- - <a href="https://astronautweb.co/snippet/font-awesome/">Font Awesome Guide</a></strong>: Font Awesome reference.
- - <a href="https://www.the-qrcode-generator.com/">QR Code Generator</a></strong>: Good, simple and ad free QR code generator.
- - <a href="https://explainshell.com/">ExplainShell.com</a></strong>: Tool to help one decipher shell command code.
- - <a href="https://jsonlint.com/">JSONLint</a></strong>: JSON validator.
- - <a href="https://jsonapi.org/">JSON:API</a></strong>: Specification for building JSON data APIs.
- - <a href="https://xrg.es/">xrg.es</a></strong>: PHP regular expression tester.
+ - [Christopher Johnson’s ASCII Art Collection](https://asciiart.website/): A cool ASCII art collection.
+ - [Emojipedia](https://emojipedia.org/): Emoji reference site.
+ - [Fsymbols](https://fsymbols.com/): Font/text symbols generator and reference.
+ - [Unicode Emoji](https://www.unicode.org/Public/emoji/): Official Unicode emoji standards and mapping.
+ - [Font Awesome Guide](https://astronautweb.co/snippet/font-awesome/): Font Awesome reference.
+ - [QR Code Generator](https://www.the-qrcode-generator.com/): Good, simple and ad free QR code generator.
+ - [ExplainShell.com](https://explainshell.com/): Tool to help one decipher shell command code.
+ - [JSONLint](https://jsonlint.com/): JSON validator.
+ - [JSON:API](https://jsonapi.org/): Specification for building JSON data APIs.
+ - [xrg.es](https://xrg.es/): PHP regular expression tester.
  - <a href="https://apps.timwhitlock.info/unicode/inspect/">Unicode Character Inspector</a></strong>: It is what it is: Unicode character inspector.
  - <a href="https://browserleaks.com/canvas/">HTML5 Canvas Fingerprinting</a></strong>: Explanation of how canvas fingerprinting works.
  - <a href="http://useragentstring.com/">User Agent String</a></strong>: Simple website for showing your browser’s User-Agent string.
