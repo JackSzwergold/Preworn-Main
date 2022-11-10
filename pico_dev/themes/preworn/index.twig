@@ -79,8 +79,9 @@
 
               <header class="col col-12 p-0 m-0 pb-2 bg-code">
                 <h1 class="p-0 m-0 text-sinanova-black text-light">{% if meta.title %} {{ meta.title }} {% else %} {{ site_title }} {% endif %}</h1>
-                <p class="p-0 m-0 text-sinanova-light text-light">{% if meta.author %}<em class="fa fa-pencil mr-2"></em>{{ meta.author }}{% endif %}</p>
-                <p class="p-0 m-0 text-sinanova-light text-light">{% if meta.date %}<em class="fa fa-calendar mr-2"></em>{{ meta.date|date("F j, Y") }}{% endif %}</p>
+                <h2 class="p-0 m-0 text-sinanova-black text-light">{% if meta.description %} {{ meta.description }} {% else %} {{ site_description }} {% endif %}</h2>
+                <!-- <p class="p-0 m-0 text-sinanova-light text-light">{% if meta.author %}<em class="fa fa-pencil mr-2"></em>{{ meta.author }}{% endif %}</p>
+                <p class="p-0 m-0 text-sinanova-light text-light">{% if meta.date %}<em class="fa fa-calendar mr-2"></em>{{ meta.date|date("F j, Y") }}{% endif %}</p> -->
               </header>
 
               <main class="col col-12 p-0 m-0 p-3 bg-light">
@@ -93,7 +94,7 @@
 
               <footer class="col col-12 p-0 m-0 pt-2 bg-code">
                 <p class="p-0 m-0 text-sinanova-regular text-light">
-                  <small>{{ meta.title }} © by {{ meta.author }}; written on {{ meta.date|date("F j, Y") }}.
+                  <small>{{ meta.title }} © by {{ meta.author }}.
                     This work is licensed under a Creative Commons Attribution-NonCommercial 4.0
                     International License (CC-BY-NC-4.0).</small>
                 </p>

@@ -1,16 +1,11 @@
 ---
-Title: Preworn
-Description: This site is Jack Szwergold’s personal portfolio and professional calling card.
+Title: About
+Description: All About Jack Szwergold
 Author: Jack Szwergold
 Date: 2016-06-13
 Robots: noindex,nofollow
 Template: index
 ---
-
-# About
-## All About Jack Szwergold
-
-***
 
 Experienced systems architect, developer and overall computer/tech professional with skills that have been honed in the world of art, design, education, publishing and the humanities.
 
