@@ -45,41 +45,51 @@ problem for me.
 
 ***
 
-<section>
-  <h3>The New School</h3>
-  <h4>Web Developer</h4>
-  <h5>(September 2016 – Present)</h5>
-  <p>Web developer for the New York City based university. Develop, debug, assess and maintain all current Linux-based systems as well as actively participate in the development and structuring of new systems. Consult with other
-    departments across
-    the university to support, develop and stabilize their own, independently managed web-based systems. Lead developer for the 2018 rewrite of the univerity’s comprehensive multi-school/college <a href="https://courses.newschool.edu">Course
-      Catalog</a> as well as the
-    <a href="https://it.newschool.edu/">IT department’s Drupal-based web-based service catalog</a>. Also have developed ETL (extract, transform, load) systems and related middle-ware processes to cleanly — and reliably — process data
-    across disparate university systems and platforms.</p>
-</section>
+### The New School
+#### Web Developer
+##### (September 2016 – Present)<
+Web developer for the New York City based university. Develop, debug, assess and
+maintain all current Linux-based systems as well as actively participate in the
+development and structuring of new systems. Consult with other departments
+across the university to support, develop and stabilize their own, independently
+managed web-based systems. Lead developer for the 2018 rewrite of the
+univerity’s comprehensive multi-school/college <a
+href="https://courses.newschool.edu">Course Catalog</a> as well as the <a
+href="https://it.newschool.edu/">IT department’s Drupal-based web-based service
+catalog</a>. Also have developed ETL (extract, transform, load) systems and
+related middle-ware processes to cleanly — and reliably — process data across
+disparate university systems and platforms.
 
-<section>
-  <h3>Guggenheim Museum</h3>
-  <h4>Web Infrastructure Systems Administrator</h4>
-  <h5>(November 2011 – November 2014)</h5>
-  <p>Full-time Linux systems administrator for the New York City based, internationally renowned, art museum. Managed and monitored all Linux servers in the Guggenheims’ Linux-based clusters to ensure 24/7 operation and availability. Was
-    the hands-on
-    tech lead in the assessment, forensics and recovery of key pieces of web-based <a href="https://en.wikipedia.org/wiki/Internet_art">Internet art</a> in the museum’s permanent collection such as Shu Lea Cheang’s landmark digital art
-    project
-    <a href="http://www.digitalhumanities.org/dhq/vol/12/2/000379/000379.html"><em>Brandon</em></a> (1998-99) as well as John Simon’s
-    <a href="http://unfoldingobject.guggenheim.org/"><em>Unfolding Object</em></a> (2002) and Mark Napier’s <a href="https://netflag.guggenheim.org/"><em>net.flag</em></a> (2002). Was also a part of the project team for the Guggenheim’s
-    2013
-    <a href="https://www.guggenheim.org/library-archives/library-archives-projects/electronic-records-management-start-up-project">electronic records management start-up project</a> funded by the National Historical Publications and
-    Records Commission (NHPRC).</p>
-</section>
 
-<section>
-  <h3>e-flux</h3>
-  <h4>Linux/Unix Systems Administrator</h4>
-  <h5>(January 2011 – February 2012)</h5>
-  <p>Contract Linux systems administrator for the web-based, global online arts newsletter/publication. Managed all servers in e-flux’s Linux-based cluster to ensure 24/7 operation and availability. Monitored and debugged e-flux’s
-    high-volume mail
-    server (450,000 to 200,000 mails per day) to ensure overall stability and availability.</p>
-</section>
+### Guggenheim Museum
+#### Web Infrastructure Systems Administrator
+##### (November 2011 – November 2014)
+Full-time Linux systems administrator for the New York City based,
+internationally renowned, art museum. Managed and monitored all Linux servers in
+the Guggenheims’ Linux-based clusters to ensure 24/7 operation and availability.
+Was the hands-on tech lead in the assessment, forensics and recovery of key
+pieces of web-based <a
+href="https://en.wikipedia.org/wiki/Internet_art">Internet art</a> in the
+museum’s permanent collection such as Shu Lea Cheang’s landmark digital art
+project <a
+href="http://www.digitalhumanities.org/dhq/vol/12/2/000379/000379.html"><em>Brandon</em></a>
+(1998-99) as well as John Simon’s <a
+href="http://unfoldingobject.guggenheim.org/"><em>Unfolding Object</em></a>
+(2002) and Mark Napier’s <a
+href="https://netflag.guggenheim.org/"><em>net.flag</em></a> (2002). Was also a
+part of the project team for the Guggenheim’s 2013 <a
+href="https://www.guggenheim.org/library-archives/library-archives-projects/electronic-records-management-start-up-project">electronic
+records management start-up project</a> funded by the National Historical
+Publications and Records Commission (NHPRC).
+
+### e-flux
+#### Linux/Unix Systems Administrator
+##### (January 2011 – February 2012)<
+Contract Linux systems administrator for the web-based, global online arts
+newsletter/publication. Managed all servers in e-flux’s Linux-based cluster to
+ensure 24/7 operation and availability. Monitored and debugged e-flux’s
+high-volume mail server (450,000 to 200,000 mails per day) to ensure overall
+stability and availability.
 
 <section>
   <h3>Artforum International</h3>
