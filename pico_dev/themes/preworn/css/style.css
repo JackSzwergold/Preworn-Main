@@ -1,0 +1,161 @@
+
+body {
+  font-family: Arial, "Arial Unicode MS", Helvetica, Verdana, sans-serif;
+}
+
+/******************************************************************************/
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+/******************************************************************************/
+pre {
+  background: #212529;
+  color: #00ff00;
+  padding: 1rem;
+  font-size: 0.75rem;
+}
+
+/******************************************************************************/
+/* The background code stuff.
+/******************************************************************************/
+
+.bg-code {
+  background: #212529 !important;
+}
+
+.bg-preworn {
+  background: #efe0cd !important;
+}
+
+/******************************************************************************/
+/*
+/*  _____           _
+/* |  ___|__  _ __ | |_ ___
+/* | |_ / _ \| '_ \| __/ __|
+/* |  _| (_) | | | | |_\__ \
+/* |_|  \___/|_| |_|\__|___/
+/*
+/******************************************************************************/
+@font-face {
+  font-family: 'SinaNovaReg';
+  src: url('../fonts/SinaNova/SinaNovaReg-webfont.eot');
+  src: url('../fonts/SinaNova/SinaNovaReg-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SinaNova/SinaNovaReg-webfont.woff2') format('woff2'),
+    url('../fonts/SinaNova/SinaNovaReg-webfont.woff') format('woff'),
+    url('../fonts/SinaNova/SinaNovaReg-webfont.ttf') format('truetype'),
+    url('../fonts/SinaNova/SinaNovaReg-webfont.svg#sinanova-regularregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/******************************************************************************/
+/* Setting SinaNova tags.
+/******************************************************************************/
+.text-sinanova-light {
+  font-family: "SinaNovaReg", Georgia, "New York", "Times New Roman", Times, serif !important;
+  font-weight: 100 !important;
+}
+
+.text-sinanova-regular {
+  font-family: "SinaNovaReg", Georgia, "New York", "Times New Roman", Times, serif !important;
+  font-weight: 400 !important;
+}
+
+.text-sinanova-bold {
+  font-family: "SinaNovaReg", Georgia, "New York", "Times New Roman", Times, serif !important;
+  font-weight: 700 !important;
+}
+
+.text-sinanova-black {
+  font-family: "SinaNovaReg", Georgia, "New York", "Times New Roman", Times, serif !important;
+  font-weight: 900 !important;
+}
+
+/******************************************************************************/
+/* Setting Arial tags.
+/******************************************************************************/
+.text-arial-light {
+  font-family: Arial, "Arial Unicode MS", Helvetica, Verdana, sans-serif !important;
+  font-weight: 100 !important;
+}
+
+.text-arial-regular {
+  font-family: Arial, "Arial Unicode MS", Helvetica, Verdana, sans-serif !important;
+  font-weight: 400 !important;
+}
+
+.text-arial-bold {
+  font-family: Arial, "Arial Unicode MS", Helvetica, Verdana, sans-serif !important;
+  font-weight: 700 !important;
+}
+
+.text-arial-black {
+  font-family: Arial, "Arial Unicode MS", Helvetica, Verdana, sans-serif !important;
+  font-weight: 900 !important;
+}
+
+/******************************************************************************/
+/* Article column list breaks.
+/******************************************************************************/
+
+main > article div.column_list ul,
+main > article div.column_list ol {
+  margin: 0;
+  padding: 0 1rem 0 1rem;
+  clear: both;
+  column-count: 3;
+  column-gap: 1rem;
+}
+
+/******************************************************************************/
+/* Article list style none.
+/******************************************************************************/
+
+main > article div.list_style_none ul,
+main > article div.list_style_none ol {
+  margin: 0;
+  padding: 0 1rem 0 1rem;
+  list-style: none;
+}
+
+/******************************************************************************/
+/*
+/*  __  __          _ _          ___                  _
+/* |  \/  | ___  __| (_) __ _   / _ \ _   _  ___ _ __(_) ___  ___
+/* | |\/| |/ _ \/ _` | |/ _` | | | | | | | |/ _ \ '__| |/ _ \/ __|
+/* | |  | |  __/ (_| | | (_| | | |_| | |_| |  __/ |  | |  __/\__ \
+/* |_|  |_|\___|\__,_|_|\__,_|  \__\_\\__,_|\___|_|  |_|\___||___/
+/*
+/******************************************************************************/
+@media (min-width: 576px) {
+  main > article div.column_list ul,
+  main > article div.column_list ol {
+    column-count: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  main > article div.column_list ul,
+  main > article div.column_list ol {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 992px) {
+  main > article div.column_list ul,
+  main > article div.column_list ol {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1200px) {
+  main > article div.column_list ul,
+  main > article div.column_list ol {
+    column-count: 4;
+  }
+}

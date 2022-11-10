@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{% if meta.title and meta.title != site_title %} {{ meta.title }} | {% endif %}{{ site_title }} | Preworn</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  {% if meta.description %}
+  <meta name="description" content="{{ meta.description|striptags }}" />
+  {% endif %}
+  {% if meta.robots %}
+  <meta name="robots" content="{{ meta.robots }}" />
+  {% endif %}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="{{ theme_url }}/favicons/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" href="{{ theme_url }}/favicons/apple-touch-icon-precomposed.png" />
+  <link rel="apple-touch-icon" sizes="300x300" href="{{ theme_url }}/favicons/apple-touch-icon.png" />
+  <link rel="stylesheet" type="text/css" href="{{ theme_url }}/css/bootstrap/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="{{ theme_url }}/fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="{{ theme_url }}/css/style.css" />
+  <script src="{{ theme_url }}/script/bootstrap/bootstrap.bundle.min.js" defer="defer"></script>
+  <script src="{{ theme_url }}/script/jquery/jquery-3.5.1.min.js"></script>
+  <script src="{{ theme_url }}/script/underscore/underscore-min.js"></script>
+  <script src="{{ theme_url }}/script/javascript.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-dark bg-dark m-0 p-0 py-2 px-2 fixed-top navbar-expand navbar-light bg-light">
+    <span class="badge badge-pill badge-primary"><a href="{{ base_url }}" class="p-0 m-0 text-light font-weight-light text-decoration-none"><em class="fa fa-home mr-1"></em>Cheat Sheets Home</a></span>
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+    <div class="collapse navbar-collapse" id="navbarText">
+      <!-- <ul class="navbar-nav m-0 p-0">
+        <li class="nav-item active m-0 p-0">
+          <a class="nav-link" href="#">Active</a>
+        </li>
+        <li class="nav-item m-0 p-0">
+          <a class="nav-link" href="#">One</a>
+        </li>
+        <li class="nav-item m-0 p-0">
+          <a class="nav-link" href="#">Two</a>
+        </li>
+      </ul> -->
+      <span class="h2 p-0 m-0 ml-auto navbar-text text-sinanova-black text-white">
+        <div class="bg-code m-0 p-0 px-5 py-1">
+          <a href="{{ config.parent_site_url }}" class="text-decoration-none">
+            Preworn
+          </a>
+        </div>
+      </span>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col px-md-5 pt-5 bg-code">
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col py-3">
+
+              <header class="col col-12 p-0 m-0 pb-2 bg-code">
+                <h1 class="p-0 m-0 text-sinanova-black text-light">{% if meta.title %} {{ meta.title }} {% else %} {{ site_title }} {% endif %}</h1>
+                <p class="p-0 m-0 text-sinanova-light text-light">{% if meta.author %}<em class="fa fa-pencil mr-2"></em>{{ meta.author }}{% endif %}</p>
+                <p class="p-0 m-0 text-sinanova-light text-light">{% if meta.date %}<em class="fa fa-calendar mr-2"></em>{{ meta.date|date("F j, Y") }}{% endif %}</p>
+              </header>
+
+              <main class="col col-12 p-0 m-0 p-3 bg-light">
+                <article class="col col-12 p-0 m-0">
+                  <span class="text-sinanova-regular">
+                    {{ content }}
+                  </span>
+                </article>
+              </main>
+
+              <footer class="col col-12 p-0 m-0 pt-2 bg-code">
+                <p class="p-0 m-0 text-sinanova-regular text-light">
+                  <small>{{ meta.title }} (c) by {{ meta.author }}; written on {{ meta.date|date("F j, Y") }}.
+                    This work is licensed under a Creative Commons Attribution-NonCommercial 4.0
+                    International License (CC-BY-NC-4.0).</small>
+                </p>
+              </footer>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
