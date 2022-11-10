@@ -148,134 +148,30 @@ Other than Emojipedia, this stuff is pretty boring and dry… Even to me! But th
  - <a href="https://www.the-qrcode-generator.com/">QR Code Generator</a></strong>: Good, simple and ad free QR code generator.
  - <a href="https://explainshell.com/">ExplainShell.com</a></strong>: Tool to help one decipher shell command code.
  - <a href="https://jsonlint.com/">JSONLint</a></strong>: JSON validator.
-
-
-      <a href="https://jsonapi.org/">JSON:API</a></strong>: Specification for building JSON data APIs.
-
-
-      <a href="https://xrg.es/">xrg.es</a></strong>: PHP regular expression tester.
-
-
-      <a href="https://apps.timwhitlock.info/unicode/inspect/">Unicode Character Inspector</a></strong>: It is what it is: Unicode character inspector.
-
-
-      <a href="https://browserleaks.com/canvas/">HTML5 Canvas Fingerprinting</a></strong>: Explanation of how canvas fingerprinting works.
-
-
-      <a href="http://useragentstring.com/">User Agent String</a></strong>: Simple website for showing your browser’s User-Agent string.
-
-
-      <a href="https://whoisrequest.com/history/">Domain History Checker</a></strong>: Tool for getting domain history information.
-
-
-      <a href="https://intodns.com/">intoDNS</a></strong>: GetDNS — and IP related — reports and info for a hostname.
-
-
-      <a href="https://dnschecker.org/">DNS Propagation Checker</a></strong>: Tool to check DNS propagation.
-
-
-      <a href="https://mxtoolbox.com/">MX Toolbox</a></strong>: MX lookup tool and other related stuff.
-
-
-      <a href="https://www.maxmind.com/en/geoip-demo/">MaxMind’s GeoIP2 City Database Demo</a></strong>: GeoIUP lookup tool that can handle IPv6.
-
-
-      <a href="https://www.vultr.com/resources/ipv4-converter/">Vultr: IPv4 Converter</a></strong>: Very good IP address analysis and conversion tool.
-
-
-      <a href="https://wave.webaim.org/">WAVE: Web Accessibility Evaluation Tool</a></strong>: A suite of evaluation tools that helps authors make their web content more accessible to individuals with disabilities.
-
-
+ - <a href="https://jsonapi.org/">JSON:API</a></strong>: Specification for building JSON data APIs.
+ - <a href="https://xrg.es/">xrg.es</a></strong>: PHP regular expression tester.
+ - <a href="https://apps.timwhitlock.info/unicode/inspect/">Unicode Character Inspector</a></strong>: It is what it is: Unicode character inspector.
+ - <a href="https://browserleaks.com/canvas/">HTML5 Canvas Fingerprinting</a></strong>: Explanation of how canvas fingerprinting works.
+ - <a href="http://useragentstring.com/">User Agent String</a></strong>: Simple website for showing your browser’s User-Agent string.
+ - <a href="https://whoisrequest.com/history/">Domain History Checker</a></strong>: Tool for getting domain history information.
+ - <a href="https://intodns.com/">intoDNS</a></strong>: GetDNS — and IP related — reports and info for a hostname.
+ - <a href="https://dnschecker.org/">DNS Propagation Checker</a></strong>: Tool to check DNS propagation.
+ - <a href="https://mxtoolbox.com/">MX Toolbox</a></strong>: MX lookup tool and other related stuff.
+ - <a href="https://www.maxmind.com/en/geoip-demo/">MaxMind’s GeoIP2 City Database Demo</a></strong>: GeoIUP lookup tool that can handle IPv6.
+ - <a href="https://www.vultr.com/resources/ipv4-converter/">Vultr: IPv4 Converter</a></strong>: Very good IP address analysis and conversion tool.
+ - <a href="https://wave.webaim.org/">WAVE: Web Accessibility Evaluation Tool</a></strong>: A suite of evaluation tools that helps authors make their web content more accessible to individuals with disabilities.
 
 ***
 
-**Caveat Emptor**: But please keep in mind that many of the instructions and ideas here might be out of date or no longer work. So if you choose to follow them, and something doesn’t work as expected? What can I tell you.
-
-<div class="column_list" markdown="1">
-- [Amazon](amazon)
-- [Apache](apache)
-- [Find](find)
-- [Git](git)
-- [IPTables](iptables)
-- [Java](java)
-- [Joomla](joomla)
-- [Linux/Unix](linux-unix)
-- [macOS](macos)
-- [MAMP](mamp)
-- [NodeJS](nodejs)
-- [PHP](php)
-- [Postfix](postfix)
-- [Redis](redis)
-- [Ruby](ruby)
-- [Ubuntu](ubuntu)
-</div>
+# Contact
+## All the Ways You Can Reach Me
 
 ***
 
-<div class="column_list" markdown="1">
-- [Avahi Daemon](avahi_daemon)
-- [Awk](awk)
-- [Bash](bash)
-- [Cron](cron)
-- [DD](dd)
-- [Diff](diff)
-- [Different Ways of Wiping Disk Space](different_ways_of_wiping_disk_space)
-- [Dig](dig)
-- [Elasticsearch](elasticsearch)
-- [EmberJS - Installation and Usage](emberjs_-_installation_and_usage)
-- [ExifTool](exiftool)
-- [FFmpeg](ffmpeg)
-- [Fail2Ban](fail2ban)
-- [GeoIP](geoip)
-- [Ghostscript](ghostscript)
-- [IFTop](iftop)
-- [Iconv](iconv)
-- [ImageMagick](imagemagick)
-- [iPerf](iperf)
-- [Kernel Networking Tweaks](kernel_networking_tweaks)
-- [LAME MP3 Related Items](lame_mp3_related_items)
-- [LS](ls)
-- [Lsyncd](lsyncd)
-- [MOTD](motd)
-- [Machine Learning](machine_learning)
-- [MailCatcher](mailcatcher)
-- [MediaWiki with Lighttpd](mediawiki_with_lighttpd)
-- [MongoDB](mongodb)
-- [Monit](monit)
-- [Munin - Moving and Renaming Data Files](munin_-_moving_and_renaming_data_files)
-- [Munin](munin)
-- [MySQL - Enable MySQL Logs to Be Group Readable](mysql_-_enable_mysql_logs_to_be_group_readable)
-- [MySQL](mysql)
-- [Netatalk](netatalk)
-- [Netcat](netcat)
-- [Netstat](netstat)
-- [Networking Netmasks and Slash Notation](networking_netmasks_and_slash_notation)
-- [Nginx](nginx)
-- [Nikto](nikto)
-- [Nmap](nmap)
-- [ProFTPD](proftpd)
-- [RNG-Tools](rng-tools)
-- [Rackspace - Cloudfuse Installation and Usage](rackspace_-_cloudfuse_installation_and_usage)
-- [Route](route)
-- [Rsync](rsync)
-- [SMARTMonTools](smartmontools)
-- [SQLite](sqlite)
-- [SSH - Chroot and SFTP Notes](ssh_-_chroot_and_sftp_notes)
-- [SSH](ssh)
-- [SVN - Subversion Related Items](svn_-_subversion_related_items)
-- [Screen](screen)
-- [Sed](sed)
-- [Stat](stat)
-- [Sysstat](sysstat)
-- [Tar](tar)
-- [Telephony - Sending an SMS via Email](telephony_-_sending_an_sms_via_email)
-- [Telephony - Telephone System Test Numbers](telephony_-_telephone_system_test_numbers)
-- [Tomcat6](tomcat6)
-- [VI](vi)
-- [Vagrant](vagrant)
-- [VirtualBox - SMB and Netatalk Filesharing Items](virtualbox_-_smb_and_netatalk_filesharing_items)
-- [VirtualBox](virtualbox)
-- [Wget](wget)
-- [XXD](xxd)
-- [Zip](zip)
-</div>
+### Actual Mail
+Jack Szwergold<br />
+P.O. Box 595<br />
+New York, NY 10276
+
+### Electronic Mail
+[me@preworn.com](mailto:me@preworn.com?Subject=Preworn%20Website%20Query)
