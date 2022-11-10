@@ -52,14 +52,13 @@ Web developer for the New York City based university. Develop, debug, assess and
 maintain all current Linux-based systems as well as actively participate in the
 development and structuring of new systems. Consult with other departments
 across the university to support, develop and stabilize their own, independently
-managed web-based systems. Lead developer for the 2018 rewrite of the
-univerity’s comprehensive multi-school/college <a
-href="https://courses.newschool.edu">Course Catalog</a> as well as the <a
-href="https://it.newschool.edu/">IT department’s Drupal-based web-based service
-catalog</a>. Also have developed ETL (extract, transform, load) systems and
-related middle-ware processes to cleanly — and reliably — process data across
-disparate university systems and platforms.
-
+managed web-based systems. Lead developer for the 2018 rewrite — and ongoing
+maintenance and development — of the univerity’s comprehensive
+multi-school/college [Course Catalog](https://courses.newschool.edu) as well as
+the [IT department’s Drupal-based web-based service
+catalog](https://it.newschool.edu/). Also have developed ETL (extract,
+transform, load) systems and related middle-ware processes to cleanly — and
+reliably — process data across disparate university systems and platforms.
 
 ### Guggenheim Museum
 #### Web Infrastructure Systems Administrator
