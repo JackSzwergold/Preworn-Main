@@ -26,7 +26,7 @@
 
 <body>
 
-  <nav class="navbar navbar-dark bg-dark m-0 p-0 py-2 px-2 fixed-top navbar-expand">
+  <nav class="navbar navbar-light bg-light m-0 p-0 py-2 px-2 fixed-top navbar-expand">
     <!-- <span class="text-sinanova-light{% if current_page.id == 'resume' %} active{% endif %}">
       <a href="{{ base_url }}" class="p-0 m-0 text-light font-weight-light text-decoration-none"><em class="fa fa-home mr-2"></em> Home</a>
     </span> -->
@@ -64,9 +64,9 @@
           </span>
         </li>
       </ul>
-      <span class="h2 p-0 m-0 ml-auto navbar-text text-sinanova-black text-white">
-        <div class="bg-code m-0 p-0 px-5 py-1">
-          <a href="{{ base_url }}" class="text-decoration-none">
+      <span class="h2 p-0 m-0 ml-auto navbar-text">
+        <div class="bg-dark m-0 p-0 px-5 py-1">
+          <a href="{{ base_url }}" class="text-decoration-none text-sinanova-black text-light">
             Preworn
           </a>
         </div>
@@ -76,15 +76,15 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col px-md-5 pt-5 bg-code">
+      <div class="col px-md-5 pt-5">
 
         <div class="container-fluid">
           <div class="row">
             <div class="col py-3">
 
-              <header class="col col-12 p-0 m-0 pb-2 bg-code">
-                <h1 class="p-0 m-0 text-sinanova-black text-light">{% if meta.title %} {{ meta.title }} {% else %} {{ site_title }} {% endif %}</h1>
-                <h2 class="p-0 m-0 text-sinanova-black text-light">{% if meta.description %} {{ meta.description }} {% else %} {{ site_description }} {% endif %}</h2>
+              <header class="col col-12 p-0 m-0 pb-2">
+                <h1 class="p-0 m-0 text-sinanova-black text-dark">{% if meta.title %} {{ meta.title }} {% else %} {{ site_title }} {% endif %}</h1>
+                <h2 class="p-0 m-0 text-sinanova-black text-dark">{% if meta.description %} {{ meta.description }} {% else %} {{ site_description }} {% endif %}</h2>
                 <!-- <p class="p-0 m-0 text-sinanova-light text-light">{% if meta.author %}<em class="fa fa-pencil mr-2"></em>{{ meta.author }}{% endif %}</p>
                 <p class="p-0 m-0 text-sinanova-light text-light">{% if meta.date %}<em class="fa fa-calendar mr-2"></em>{{ meta.date|date("F j, Y") }}{% endif %}</p> -->
               </header>
@@ -97,8 +97,8 @@
                 </article>
               </main>
 
-              <footer class="col col-12 p-0 m-0 pt-2 bg-code">
-                <p class="p-0 m-0 text-sinanova-regular text-light">
+              <footer class="col col-12 p-0 m-0 pt-2">
+                <p class="p-0 m-0 text-sinanova-regular text-dark">
                   <small>Copyright © {{ "now"|date("Y") }} {{ meta.author }}.
                     This work is licensed under a Creative Commons Attribution-NonCommercial 4.0
                     International License (CC-BY-NC-4.0).</small>
