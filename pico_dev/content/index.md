@@ -119,6 +119,76 @@ circulation campus weekly to an internationally renowned web presence.
 
 ***
 
+# Projects
+## Projects and Distractions
+
+***
+
+### <a href="projects/mosaic" title="Mosaic">Mosaic</a>
+Dynamically generated image mosaics using record album artwork as the basis.
+Reload the page to view another random image.
+
+### <a href="projects/ascii" title="ASCII">ASCII</a>
+Dynamically generated ASCII art images which were created using PHP, the GD
+graphics library, HTML and CSS. Reload the page to view another random image.
+
+***
+
+# Bookmarks
+## Links I Find Useful
+
+Other than Emojipedia, this stuff is pretty boring and dry… Even to me! But this is stuff I find useful in my day job and general tech life.
+
+
+ - <a href="https://asciiart.website/">Christopher Johnson’s ASCII Art Collection</a></strong>: A cool ASCII art collection.
+ - <a href="https://emojipedia.org/">Emojipedia</a></strong>: Emoji reference site.
+ - <a href="https://fsymbols.com/">Fsymbols</a></strong>: Font/text symbols generator and reference.
+ - <a href="https://www.unicode.org/Public/emoji/">Unicode Emoji</a></strong>: Official Unicode emoji standards and mapping.
+ - <a href="https://astronautweb.co/snippet/font-awesome/">Font Awesome Guide</a></strong>: Font Awesome reference.
+ - <a href="https://www.the-qrcode-generator.com/">QR Code Generator</a></strong>: Good, simple and ad free QR code generator.
+ - <a href="https://explainshell.com/">ExplainShell.com</a></strong>: Tool to help one decipher shell command code.
+ - <a href="https://jsonlint.com/">JSONLint</a></strong>: JSON validator.
+
+
+      <a href="https://jsonapi.org/">JSON:API</a></strong>: Specification for building JSON data APIs.
+
+
+      <a href="https://xrg.es/">xrg.es</a></strong>: PHP regular expression tester.
+
+
+      <a href="https://apps.timwhitlock.info/unicode/inspect/">Unicode Character Inspector</a></strong>: It is what it is: Unicode character inspector.
+
+
+      <a href="https://browserleaks.com/canvas/">HTML5 Canvas Fingerprinting</a></strong>: Explanation of how canvas fingerprinting works.
+
+
+      <a href="http://useragentstring.com/">User Agent String</a></strong>: Simple website for showing your browser’s User-Agent string.
+
+
+      <a href="https://whoisrequest.com/history/">Domain History Checker</a></strong>: Tool for getting domain history information.
+
+
+      <a href="https://intodns.com/">intoDNS</a></strong>: GetDNS — and IP related — reports and info for a hostname.
+
+
+      <a href="https://dnschecker.org/">DNS Propagation Checker</a></strong>: Tool to check DNS propagation.
+
+
+      <a href="https://mxtoolbox.com/">MX Toolbox</a></strong>: MX lookup tool and other related stuff.
+
+
+      <a href="https://www.maxmind.com/en/geoip-demo/">MaxMind’s GeoIP2 City Database Demo</a></strong>: GeoIUP lookup tool that can handle IPv6.
+
+
+      <a href="https://www.vultr.com/resources/ipv4-converter/">Vultr: IPv4 Converter</a></strong>: Very good IP address analysis and conversion tool.
+
+
+      <a href="https://wave.webaim.org/">WAVE: Web Accessibility Evaluation Tool</a></strong>: A suite of evaluation tools that helps authors make their web content more accessible to individuals with disabilities.
+
+
+
+***
+
 **Caveat Emptor**: But please keep in mind that many of the instructions and ideas here might be out of date or no longer work. So if you choose to follow them, and something doesn’t work as expected? What can I tell you.
 
 <div class="column_list" markdown="1">
