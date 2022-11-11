@@ -1,4 +1,8 @@
+# Ignore OS specific cruft.
 .DS_Store
-/clients
-/markdown/tutorials_and_cheat_sheets
+Thumbs.db
+
+# Ignore the projects directory.
+/projects_base/*
 /projects/*
+
