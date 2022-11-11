@@ -7,8 +7,8 @@ Robots: noindex,nofollow
 Template: index
 ---
 
-### [Mosaic](projects/mosaic)
+### [Mosaic](%base_url%/projects_base/mosaic)
 Dynamically generated image mosaics using record album artwork as the basis. Reload the page to view another random image.
 
-### [ASCII](projects/ascii)
+### [ASCII](%base_url%/projects_base/ascii)
 Dynamically generated ASCII art images which were created using PHP, the GD graphics library, HTML and CSS. Reload the page to view another random image.
