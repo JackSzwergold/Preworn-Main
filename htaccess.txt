@@ -64,7 +64,8 @@ Options +FollowSymlinks
 ServerSignature Off
 Options -Indexes
 RewriteEngine On
-RewriteBase /
+# 2022-09-28: Disabling 'RewriteBase' for this codebase.
+# RewriteBase /
 
 # 7G:[QUERY STRING]
 <IfModule mod_rewrite.c>
@@ -207,20 +208,26 @@ RewriteBase /
 
 # END ##########################################################################
 
-# Enable the rewrite engine.
-# RewriteEngine on
+# Pico specific stuff.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # May be required to access sub directories
+    #RewriteBase /
 
-# Only rewrite if the directory or file doesn’t exist on the system.
-# RewriteCond   %{REQUEST_FILENAME} !-d
-# RewriteCond   %{REQUEST_FILENAME} !-f
+    # Deny access to internal dirs and files by passing the URL to Pico
+    RewriteRule ^(config|content|vendor|CHANGELOG\.md|composer\.(json|lock|phar))(/|$) index.php [L]
+    RewriteRule (^\.|/\.)(?!well-known(/|$)) index.php [L]
 
-# Ignore these base directories.
-# RewriteRule   ^(about|portfolio|distractions|clients|art|projects|css|favicons|script)($|/) - [L]
-# RewriteCond %{REQUEST_URI} !^(clients/.*)$ [NC]
+    # Enable URL rewriting
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
 
-# This redirects any call to this directory to an index file with $_GET parameters.
-# The 'parent=$1&child=$2&grandchild=$3&greatgrandchild=$4' passes the pathname as an HTML param called 'parent', 'child', 'grandchild' and 'greatgrandchild'.
-# RewriteRule    ^([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/?$    index.php?parent=$1&child=$2&grandchild=$3&greatgrandchild=$4 [L,QSA]
-# RewriteRule    ^([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/?$    index.php?parent=$1&child=$2&grandchild=$3 [L,QSA]
-# RewriteRule    ^([A-Za-z0-9-_,\s]+)/([A-Za-z0-9-_,\s]+)/?$    index.php?parent=$1&child=$2 [L,QSA]
-# RewriteRule    ^([A-Za-z0-9-_,\s]+)/?$    index.php?parent=$1 [QSA]
+    <IfModule mod_env.c>
+        # Let Pico know about available URL rewriting
+        SetEnv PICO_URL_REWRITING 1
+    </IfModule>
+</IfModule>
+
+# Prevent file browsing
+Options -Indexes -MultiViews
