@@ -39,7 +39,7 @@ set :web_builds, "/var/www/builds"
 set :content_data_path, "/var/www/content"
 
 # The path where projects get deployed.
-set :projects_path, "projects"
+set :projects_path, "projects_base"
 
 # The path where markdown items get deployed.
 set :markdown_path, "markdown"
