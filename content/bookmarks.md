@@ -2,8 +2,8 @@
 Title: Bookmarks
 Description: A list of links I find useful.
 Author: Jack Szwergold
-Date: 2016-06-13
-Robots: noindex,nofollow
+Date: 2022-11-10
+Robots: index,nofollow
 Template: index
 ---
 

@@ -2,8 +2,8 @@
 Title: Résumé
 Description: All of the places I have worked and the work I have done.
 Author: Jack Szwergold
-Date: 2016-06-13
-Robots: noindex,nofollow
+Date: 2022-11-10
+Robots: index,nofollow
 Template: index
 ---
 

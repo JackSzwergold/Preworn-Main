@@ -2,8 +2,8 @@
 Title: Contact
 Description: All the different ways you can contact me.
 Author: Jack Szwergold
-Date: 2016-06-13
-Robots: noindex,nofollow
+Date: 2022-11-10
+Robots: index,nofollow
 Template: index
 ---
 
