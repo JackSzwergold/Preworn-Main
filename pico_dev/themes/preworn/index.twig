@@ -65,8 +65,8 @@
         </li>
       </ul>
       <span class="h2 p-0 m-0 ml-auto navbar-text">
-        <div class="bg-dark m-0 p-0 px-5 py-1">
-          <a href="{{ base_url }}" class="text-decoration-none text-sinanova-black text-light">
+        <div class="bg-dark m-0 p-0 px-3">
+          <a href="{{ base_url }}" class="text-decoration-none text-sinanova-regular text-light">
             Preworn
           </a>
         </div>
@@ -82,14 +82,14 @@
           <div class="row">
             <div class="col py-3">
 
-              <header class="col col-12 p-0 m-0 pb-2">
-                <h1 class="p-0 m-0 text-sinanova-black text-dark">{% if meta.title %} {{ meta.title }} {% else %} {{ site_title }} {% endif %}</h1>
-                <h2 class="p-0 m-0 text-sinanova-black text-dark">{% if meta.description %} {{ meta.description }} {% else %} {{ site_description }} {% endif %}</h2>
+              <header class="col col-12 p-0 m-0 pb-3 mb-3 border-bottom border-dark">
+                <h1 class="p-0 m-0 text-sinanova-regular text-dark">{% if meta.title %} {{ meta.title }} {% else %} {{ site_title }} {% endif %}</h1>
+                <h2 class="p-0 m-0 text-sinanova-regular text-dark">{% if meta.description %} {{ meta.description }} {% else %} {{ site_description }} {% endif %}</h2>
                 <!-- <p class="p-0 m-0 text-sinanova-light text-light">{% if meta.author %}<em class="fa fa-pencil mr-2"></em>{{ meta.author }}{% endif %}</p>
                 <p class="p-0 m-0 text-sinanova-light text-light">{% if meta.date %}<em class="fa fa-calendar mr-2"></em>{{ meta.date|date("F j, Y") }}{% endif %}</p> -->
               </header>
 
-              <main class="col col-12 p-0 m-0 p-3 bg-white">
+              <main class="col col-12 p-0 m-0">
                 <article class="col col-12 p-0 m-0">
                   <span class="text-sinanova-regular">
                     {{ content }}
@@ -97,7 +97,7 @@
                 </article>
               </main>
 
-              <footer class="col col-12 p-0 m-0 pt-2">
+              <footer class="col col-12 p-0 m-0 pt-3 mt-3 border-top border-dark">
                 <p class="p-0 m-0 text-sinanova-regular text-dark">
                   <small>Copyright © {{ "now"|date("Y") }} {{ meta.author }}.
                     This work is licensed under a Creative Commons Attribution-NonCommercial 4.0
