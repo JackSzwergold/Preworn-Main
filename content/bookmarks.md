@@ -29,5 +29,6 @@ Other than Emojipedia, this stuff is pretty boring and dry… Even to me! But th
  - [**MX Toolbox**](https://mxtoolbox.com/): MX lookup tool and other related stuff.
  - [**MaxMind’s GeoIP2 City Database Demo**](https://www.maxmind.com/en/geoip-demo/): GeoIUP lookup tool that can handle IPv6.
  - [**Vultr: IPv4 Converter**](https://www.vultr.com/resources/ipv4-converter/): Very good IP address analysis and conversion tool.
- - [**Hacker Target: WordPress Security Scan**](https://hackertarget.com/wordpress-security-scan/): Very good passive WordPress vulnerability scanner.
+ - [**Hacker Target: WordPress Security Scan**](https://hackertarget.com/wordpress-security-scan/): Good passive WordPress vulnerability scanner.
+ - [**Google CSP Evaluator**](https://csp-evaluator.withgoogle.com): Good CSP (Content Security Policy) evaluator.
  - [**WAVE: Web Accessibility Evaluation Tool**](https://wave.webaim.org/): A suite of evaluation tools that helps authors make their web content more accessible to individuals with disabilities.
