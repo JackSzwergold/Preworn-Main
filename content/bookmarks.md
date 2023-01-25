@@ -14,7 +14,7 @@ Other than Emojipedia, this stuff is pretty boring and dry… Even to me! But th
  - [**Emojipedia**](https://emojipedia.org/): Emoji reference site.
  - [**Fsymbols**](https://fsymbols.com/): Font/text symbols generator and reference.
  - [**Unicode Emoji**](https://www.unicode.org/Public/emoji/): Official Unicode emoji standards and mapping.
- - [**Full Emoji List**](https://unicode.org/emoji/charts-12.0/full-emoji-list.html): Official list that shows what Emoji renders as on different platforms. 
+ - [**Full Emoji List**](https://unicode.org/emoji/charts-15.0/full-emoji-list.html): Official list that shows what Emoji renders as on different platforms. 
  - [**Font Awesome Guide**](https://astronautweb.co/snippet/font-awesome/): Font Awesome reference.
  - [**QR Code Generator**](https://www.the-qrcode-generator.com/): Good, simple and ad free QR code generator.
  - [**ExplainShell.com**](https://explainshell.com/): Tool to help one decipher shell command code.
