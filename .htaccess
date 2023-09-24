@@ -8,7 +8,7 @@ AddDefaultCharset UTF-8
   Header always set X-Frame-Options "SAMEORIGIN"
 
   # 2022-11-07: Setting the Content-Security-Policy header.
-  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' http: https: data:; connect-src 'self' http: https: data:; style-src 'self' 'unsafe-inline' http: https:; font-src 'self' 'unsafe-inline' http: https:; frame-ancestors 'self'; object-src 'none'; base-uri 'self'; script-src 'self' 'unsafe-inline' http: https:;"
+  Header always set Content-Security-Policy "default-src 'self' 'unsafe-inline' 'unsafe-eval' http: https: data: ws:; worker-src 'none'; manifest-src 'none'; base-uri 'none'; report-to 'none';"
 
   # 2022-11-08: Setting the X-Content-Type-Options header.
   Header always set X-Content-Type-Options "nosniff"
