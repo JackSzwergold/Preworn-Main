@@ -1,5 +1,5 @@
 # Set the github branch that will be used for this deployment.
-set :branch, "master"
+set :branch, "main"
 
 # Set the host and user as separate variables since Capistrano 3 doesn’t seem to have an easy way to access that info.
 # TODO: Figure out a better way to do this since 'ENV["CAP_USER"]' will override the fallback in the 'server' setup logic.
