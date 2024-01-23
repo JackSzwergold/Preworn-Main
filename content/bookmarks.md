@@ -20,6 +20,7 @@ Other than Emojipedia, this stuff is pretty boring and dry… Even to me! But th
  - [**ExplainShell.com**](https://explainshell.com/): Tool to help one decipher shell command code.
  - [**JSONLint**](https://jsonlint.com/): JSON validator.
  - [**JSON:API**](https://jsonapi.org/): Specification for building JSON data APIs.
+ - [**Table to Markdown**](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/): An online too to convert spreadsheet tables to Markdown.
  - [**xrg.es**](https://xrg.es/): PHP regular expression tester.
  - [**Unicode Character Inspector**](https://apps.timwhitlock.info/unicode/inspect/): It is what it is: Unicode character inspector.
  - [**HTML5 Canvas Fingerprinting**](https://browserleaks.com/canvas/): Explanation of how canvas fingerprinting works.
