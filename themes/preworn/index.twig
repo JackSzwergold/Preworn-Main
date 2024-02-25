@@ -4,20 +4,24 @@
 <head>
   <title>{% if meta.title and meta.title != site_title %} {{ meta.title }} | {% endif %}{{ site_title }}</title>
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'nonce-[[NONCE]]'; style-src 'self' ; font-src 'self'; img-src 'self' data:; connect-src 'self'; worker-src 'self'; object-src 'self'; media-src 'self'; manifest-src 'self'; base-uri 'self'; frame-src 'self'; child-src 'self'; form-action 'self';">
   {% if meta.description %}
-  <meta name="description" content="{{ meta.description|striptags }}" />
+  <meta name="description" content="{{ meta.description|striptags }}">
   {% endif %}
   {% if meta.robots %}
-  <meta name="robots" content="{{ meta.robots }}" />
+  <meta name="robots" content="{{ meta.robots }}">
   {% endif %}
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="{{ theme_url }}/favicons/favicon.ico" />
-  <link rel="apple-touch-icon-precomposed" href="{{ theme_url }}/favicons/apple-touch-icon-precomposed.png" />
-  <link rel="apple-touch-icon" sizes="300x300" href="{{ theme_url }}/favicons/apple-touch-icon.png" />
-  <link rel="stylesheet" type="text/css" href="{{ theme_url }}/css/bootstrap-4.6.2/bootstrap.css" />
-  <link rel="stylesheet" type="text/css" href="{{ theme_url }}/fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" type="text/css" href="{{ theme_url }}/css/style.css" />
+
+  <link rel="icon" type="image/png" href="{{ theme_url }}/favicons/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="{{ theme_url }}/favicons/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon" sizes="300x300" href="{{ theme_url }}/favicons/apple-touch-icon.png">
+  <link rel="stylesheet" type="text/css" href="{{ theme_url }}/css/bootstrap-4.6.2/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="{{ theme_url }}/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ theme_url }}/css/style.css">
   <script src="{{ theme_url }}/script/bootstrap-4.6.2/bootstrap.bundle.min.js" defer="defer"></script>
   <script src="{{ theme_url }}/script/jquery/jquery-3.5.1.min.js"></script>
   <script src="{{ theme_url }}/script/underscore/underscore-min.js"></script>
